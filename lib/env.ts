@@ -41,6 +41,9 @@ export function requirePublicEnv(): PublicEnv {
 export function getServerEnv(): ServerEnv | null {
   const parsed = serverEnvSchema.safeParse({
     SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY,
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
+    RESEND_FROM_EMAIL: process.env.RESEND_FROM_EMAIL,
+    RESEND_REPLY_TO_EMAIL: process.env.RESEND_REPLY_TO_EMAIL,
   });
 
   return parsed.success ? parsed.data : null;

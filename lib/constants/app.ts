@@ -12,6 +12,7 @@ export const publicNavLinks = [
   { href: "/", key: "home" },
   { href: "/courses", key: "courses" },
   { href: "/about", key: "about" },
+  { href: "/contact", key: "contact" },
 ] as const;
 
 export const approvalLabels: Record<ApprovalStatus, string> = {

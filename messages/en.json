@@ -9,7 +9,8 @@
     "nav": {
       "home": "Home",
       "courses": "Courses",
-      "about": "About"
+      "about": "About",
+      "contact": "Contact"
     },
     "labels": {
       "access": "Access",
@@ -345,6 +346,64 @@
       "removedDescription": "Older flows and duplicated steps were removed so the academy feels simpler and easier to navigate.",
       "nextTitle": "What gets easier next",
       "nextDescription": "With the main journeys now clearer, future improvements to communication, guidance, and the overall experience can land more smoothly."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact the academy",
+    "title": "Reach the academy through a calmer, clearer contact page.",
+    "description": "Whether you are exploring courses, planning an application, or arranging a visit, the best next step should be easy to find.",
+    "sections": {
+      "heroPrimaryCta": "See contact options",
+      "heroSecondaryCta": "Plan a visit",
+      "methodsEyebrow": "Direct contact points",
+      "methodsTitle": "Choose the right way to reach the academy.",
+      "methodsDescription": "Different conversations need different paths. These contact points keep the first step simple and easy to trust.",
+      "formEyebrow": "Send a message",
+      "formTitle": "Write to the academy and expect a clear reply.",
+      "formDescription": "Use the form for longer questions, admissions context, visit requests, or anything that needs a more thoughtful response.",
+      "visitEyebrow": "Visit and opening rhythm",
+      "visitTitle": "Plan a quieter visit or send a more detailed enquiry.",
+      "visitDescription": "If you are reaching out for admissions, partnerships, or a general introduction, the academy should feel welcoming before anyone even arrives."
+    },
+    "methods": {
+      "generalTitle": "General enquiries",
+      "generalDescription": "Use this for first questions about the academy, the public site, and where to begin.",
+      "admissionsTitle": "Admissions support",
+      "admissionsDescription": "For applications, role guidance, and questions about joining as a student or teacher.",
+      "phoneTitle": "Call the academy",
+      "phoneDescription": "Use the main line for short questions, scheduling help, or quick follow-up.",
+      "visitTitle": "Visit in person",
+      "visitDescription": "Find the address, opening rhythm, and visit guidance below before you come in.",
+      "visitValue": "See address and hours"
+    },
+    "visit": {
+      "addressLabel": "Academy address",
+      "hoursLabel": "Opening hours",
+      "noteTitle": "A note before you arrive",
+      "noteDescription": "If you are planning a visit about admissions, partnerships, or a specific course path, sending a short message first helps the academy prepare the right welcome."
+    },
+    "form": {
+      "noteTitle": "A more detailed message works well here",
+      "noteDescription": "If you need guidance about admissions, a visit, or a partnership conversation, share a little context and the academy team can reply more meaningfully.",
+      "fields": {
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "reason": "Reason",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "you@example.com",
+        "subjectPlaceholder": "What would you like help with?",
+        "messagePlaceholder": "Share your question, visit request, or context here...",
+        "submit": "Send message",
+        "pending": "Sending message...",
+        "reasonOptions": {
+          "general": "General enquiry",
+          "admissions": "Admissions",
+          "partnerships": "Partnerships",
+          "visit": "Visit planning"
+        }
+      }
     }
   },
   "catalog": {
