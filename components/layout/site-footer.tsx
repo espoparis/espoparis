@@ -2,7 +2,6 @@ import { getTranslations } from "next-intl/server";
 import { Github, Twitter } from "lucide-react";
 import { SiteBrand } from "@/components/shared/site-brand";
 import { Footer } from "@/components/ui/footer";
-import { getSessionContext } from "@/server/auth/session";
 import { publicNavLinks } from "@/lib/constants/app";
 import { localizePath } from "@/lib/constants/app";
 import { siteConfig } from "@/lib/site-config";
@@ -14,7 +13,6 @@ type Props = {
 export async function SiteFooter({ locale }: Props) {
   const tCommon = await getTranslations({ locale, namespace: "common" });
   const tFooter = await getTranslations({ locale, namespace: "shell.footer" });
-  const { profile } = await getSessionContext();
 
   return (
     <div data-site-footer>
@@ -38,30 +36,17 @@ export async function SiteFooter({ locale }: Props) {
           href: localizePath(locale, link.href),
           label: tCommon(`nav.${link.key}`),
         }))}
-        legalLinksTitle={tCommon("labels.access")}
-        legalLinks={
-          profile
-            ? [
-                {
-                  href: localizePath(locale, "/dashboard"),
-                  label: tCommon("actions.openWorkspace"),
-                },
-                {
-                  href: localizePath(locale, "/pending"),
-                  label: tCommon("actions.viewApprovalStatus"),
-                },
-              ]
-            : [
-                {
-                  href: localizePath(locale, "/auth/login"),
-                  label: tCommon("actions.signIn"),
-                },
-                {
-                  href: localizePath(locale, "/auth/register"),
-                  label: tCommon("actions.applyForAccess"),
-                },
-              ]
-        }
+        legalLinksTitle={tCommon("labels.connect")}
+        legalLinks={[
+          {
+            href: `mailto:${siteConfig.contact.primaryEmail}`,
+            label: siteConfig.contact.primaryEmail,
+          },
+          {
+            href: `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`,
+            label: siteConfig.contact.phone,
+          },
+        ]}
         copyright={{
           text: `© ${new Date().getFullYear()} ${siteConfig.name}`,
           license: "All rights reserved",

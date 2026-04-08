@@ -37,10 +37,10 @@ export default async function ContactPage({
                 href: `mailto:${siteConfig.contact.primaryEmail}`,
               },
               {
-                title: t("methods.admissionsTitle"),
-                description: t("methods.admissionsDescription"),
-                value: siteConfig.contact.admissionsEmail,
-                href: `mailto:${siteConfig.contact.admissionsEmail}`,
+                title: t("methods.partnershipsTitle"),
+                description: t("methods.partnershipsDescription"),
+                value: siteConfig.contact.partnershipsEmail,
+                href: `mailto:${siteConfig.contact.partnershipsEmail}`,
               },
               {
                 title: t("methods.phoneTitle"),
@@ -74,7 +74,6 @@ export default async function ContactPage({
               reason: t("form.fields.reason"),
               reasonOptions: {
                 general: t("form.fields.reasonOptions.general"),
-                admissions: t("form.fields.reasonOptions.admissions"),
                 partnerships: t("form.fields.reasonOptions.partnerships"),
                 visit: t("form.fields.reasonOptions.visit"),
               },

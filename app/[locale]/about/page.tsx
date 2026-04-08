@@ -1,17 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { PageFrame } from "@/components/layout/page-frame";
-import { PublicStatsStrip } from "@/features/marketing/components/public-stats-strip";
-import { SetupAlert } from "@/components/shared/setup-alert";
 import { AboutClosingSection } from "@/features/marketing/components/about-closing-section";
 import { AboutHero } from "@/features/marketing/components/about-hero";
 import { PhotoGallery } from "@/components/ui/gallery";
-import { isSupabaseConfigured } from "@/lib/env";
-import { getPublicCatalogStats } from "@/server/queries/marketing";
 
 export default async function AboutPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: "about" });
-  const configured = isSupabaseConfigured();
-  const stats = configured ? await getPublicCatalogStats() : null;
 
   return (
     <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
@@ -26,18 +20,13 @@ export default async function AboutPage({ params }: { params: { locale: string }
 
       <PageFrame className="py-10 lg:py-14">
         <section className="section-space">
-          {!configured ? <SetupAlert /> : null}
-          {configured && stats ? <PublicStatsStrip stats={stats} /> : null}
-        </section>
-
-        <section className="section-space">
           <PhotoGallery
             locale={params.locale}
             eyebrow={t("sections.galleryEyebrow")}
             title={t("sections.galleryTitle")}
             description={t("sections.galleryDescription")}
             ctaLabel={t("sections.galleryCta")}
-            ctaHref="/courses"
+            ctaHref="/contact"
             images={[
               {
                 src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",

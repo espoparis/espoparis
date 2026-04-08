@@ -1,6 +1,4 @@
-import { localizePath } from "@/lib/constants/app";
 import { siteConfig } from "@/lib/site-config";
-import type { ApprovalStatus, EnrollmentStatus } from "@/lib/types/database";
 import type { ContactInquiryInput } from "@/lib/validation/contact";
 
 type EmailTemplate = {
@@ -46,94 +44,9 @@ function renderEmailTemplate(input: BaseTemplateInput): EmailTemplate {
   };
 }
 
-export function buildPendingRegistrationEmail(input: {
-  fullName: string;
-  role: "student" | "teacher";
-  locale: string;
-  siteUrl: string;
-}): EmailTemplate {
-  const roleLabel = input.role === "teacher" ? "teacher" : "student";
-  const href = `${input.siteUrl}${localizePath(input.locale, "/pending")}`;
-
-  return renderEmailTemplate({
-    preview: "Your account is created and waiting for approval.",
-    heading: `You’re on the list, ${input.fullName}`,
-    intro: `Your ${roleLabel} account has been created successfully. An admin will review it before you can access the full workspace.`,
-    ctaLabel: "View status",
-    ctaHref: href,
-    outro: "We’ll email you again as soon as your account status changes.",
-  });
-}
-
-export function buildApprovalStatusEmail(input: {
-  fullName: string;
-  status: ApprovalStatus;
-  locale: string;
-  siteUrl: string;
-}): EmailTemplate {
-  const href =
-    input.status === "approved"
-      ? `${input.siteUrl}${localizePath(input.locale, "/dashboard")}`
-      : `${input.siteUrl}${localizePath(input.locale, "/pending")}`;
-
-  if (input.status === "approved") {
-    return renderEmailTemplate({
-      preview: "Your account has been approved.",
-      heading: "Your account is now active",
-      intro: `${input.fullName}, your access request has been approved. You can now sign in and start using your workspace.`,
-      ctaLabel: "Open dashboard",
-      ctaHref: href,
-      outro: "If anything looks off after signing in, reply to this email and we’ll help.",
-    });
-  }
-
-  return renderEmailTemplate({
-    preview: "There’s an update on your account request.",
-    heading: "Your request was not approved",
-    intro: `${input.fullName}, your account request was reviewed but wasn’t approved at this time. You can still sign in to check your status or contact support for the next step.`,
-    ctaLabel: "Review status",
-    ctaHref: href,
-    outro: "You can update your information later and request access again if needed.",
-  });
-}
-
-export function buildEnrollmentDecisionEmail(input: {
-  fullName: string;
-  courseTitle: string;
-  status: EnrollmentStatus;
-  locale: string;
-  siteUrl: string;
-}): EmailTemplate {
-  const href =
-    input.status === "approved"
-      ? `${input.siteUrl}${localizePath(input.locale, "/student/courses")}`
-      : `${input.siteUrl}${localizePath(input.locale, "/student/applications")}`;
-
-  if (input.status === "approved") {
-    return renderEmailTemplate({
-      preview: "Your course application has been approved.",
-      heading: `You’re in: ${input.courseTitle}`,
-      intro: `${input.fullName}, your application for ${input.courseTitle} has been approved. Your course materials are now available in your student workspace.`,
-      ctaLabel: "Open my courses",
-      ctaHref: href,
-      outro: "Enjoy the course, and keep an eye on your dashboard for new materials and updates.",
-    });
-  }
-
-  return renderEmailTemplate({
-    preview: "There’s an update on your course application.",
-    heading: `Application update for ${input.courseTitle}`,
-    intro: `${input.fullName}, your application for ${input.courseTitle} was not approved. You can review your application history and apply to other courses anytime.`,
-    ctaLabel: "View applications",
-    ctaHref: href,
-    outro: "If you need help choosing another course, we’ll be happy to help.",
-  });
-}
-
 export function buildContactInquiryEmail(input: ContactInquiryInput): EmailTemplate {
   const reasonLabels: Record<ContactInquiryInput["reason"], string> = {
     general: "General enquiry",
-    admissions: "Admissions",
     partnerships: "Partnerships",
     visit: "Visit planning",
   };

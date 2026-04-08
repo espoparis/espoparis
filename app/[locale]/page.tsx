@@ -1,13 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import { Features } from "@/components/blocks/features-4";
 import { PageFrame } from "@/components/layout/page-frame";
-import { SetupAlert } from "@/components/shared/setup-alert";
 import { HomeClosingCta } from "@/features/marketing/components/home-closing-cta";
 import { HomeHero } from "@/features/marketing/components/home-hero";
-import { PublicStatsStrip } from "@/features/marketing/components/public-stats-strip";
-import { isSupabaseConfigured } from "@/lib/env";
 import { localizePath } from "@/lib/constants/app";
-import { getPublicCatalogStats } from "@/server/queries/marketing";
 
 export default async function Home({
   params,
@@ -15,9 +11,7 @@ export default async function Home({
   params: { locale: string };
 }) {
   const t = await getTranslations({ locale: params.locale, namespace: "home" });
-  const tCommon = await getTranslations({ locale: params.locale, namespace: "common.actions" });
-  const configured = isSupabaseConfigured();
-  const stats = configured ? await getPublicCatalogStats() : null;
+  const tNav = await getTranslations({ locale: params.locale, namespace: "common.nav" });
 
   return (
     <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
@@ -26,21 +20,16 @@ export default async function Home({
         title={t("title")}
         description={t("description")}
         primaryCta={{
-          label: t("exploreCourses"),
-          href: localizePath(params.locale, "/courses"),
+          label: tNav("about"),
+          href: localizePath(params.locale, "/about"),
         }}
         secondaryCta={{
-          label: tCommon("signIn"),
-          href: localizePath(params.locale, "/auth/login"),
+          label: tNav("contact"),
+          href: localizePath(params.locale, "/contact"),
         }}
       />
 
       <PageFrame className="py-3 sm:py-4 lg:py-5">
-        <section className="space-y-4">
-          {!configured ? <SetupAlert /> : null}
-          {configured && stats ? <PublicStatsStrip stats={stats} /> : null}
-        </section>
-
         <section className="mt-4 sm:mt-5 lg:mt-6">
           <Features
             title={t("featuresSection.title")}
@@ -83,12 +72,12 @@ export default async function Home({
         }}
         subtitle={t("closingCta.description")}
         primaryCta={{
-          label: tCommon("applyForAccess"),
-          href: localizePath(params.locale, "/auth/register"),
+          label: tNav("contact"),
+          href: localizePath(params.locale, "/contact"),
         }}
         secondaryCta={{
-          label: t("exploreCourses"),
-          href: localizePath(params.locale, "/courses"),
+          label: tNav("about"),
+          href: localizePath(params.locale, "/about"),
         }}
       />
     </div>

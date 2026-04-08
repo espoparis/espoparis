@@ -1,9 +1,8 @@
 "use client";
 
-import { LayoutDashboard, Menu } from "lucide-react";
+import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SiteBrand } from "@/components/shared/site-brand";
-import type { SessionProfile } from "@/lib/types/domain";
 import { publicNavLinks } from "@/lib/constants/app";
 import { cn } from "@/lib/utils";
 import { Link, usePathname } from "@/lib/navigation";
@@ -20,7 +19,6 @@ import {
 
 type Props = {
   locale: string;
-  profile: SessionProfile | null;
 };
 
 function isActivePath(pathname: string, href: string) {
@@ -35,7 +33,7 @@ function isActivePath(pathname: string, href: string) {
   return pathname.startsWith(`${href}/`);
 }
 
-export function SiteMobileNav({ locale, profile }: Props) {
+export function SiteMobileNav({ locale }: Props) {
   const tCommon = useTranslations("common");
   const tMobile = useTranslations("shell.mobile");
   const pathname = usePathname();
@@ -86,38 +84,9 @@ export function SiteMobileNav({ locale, profile }: Props) {
             })}
           </nav>
 
-          <div className="flex flex-col gap-4 rounded-[1.5rem] border border-border/60 bg-secondary/35 p-4">
-            <div className="flex flex-col gap-1">
-              <p className="section-eyebrow">{tCommon("labels.access")}</p>
-              <p className="text-sm text-muted-foreground">{tMobile("description")}</p>
-            </div>
-            {profile ? (
-              <DialogClose asChild>
-                <Button asChild className="w-full">
-                  <Link href="/dashboard" locale={locale}>
-                    <LayoutDashboard className="h-4 w-4" />
-                    {tCommon("actions.openWorkspace")}
-                  </Link>
-                </Button>
-              </DialogClose>
-            ) : (
-              <div className="flex flex-col gap-3">
-                <DialogClose asChild>
-                  <Button asChild variant="outline" className="w-full">
-                    <Link href="/auth/login" locale={locale}>
-                      {tCommon("actions.signIn")}
-                    </Link>
-                  </Button>
-                </DialogClose>
-                <DialogClose asChild>
-                  <Button asChild variant="hero" className="w-full">
-                    <Link href="/auth/register" locale={locale}>
-                      {tCommon("actions.applyForAccess")}
-                    </Link>
-                  </Button>
-                </DialogClose>
-              </div>
-            )}
+          <div className="flex flex-col gap-2 rounded-[1.5rem] border border-border/60 bg-secondary/35 p-4">
+            <p className="section-eyebrow">{tCommon("labels.navigate")}</p>
+            <p className="text-sm text-muted-foreground">{tMobile("description")}</p>
           </div>
         </div>
       </DialogContent>

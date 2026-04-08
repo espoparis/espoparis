@@ -1,9 +1,13 @@
 "use server";
 
-import type { ActionState } from "@/features/auth/actions";
 import { contactInquirySchema } from "@/lib/validation/contact";
 import { isEmailConfigured } from "@/lib/env";
 import { sendContactInquiryNotification } from "@/server/email/contact";
+
+export type ActionState = {
+  error?: string;
+  success?: string;
+};
 
 export async function submitContactInquiryAction(
   _prevState: ActionState,

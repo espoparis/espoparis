@@ -30,7 +30,6 @@ export function ContactHero({
         { text: secondaryCta, href: "#visit-academy", variant: "secondary" },
       ]}
       className="full-bleed border-b border-border/60 bg-background"
-      compact
     />
   );
 }

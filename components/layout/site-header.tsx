@@ -1,21 +1,16 @@
-import { LayoutDashboard } from "lucide-react";
 import { getTranslations } from "next-intl/server";
-import { getSessionContext } from "@/server/auth/session";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { SiteBrand } from "@/components/shared/site-brand";
 import { SiteMobileNav } from "@/components/layout/site-mobile-nav";
 import { SitePrimaryNav } from "@/components/layout/site-primary-nav";
 import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { Button } from "@/components/ui/button";
-import { Link } from "@/lib/navigation";
 
 type Props = {
   locale: string;
 };
 
 export async function SiteHeader({ locale }: Props) {
-  const tCommon = await getTranslations({ locale, namespace: "common" });
-  const { profile } = await getSessionContext();
+  await getTranslations({ locale, namespace: "common" });
 
   return (
     <header data-site-header className="fixed inset-x-0 top-0 z-50">
@@ -36,32 +31,7 @@ export async function SiteHeader({ locale }: Props) {
               <LanguageSwitcher />
               <ThemeToggle />
             </div>
-            <SiteMobileNav locale={locale} profile={profile} />
-            {profile ? (
-              <Button asChild variant="hero" className="hidden md:inline-flex">
-                <Link href="/dashboard" locale={locale}>
-                  <LayoutDashboard className="h-4 w-4" />
-                  {tCommon("actions.openWorkspace")}
-                </Link>
-              </Button>
-            ) : (
-              <>
-                <Button variant="nav" asChild className="hidden md:inline-flex">
-                  <Link href="/auth/login" locale={locale}>
-                    {tCommon("actions.signIn")}
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="hero"
-                  className="hidden md:inline-flex"
-                >
-                  <Link href="/auth/register" locale={locale}>
-                    {tCommon("actions.applyForAccess")}
-                  </Link>
-                </Button>
-              </>
-            )}
+            <SiteMobileNav locale={locale} />
           </div>
         </div>
       </div>

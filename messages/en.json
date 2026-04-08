@@ -1,49 +1,19 @@
 {
   "common": {
     "siteName": "Espo Paris Academy",
-    "roles": {
-      "admin": "Admin",
-      "teacher": "Teacher",
-      "student": "Student"
-    },
     "nav": {
       "home": "Home",
-      "courses": "Courses",
       "about": "About",
       "contact": "Contact"
     },
     "labels": {
-      "access": "Access",
-      "navigate": "Navigate",
-      "role": "Role",
-      "approval": "Approval",
-      "email": "Email",
-      "currentState": "Current state",
-      "studentFlow": "Student flow",
-      "courseContext": "Course context",
-      "learningFocus": "Learning focus"
+      "connect": "Connect",
+      "navigate": "Navigate"
     },
     "actions": {
-      "signIn": "Sign in",
-      "applyForAccess": "Apply for access",
-      "openWorkspace": "Open workspace",
-      "viewApprovalStatus": "View approval status",
-      "backToSignIn": "Back to sign in",
-      "returnHome": "Return home",
-      "forgotPassword": "Forgot password",
-      "createAccount": "Create account",
-      "updateView": "Update view",
-      "resetFilters": "Reset filters",
-      "tryAgain": "Try again",
-      "reloadApp": "Reload app",
-      "browseCatalog": "Browse catalog",
-      "newCourse": "New course",
-      "viewAllCourses": "View all courses",
-      "viewAllApplications": "View all applications",
-      "resumeCourse": "Resume course",
-      "signOut": "Sign out",
-      "viewCourse": "View course",
       "working": "Working...",
+      "tryAgain": "Try again",
+      "returnHome": "Return home",
       "toggleTheme": "Toggle color theme"
     },
     "languages": {
@@ -52,69 +22,23 @@
       "ar": "Arabic",
       "fr": "French",
       "fa": "Persian"
-    },
-    "pagination": {
-      "previous": "Previous",
-      "next": "Next",
-      "showingRange": "Showing {start}-{end} of {total} {label}"
     }
   },
   "shell": {
     "footer": {
-      "eyebrow": "Espo Paris",
       "title": "A clear home for learning, teaching, and thoughtful growth.",
-      "description": "Designed to help students, teachers, and admins move through the academy with confidence."
+      "description": "Designed to help every visitor move through the academy with confidence."
     },
     "mobile": {
       "title": "Navigate the academy",
-      "description": "Jump between the public site and your workspace."
-    },
-    "dashboard": {
-      "publicSite": "Public site",
-      "workspaceTitle": "{role} workspace"
-    },
-    "auth": {
-      "heroTitle": "The academy rebuilt around clarity, trust, and momentum.",
-      "heroDescription": "A calmer academy experience built to keep access, approvals, and learning paths easy to follow."
+      "description": "Move between the main public pages of the academy."
     }
   },
   "status": {
-    "setup": {
-      "title": "Complete the academy setup to continue",
-      "description": "A few essentials still need attention before sign in, uploads, and course access are available.",
-      "footer": "Once setup is complete, the full academy experience will open here."
-    },
     "loading": {
       "badge": "Loading",
       "title": "Preparing your experience",
-      "description": "Syncing the latest data and routes.",
-      "adminEyebrow": "Loading workspace",
-      "adminTitle": "Preparing your admin workspace",
-      "adminDescription": "Syncing approvals, users, and catalog oversight.",
-      "teacherEyebrow": "Loading workspace",
-      "teacherTitle": "Preparing your teacher workspace",
-      "teacherDescription": "Syncing courses, enrollments, and recent actions.",
-      "studentEyebrow": "Loading workspace",
-      "studentTitle": "Preparing your student workspace",
-      "studentDescription": "Syncing applications, approved courses, and next steps.",
-      "catalogEyebrow": "Loading catalog",
-      "catalogTitle": "Preparing the course catalog",
-      "catalogDescription": "Syncing published courses, filters, and discovery surfaces.",
-      "courseEyebrow": "Loading course",
-      "courseTitle": "Preparing course details",
-      "courseDescription": "Syncing protected lessons, access, and review context."
-    },
-    "pending": {
-      "badge": "Pending approval",
-      "title": "Your account is awaiting review",
-      "description": "We received your registration and the team will review it shortly.",
-      "footer": "When approval is complete, your matching workspace unlocks automatically. If email notifications are enabled, you will also receive an update there."
-    },
-    "unauthorized": {
-      "badge": "Protected area",
-      "title": "Access restricted",
-      "description": "This account cannot view that area yet. Return to your approved workspace or sign in again with a different account.",
-      "footer": "Role access is enforced server-side, so the app will keep redirecting until you enter an approved workspace."
+      "description": "Syncing the latest data and routes."
     },
     "error": {
       "badge": "Something went wrong",
@@ -122,166 +46,40 @@
       "defaultDescription": "The page could not finish loading. Try again or return to a stable area of the app.",
       "pageTitle": "This page ran into a problem",
       "pageDescription": "The current route could not finish loading. Try again or return to a stable area of the app.",
-      "pageFooter": "If it keeps happening, refresh the page and continue from the dashboard or public catalog.",
-      "globalTitle": "The app hit a critical problem",
-      "globalDescription": "A root-level failure interrupted the experience. Try reloading the app.",
-      "globalFooter": "If it keeps happening, restart the flow from the homepage."
-    }
-  },
-  "auth": {
-    "login": {
-      "eyebrow": "Sign in",
-      "title": "Welcome back",
-      "description": "Sign in to continue to your academy account.",
-      "setupDescription": "Sign in will be available as soon as the academy setup is complete.",
-      "visualTitle": "A calmer way back into your academy workspace.",
-      "visualDescription": "Sign in to continue with a calmer experience for students, teachers, and admins.",
-      "visualFeatureOne": "Role-aware workspaces keep dashboards, approvals, and course flows easier to navigate.",
-      "visualFeatureTwo": "Everything you need stays easier to follow from one clear place."
-    },
-    "register": {
-      "eyebrow": "Apply",
-      "title": "Create your academy account",
-      "description": "Students and teachers can apply here and continue once approval is complete.",
-      "setupDescription": "Registration will be available as soon as the academy setup is complete.",
-      "alreadyHaveAccount": "Already have an account",
-      "visualTitle": "A steadier path into your academy account.",
-      "visualDescription": "Apply once, choose the right role, and move into a calmer approval flow built for students and teachers."
-    },
-    "forgot": {
-      "eyebrow": "Recovery",
-      "title": "Reset your password",
-      "description": "We will send you a secure link to reset your password.",
-      "setupDescription": "Password recovery will be available as soon as the academy setup is complete.",
-      "visualTitle": "A secure way to recover your access.",
-      "visualDescription": "We will send a reset link so you can return to your academy workspace without friction."
-    },
-    "reset": {
-      "eyebrow": "Security",
-      "title": "Choose a new password",
-      "description": "Once your email link is confirmed, you can set a fresh password here.",
-      "setupDescription": "Password reset will be available as soon as the academy setup is complete.",
-      "visualTitle": "Set a stronger password and continue.",
-      "visualDescription": "Choose a new password to secure your account and get back into your workspace."
-    },
-    "forms": {
-      "login": {
-        "email": "Email",
-        "password": "Password",
-        "submit": "Sign in",
-        "pending": "Signing in...",
-        "placeholderEmail": "email@example.com",
-        "placeholderPassword": "Enter your password",
-        "rememberMe": "Remember me",
-        "noAccount": "Don't have an account yet?"
-      },
-      "register": {
-        "teacher": "Teacher",
-        "student": "Student",
-        "fullName": "Full name",
-        "email": "Email",
-        "password": "Password",
-        "confirmPassword": "Confirm password",
-        "primaryInterest": "Primary interest",
-        "primaryInterestPlaceholder": "Quranic studies, Arabic, Islamic history...",
-        "hasTakenCourses": "Have you taken courses before?",
-        "yes": "Yes",
-        "no": "No",
-        "previousCourses": "Previous courses",
-        "previousCoursesPlaceholder": "Tell us about previous study experience if any.",
-        "teacherNotice": "Teacher accounts are reviewed before workspace access is granted. The admin team will approve your profile inside the new workspace.",
-        "submit": "Create account",
-        "pending": "Creating account...",
-        "role": "Role"
-      },
-      "forgot": {
-        "email": "Email",
-        "submit": "Send reset link",
-        "pending": "Sending..."
-      },
-      "reset": {
-        "newPassword": "New password",
-        "confirmNewPassword": "Confirm new password",
-        "submit": "Update password",
-        "pending": "Updating..."
-      }
+      "pageFooter": "If it keeps happening, refresh the page and continue from the public site."
     }
   },
   "home": {
     "badge": "Explore the academy",
     "title": "A calmer, cleaner platform for learning, teaching, and growing.",
-    "description": "A warm, modern academy experience with clear paths into courses, teaching, and student access.",
-    "exploreCourses": "Explore courses",
-    "highlights": {
-      "coursesFirstLabel": "Courses first",
-      "coursesFirstValue": "Structured learning flows",
-      "roleAwareLabel": "Role aware",
-      "roleAwareValue": "Teacher, student, admin spaces",
-      "supabaseReadyLabel": "Easy to follow",
-      "supabaseReadyValue": "Clear access and progress"
-    },
-    "designBadge": "Design direction",
-    "designCaption": "modern / warm / reusable",
-    "designDescription": "The experience centers content inside soft, clear layouts so every section feels connected and easy to use.",
-    "stateCards": {
-      "loadingTitle": "Loading",
-      "loadingDescription": "Shared states",
-      "emptyTitle": "Empty",
-      "emptyDescription": "Reusable feedback",
-      "pendingTitle": "Pending",
-      "pendingDescription": "Approval flow",
-      "unauthorizedTitle": "Unauthorized",
-      "unauthorizedDescription": "Clear role routing"
-    },
-    "featuredEyebrow": "Featured learning paths",
-    "featuredTitle": "Public courses with a cleaner path into enrollment.",
-    "featuredDescription": "Explore published courses, compare learning paths, and move into enrollment with confidence.",
-    "featuredEmpty": "Featured courses will appear here as soon as teachers publish them.",
-    "teachersEyebrow": "Teacher spotlight",
-    "teachersTitle": "Approved teachers presented more clearly.",
-    "teachersDescription": "Public teacher presentation is now part of the rebuild direction, so the platform can feel trustworthy before a student even signs in.",
-    "teachersEmpty": "Approved teacher profiles will be highlighted here once they are available.",
-    "stats": {
-      "eyebrow": "Platform at a glance",
-      "title": "The academy in numbers",
-      "description": "A clearer view of the published catalog, approved teachers, active enrollments, and student feedback shaping the platform.",
-      "publishedCourses": "Published courses",
-      "approvedTeachers": "Approved teachers",
-      "approvedEnrollments": "Approved enrollments",
-      "studentReviews": "Student reviews"
-    },
-    "teacherCard": {
-      "publishedCourses": "Published courses",
-      "fallbackBio": "A verified teacher profile ready for public course discovery.",
-      "approvedProfile": "Approved teaching profile"
-    },
+    "description": "A warm, modern academy presence with clearer storytelling, stronger guidance, and a calmer sense of arrival.",
     "featuresSection": {
       "title": "The foundation for calmer academy operations",
-      "description": "A clearer experience for students, teachers, and admins.",
+      "description": "A clearer public experience shaped around trust, guidance, and a more thoughtful academy presence.",
       "items": {
         "speed": {
           "title": "Faster flows",
-          "description": "Cleaner paths into courses, approvals, and daily work."
+          "description": "Cleaner paths into the academy story, the key pages, and the next conversation."
         },
         "power": {
           "title": "Stronger foundation",
-          "description": "Course access, approvals, and progress stay easier to follow in one place."
+          "description": "Core pages now feel more consistent, more confident, and easier to understand."
         },
         "security": {
-          "title": "Safer access",
-          "description": "Role-aware routes and guarded media keep each workspace protected."
+          "title": "Clearer trust",
+          "description": "The public experience is designed to feel reliable, warm, and easy to navigate."
         },
         "customization": {
           "title": "Reusable patterns",
-          "description": "Shared sections and forms keep the interface consistent."
+          "description": "Shared sections and forms keep the public site visually aligned from page to page."
         },
         "control": {
-          "title": "Clear oversight",
-          "description": "Teachers and admins get cleaner approval and course control."
+          "title": "Stronger story",
+          "description": "Home, about, and contact now work together as one calmer public system."
         },
         "aiReady": {
           "title": "Ready to grow",
-          "description": "The shell leaves room for automation and smarter workflows."
+          "description": "The site can expand later without losing its clarity or visual rhythm."
         }
       }
     },
@@ -289,48 +87,23 @@
       "badge": "Ready for the next step",
       "line1": "Bring your learning",
       "line2": "into a calmer flow.",
-      "description": "Explore the published catalog, apply for access, and move into a cleaner academy experience built for students, teachers, and admins."
+      "description": "Learn more about the academy, get in touch with the team, and move through a calmer public experience."
     }
   },
   "about": {
     "eyebrow": "About the academy",
     "title": "A calmer academy designed to support steady growth.",
-    "description": "Espo Paris Academy is being shaped around clearer discovery, simpler approvals, and a better learning experience for students, teachers, and admins.",
+    "description": "Espo Paris Academy is being shaped around clearer discovery, a more human story, and a public experience that feels calm from the first visit.",
     "sections": {
-      "heroPrimaryCta": "Browse courses",
-      "heroSecondaryCta": "Apply for access",
-      "heroPanelEyebrow": "What shapes the experience",
-      "heroPanelTitle": "Built around clarity",
-      "heroPanelDescription": "Every part of the academy is being refined to feel guided, calm, and easy to trust.",
+      "heroPrimaryCta": "Contact the academy",
+      "heroSecondaryCta": "Return home",
       "galleryEyebrow": "A look inside the academy",
       "galleryTitle": "A more human picture of learning, guidance, and shared progress.",
       "galleryDescription": "The academy should feel as warm and confident as the people inside it. This section gives the page a more lived-in rhythm instead of relying only on explanation.",
-      "galleryCta": "Explore the learning paths",
+      "galleryCta": "Contact the academy",
       "closingEyebrow": "Where it is heading",
       "closingTitle": "A stronger rhythm for the next chapter of the academy.",
       "closingDescription": "The focus now is to keep the academy simple to navigate, supportive to use, and ready for the next wave of students, teachers, and programs."
-    },
-    "foundation": {
-      "serverFirstTitle": "Clear experience",
-      "serverFirstDescription": "Pages feel faster, calmer, and easier to follow from the first visit.",
-      "supabaseTitle": "Trusted access",
-      "supabaseDescription": "Accounts, approvals, and course access stay easier to manage and understand.",
-      "modulesTitle": "Reusable modules",
-      "modulesDescription": "Shared patterns help the academy feel more consistent as it continues to grow."
-    },
-    "grid": {
-      "trustTitle": "Designed for trust",
-      "trustDescription": "Pending approvals, clearer permissions, and cleaner copy remove confusion from the first touchpoint.",
-      "learningTitle": "Built for learning",
-      "learningDescription": "Course pages, media delivery, enrollments, and reviews are focused on the actual learning flow.",
-      "durabilityTitle": "Built for durability",
-      "durabilityDescription": "Clear structure and dependable patterns make future improvements easier to introduce.",
-      "polishTitle": "Built for polish",
-      "polishDescription": "Loading, empty, pending, and unauthorized states are now treated as first-class design surfaces.",
-      "teamsTitle": "Built for teams",
-      "teamsDescription": "Admins can review applications, teachers can manage courses, and students can move through a simpler path.",
-      "changeTitle": "Built for change",
-      "changeDescription": "The academy can keep improving without losing its sense of clarity or cohesion."
     },
     "gallery": {
       "imageOneAlt": "Students collaborating at a shared table.",
@@ -341,7 +114,7 @@
     },
     "closing": {
       "phaseOneTitle": "Phase one focus",
-      "phaseOneDescription": "Right now the focus is on public discovery, teacher flows, student access, and clear admin approvals.",
+      "phaseOneDescription": "Right now the focus is on public discovery, clearer guidance, and a more welcoming academy presence.",
       "removedTitle": "What was removed",
       "removedDescription": "Older flows and duplicated steps were removed so the academy feels simpler and easier to navigate.",
       "nextTitle": "What gets easier next",
@@ -351,7 +124,7 @@
   "contact": {
     "eyebrow": "Contact the academy",
     "title": "Reach the academy through a calmer, clearer contact page.",
-    "description": "Whether you are exploring courses, planning an application, or arranging a visit, the best next step should be easy to find.",
+    "description": "Whether you are discovering the academy, planning a visit, or starting a conversation, the best next step should be easy to find.",
     "sections": {
       "heroPrimaryCta": "See contact options",
       "heroSecondaryCta": "Plan a visit",
@@ -360,16 +133,16 @@
       "methodsDescription": "Different conversations need different paths. These contact points keep the first step simple and easy to trust.",
       "formEyebrow": "Send a message",
       "formTitle": "Write to the academy and expect a clear reply.",
-      "formDescription": "Use the form for longer questions, admissions context, visit requests, or anything that needs a more thoughtful response.",
+      "formDescription": "Use the form for longer questions, visit requests, partnership conversations, or anything that needs a more thoughtful response.",
       "visitEyebrow": "Visit and opening rhythm",
       "visitTitle": "Plan a quieter visit or send a more detailed enquiry.",
-      "visitDescription": "If you are reaching out for admissions, partnerships, or a general introduction, the academy should feel welcoming before anyone even arrives."
+      "visitDescription": "Whether you are reaching out for a visit, a partnership, or a first introduction, the academy should feel welcoming before anyone even arrives."
     },
     "methods": {
       "generalTitle": "General enquiries",
       "generalDescription": "Use this for first questions about the academy, the public site, and where to begin.",
-      "admissionsTitle": "Admissions support",
-      "admissionsDescription": "For applications, role guidance, and questions about joining as a student or teacher.",
+      "partnershipsTitle": "Partnerships",
+      "partnershipsDescription": "Use this for collaborations, events, visiting opportunities, or institutional conversations.",
       "phoneTitle": "Call the academy",
       "phoneDescription": "Use the main line for short questions, scheduling help, or quick follow-up.",
       "visitTitle": "Visit in person",
@@ -380,11 +153,11 @@
       "addressLabel": "Academy address",
       "hoursLabel": "Opening hours",
       "noteTitle": "A note before you arrive",
-      "noteDescription": "If you are planning a visit about admissions, partnerships, or a specific course path, sending a short message first helps the academy prepare the right welcome."
+      "noteDescription": "If you are planning a visit, a collaboration, or a more detailed conversation, sending a short message first helps the academy prepare the right welcome."
     },
     "form": {
       "noteTitle": "A more detailed message works well here",
-      "noteDescription": "If you need guidance about admissions, a visit, or a partnership conversation, share a little context and the academy team can reply more meaningfully.",
+      "noteDescription": "If you need guidance about a visit, a collaboration, or a broader academy conversation, share a little context and the team can reply more meaningfully.",
       "fields": {
         "name": "Name",
         "email": "Email",
@@ -399,152 +172,9 @@
         "pending": "Sending message...",
         "reasonOptions": {
           "general": "General enquiry",
-          "admissions": "Admissions",
           "partnerships": "Partnerships",
           "visit": "Visit planning"
         }
-      }
-    }
-  },
-  "catalog": {
-    "badge": "Catalog focus",
-    "title": "Browse structured learning paths with a cleaner, faster flow.",
-    "description": "Explore published courses through a clearer catalog, useful details, and direct paths into application and enrollment.",
-    "focusEyebrow": "Catalog focus",
-    "focusDescription": "We are keeping the catalog intentionally focused: cleaner cards, faster browsing, stronger empty states, and a direct path into student access.",
-    "surfaceOne": "Focused learning catalog",
-    "surfaceTwo": "Clear course overview",
-    "emptyTitle": "No courses match these filters",
-    "emptyDescription": "Try a broader search, change the level or format, or clear the filters to view the full published catalog.",
-    "filters": {
-      "title": "Catalog filters",
-      "description": "Search by course title and narrow the catalog by format or learning level.",
-      "searchLabel": "Search",
-      "searchPlaceholder": "Search by title...",
-      "format": "Format",
-      "level": "Level",
-      "sort": "Sort",
-      "allFormats": "All formats",
-      "diploma": "Diploma",
-      "bachelors": "Bachelors",
-      "allLevels": "All levels",
-      "beginner": "Beginner",
-      "intermediate": "Intermediate",
-      "advanced": "Advanced",
-      "mostRecent": "Most recent",
-      "titleAsc": "Title A-Z",
-      "topRated": "Top rated"
-    },
-    "noMatchesBadge": "No matches",
-    "card": {
-      "new": "New",
-      "reviews": "reviews",
-      "viewCourse": "View course",
-      "status": {
-        "published": "Published",
-        "draft": "Draft",
-        "archived": "Archived"
-      },
-      "type": {
-        "diploma": "Diploma",
-        "bachelors": "Bachelors"
-      },
-      "level": {
-        "beginner": "Beginner",
-        "intermediate": "Intermediate",
-        "advanced": "Advanced"
-      }
-    }
-  },
-  "dashboard": {
-    "quickActionsTitle": "Quick actions",
-    "nav": {
-      "overview": "Overview",
-      "users": "Users",
-      "courses": "Courses",
-      "profile": "Profile",
-      "enrollments": "Enrollments",
-      "students": "Students",
-      "myCourses": "My courses",
-      "applications": "Applications"
-    },
-    "admin": {
-      "stats": {
-        "users": "Users",
-        "pendingApprovals": "Pending approvals",
-        "teachers": "Teachers",
-        "courses": "Courses"
-      },
-      "summary": {
-        "pendingLabel": "Pending approvals",
-        "pendingDescription": "Accounts still waiting for admin review before they can enter the main workspace.",
-        "mixLabel": "People mix",
-        "mixDescription": "Teacher and student coverage across the current platform roster.",
-        "catalogLabel": "Catalog coverage",
-        "catalogDescription": "Published courses versus the total number of courses in the system.",
-        "narrative": "{totalUsers} total users are currently represented in the rebuilt platform, with {pendingUsers} still waiting on approval before they move into teacher or student workspaces. Published courses and approval status now sit together in one cleaner admin flow."
-      },
-      "pendingTitle": "Pending approvals",
-      "pendingDescription": "Review pending registrations and move them into the active workspace flow.",
-      "pendingAction": "Open full user management",
-      "emptyTitle": "Pending approvals are clear",
-      "emptyDescription": "New student and teacher applications will appear here as soon as they register.",
-      "quick": {
-        "usersLabel": "User management",
-        "usersDescription": "Approve accounts, adjust roles, and inspect teacher or student context.",
-        "coursesLabel": "Course oversight",
-        "coursesDescription": "Track published versus draft programs and monitor public catalog quality.",
-        "profileLabel": "Admin profile",
-        "profileDescription": "Keep your own platform operator profile current inside the rebuilt shell."
-      }
-    },
-    "teacher": {
-      "eyebrow": "Teacher workspace",
-      "title": "Create, publish, and manage your learning tracks.",
-      "description": "This area is built for course operations: reusable forms, media uploads, and enrollment review in one consistent workspace.",
-      "stats": {
-        "courses": "Total courses",
-        "published": "Published",
-        "pendingEnrollments": "Pending enrollments",
-        "approvedStudents": "Approved students"
-      },
-      "recentTitle": "Recent course updates",
-      "recentDescription": "Jump straight back into editing, publishing, and media updates.",
-      "emptyTitle": "No courses yet",
-      "emptyDescription": "Create your first course to begin shaping your teaching experience.",
-      "quick": {
-        "coursesLabel": "Course management",
-        "coursesDescription": "Update drafts, publish programs, and refine course metadata.",
-        "enrollmentsLabel": "Enrollment review",
-        "enrollmentsDescription": "Approve or reject student access requests with a cleaner flow.",
-        "studentsLabel": "Student roster",
-        "studentsDescription": "See approved learners across your currently active courses."
-      }
-    },
-    "student": {
-      "badge": "Student workspace",
-      "active": "active",
-      "pending": "pending",
-      "title": "A focused place to keep learning, track approvals, and jump back into your active courses.",
-      "description": "This workspace puts your learning flow first: approved courses are easy to resume, pending requests stay visible, and every course page gives you a clear path back into the material.",
-      "stats": {
-        "applications": "Applications",
-        "activeCourses": "Active courses",
-        "pending": "Pending"
-      },
-      "recentCourseTitle": "Continue your most recent active course",
-      "recentCourseDescription": "Reopen the learning space first, then move back to your other approved courses when you are ready.",
-      "recentApplicationsTitle": "Recent applications",
-      "recentApplicationsDescription": "Follow the status of your latest enrollment requests and jump back into course pages.",
-      "emptyTitle": "No applications yet",
-      "emptyDescription": "Browse the catalog and apply to your first course to begin the new student flow.",
-      "quick": {
-        "catalogLabel": "Browse catalog",
-        "catalogDescription": "Explore published courses and apply to the next learning path.",
-        "coursesLabel": "Open active courses",
-        "coursesDescription": "Go straight to approved courses and their protected lesson materials.",
-        "applicationsLabel": "Track applications",
-        "applicationsDescription": "Review pending, approved, or rejected enrollment requests in one place."
       }
     }
   },
@@ -552,687 +182,5 @@
     "pageNotFound": "Page not found",
     "goBack": "Go back home",
     "pageNotFoundDescription": "The page you are looking for does not exist or has moved."
-  },
-  "profile": {
-    "identity": {
-      "admin": "Admin identity",
-      "teacher": "Teacher identity",
-      "student": "Student identity"
-    },
-    "form": {
-      "title": "Public profile",
-      "description": "Keep your profile concise and clear so students, teachers, and admins all see the same polished identity.",
-      "fullName": "Full name",
-      "shortBio": "Short bio",
-      "currentCount": "{count}/600 current",
-      "placeholder": "Share a short introduction, teaching background, or learning focus.",
-      "helper": "A strong profile usually explains who you are, what you teach or study, and the focus you bring to the academy.",
-      "save": "Save profile",
-      "saving": "Saving profile...",
-      "updated": "Profile updated.",
-      "updateError": "Unable to update profile."
-    },
-    "avatar": {
-      "title": "Profile image",
-      "description": "Add a square image that stays clear across the workspace and course surfaces.",
-      "helper": "Use a clean square image under 5 MB so it looks sharp across profile cards, dashboards, and course pages.",
-      "upload": "Upload image",
-      "replace": "Replace image",
-      "remove": "Remove image",
-      "uploading": "Uploading...",
-      "updated": "Avatar updated.",
-      "removed": "Avatar removed.",
-      "uploadError": "Unable to upload avatar.",
-      "removeError": "Unable to remove avatar."
-    }
-  },
-  "reviews": {
-    "form": {
-      "rating": "Rating",
-      "comment": "Comment",
-      "placeholder": "Share what worked well, what could improve, and how the course felt overall.",
-      "submit": "Save review",
-      "pending": "Saving review...",
-      "options": {
-        "five": "5 - Outstanding",
-        "four": "4 - Strong",
-        "three": "3 - Good",
-        "two": "2 - Needs work",
-        "one": "1 - Poor"
-      }
-    }
-  },
-  "enrollments": {
-    "card": {
-      "appliedOn": "Applied {date}",
-      "learningLane": "Learning lane",
-      "applicationTrack": "Application track",
-      "teacher": "Teacher: {name}",
-      "assets": "{count} assets",
-      "approved": "Approved",
-      "approvedDescription": "You can open the course page, access approved material, and leave a review.",
-      "rejected": "Rejected",
-      "rejectedDescription": "This application was not approved. You can continue browsing other published courses.",
-      "pending": "Pending",
-      "pendingDescription": "Your request is under review. Access opens automatically after approval.",
-      "activeFlow": "Open and continue learning",
-      "applicationFlow": "Track application status",
-      "continueLearning": "Continue learning",
-      "openCourse": "Open course",
-      "browseMoreCourses": "Browse more courses",
-      "viewLessonAssets": "View lesson assets"
-    },
-    "summary": {
-      "title": "Learning focus",
-      "activeTitle": "Keep moving",
-      "pendingTitle": "Get approved",
-      "activeDescription": "Your active lane is ready. Open {course} first to keep momentum.",
-      "fallbackDescription": "Approved courses will appear here with direct access to protected lesson materials.",
-      "approvedLabel": "Approved",
-      "approvedDescription": "Courses now open for protected material and review access.",
-      "pendingLabel": "Pending review",
-      "pendingDescription": "Applications still waiting on teacher or admin approval.",
-      "rejectedLabel": "Rejected",
-      "rejectedDescription": "Requests that did not move into the active student flow."
-    },
-    "reviewCard": {
-      "appliedOn": "Applied {date}",
-      "reviewedOn": "Reviewed {date}",
-      "reviewLabel": "Enrollment review",
-      "requestingAccess": "Requesting access to {course}",
-      "approved": "Approved",
-      "approvedHelper": "This student already has course access. You can still change the decision if needed.",
-      "rejected": "Rejected",
-      "rejectedHelper": "This request is closed for now, but you can reopen the student path by approving it.",
-      "pending": "Pending",
-      "pendingHelper": "Pending requests are the main queue. Approving unlocks the student course library immediately.",
-      "approve": "Approve",
-      "reject": "Reject",
-      "openCoursePage": "Open course page"
-    }
-  },
-  "operations": {
-    "teacherCourses": {
-      "title": "Course management",
-      "description": "Manage drafts, published programs, and the media attached to each course.",
-      "filtersTitle": "Course filters",
-      "filtersDescription": "Search by title or description, then narrow the course list by status or format.",
-      "searchLabel": "Search courses",
-      "searchPlaceholder": "Search by title or description...",
-      "summary": "Showing {count} of {total} {label}",
-      "status": "Status",
-      "format": "Format",
-      "sort": "Sort",
-      "allStatuses": "All statuses",
-      "draft": "Draft",
-      "published": "Published",
-      "archived": "Archived",
-      "allFormats": "All formats",
-      "diploma": "Diploma",
-      "bachelors": "Bachelors",
-      "mostRecent": "Most recent",
-      "titleAsc": "Title A-Z",
-      "titleDesc": "Title Z-A",
-      "noMatchesBadge": "No matches",
-      "noMatchesTitle": "No courses match these filters",
-      "noMatchesDescription": "Try a broader search or reset the filters to return to the full teaching catalog.",
-      "emptyBadge": "Course management",
-      "emptyTitle": "No teacher courses yet",
-      "emptyDescription": "Create the first course to unlock media uploads and enrollment review.",
-      "label": "courses",
-      "summaryStrip": {
-        "draft": {
-          "label": "Draft courses",
-          "description": "Courses still being prepared before public release."
-        },
-        "published": {
-          "label": "Published courses",
-          "description": "Visible to the public catalog and ready for applications."
-        },
-        "archived": {
-          "label": "Archived courses",
-          "description": "Older programs kept out of the active student flow."
-        }
-      }
-    },
-    "teacherEnrollments": {
-      "badge": "Enrollment review",
-      "title": "Triage student access, approve the right learners, and keep the queue moving.",
-      "description": "Pending requests are grouped first, while recent decisions stay visible below for follow-up and quick corrections.",
-      "pendingLabel": "Pending approvals",
-      "pendingDescription": "Requests that still need a decision from you.",
-      "approvedLabel": "Approved",
-      "approvedDescription": "Students who now have direct course access.",
-      "rejectedLabel": "Rejected",
-      "rejectedDescription": "Requests closed out of the current student flow.",
-      "filtersTitle": "Enrollment filters",
-      "filtersDescription": "Search by learner or course, then narrow the review board by lane or status.",
-      "searchLabel": "Search enrollments",
-      "searchPlaceholder": "Search by student or course...",
-      "summary": "Showing {count} of {total} {label}",
-      "lane": "Lane",
-      "allLanes": "All lanes",
-      "queue": "Pending approvals",
-      "reviewed": "Recent decisions",
-      "status": "Status",
-      "allStatuses": "All statuses",
-      "pending": "Pending",
-      "approved": "Approved",
-      "rejected": "Rejected",
-      "sort": "Sort",
-      "mostRecent": "Most recent",
-      "studentAsc": "Student A-Z",
-      "courseAsc": "Course A-Z",
-      "sectionPendingTitle": "Pending approvals",
-      "sectionPendingDescription": "Review these first so the student learning flow stays responsive.",
-      "sectionReviewedTitle": "Recent decisions",
-      "sectionReviewedDescription": "Keep recent approvals and rejections visible so you can adjust them if needed.",
-      "pendingEmptyTitle": "No pending approvals",
-      "pendingEmptyDescription": "No pending student requests match the current filters.",
-      "noMatchesBadge": "No matches",
-      "noMatchesTitle": "No enrollments match these filters",
-      "noMatchesDescription": "Try a broader search or reset the filters to return to the full enrollment review board.",
-      "emptyBadge": "Enrollment review",
-      "emptyTitle": "No enrollments to review",
-      "emptyDescription": "New student applications for your courses will appear here.",
-      "label": "enrollments"
-    },
-    "teacherStudents": {
-      "badge": "Student roster",
-      "title": "See who is actively learning across your approved course lineup.",
-      "description": "This roster groups approved learners into a cleaner teaching view so you can see course coverage without digging through enrollment decisions.",
-      "approvedLearnersLabel": "Approved learners",
-      "approvedLearnersDescription": "Students currently active in at least one approved course.",
-      "approvedSeatsLabel": "Approved seats",
-      "approvedSeatsDescription": "Total approved enrollments across your course roster.",
-      "multiCourseLabel": "Multi-course learners",
-      "multiCourseDescription": "Students active in more than one approved course.",
-      "filtersTitle": "Roster filters",
-      "filtersDescription": "Search by student or course name, then narrow the roster by coverage level.",
-      "searchLabel": "Search roster",
-      "searchPlaceholder": "Search learners or courses...",
-      "summary": "Showing {count} of {total} {label}",
-      "coverage": "Coverage",
-      "allLearners": "All learners",
-      "singleCourse": "Single course",
-      "multiCourse": "Multi course",
-      "sort": "Sort",
-      "mostCoverage": "Most coverage",
-      "studentAsc": "Student A-Z",
-      "studentDesc": "Student Z-A",
-      "rosterTitle": "Student roster",
-      "noMatchesBadge": "No matches",
-      "noMatchesTitle": "No students match these filters",
-      "noMatchesDescription": "Try a broader search term or reset the filters to bring the full roster back into view.",
-      "emptyBadge": "Student roster",
-      "emptyTitle": "No approved students yet",
-      "emptyDescription": "Once you approve student enrollments, they will be listed here for a quick roster view.",
-      "label": "learners"
-    },
-    "studentCourses": {
-      "badge": "Active courses",
-      "title": "Your approved courses, organized for quick access.",
-      "description": "We keep this page focused on your current learning lane so you can open protected materials faster and stay in momentum once a course is approved.",
-      "filtersTitle": "Active course filters",
-      "filtersDescription": "Search approved courses by title or teacher, then narrow the active list faster.",
-      "searchLabel": "Search active courses",
-      "searchPlaceholder": "Search by course or teacher...",
-      "summary": "Showing {count} of {total} {label}",
-      "sort": "Sort",
-      "mostRecent": "Most recent",
-      "courseAsc": "Course A-Z",
-      "teacherAsc": "Teacher A-Z",
-      "primaryTitle": "Primary active course",
-      "primaryDescription": "Start here to open the protected lesson view, then move through your other approved courses.",
-      "noMatchesBadge": "No matches",
-      "noMatchesTitle": "No active courses match these filters",
-      "noMatchesDescription": "Try a broader search or reset the filters to bring your full approved course list back into view.",
-      "emptyBadge": "Active courses",
-      "emptyTitle": "No active courses yet",
-      "emptyDescription": "Once an enrollment is approved, the course will appear here with direct access to protected materials and a clear path to continue learning.",
-      "label": "courses"
-    },
-    "studentApplications": {
-      "badge": "Application history",
-      "total": "{count} total",
-      "title": "Track every course application in one place.",
-      "description": "This page keeps your pending, approved, and rejected applications together so you can follow each decision without losing the thread.",
-      "filtersTitle": "Application filters",
-      "filtersDescription": "Search by course or teacher, then narrow the applications list by approval state.",
-      "searchLabel": "Search applications",
-      "searchPlaceholder": "Search by course or teacher...",
-      "summary": "Showing {count} of {total} {label}",
-      "status": "Status",
-      "allStatuses": "All statuses",
-      "pending": "Pending",
-      "approved": "Approved",
-      "rejected": "Rejected",
-      "sort": "Sort",
-      "mostRecent": "Most recent",
-      "courseAsc": "Course A-Z",
-      "teacherAsc": "Teacher A-Z",
-      "noMatchesBadge": "No matches",
-      "noMatchesTitle": "No applications match these filters",
-      "noMatchesDescription": "Try a broader search or reset the filters to return to the full application timeline.",
-      "emptyBadge": "Application history",
-      "emptyTitle": "No course applications yet",
-      "emptyDescription": "As soon as you apply to a course, the approval progress will be listed here.",
-      "label": "applications"
-    },
-    "adminUsers": {
-      "title": "User management",
-      "description": "Review the platform roster, approve accounts, and manage roles from one place.",
-      "totalUsersLabel": "Total users",
-      "totalUsersDescription": "Every profile currently represented in the rebuilt platform.",
-      "pendingLabel": "Pending approvals",
-      "pendingDescription": "Users still waiting for role access into the platform workspaces.",
-      "mixLabel": "Teacher / student",
-      "mixDescription": "Current role distribution across the user roster.",
-      "narrative": "This view is the operational source of truth for approvals, role updates, and profile context across the rebuilt academy.",
-      "filtersTitle": "User filters",
-      "filtersDescription": "Search by name, email, or bio, then narrow the roster by role or approval state.",
-      "searchLabel": "Search users",
-      "searchPlaceholder": "Search by name, email, or bio...",
-      "summary": "Showing {count} of {total} {label}",
-      "role": "Role",
-      "allRoles": "All roles",
-      "admin": "Admin",
-      "teacher": "Teacher",
-      "student": "Student",
-      "status": "Status",
-      "allStatuses": "All statuses",
-      "pending": "Pending",
-      "approved": "Approved",
-      "rejected": "Rejected",
-      "sort": "Sort",
-      "newestFirst": "Newest first",
-      "nameAsc": "Name A-Z",
-      "nameDesc": "Name Z-A",
-      "pendingSectionTitle": "Pending approvals",
-      "pendingSectionDescription": "Review these requests first so new users can move into the correct workspace quickly.",
-      "pendingEmptyTitle": "No pending approvals",
-      "pendingEmptyDescription": "The current approval queue is clear. New signup requests will appear here automatically.",
-      "activeSectionTitle": "Active user records",
-      "activeSectionDescription": "Approved and rejected profiles stay here for role updates, audits, and historical review.",
-      "noMatchesBadge": "No matches",
-      "rosterBadge": "User roster",
-      "noMatchesTitle": "No users match these filters",
-      "emptyTitle": "No users found",
-      "noMatchesDescription": "Try a broader search or reset the filters to return to the full roster.",
-      "emptyDescription": "The roster is empty right now. New profiles will appear here once users register.",
-      "label": "users"
-    },
-    "adminCourses": {
-      "badge": "Course oversight",
-      "title": "Review course lanes with a cleaner, consistent view.",
-      "description": "This view keeps drafts, published courses, and archived programs in one place so the operational picture stays clear.",
-      "publishedLabel": "Published courses",
-      "publishedDescription": "Courses currently visible in the public catalog.",
-      "watchlistLabel": "Watchlist courses",
-      "watchlistDescription": "Drafts and published courses that need attention or feedback.",
-      "archivedLabel": "Archived courses",
-      "archivedDescription": "Older courses kept out of the active student flow.",
-      "narrative": "{count} total courses are currently in the rebuilt platform, with admin oversight across public visibility, quality, and teacher-owned catalog growth.",
-      "filtersTitle": "Catalog filters",
-      "filtersDescription": "Search by title, teacher, or description, then narrow the catalog by lane, status, or sort order.",
-      "searchLabel": "Search courses",
-      "searchPlaceholder": "Search by title, teacher, or description...",
-      "summary": "Showing {count} of {total} {label}",
-      "lane": "Lane",
-      "allLanes": "All lanes",
-      "watchlistLane": "Watchlist courses",
-      "liveLane": "Published catalog",
-      "archiveLane": "Archived catalog",
-      "status": "Status",
-      "allStatuses": "All statuses",
-      "draft": "Draft",
-      "published": "Published",
-      "archived": "Archived",
-      "sort": "Sort",
-      "mostRecent": "Most recent",
-      "titleAsc": "Title A-Z",
-      "highestRated": "Highest rated",
-      "watchlistSectionTitle": "Watchlist courses",
-      "watchlistSectionDescription": "Drafts and published courses with no reviews or low feedback are grouped here first.",
-      "watchlistEmptyTitle": "No watchlist items",
-      "watchlistEmptyDescription": "Drafts and low-signal published courses are all clear for now.",
-      "liveSectionTitle": "Published catalog",
-      "liveSectionDescription": "Published courses that are active and not currently flagged for review.",
-      "liveEmptyTitle": "No published catalog courses",
-      "liveEmptyDescription": "Once published courses earn healthy review coverage, they will appear here.",
-      "archiveSectionTitle": "Archived catalog",
-      "archiveSectionDescription": "Archived courses stay available here for historical review and catalog cleanup.",
-      "archiveEmptyTitle": "No archived courses",
-      "archiveEmptyDescription": "Archived courses will appear here when teachers retire older programs.",
-      "noMatchesBadge": "No matches",
-      "noMatchesTitle": "No courses match these filters",
-      "noMatchesDescription": "Try a broader search or reset the filters to return to the full admin catalog view.",
-      "emptyBadge": "Course oversight",
-      "emptyTitle": "No courses in the platform yet",
-      "emptyDescription": "As teachers start building the new academy catalog, every course will appear here for oversight.",
-      "label": "courses"
-    }
-  },
-  "courseDetail": {
-    "accessTitle": "Access and enrollment",
-    "guestTitle": "Guest preview",
-    "guestDescription": "Sign in to submit an application and unlock protected lessons after approval.",
-    "notStartedTitle": "Application not started",
-    "notStartedDescription": "Use the learning hub to submit your application, then return here to track the approval flow.",
-    "applicationStatus": "Application status: {status}",
-    "approvedDescription": "Your access is open. The lesson library and review form are ready below.",
-    "pendingDescription": "Your application is under review. We will unlock the library as soon as it is approved.",
-    "managerDescription": "You can access protected media because you are managing this course or operating as an admin.",
-    "approvedNotice": "Your access is approved. Open the lesson assets in sequence, then return here to leave a review and continue exploring.",
-    "feedbackTitle": "Student feedback",
-    "noComment": "No written comment left.",
-    "noReviews": "No reviews yet. The first approved student review will appear here.",
-    "relatedEyebrow": "Continue exploring",
-    "relatedTitle": "Related courses",
-    "relatedDescription": "Nearby learning paths with a similar level or format, so students can keep moving without hitting a dead end.",
-    "hero": {
-      "teacherLabel": "Teacher",
-      "durationLabel": "Duration",
-      "ratingLabel": "Rating",
-      "newLabel": "New",
-      "reviewsSuffix": "reviews",
-      "instructorLabel": "Instructor",
-      "instructorDescription": "Structured teaching access, protected lesson delivery, and approval-aware enrollment are all built into this course flow.",
-      "expectLabel": "What to expect",
-      "expectations": {
-        "first": "Approval-aware access for protected material",
-        "second": "Server-rendered course and review surfaces",
-        "third": "Private media with signed delivery",
-        "fourth": "Reusable student enrollment flow"
-      },
-      "types": {
-        "diploma": "Diploma",
-        "bachelors": "Bachelors"
-      },
-      "levels": {
-        "beginner": "Beginner",
-        "intermediate": "Intermediate",
-        "advanced": "Advanced"
-      },
-      "statuses": {
-        "draft": "Draft",
-        "published": "Published",
-        "archived": "Archived"
-      }
-    },
-    "learning": {
-      "hubLabel": "Course overview",
-      "metrics": {
-        "lessons": "Lessons",
-        "reviews": "Reviews",
-        "access": "Access"
-      },
-      "nextSteps": "Next steps",
-      "step": "Step {number}",
-      "actions": {
-        "signIn": "Sign in",
-        "viewApplications": "View applications",
-        "openCourses": "Open courses",
-        "openWorkspace": "Open workspace"
-      },
-      "access": {
-        "guest": "Guest",
-        "notApplied": "Not applied",
-        "pending": "Pending",
-        "approved": "Approved",
-        "rejected": "Rejected",
-        "teacher": "Teacher",
-        "admin": "Admin"
-      },
-      "panels": {
-        "guest": {
-          "badge": "Welcome",
-          "title": "Start with the course roadmap",
-          "description": "Sign in, apply, and follow the approval flow. Once access is granted, the course assets unlock here.",
-          "nextStep": "Sign in to continue",
-          "helper": "You can still explore the public information on this page before logging in."
-        },
-        "studentNotApplied": {
-          "badge": "Ready to apply",
-          "title": "Apply first, then learn",
-          "description": "Sign up for the course, wait for approval, and the protected lesson library will open from this same page.",
-          "nextStep": "Submit application",
-          "helper": "The review and lesson areas stay locked until an admin approves the enrollment."
-        },
-        "studentPending": {
-          "badge": "Awaiting review",
-          "title": "Your request is waiting for review",
-          "description": "We have your application on record. Once it is approved, the lesson library and review form unlock automatically.",
-          "nextStep": "View application status",
-          "helper": "Keep an eye on the applications page while you wait. You do not need to reapply."
-        },
-        "studentApproved": {
-          "badge": "You are approved",
-          "title": "Follow the lesson path",
-          "description": "Open the lesson library, work through the protected material, then return here to leave a review or continue with related courses.",
-          "nextStep": "Open lesson library",
-          "helper": "Your approved enrollment unlocks the assets below. Start at the top and move lesson by lesson."
-        },
-        "teacher": {
-          "badge": "Teaching mode",
-          "title": "Review the course like a learner would",
-          "description": "Use this page to validate lesson order, media coverage, and the learner-facing journey before publishing updates.",
-          "nextStep": "Open workspace",
-          "helper": "You can manage media and enrollment tools from your workspace."
-        },
-        "admin": {
-          "badge": "Admin mode",
-          "title": "Audit the learner flow",
-          "description": "Check the sequence, protected media presentation, and enrollment path as part of platform oversight.",
-          "nextStep": "Open workspace",
-          "helper": "As an admin you can access this course and continue to the broader management area from your workspace."
-        }
-      },
-      "steps": {
-        "guest": {
-          "first": "Sign in with a student account.",
-          "second": "Apply for the course and wait for approval.",
-          "third": "Open the lesson library after access is granted."
-        },
-        "studentNotApplied": {
-          "first": "Submit your course application.",
-          "second": "Wait for the admin review to complete.",
-          "third": "Begin learning when the lesson library unlocks."
-        },
-        "studentPending": {
-          "first": "Your application is saved.",
-          "second": "Wait for approval email and status updates.",
-          "third": "Return to this page once the library unlocks."
-        },
-        "studentApproved": {
-          "first": "Open the lesson library and start from the top.",
-          "second": "Work through the protected files in sequence.",
-          "third": "Leave a review once you complete the material."
-        },
-        "manager": {
-          "first": "Review the learner-facing lesson order.",
-          "second": "Check the protected media presentation.",
-          "third": "Use the workspace to update or manage the course."
-        }
-      }
-    },
-    "media": {
-      "open": "Open",
-      "locked": "Locked",
-      "lessonCount": "{count} lessons",
-      "lessonLabel": "Lesson {number}",
-      "openAsset": "Open asset",
-      "protectedAfterApproval": "Protected after approval",
-      "empty": "No lesson assets are available yet. They will appear here as soon as the course team uploads them.",
-      "kind": {
-        "video": "Video",
-        "document": "Document"
-      },
-      "states": {
-        "guest": {
-          "title": "Protected lesson library",
-          "description": "Sign in and apply to unlock these lesson assets after approval.",
-          "helper": "The public view stays locked until enrollment is approved."
-        },
-        "studentNotApplied": {
-          "title": "Apply to unlock lessons",
-          "description": "Once your application is approved, these lessons become available here.",
-          "helper": "Submit an application to begin the access flow."
-        },
-        "studentPending": {
-          "title": "Lesson library is waiting for approval",
-          "description": "The course assets are ready, but they will unlock after enrollment approval.",
-          "helper": "Check your applications page for status updates."
-        },
-        "studentApproved": {
-          "title": "Protected lesson library",
-          "description": "You can open each lesson in order. Start at the top and continue through the sequence.",
-          "helper": "Approved students can access the media directly."
-        },
-        "manager": {
-          "title": "Managed lesson library",
-          "description": "Use this view to review the protected media sequence and verify the learner experience.",
-          "helper": "You have direct access because you manage this course."
-        }
-      }
-    }
-  },
-  "admin": {
-    "courseCard": {
-      "reviewPriority": "Review priority",
-      "teacherLabel": "Teacher",
-      "catalogSignalLabel": "Catalog signal",
-      "reviewsLabel": "Reviews",
-      "durationLabel": "Duration",
-      "openCoursePage": "Open course page",
-      "reviewOwnerProfile": "Review owner profile",
-      "signals": {
-        "draft": {
-          "label": "Draft",
-          "description": "Not live yet. Review before publishing."
-        },
-        "archived": {
-          "label": "Archived",
-          "description": "Kept for history and cleanup."
-        },
-        "new": {
-          "label": "New",
-          "description": "Published but still gathering feedback."
-        },
-        "watch": {
-          "label": "Watch",
-          "description": "Published, but review quality is below target."
-        },
-        "healthy": {
-          "label": "Healthy",
-          "description": "Published with steady learner feedback."
-        }
-      },
-      "statuses": {
-        "draft": "Draft",
-        "published": "Published",
-        "archived": "Archived"
-      },
-      "types": {
-        "diploma": "Diploma",
-        "bachelors": "Bachelors"
-      },
-      "levels": {
-        "beginner": "Beginner",
-        "intermediate": "Intermediate",
-        "advanced": "Advanced"
-      }
-    },
-    "userCard": {
-      "unknown": "Unknown",
-      "noBio": "No public bio has been added yet.",
-      "emailUnavailable": "Email unavailable",
-      "contactLabel": "Contact",
-      "roleLabel": "Role",
-      "approvalLabel": "Approval",
-      "timelineLabel": "Timeline",
-      "submittedDate": "Submitted {date}",
-      "studentContextLabel": "Student context",
-      "interestLabel": "Interest",
-      "notSpecified": "Not specified",
-      "previousStudyExperience": "Previous study experience",
-      "previousStudyDetails": "Previous study details",
-      "yes": "Yes",
-      "no": "No",
-      "statuses": {
-        "pending": "Pending",
-        "approved": "Approved",
-        "rejected": "Rejected"
-      }
-    }
-  },
-  "courses": {
-    "editor": {
-      "titleLabel": "Course title",
-      "descriptionLabel": "Description",
-      "typeLabel": "Type",
-      "levelLabel": "Level",
-      "durationLabel": "Duration label",
-      "durationDefault": "8 weeks",
-      "statusLabel": "Status",
-      "save": "Save changes",
-      "create": "Create course",
-      "saving": "Saving course...",
-      "types": {
-        "diploma": "Diploma",
-        "bachelors": "Bachelors"
-      },
-      "levels": {
-        "beginner": "Beginner",
-        "intermediate": "Intermediate",
-        "advanced": "Advanced"
-      },
-      "statuses": {
-        "draft": "Draft",
-        "published": "Published",
-        "archived": "Archived"
-      }
-    },
-    "mediaManager": {
-      "titleLabel": "Media title",
-      "kindLabel": "Kind",
-      "fileLabel": "File",
-      "thumbnailLabel": "Optional thumbnail",
-      "helper": "Upload videos up to 250 MB or add course documents with an optional cover image for a cleaner lesson library.",
-      "upload": "Upload asset",
-      "uploading": "Uploading...",
-      "uploadSuccess": "Course media uploaded.",
-      "uploadError": "Unable to upload media.",
-      "save": "Save",
-      "updated": "Updated {title}.",
-      "lessonNumber": "Lesson {number}",
-      "approxMinutes": "Approx. {count} min",
-      "privateAsset": "Private course asset",
-      "moveUp": "Move up",
-      "movedUp": "Moved {title} up.",
-      "moveDown": "Move down",
-      "movedDown": "Moved {title} down.",
-      "openAsset": "Open asset",
-      "delete": "Delete",
-      "removed": "Removed {title}.",
-      "empty": "No lesson assets yet. Upload the first file to start building the lesson library.",
-      "kind": {
-        "document": "Document",
-        "video": "Video"
-      }
-    },
-    "thumbnail": {
-      "title": "Course thumbnail",
-      "empty": "No cover image yet",
-      "upload": "Upload cover image",
-      "replace": "Replace cover image",
-      "remove": "Remove cover image",
-      "uploading": "Uploading...",
-      "helper": "Use a landscape image under 8 MB for the cleanest catalog card and course detail presentation.",
-      "updated": "Course thumbnail updated.",
-      "removed": "Course thumbnail removed.",
-      "updateError": "Unable to update course thumbnail.",
-      "removeError": "Unable to remove course thumbnail."
-    }
   }
 }

@@ -1,5 +1,4 @@
 import { routing } from "@/i18n/routing";
-import type { AppRole, ApprovalStatus } from "@/lib/types/database";
 
 export const localeDirection: Record<string, "ltr" | "rtl"> = {
   en: "ltr",
@@ -10,16 +9,9 @@ export const localeDirection: Record<string, "ltr" | "rtl"> = {
 
 export const publicNavLinks = [
   { href: "/", key: "home" },
-  { href: "/courses", key: "courses" },
   { href: "/about", key: "about" },
   { href: "/contact", key: "contact" },
 ] as const;
-
-export const approvalLabels: Record<ApprovalStatus, string> = {
-  pending: "Pending review",
-  approved: "Approved",
-  rejected: "Rejected",
-};
 
 export function isValidLocale(locale: string) {
   return routing.locales.includes(locale as (typeof routing.locales)[number]);

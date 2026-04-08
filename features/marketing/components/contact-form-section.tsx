@@ -2,8 +2,7 @@
 
 import { useFormState } from "react-dom";
 import { MessageSquareText } from "lucide-react";
-import { submitContactInquiryAction } from "@/features/marketing/actions";
-import type { ActionState } from "@/features/auth/actions";
+import { submitContactInquiryAction, type ActionState } from "@/features/marketing/actions";
 import { SubmitButton } from "@/components/shared/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -27,7 +26,6 @@ type Props = {
     reason: string;
     reasonOptions: {
       general: string;
-      admissions: string;
       partnerships: string;
       visit: string;
     };
@@ -109,7 +107,6 @@ export function ContactFormSection({
                 <Label htmlFor="reason">{fields.reason}</Label>
                 <Select id="reason" name="reason" defaultValue="general" size="lg">
                   <option value="general">{fields.reasonOptions.general}</option>
-                  <option value="admissions">{fields.reasonOptions.admissions}</option>
                   <option value="partnerships">{fields.reasonOptions.partnerships}</option>
                   <option value="visit">{fields.reasonOptions.visit}</option>
                 </Select>
