@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Espo Paris Academy",
   shortName: "Espo Paris",
-  url: "https://espoparis.com",
+  url: "https://www.espoparis.com",
   description:
     "A clear academy home for learning, teaching, and thoughtful growth.",
   category: "education",
