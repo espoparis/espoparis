@@ -1,0 +1,18 @@
+-- Seed scaffold for the Supabase-only rebuild.
+--
+-- Keep this file focused on stable bootstrap data only.
+-- Recommended flow:
+-- 1. Create the first admin auth user manually in local Supabase or the dashboard.
+-- 2. Let the auth trigger create the matching `profiles` row.
+-- 3. Approve that profile as admin.
+--
+-- Example:
+-- update public.profiles
+-- set role = 'admin', approval_status = 'approved'
+-- where id = (
+--   select id
+--   from auth.users
+--   where email = 'admin@example.com'
+-- );
+--
+-- Add any stable demo rows only after the schema is locked.

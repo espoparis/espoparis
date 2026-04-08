@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: var(--font-body), "Avenir Next", "Segoe UI", sans-serif;
+    --font-display: var(--font-sans);
+    --background: 210 20% 97%;
+    --foreground: 220 27% 12%;
+    --card: 210 22% 99%;
+    --card-foreground: 220 27% 12%;
+    --popover: 210 22% 99%;
+    --popover-foreground: 220 27% 12%;
+    --primary: 201 66% 44%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 15% 93%;
+    --secondary-foreground: 220 21% 20%;
+    --muted: 210 14% 94%;
+    --muted-foreground: 217 12% 40%;
+    --accent: 174 34% 43%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 68% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 18% 86%;
+    --input: 214 18% 86%;
+    --ring: 201 66% 44%;
+    --radius: 1.25rem;
+    --surface-soft: 210 22% 98%;
+    --surface-strong: 210 20% 99%;
+    --surface-ink: 220 24% 15%;
+    --shadow-soft: 0 24px 70px -36px hsl(220 30% 12% / 0.12);
+    --shadow-panel:
+      0 0 0 1px hsl(var(--border) / 0.52),
+      0 22px 60px -30px hsl(220 30% 12% / 0.12);
+    --section-space: clamp(4rem, 7vw, 7rem);
+  }
+
+  .dark {
+    --background: 220 24% 8%;
+    --foreground: 210 20% 92%;
+    --card: 220 18% 11%;
+    --card-foreground: 210 20% 92%;
+    --popover: 220 18% 11%;
+    --popover-foreground: 210 20% 92%;
+    --primary: 198 72% 63%;
+    --primary-foreground: 220 34% 8%;
+    --secondary: 218 14% 17%;
+    --secondary-foreground: 210 18% 90%;
+    --muted: 218 14% 16%;
+    --muted-foreground: 214 12% 68%;
+    --accent: 174 38% 54%;
+    --accent-foreground: 220 34% 8%;
+    --destructive: 0 74% 60%;
+    --destructive-foreground: 220 34% 8%;
+    --border: 218 14% 22%;
+    --input: 218 14% 22%;
+    --ring: 198 72% 63%;
+    --surface-soft: 220 18% 11%;
+    --surface-strong: 220 17% 13%;
+    --surface-ink: 210 20% 92%;
+    --shadow-soft: 0 24px 70px -36px hsl(220 40% 3% / 0.48);
+    --shadow-panel:
+      0 0 0 1px hsl(var(--border) / 0.68),
+      0 18px 54px -26px hsl(220 40% 3% / 0.5);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    font-family: var(--font-sans), sans-serif;
+    font-feature-settings: "liga", "kern";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer utilities {
+  .page-shell {
+    @apply mx-auto w-full max-w-[112rem] px-6 md:px-10 lg:px-14 xl:px-16;
+  }
+
+  .full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  .frame-gutter {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-space {
+    margin-top: var(--section-space);
+  }
+
+  .stack-section {
+    @apply space-y-6 lg:space-y-8;
+  }
+
+  .surface-panel {
+    background: hsl(var(--surface-soft) / 0.86);
+    box-shadow: var(--shadow-panel);
+    @apply rounded-[1.75rem] border border-border/70 backdrop-blur-xl;
+  }
+
+  .surface-panel-strong {
+    background: hsl(var(--surface-strong) / 0.96);
+    box-shadow: var(--shadow-panel);
+    @apply rounded-[2rem] border border-border/70 backdrop-blur-xl;
+  }
+
+  .surface-subtle {
+    @apply rounded-[1.35rem] border border-border/60 bg-background/70;
+  }
+
+  .surface-accent {
+    background: hsl(var(--primary) / 0.06);
+    @apply rounded-[1.75rem] border border-border/60;
+  }
+
+  .panel-grid {
+    @apply grid gap-4 lg:gap-5;
+  }
+
+  .content-cluster {
+    @apply space-y-6 lg:space-y-8;
+  }
+
+  .metric-strip {
+    @apply grid gap-3 sm:grid-cols-2 xl:grid-cols-3;
+  }
+
+  .metric-tile {
+    @apply surface-subtle p-4 sm:p-5;
+  }
+
+  .inset-panel {
+    @apply rounded-[1.35rem] border border-border/60 bg-background/70 p-4 sm:p-5;
+  }
+
+  .form-stack {
+    @apply space-y-5;
+  }
+
+  .field-stack {
+    @apply space-y-2;
+  }
+
+  .content-measure {
+    @apply max-w-3xl;
+  }
+
+  .section-eyebrow {
+    @apply text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-primary;
+  }
+
+  .hairline-divider {
+    @apply h-px w-full bg-border/70;
+  }
+
+  .surface-grid {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.18) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.18) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .hero-glow {
+    box-shadow:
+      0 0 0 1px hsl(var(--border) / 0.45),
+      0 30px 80px hsl(var(--primary) / 0.18);
+  }
+
+  .glass-surface {
+    @apply surface-panel;
+  }
+
+  .display-shadow {
+    box-shadow: var(--shadow-soft);
+  }
+}
