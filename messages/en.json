@@ -301,9 +301,10 @@
       "heroPanelEyebrow": "What shapes the experience",
       "heroPanelTitle": "Built around clarity",
       "heroPanelDescription": "Every part of the academy is being refined to feel guided, calm, and easy to trust.",
-      "valuesEyebrow": "What defines the academy",
-      "valuesTitle": "A clearer standard for learning, teaching, and daily progress.",
-      "valuesDescription": "From first discovery to approved access, every part of the experience is meant to feel more thoughtful, consistent, and easy to follow.",
+      "galleryEyebrow": "A look inside the academy",
+      "galleryTitle": "A more human picture of learning, guidance, and shared progress.",
+      "galleryDescription": "The academy should feel as warm and confident as the people inside it. This section gives the page a more lived-in rhythm instead of relying only on explanation.",
+      "galleryCta": "Explore the learning paths",
       "closingEyebrow": "Where it is heading",
       "closingTitle": "A stronger rhythm for the next chapter of the academy.",
       "closingDescription": "The focus now is to keep the academy simple to navigate, supportive to use, and ready for the next wave of students, teachers, and programs."
@@ -329,6 +330,13 @@
       "teamsDescription": "Admins can review applications, teachers can manage courses, and students can move through a simpler path.",
       "changeTitle": "Built for change",
       "changeDescription": "The academy can keep improving without losing its sense of clarity or cohesion."
+    },
+    "gallery": {
+      "imageOneAlt": "Students collaborating at a shared table.",
+      "imageTwoAlt": "A teacher leading a class discussion.",
+      "imageThreeAlt": "Learners focused during a workshop session.",
+      "imageFourAlt": "A creative studio moment inside the academy.",
+      "imageFiveAlt": "Students working together in a modern learning space."
     },
     "closing": {
       "phaseOneTitle": "Phase one focus",

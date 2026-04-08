@@ -294,49 +294,57 @@
   "about": {
     "eyebrow": "À propos de l’académie",
     "title": "Une académie plus calme, pensée pour accompagner une croissance sereine.",
-    "description": "Espo Paris Academy evolue autour d’une decouverte plus claire, d’approbations plus simples et d’une meilleure experience pour les etudiants, les enseignants et les admins.",
+    "description": "Espo Paris Academy evolue autour d’une decouverte plus claire, d’approbations plus simples et d’un parcours d’apprentissage plus attentif pour les etudiants, les enseignants et les familles.",
     "sections": {
       "heroPrimaryCta": "Parcourir les cours",
       "heroSecondaryCta": "Demander l’acces",
       "heroPanelEyebrow": "Ce qui faconne l’experience",
       "heroPanelTitle": "Pensee autour de la clarte",
       "heroPanelDescription": "Chaque partie de l’academie est peaufinee pour sembler guidee, calme et facile a comprendre.",
-      "valuesEyebrow": "Ce qui definit l’academie",
-      "valuesTitle": "Une norme plus claire pour apprendre, enseigner et progresser chaque jour.",
-      "valuesDescription": "De la premiere decouverte a l’acces approuve, chaque etape est pensee pour sembler plus coherente, plus attentive et plus simple a suivre.",
+      "galleryEyebrow": "Un regard sur l’academie",
+      "galleryTitle": "Une image plus humaine de l’apprentissage, de l’accompagnement et du progres partage.",
+      "galleryDescription": "L’academie doit sembler aussi chaleureuse et assuree que les personnes qui l’animent. Cette section donne a la page un rythme plus vivant que le texte seul.",
+      "galleryCta": "Explorer les parcours",
       "closingEyebrow": "La suite",
       "closingTitle": "Un rythme plus solide pour le prochain chapitre de l’academie.",
       "closingDescription": "La priorite est maintenant de garder l’academie simple a parcourir, agreable a utiliser et prete pour les prochaines promotions, les enseignants et les programmes."
     },
     "foundation": {
-      "serverFirstTitle": "Experience claire",
-      "serverFirstDescription": "Les pages paraissent plus rapides, plus calmes et plus faciles a suivre des la premiere visite.",
-      "supabaseTitle": "Acces de confiance",
-      "supabaseDescription": "Les comptes, les validations et l’acces aux cours restent plus simples a comprendre et a gerer.",
-      "modulesTitle": "Modules réutilisables",
-      "modulesDescription": "Des modeles partages aident l’academie a rester coherente au fil de sa croissance."
+      "serverFirstTitle": "Decouverte claire",
+      "serverFirstDescription": "Les visiteurs peuvent comprendre l’academie rapidement et avancer vers la bonne suite avec confiance.",
+      "supabaseTitle": "Orientation attentive",
+      "supabaseDescription": "Les demandes, les validations et l’acces sont presentes d’une facon plus calme et plus simple a suivre.",
+      "modulesTitle": "Experience coherente",
+      "modulesDescription": "Le meme rythme visuel traverse les pages publiques, le catalogue et les parcours de compte."
     },
     "grid": {
       "trustTitle": "Pensé pour la confiance",
       "trustDescription": "Les approbations en attente, les permissions plus claires et un meilleur texte réduisent la confusion dès le premier contact.",
       "learningTitle": "Pensé pour l’apprentissage",
       "learningDescription": "Les pages de cours, la livraison des médias, les inscriptions et les avis se concentrent sur le vrai parcours d’apprentissage.",
-      "durabilityTitle": "Pensé pour durer",
-      "durabilityDescription": "Une structure claire et des modeles fiables rendent les futures ameliorations plus faciles a introduire.",
-      "polishTitle": "Pensé pour la finition",
-      "polishDescription": "Les états de chargement, vide, attente et accès refusé sont désormais traités comme des surfaces de design à part entière.",
-      "teamsTitle": "Pensé pour les équipes",
-      "teamsDescription": "Les admins peuvent examiner les demandes, les enseignants gérer les cours et les étudiants suivre un parcours plus simple.",
-      "changeTitle": "Pensé pour le changement",
-      "changeDescription": "L’academie peut continuer a s’ameliorer sans perdre sa clarte ni son unite."
+      "durabilityTitle": "Pensé pour guider",
+      "durabilityDescription": "Chaque partie de l’academie aide les personnes a comprendre ou elles sont et quelle est la prochaine etape.",
+      "polishTitle": "Pensé avec soin",
+      "polishDescription": "Les chargements, les moments vides et les transitions font partie de l’experience globale et ne sont plus secondaires.",
+      "teamsTitle": "Pensé pour les personnes",
+      "teamsDescription": "Les etudiants, les enseignants et les admins suivent chacun un parcours plus simple et plus intentionnel.",
+      "changeTitle": "Pensé pour evoluer",
+      "changeDescription": "L’academie peut continuer a progresser sans perdre sa chaleur, sa clarte ni sa direction."
+    },
+    "gallery": {
+      "imageOneAlt": "Des etudiants collaborent autour d’une table.",
+      "imageTwoAlt": "Un enseignant anime une discussion en classe.",
+      "imageThreeAlt": "Des apprenants concentres pendant un atelier.",
+      "imageFourAlt": "Un moment creatif dans l’academie.",
+      "imageFiveAlt": "Des etudiants travaillent ensemble dans un espace moderne."
     },
     "closing": {
-      "phaseOneTitle": "Priorité de la phase un",
-      "phaseOneDescription": "En ce moment, la priorite va a la decouverte publique, aux flux enseignant, a l’acces etudiant et aux validations admin plus claires.",
-      "removedTitle": "Ce qui a été supprimé",
-      "removedDescription": "Les anciens parcours et les etapes dupliquees ont ete retires pour rendre l’academie plus simple a comprendre et a parcourir.",
-      "nextTitle": "Ce qui devient plus facile ensuite",
-      "nextDescription": "Maintenant que les parcours principaux sont plus clairs, les prochaines ameliorations autour de la communication, de l’accompagnement et de l’experience globale pourront arriver plus naturellement."
+      "phaseOneTitle": "Ce qui compte aujourd’hui",
+      "phaseOneDescription": "La priorite est une presence publique plus claire, des validations plus simples et un acces plus direct a l’apprentissage.",
+      "removedTitle": "Ce qui semble plus leger",
+      "removedDescription": "Les etapes inutiles et les moments de confusion diminuent pour rendre l’academie plus simple a parcourir.",
+      "nextTitle": "La suite",
+      "nextDescription": "Le prochain chapitre consiste a enrichir la communication, renforcer l’accompagnement et rendre chaque partie de l’academie encore plus complete."
     }
   },
   "catalog": {

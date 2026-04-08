@@ -4,7 +4,7 @@ import { PublicStatsStrip } from "@/features/marketing/components/public-stats-s
 import { SetupAlert } from "@/components/shared/setup-alert";
 import { AboutClosingSection } from "@/features/marketing/components/about-closing-section";
 import { AboutHero } from "@/features/marketing/components/about-hero";
-import { AboutValuesGrid } from "@/features/marketing/components/about-values-grid";
+import { PhotoGallery } from "@/components/ui/gallery";
 import { isSupabaseConfigured } from "@/lib/env";
 import { getPublicCatalogStats } from "@/server/queries/marketing";
 
@@ -14,7 +14,7 @@ export default async function AboutPage({ params }: { params: { locale: string }
   const stats = configured ? await getPublicCatalogStats() : null;
 
   return (
-    <div className="flex flex-1 flex-col pt-4 lg:pt-6">
+    <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
       <AboutHero
         locale={params.locale}
         eyebrow={t("eyebrow")}
@@ -22,23 +22,6 @@ export default async function AboutPage({ params }: { params: { locale: string }
         description={t("description")}
         primaryCta={t("sections.heroPrimaryCta")}
         secondaryCta={t("sections.heroSecondaryCta")}
-        panelEyebrow={t("sections.heroPanelEyebrow")}
-        panelTitle={t("sections.heroPanelTitle")}
-        panelDescription={t("sections.heroPanelDescription")}
-        items={[
-          {
-            title: t("foundation.serverFirstTitle"),
-            description: t("foundation.serverFirstDescription"),
-          },
-          {
-            title: t("foundation.supabaseTitle"),
-            description: t("foundation.supabaseDescription"),
-          },
-          {
-            title: t("foundation.modulesTitle"),
-            description: t("foundation.modulesDescription"),
-          },
-        ]}
       />
 
       <PageFrame className="py-10 lg:py-14">
@@ -48,36 +31,35 @@ export default async function AboutPage({ params }: { params: { locale: string }
         </section>
 
         <section className="section-space">
-          <AboutValuesGrid
-            eyebrow={t("sections.valuesEyebrow")}
-            title={t("sections.valuesTitle")}
-            description={t("sections.valuesDescription")}
-            items={[
-            {
-              title: t("grid.trustTitle"),
-              description: t("grid.trustDescription"),
-            },
-            {
-              title: t("grid.learningTitle"),
-              description: t("grid.learningDescription"),
-            },
-            {
-              title: t("grid.durabilityTitle"),
-              description: t("grid.durabilityDescription"),
-            },
-            {
-              title: t("grid.polishTitle"),
-              description: t("grid.polishDescription"),
-            },
-            {
-              title: t("grid.teamsTitle"),
-              description: t("grid.teamsDescription"),
-            },
-            {
-              title: t("grid.changeTitle"),
-              description: t("grid.changeDescription"),
-            },
-          ]}
+          <PhotoGallery
+            locale={params.locale}
+            eyebrow={t("sections.galleryEyebrow")}
+            title={t("sections.galleryTitle")}
+            description={t("sections.galleryDescription")}
+            ctaLabel={t("sections.galleryCta")}
+            ctaHref="/courses"
+            images={[
+              {
+                src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+                alt: t("gallery.imageOneAlt"),
+              },
+              {
+                src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
+                alt: t("gallery.imageTwoAlt"),
+              },
+              {
+                src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
+                alt: t("gallery.imageThreeAlt"),
+              },
+              {
+                src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+                alt: t("gallery.imageFourAlt"),
+              },
+              {
+                src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+                alt: t("gallery.imageFiveAlt"),
+              },
+            ]}
           />
         </section>
 
