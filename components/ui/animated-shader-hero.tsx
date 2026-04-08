@@ -172,7 +172,7 @@ function withAlpha([r, g, b]: RgbTuple, alpha: number) {
 
 class WebGLRenderer {
   private canvas: HTMLCanvasElement;
-  private gl: WebGL2RenderingContext;
+  private gl: WebGL2RenderingContext | null;
   private program: RendererProgram | null = null;
   private vs: WebGLShader | null = null;
   private fs: WebGLShader | null = null;
@@ -196,8 +196,12 @@ void main() { gl_Position = position; }`;
   constructor(canvas: HTMLCanvasElement, scale: number) {
     this.canvas = canvas;
     this.scale = scale;
-    this.gl = canvas.getContext("webgl2") as WebGL2RenderingContext;
-    this.gl.viewport(0, 0, canvas.width * scale, canvas.height * scale);
+    this.gl = canvas.getContext("webgl2");
+    this.gl?.viewport(0, 0, canvas.width * scale, canvas.height * scale);
+  }
+
+  isSupported() {
+    return this.gl !== null;
   }
 
   updateMove(deltas: number[]) {
@@ -217,6 +221,7 @@ void main() { gl_Position = position; }`;
   }
 
   updateScale(scale: number) {
+    if (!this.gl) return;
     this.scale = scale;
     this.gl.viewport(
       0,
@@ -233,12 +238,14 @@ void main() { gl_Position = position; }`;
 
   compile(shader: WebGLShader, source: string) {
     const gl = this.gl;
+    if (!gl) return;
     gl.shaderSource(shader, source);
     gl.compileShader(shader);
   }
 
   test(source: string) {
     const gl = this.gl;
+    if (!gl) return "WebGL2 is not available";
     const shader = gl.createShader(gl.FRAGMENT_SHADER);
     if (!shader) return "Shader creation failed";
     gl.shaderSource(shader, source);
@@ -252,6 +259,7 @@ void main() { gl_Position = position; }`;
 
   reset() {
     const gl = this.gl;
+    if (!gl) return;
     if (
       this.program &&
       !gl.getProgramParameter(this.program, gl.DELETE_STATUS)
@@ -270,6 +278,7 @@ void main() { gl_Position = position; }`;
 
   setup() {
     const gl = this.gl;
+    if (!gl) return;
     this.vs = gl.createShader(gl.VERTEX_SHADER);
     this.fs = gl.createShader(gl.FRAGMENT_SHADER);
     this.program = gl.createProgram() as RendererProgram | null;
@@ -285,7 +294,7 @@ void main() { gl_Position = position; }`;
   init() {
     const gl = this.gl;
     const program = this.program;
-    if (!program) return;
+    if (!gl || !program) return;
 
     this.buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, this.buffer);
@@ -312,7 +321,7 @@ void main() { gl_Position = position; }`;
   render(now = 0) {
     const gl = this.gl;
     const program = this.program;
-    if (!program) return;
+    if (!gl || !program) return;
 
     gl.clearColor(0, 0, 0, 1);
     gl.clear(gl.COLOR_BUFFER_BIT);
@@ -436,6 +445,10 @@ function useShaderBackground() {
     };
 
     rendererRef.current = new WebGLRenderer(canvas, dpr);
+    if (!rendererRef.current.isSupported()) {
+      return;
+    }
+
     (
       canvas as HTMLCanvasElement & {
         __shaderRenderer?: WebGLRenderer;
