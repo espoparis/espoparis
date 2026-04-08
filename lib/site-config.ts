@@ -1,12 +1,15 @@
 export const siteConfig = {
   name: "Espo Paris Academy",
   shortName: "Espo Paris",
+  alternateName: "Espoparis",
   url: "https://www.espoparis.com",
   description:
     "A clear academy home for learning, teaching, and thoughtful growth.",
   category: "education",
   keywords: [
     "Espo Paris Academy",
+    "Espoparis",
+    "Espo Paris",
     "Paris academy",
     "creative learning",
     "education in Paris",
@@ -32,6 +35,7 @@ export const siteConfig = {
   },
   seo: {
     ogImageAlt: "Espo Paris Academy preview image",
+    brandQuery: "Espoparis",
     localeMap: {
       en: "en_US",
       fr: "fr_FR",
