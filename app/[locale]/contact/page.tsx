@@ -1,10 +1,28 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { JsonLd } from "@/components/shared/json-ld";
 import { PageFrame } from "@/components/layout/page-frame";
 import { ContactFormSection } from "@/features/marketing/components/contact-form-section";
 import { ContactHero } from "@/features/marketing/components/contact-hero";
 import { ContactMethodsSection } from "@/features/marketing/components/contact-methods-section";
 import { ContactVisitSection } from "@/features/marketing/components/contact-visit-section";
+import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "contact.seo" });
+
+  return buildPageMetadata({
+    locale: params.locale,
+    path: "/contact",
+    title: t("title"),
+    description: t("description"),
+  });
+}
 
 export default async function ContactPage({
   params,
@@ -15,6 +33,16 @@ export default async function ContactPage({
 
   return (
     <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
+      <JsonLd
+        data={createWebPageJsonLd({
+          locale: params.locale,
+          path: "/contact",
+          title: t("seo.title"),
+          description: t("seo.description"),
+          type: "ContactPage",
+        })}
+      />
+
       <ContactHero
         eyebrow={t("eyebrow")}
         title={t("title")}

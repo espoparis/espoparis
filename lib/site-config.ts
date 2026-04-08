@@ -4,6 +4,15 @@ export const siteConfig = {
   url: "https://espoparis.com",
   description:
     "A clear academy home for learning, teaching, and thoughtful growth.",
+  category: "education",
+  keywords: [
+    "Espo Paris Academy",
+    "Paris academy",
+    "creative learning",
+    "education in Paris",
+    "academy contact",
+    "academy about page",
+  ],
   brand: {
     wordmarkSrc: "/logo.png",
     wordmarkDarkSrc: "/logo-dark.png",
@@ -20,6 +29,15 @@ export const siteConfig = {
     addressLineTwo: "75002 Paris, France",
     visitHoursWeekdays: "Monday to Friday, 9:00 to 18:00",
     visitHoursSaturday: "Saturday visits by appointment",
+  },
+  seo: {
+    ogImageAlt: "Espo Paris Academy preview image",
+    localeMap: {
+      en: "en_US",
+      fr: "fr_FR",
+      ar: "ar_AR",
+      fa: "fa_IR",
+    },
   },
 } as const;
 

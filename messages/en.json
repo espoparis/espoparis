@@ -50,6 +50,10 @@
     }
   },
   "home": {
+    "seo": {
+      "title": "Espo Paris Academy",
+      "description": "Discover Espo Paris Academy through a calmer, clearer public site shaped around learning, teaching, and thoughtful growth."
+    },
     "badge": "Explore the academy",
     "title": "A calmer, cleaner platform for learning, teaching, and growing.",
     "description": "A warm, modern academy presence with clearer storytelling, stronger guidance, and a calmer sense of arrival.",
@@ -128,6 +132,10 @@
     }
   },
   "about": {
+    "seo": {
+      "title": "About Espo Paris Academy",
+      "description": "Learn about the people, values, and atmosphere shaping Espo Paris Academy and the experience it wants every visitor to feel."
+    },
     "eyebrow": "About the academy",
     "title": "A calmer academy designed to support steady growth.",
     "description": "Espo Paris Academy is being shaped around clearer discovery, a more human story, and a public experience that feels calm from the first visit.",
@@ -159,6 +167,10 @@
     }
   },
   "contact": {
+    "seo": {
+      "title": "Contact Espo Paris Academy",
+      "description": "Contact Espo Paris Academy for general enquiries, partnerships, visit planning, and thoughtful conversations with the academy team."
+    },
     "eyebrow": "Contact the academy",
     "title": "Reach the academy through a calmer, clearer contact page.",
     "description": "Whether you are discovering the academy, planning a visit, or starting a conversation, the best next step should be easy to find.",

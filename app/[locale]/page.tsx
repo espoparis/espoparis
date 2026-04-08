@@ -1,10 +1,30 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { JsonLd } from "@/components/shared/json-ld";
 import { Features } from "@/components/blocks/features-4";
 import { PageFrame } from "@/components/layout/page-frame";
 import { HomeClosingCta } from "@/features/marketing/components/home-closing-cta";
 import { HomeHero } from "@/features/marketing/components/home-hero";
 import { HomeTeamSection } from "@/features/marketing/components/home-team-section";
 import { localizePath } from "@/lib/constants/app";
+import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "home.seo" });
+
+  return buildPageMetadata({
+    locale: params.locale,
+    path: "/",
+    title: t("title"),
+    description: t("description"),
+    absoluteTitle: true,
+  });
+}
 
 export default async function Home({
   params,
@@ -16,6 +36,15 @@ export default async function Home({
 
   return (
     <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
+      <JsonLd
+        data={createWebPageJsonLd({
+          locale: params.locale,
+          path: "/",
+          title: siteConfig.name,
+          description: t("seo.description"),
+        })}
+      />
+
       <HomeHero
         badge={t("badge")}
         title={t("title")}

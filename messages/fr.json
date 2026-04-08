@@ -50,6 +50,10 @@
     }
   },
   "home": {
+    "seo": {
+      "title": "Espo Paris Academy",
+      "description": "Découvrez Espo Paris Academy à travers un site public plus calme et plus clair, pensé autour de l’apprentissage, de l’enseignement et d’une croissance réfléchie."
+    },
     "badge": "Explorer l’academie",
     "title": "Une plateforme plus calme et plus claire pour apprendre, enseigner et progresser.",
     "description": "Une presence academique chaleureuse et moderne, avec une histoire plus claire, une meilleure orientation et une arrivee plus sereine.",
@@ -128,6 +132,10 @@
     }
   },
   "about": {
+    "seo": {
+      "title": "À propos de Espo Paris Academy",
+      "description": "Découvrez les personnes, les valeurs et l’atmosphère qui façonnent Espo Paris Academy et l’expérience qu’elle souhaite offrir à chaque visiteur."
+    },
     "eyebrow": "À propos de l’académie",
     "title": "Une académie plus calme, pensée pour accompagner une croissance sereine.",
     "description": "Espo Paris Academy evolue autour d’une decouverte plus claire, d’approbations plus simples et d’un parcours d’apprentissage plus attentif pour les etudiants, les enseignants et les familles.",
@@ -159,6 +167,10 @@
     }
   },
   "contact": {
+    "seo": {
+      "title": "Contacter Espo Paris Academy",
+      "description": "Contactez Espo Paris Academy pour les demandes générales, les partenariats, l’organisation de visites et des échanges plus attentifs avec l’équipe."
+    },
     "eyebrow": "Contacter l’academie",
     "title": "Rejoignez l’academie par une page de contact plus claire et plus calme.",
     "description": "Que vous exploriez les cours, prepariez une candidature ou souhaitiez organiser une visite, la bonne prochaine etape doit etre simple a trouver.",

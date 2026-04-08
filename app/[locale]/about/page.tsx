@@ -1,14 +1,42 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { JsonLd } from "@/components/shared/json-ld";
 import { PageFrame } from "@/components/layout/page-frame";
 import { AboutClosingSection } from "@/features/marketing/components/about-closing-section";
 import { AboutHero } from "@/features/marketing/components/about-hero";
 import { PhotoGallery } from "@/components/ui/gallery";
+import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: "about.seo" });
+
+  return buildPageMetadata({
+    locale: params.locale,
+    path: "/about",
+    title: t("title"),
+    description: t("description"),
+  });
+}
 
 export default async function AboutPage({ params }: { params: { locale: string } }) {
   const t = await getTranslations({ locale: params.locale, namespace: "about" });
 
   return (
     <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
+      <JsonLd
+        data={createWebPageJsonLd({
+          locale: params.locale,
+          path: "/about",
+          title: t("seo.title"),
+          description: t("seo.description"),
+          type: "AboutPage",
+        })}
+      />
+
       <AboutHero
         locale={params.locale}
         eyebrow={t("eyebrow")}
