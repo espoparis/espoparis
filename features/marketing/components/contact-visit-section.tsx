@@ -23,13 +23,13 @@ export function ContactVisitSection({
 }: Props) {
   return (
     <section id="visit-academy" className="py-6 md:py-8">
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-12">
-        <div className="space-y-4">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-16">
+        <div className="public-intro-stack">
           <p className="section-eyebrow">{eyebrow}</p>
-          <h2 className="max-w-xl font-display text-[clamp(2.2rem,4.6vw,3.8rem)] font-semibold tracking-tight text-foreground">
+          <h2 className="public-heading-display max-w-xl">
             {title}
           </h2>
-          <p className="max-w-xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+          <p className="public-copy-lead max-w-xl">
             {description}
           </p>
         </div>
@@ -58,10 +58,10 @@ export function ContactVisitSection({
           </div>
 
           <div className="bg-background/82 p-6 sm:p-7">
-            <p className="font-display text-2xl font-semibold tracking-tight text-foreground">
+            <p className="public-card-heading">
               {noteLabel}
             </p>
-            <p className="mt-3 text-sm leading-7 text-muted-foreground sm:text-base">
+            <p className="public-card-copy">
               {noteDescription}
             </p>
           </div>

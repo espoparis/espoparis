@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "Espo Paris Academy",
   shortName: "Espo Paris",
+  url: "https://espoparis.com",
   description:
     "A clear academy home for learning, teaching, and thoughtful growth.",
   brand: {
@@ -11,9 +12,9 @@ export const siteConfig = {
     alt: "Espo Paris Academy",
   },
   contact: {
-    primaryEmail: "hello@espoparis.academy",
-    admissionsEmail: "admissions@espoparis.academy",
-    partnershipsEmail: "partnerships@espoparis.academy",
+    primaryEmail: "hello@espoparis.com",
+    admissionsEmail: "admissions@espoparis.com",
+    partnershipsEmail: "partnerships@espoparis.com",
     phone: "+33 1 84 80 24 10",
     addressLineOne: "24 Rue de la Paix",
     addressLineTwo: "75002 Paris, France",

@@ -16,14 +16,10 @@ const icons = [Zap, Cpu, Fingerprint, Pencil, Settings2, Sparkles];
 export function Features({ title, description, items }: FeaturesProps) {
   return (
     <section className="py-6 md:py-8">
-      <div className="w-full space-y-5 md:space-y-8">
-        <div className="relative z-10 mx-auto max-w-3xl space-y-5 text-center md:space-y-8">
-          <h2 className="text-balance font-display text-[clamp(2.35rem,5.5vw,3.5rem)] font-medium text-foreground">
-            {title}
-          </h2>
-          <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-            {description}
-          </p>
+      <div className="public-section-stack w-full">
+        <div className="public-intro-stack relative z-10 mx-auto max-w-3xl text-center">
+          <h2 className="public-heading-display">{title}</h2>
+          <p className="public-copy-lead">{description}</p>
         </div>
 
         <div className="relative grid w-full divide-x divide-y border border-border/70 *:p-8 md:*:p-10 sm:grid-cols-2 md:grid-cols-3">
@@ -34,9 +30,9 @@ export function Features({ title, description, items }: FeaturesProps) {
               <div key={item.title} className={index === 0 ? "space-y-3" : "space-y-2"}>
                 <div className="flex items-center gap-2">
                   <Icon className="size-4 text-primary" />
-                  <h3 className="text-base font-medium text-foreground sm:text-lg">{item.title}</h3>
+                  <h3 className="public-item-title">{item.title}</h3>
                 </div>
-                <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">{item.description}</p>
+                <p className="public-item-copy">{item.description}</p>
               </div>
             );
           })}

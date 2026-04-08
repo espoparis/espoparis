@@ -83,6 +83,43 @@
         }
       }
     },
+    "teamSection": {
+      "eyebrow": "Les personnes derrière l’académie",
+      "title": "Une communauté portée par des mentors, des éducateurs et des guides créatifs.",
+      "description": "Derrière chaque page plus calme, il y a une équipe réelle qui aide l’académie à paraître plus accueillante, plus humaine et plus vivante.",
+      "cta": "Lire l’histoire de l’académie",
+      "members": {
+        "one": {
+          "name": "Mariam Rahal",
+          "role": "Direction académique"
+        },
+        "two": {
+          "name": "Omar Benyoussef",
+          "role": "Expérience étudiante"
+        },
+        "three": {
+          "name": "Camille Laurent",
+          "role": "Programmes créatifs"
+        },
+        "four": {
+          "name": "Youssef Haddad",
+          "role": "Partenariats et rayonnement"
+        },
+        "five": {
+          "name": "Ines Moreau",
+          "role": "Accompagnement pédagogique"
+        },
+        "six": {
+          "name": "Samir El Amrani",
+          "role": "Ateliers et événements"
+        }
+      },
+      "testimonial": {
+        "quote": "Ce qui rend l’académie différente, ce n’est pas seulement son travail, mais aussi la générosité, l’attention et le soin constant derrière chaque échange.",
+        "name": "Nadia El Idrissi",
+        "role": "Responsable de communauté"
+      }
+    },
     "closingCta": {
       "badge": "Pret pour la suite",
       "line1": "Faites entrer votre apprentissage",

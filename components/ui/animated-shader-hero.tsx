@@ -606,23 +606,20 @@ export default function AnimatedShaderHero({
         <div className="max-w-5xl space-y-6">
           <div className="space-y-2">
             <h2
-              className="font-display text-[clamp(3.1rem,10vw,7.2rem)] font-semibold leading-[0.92] tracking-tight"
+              className="text-balance font-display text-[clamp(3.1rem,10vw,7.2rem)] font-semibold leading-[0.92] tracking-tight"
               style={{ color: heroStyles.text }}
             >
               {headline.line1}
             </h2>
             <h2
-              className="font-display text-[clamp(3.1rem,10vw,7.2rem)] font-semibold leading-[0.92] tracking-tight"
+              className="text-balance font-display text-[clamp(3.1rem,10vw,7.2rem)] font-semibold leading-[0.92] tracking-tight"
               style={{ color: heroStyles.text }}
             >
               {headline.line2}
             </h2>
           </div>
 
-          <p
-            className="mx-auto max-w-3xl text-base leading-7 sm:text-lg sm:leading-8 lg:text-xl"
-            style={{ color: heroStyles.textMuted }}
-          >
+          <p className="public-copy-lead mx-auto max-w-3xl lg:text-xl" style={{ color: heroStyles.textMuted }}>
             {subtitle}
           </p>
         </div>

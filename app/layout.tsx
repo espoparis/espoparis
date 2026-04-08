@@ -7,6 +7,17 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    type: "website",
+  },
 };
 
 export default function RootLayout({

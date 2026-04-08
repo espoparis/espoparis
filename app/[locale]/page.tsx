@@ -3,6 +3,7 @@ import { Features } from "@/components/blocks/features-4";
 import { PageFrame } from "@/components/layout/page-frame";
 import { HomeClosingCta } from "@/features/marketing/components/home-closing-cta";
 import { HomeHero } from "@/features/marketing/components/home-hero";
+import { HomeTeamSection } from "@/features/marketing/components/home-team-section";
 import { localizePath } from "@/lib/constants/app";
 
 export default async function Home({
@@ -63,6 +64,47 @@ export default async function Home({
           />
         </section>
       </PageFrame>
+
+      <HomeTeamSection
+        eyebrow={t("teamSection.eyebrow")}
+        title={t("teamSection.title")}
+        description={t("teamSection.description")}
+        cta={{
+          label: t("teamSection.cta"),
+          href: localizePath(params.locale, "/about"),
+        }}
+        members={[
+          {
+            name: t("teamSection.members.one.name"),
+            role: t("teamSection.members.one.role"),
+          },
+          {
+            name: t("teamSection.members.two.name"),
+            role: t("teamSection.members.two.role"),
+          },
+          {
+            name: t("teamSection.members.three.name"),
+            role: t("teamSection.members.three.role"),
+          },
+          {
+            name: t("teamSection.members.four.name"),
+            role: t("teamSection.members.four.role"),
+          },
+          {
+            name: t("teamSection.members.five.name"),
+            role: t("teamSection.members.five.role"),
+          },
+          {
+            name: t("teamSection.members.six.name"),
+            role: t("teamSection.members.six.role"),
+          },
+        ]}
+        testimonial={{
+          quote: t("teamSection.testimonial.quote"),
+          name: t("teamSection.testimonial.name"),
+          role: t("teamSection.testimonial.role"),
+        }}
+      />
 
       <HomeClosingCta
         badge={t("closingCta.badge")}

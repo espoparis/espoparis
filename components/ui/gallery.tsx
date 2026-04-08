@@ -82,10 +82,10 @@ export function PhotoGallery({
       <div className="space-y-10 md:space-y-14">
         <div className="mx-auto max-w-3xl space-y-4 text-center">
           <p className="section-eyebrow">{eyebrow}</p>
-          <h2 className="font-display text-[clamp(2.35rem,5vw,4.4rem)] font-semibold tracking-tight text-foreground">
+          <h2 className="public-heading-display">
             {title}
           </h2>
-          <p className="mx-auto max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
+          <p className="public-copy-lead mx-auto max-w-2xl">
             {description}
           </p>
         </div>

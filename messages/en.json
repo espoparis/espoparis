@@ -83,6 +83,43 @@
         }
       }
     },
+    "teamSection": {
+      "eyebrow": "The people behind the academy",
+      "title": "A community shaped by thoughtful mentors, educators, and creative guides.",
+      "description": "Behind every calmer page is a real group of people helping the academy feel more welcoming, more human, and more alive.",
+      "cta": "Read the academy story",
+      "members": {
+        "one": {
+          "name": "Mariam Rahal",
+          "role": "Academic Direction"
+        },
+        "two": {
+          "name": "Omar Benyoussef",
+          "role": "Student Experience"
+        },
+        "three": {
+          "name": "Camille Laurent",
+          "role": "Creative Programs"
+        },
+        "four": {
+          "name": "Youssef Haddad",
+          "role": "Partnerships and Outreach"
+        },
+        "five": {
+          "name": "Ines Moreau",
+          "role": "Learning Support"
+        },
+        "six": {
+          "name": "Samir El Amrani",
+          "role": "Workshops and Events"
+        }
+      },
+      "testimonial": {
+        "quote": "What makes the academy feel different is not only the work itself, but the generosity, attention, and steady care behind each interaction.",
+        "name": "Nadia El Idrissi",
+        "role": "Community Lead"
+      }
+    },
     "closingCta": {
       "badge": "Ready for the next step",
       "line1": "Bring your learning",

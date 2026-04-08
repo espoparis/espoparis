@@ -87,6 +87,26 @@
     font-family: var(--font-display), sans-serif;
     letter-spacing: -0.03em;
   }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-100% - var(--gap, 1.5rem)));
+    }
+  }
+
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+
+    to {
+      transform: translateY(calc(-100% - var(--gap, 1.5rem)));
+    }
+  }
 }
 
 @layer utilities {
@@ -169,6 +189,50 @@
     @apply text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-primary;
   }
 
+  .public-heading-hero {
+    font-size: clamp(2.9rem, 7vw, 5.5rem);
+    line-height: 0.96;
+    @apply text-balance font-display font-medium text-foreground;
+  }
+
+  .public-heading-display {
+    font-size: clamp(2.35rem, 5vw, 4rem);
+    line-height: 0.98;
+    @apply text-balance font-display font-medium text-foreground;
+  }
+
+  .public-copy-lead {
+    @apply text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8;
+  }
+
+  .public-section-stack {
+    @apply space-y-10 md:space-y-14;
+  }
+
+  .public-intro-stack {
+    @apply space-y-4 md:space-y-6;
+  }
+
+  .public-item-title {
+    @apply text-base font-medium text-foreground sm:text-lg;
+  }
+
+  .public-item-copy {
+    @apply text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8;
+  }
+
+  .public-card-heading {
+    @apply font-display text-2xl font-semibold tracking-tight text-foreground;
+  }
+
+  .public-card-copy {
+    @apply mt-3 text-sm leading-7 text-muted-foreground sm:text-base;
+  }
+
+  .public-support-text {
+    @apply text-sm text-muted-foreground sm:text-base;
+  }
+
   .hairline-divider {
     @apply h-px w-full bg-border/70;
   }
@@ -192,5 +256,13 @@
 
   .display-shadow {
     box-shadow: var(--shadow-soft);
+  }
+
+  .animate-marquee {
+    animation: marquee var(--duration, 36s) linear infinite;
+  }
+
+  .animate-marquee-vertical {
+    animation: marquee-vertical var(--duration, 36s) linear infinite;
   }
 }

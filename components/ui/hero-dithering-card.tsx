@@ -133,11 +133,11 @@ export function CTASection({
               </div>
             ) : null}
 
-            <h1 className="mb-8 max-w-5xl font-display text-[clamp(2.9rem,7vw,5.5rem)] font-medium leading-[0.96] text-foreground">
+            <h1 className="public-heading-hero mb-8 max-w-5xl">
               {title}
             </h1>
 
-            <p className="mb-12 max-w-3xl text-base leading-7 text-foreground/78 sm:text-lg sm:leading-8 lg:text-xl">
+            <p className="public-copy-lead mb-12 max-w-3xl text-foreground/78 lg:text-xl">
               {description}
             </p>
 
