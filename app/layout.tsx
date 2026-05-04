@@ -35,12 +35,9 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: siteConfig.brand.markSrc, type: "image/png" },
-      { url: siteConfig.brand.markDarkSrc, media: "(prefers-color-scheme: dark)", type: "image/png" },
-    ],
-    shortcut: [siteConfig.brand.markSrc],
-    apple: [siteConfig.brand.markSrc],
+    icon: [{ url: "/icon", type: "image/png" }],
+    shortcut: ["/icon"],
+    apple: [{ url: "/apple-icon", type: "image/png" }],
   },
   manifest: "/manifest.webmanifest",
   openGraph: {
