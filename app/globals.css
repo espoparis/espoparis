@@ -111,7 +111,7 @@
 
 @layer utilities {
   .page-shell {
-    @apply mx-auto w-full max-w-[112rem] px-6 md:px-10 lg:px-14 xl:px-16;
+    @apply mx-auto w-full max-w-[96rem] px-6 md:px-10 lg:px-12 xl:px-14;
   }
 
   .full-bleed {
@@ -196,8 +196,8 @@
   }
 
   .public-heading-display {
-    font-size: clamp(2.35rem, 5vw, 4rem);
-    line-height: 0.98;
+    font-size: clamp(2.05rem, 4.4vw, 3.45rem);
+    line-height: 1.02;
     @apply text-balance font-display font-medium text-foreground;
   }
 
@@ -206,11 +206,11 @@
   }
 
   .public-section-stack {
-    @apply space-y-10 md:space-y-14;
+    @apply space-y-8 md:space-y-12;
   }
 
   .public-intro-stack {
-    @apply space-y-4 md:space-y-6;
+    @apply space-y-4 md:space-y-5;
   }
 
   .public-item-title {
@@ -222,7 +222,7 @@
   }
 
   .public-card-heading {
-    @apply font-display text-2xl font-semibold tracking-tight text-foreground;
+    @apply font-display text-[1.55rem] font-semibold tracking-tight text-foreground sm:text-[1.7rem];
   }
 
   .public-card-copy {

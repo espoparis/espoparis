@@ -23,7 +23,7 @@ export function AboutNetworkSection({
       <div className="public-section-stack">
         <div className="mx-auto max-w-3xl text-center public-intro-stack">
           <p className="section-eyebrow">{eyebrow}</p>
-          <h2 className="public-heading-display">
+          <h2 className="public-heading-display mx-auto max-w-[14ch]">
             {title}
           </h2>
           <p className="public-copy-lead mx-auto max-w-2xl">
@@ -41,7 +41,7 @@ export function AboutNetworkSection({
               <h3 className="public-card-heading mt-3">
                 {item.country}
               </h3>
-              <p className="public-card-copy mt-2">
+              <p className="public-card-copy mt-3">
                 {item.institute}
               </p>
             </article>

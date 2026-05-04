@@ -24,7 +24,7 @@ export function AboutProgramsSection({
       <div className="public-section-stack">
         <div className="mx-auto max-w-3xl text-center public-intro-stack">
           <p className="section-eyebrow">{eyebrow}</p>
-          <h2 className="public-heading-display">
+          <h2 className="public-heading-display mx-auto max-w-[14ch]">
             {title}
           </h2>
           <p className="public-copy-lead mx-auto max-w-2xl">
@@ -41,7 +41,7 @@ export function AboutProgramsSection({
               <h3 className="public-card-heading">
                 {track.title}
               </h3>
-              <p className="public-card-copy mt-2">
+              <p className="public-card-copy mt-3">
                 {track.description}
               </p>
               <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground md:text-[0.98rem]">
@@ -58,7 +58,7 @@ export function AboutProgramsSection({
 
         <article className="rounded-[2rem] border border-border/65 bg-card/80 p-6 shadow-[0_34px_90px_-60px_hsl(var(--foreground)/0.34)] backdrop-blur-xl sm:p-7">
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.74fr)_minmax(0,1.26fr)] lg:gap-10">
-            <div className="public-intro-stack">
+            <div className="public-intro-stack max-w-md">
               <p className="section-eyebrow">Weekend schools</p>
               <h3 className="public-card-heading text-balance">
                 {weekendSchool.title}

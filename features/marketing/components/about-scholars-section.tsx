@@ -28,22 +28,22 @@ export function AboutScholarsSection({
   return (
     <section className="py-6 md:py-8">
       <div className="public-section-stack">
-        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)] lg:gap-14">
-          <div className="public-intro-stack">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.76fr)_minmax(0,1.24fr)] lg:items-start lg:gap-16">
+          <div className="public-intro-stack max-w-lg">
             <p className="section-eyebrow">{eyebrow}</p>
-            <h2 className="public-heading-display max-w-xl">
+            <h2 className="public-heading-display max-w-[12ch]">
               {title}
             </h2>
-            <p className="public-copy-lead max-w-xl">
+            <p className="public-copy-lead max-w-[31rem]">
               {description}
             </p>
           </div>
 
-          <div className="rounded-[2rem] border border-border/65 bg-card/78 p-6 shadow-[0_36px_90px_-64px_hsl(var(--foreground)/0.38)] backdrop-blur-xl sm:p-7">
+          <div className="self-start rounded-[2rem] border border-border/65 bg-card/78 p-7 shadow-[0_36px_90px_-64px_hsl(var(--foreground)/0.38)] backdrop-blur-xl sm:p-8">
             <h3 className="public-card-heading">
               {founder.title}
             </h3>
-            <div className="mt-4 space-y-4">
+            <div className="mt-5 space-y-5">
               {founder.paragraphs.map((paragraph) => (
                 <p key={paragraph} className="public-card-copy">
                   {paragraph}
@@ -62,11 +62,11 @@ export function AboutScholarsSection({
               <h3 className="public-card-heading">
                 {group.title}
               </h3>
-              <ul className="mt-5 space-y-3 text-sm leading-7 text-muted-foreground md:text-[0.98rem]">
+              <ul className="mt-6 space-y-3.5 text-sm leading-7 text-muted-foreground md:text-[0.98rem]">
                 {group.members.map((member) => (
                   <li
                     key={member}
-                    className="rounded-2xl border border-border/55 bg-background/70 px-4 py-4"
+                    className="rounded-2xl border border-border/55 bg-background/70 px-5 py-4"
                   >
                     {member}
                   </li>
