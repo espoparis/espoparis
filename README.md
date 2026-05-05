@@ -32,4 +32,4 @@ A public-facing Next.js site for Espo Paris Academy.
 - `npm run lint`
 - `npm run typecheck`
 - `npm run clean`
-- If `RESEND_API_KEY` and `RESEND_FROM_EMAIL` are missing, email notifications are skipped without breaking the app.
+- If `RESEND_API_KEY` and `RESEND_FROM_EMAIL` are missing, email notifications are skipped without breaking the app
