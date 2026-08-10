@@ -121,15 +121,7 @@
     },
     "sections": {
       "heroPrimaryCta": "Register now",
-      "heroSecondaryCta": "Return home",
-      "galleryCta": "Register now"
-    },
-    "gallery": {
-      "imageOneAlt": "Students studying together around a shared table.",
-      "imageTwoAlt": "A teacher leading a lesson with students.",
-      "imageThreeAlt": "Learners focused during a study session.",
-      "imageFourAlt": "A quiet corner of the study hall.",
-      "imageFiveAlt": "Students working together in a learning space."
+      "heroSecondaryCta": "Return home"
     },
     "content": {
       "hero": {
@@ -208,11 +200,6 @@
             "points": ["Europe", "The West", "Africa", "Contemporary needs"]
           }
         ]
-      },
-      "gallery": {
-        "eyebrow": "A living hawza environment",
-        "title": "Study, teaching, and community in a more human frame.",
-        "description": "Beyond dates and institutions, the hawza is about the texture of learning itself: presence, discipline, guidance, discussion, and the steady shaping of people who will later teach and serve others."
       },
       "methodology": {
         "eyebrow": "Educational methodology",

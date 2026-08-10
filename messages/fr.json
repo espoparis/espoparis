@@ -121,15 +121,7 @@
     },
     "sections": {
       "heroPrimaryCta": "S’inscrire",
-      "heroSecondaryCta": "Retour à l’accueil",
-      "galleryCta": "S’inscrire"
-    },
-    "gallery": {
-      "imageOneAlt": "Des étudiants étudient ensemble autour d’une table commune.",
-      "imageTwoAlt": "Un enseignant dirige un cours avec des étudiants.",
-      "imageThreeAlt": "Des apprenants concentrés pendant une séance d’étude.",
-      "imageFourAlt": "Un coin calme de la salle d’étude.",
-      "imageFiveAlt": "Des étudiants travaillent ensemble dans un espace d’apprentissage."
+      "heroSecondaryCta": "Retour à l’accueil"
     },
     "content": {
       "hero": {
@@ -208,11 +200,6 @@
             "points": ["Europe", "Occident", "Afrique", "Besoins contemporains"]
           }
         ]
-      },
-      "gallery": {
-        "eyebrow": "Un environnement hawzawi vivant",
-        "title": "L’étude, l’enseignement et la communauté sous un jour plus humain.",
-        "description": "Au-delà des dates et des institutions, la hawza tient à la texture même de l’apprentissage : la présence, la discipline, l’accompagnement, la discussion, et la formation patiente de ceux qui enseigneront et serviront à leur tour."
       },
       "methodology": {
         "eyebrow": "Méthodologie éducative",

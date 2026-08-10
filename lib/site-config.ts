@@ -29,7 +29,7 @@ export const siteConfig = {
   seminaryName: "Imam (AJ) Center – Paris",
   url: resolveSiteUrl(),
   description:
-    "Espo Paris Academy presents Imam Center (AJ) - Paris: a seminary rooted in Paris, preparing students, teachers, and preachers for France, Europe, and the wider Francophone world.",
+    "Espo Paris Academy presents Imam (AJ) Center – Paris: a hawza rooted in Paris, preparing students, teachers, and preachers for France, Europe, and the wider Francophone world.",
   category: "education",
   keywords: [
     "Espo Paris Academy",
@@ -52,9 +52,12 @@ export const siteConfig = {
     wordmarkDarkSize: { width: 866, height: 288 },
   },
   contact: {
-    primaryEmail: "hello@espoparis.com",
-    admissionsEmail: "admissions@espoparis.com",
-    partnershipsEmail: "partnerships@espoparis.com",
+    // One mailbox serves all three routes for now. They stay as separate
+    // fields so a dedicated admissions or partnerships address can be split
+    // out later without touching every call site.
+    primaryEmail: "espoparis.ecole@gmail.co",
+    admissionsEmail: "espoparis.ecole@gmail.co",
+    partnershipsEmail: "espoparis.ecole@gmail.co",
     phone: "+33 1 84 80 24 10",
     addressLineOne: "24 Rue de la Paix",
     addressLineTwo: "75002 Paris, France",

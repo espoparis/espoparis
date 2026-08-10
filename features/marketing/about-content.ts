@@ -70,11 +70,6 @@ export async function getAboutContent(locale: string) {
       description: t("distinctives.description"),
       items: t.raw("distinctives.items") as Distinctive[],
     },
-    gallery: {
-      eyebrow: t("gallery.eyebrow"),
-      title: t("gallery.title"),
-      description: t("gallery.description"),
-    },
     methodology: {
       eyebrow: t("methodology.eyebrow"),
       title: t("methodology.title"),

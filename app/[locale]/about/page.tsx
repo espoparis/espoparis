@@ -13,7 +13,6 @@ import { AboutNetworkSection } from "@/features/marketing/components/about-netwo
 import { AboutObjectivesSection } from "@/features/marketing/components/about-objectives-section";
 import { AboutOverviewSection } from "@/features/marketing/components/about-overview-section";
 import { AboutProgramsSection } from "@/features/marketing/components/about-programs-section";
-import { PhotoGallery } from "@/components/ui/gallery";
 import { getAboutContent } from "@/features/marketing/about-content";
 import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 
@@ -97,39 +96,6 @@ export default async function AboutPage({ params }: { params: { locale: string }
             title={content.distinctives.title}
             description={content.distinctives.description}
             items={content.distinctives.items}
-          />
-        </section>
-
-        <section className="section-space">
-          <PhotoGallery
-            locale={params.locale}
-            eyebrow={content.gallery.eyebrow}
-            title={content.gallery.title}
-            description={content.gallery.description}
-            ctaLabel={t("sections.galleryCta")}
-            ctaHref="/register"
-            images={[
-              {
-                src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-                alt: t("gallery.imageOneAlt"),
-              },
-              {
-                src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80",
-                alt: t("gallery.imageTwoAlt"),
-              },
-              {
-                src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
-                alt: t("gallery.imageThreeAlt"),
-              },
-              {
-                src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
-                alt: t("gallery.imageFourAlt"),
-              },
-              {
-                src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-                alt: t("gallery.imageFiveAlt"),
-              },
-            ]}
           />
         </section>
 

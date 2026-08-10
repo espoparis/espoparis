@@ -93,11 +93,16 @@ if a directory using `className` is not covered by a glob.
 
 These are placeholders that need real values before launch:
 
-- Postal address, phone number, and the three `@espoparis.com` mailboxes in
-  `lib/site-config.ts`
-- **The About page gallery is generic Western corporate stock photography** —
-  a woman at a laptop, an office meeting, a smartwatch close-up. It reads badly
-  on a seminary page and should be replaced with real photographs of the hawza
-  or the section removed. It lives in `app/[locale]/about/page.tsx`.
+- Postal address and phone number in `lib/site-config.ts`
 - Four of the seven faculty have no portrait yet (Shami-Zadeh, al-Kanawi,
   Abu Fatimah, Mujtaba al-Khaliq, al-Nasiri).
+
+The site carries no stock photography. The only images are the two brand logos
+and the three supplied faculty portraits, so nothing on the page depicts people
+who are not actually connected to the hawza.
+
+> **Check the contact address.** `siteConfig.contact` uses
+> `espoparis.ecole@gmail.co` — note the `.co`, not `.com`. If that is a typo,
+> every enquiry, the JSON-LD contact points, and the contact form's delivery
+> target are all pointing at the wrong domain. It is a one-line fix in
+> `lib/site-config.ts`.
