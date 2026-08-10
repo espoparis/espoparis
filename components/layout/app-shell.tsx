@@ -16,7 +16,7 @@ export function AppShell({ children, className }: AppShellProps) {
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 app-grid opacity-35 dark:opacity-15"
+        className="pointer-events-none absolute inset-0 surface-grid opacity-35 dark:opacity-15"
       />
       <div className="relative z-10 flex min-h-screen flex-col">{children}</div>
     </div>

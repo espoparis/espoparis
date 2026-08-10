@@ -4,6 +4,11 @@ module.exports = {
   content: [
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
+    // Every public page section lives under `features/`. Omitting it here
+    // silently purged the classes those sections use — headings, card
+    // surfaces, and grids all fell back to unstyled defaults.
+    "features/**/*.{ts,tsx}",
+    "lib/**/*.{ts,tsx}",
     "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {

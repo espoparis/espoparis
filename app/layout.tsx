@@ -1,10 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { JsonLd } from "@/components/shared/json-ld";
-import { ThemeProvider } from "@/components/theme-provider";
-import "@/app/globals.css";
-import { bodyFont } from "@/lib/fonts";
+import type { ReactNode } from "react";
 import { siteConfig } from "@/lib/site-config";
-import { createOrganizationJsonLd, createWebsiteJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: {
@@ -20,9 +16,6 @@ export const metadata: Metadata = {
   category: siteConfig.category,
   keywords: [...siteConfig.keywords],
   referrer: "origin-when-cross-origin",
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,
@@ -46,7 +39,6 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",
-    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
@@ -63,17 +55,11 @@ export const viewport: Viewport = {
   colorScheme: "dark light",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html suppressHydrationWarning className={bodyFont.variable}>
-      <body className="min-h-screen bg-background font-sans text-foreground antialiased">
-        <JsonLd data={[createOrganizationJsonLd(), createWebsiteJsonLd()]} />
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  );
+/**
+ * `<html>` and `<body>` live in `app/[locale]/layout.tsx` so they can carry the
+ * request's `lang` and `dir`. This root layout only exists because `app` needs
+ * one alongside the root `not-found.tsx`, which renders its own document.
+ */
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return children;
 }

@@ -1,14 +1,26 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { JsonLd } from "@/components/shared/json-ld";
 import { Features } from "@/components/blocks/features-4";
 import { PageFrame } from "@/components/layout/page-frame";
 import { HomeClosingCta } from "@/features/marketing/components/home-closing-cta";
 import { HomeHero } from "@/features/marketing/components/home-hero";
-import { HomeTeamSection } from "@/features/marketing/components/home-team-section";
+import {
+  HomeTeamSection,
+  type TeamMemberEntry,
+} from "@/features/marketing/components/home-team-section";
 import { localizePath } from "@/lib/constants/app";
 import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
+
+const FEATURE_KEYS = [
+  "seminaryStudy",
+  "multilingualTeaching",
+  "teacherFormation",
+  "onlineAccess",
+  "najafPathway",
+  "francophoneReach",
+] as const;
 
 export async function generateMetadata({
   params,
@@ -31,6 +43,8 @@ export default async function Home({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(params.locale);
+
   const t = await getTranslations({ locale: params.locale, namespace: "home" });
   const tNav = await getTranslations({ locale: params.locale, namespace: "common.nav" });
 
@@ -64,32 +78,10 @@ export default async function Home({
           <Features
             title={t("featuresSection.title")}
             description={t("featuresSection.description")}
-            items={[
-              {
-                title: t("featuresSection.items.speed.title"),
-                description: t("featuresSection.items.speed.description"),
-              },
-              {
-                title: t("featuresSection.items.power.title"),
-                description: t("featuresSection.items.power.description"),
-              },
-              {
-                title: t("featuresSection.items.security.title"),
-                description: t("featuresSection.items.security.description"),
-              },
-              {
-                title: t("featuresSection.items.customization.title"),
-                description: t("featuresSection.items.customization.description"),
-              },
-              {
-                title: t("featuresSection.items.control.title"),
-                description: t("featuresSection.items.control.description"),
-              },
-              {
-                title: t("featuresSection.items.aiReady.title"),
-                description: t("featuresSection.items.aiReady.description"),
-              },
-            ]}
+            items={FEATURE_KEYS.map((key) => ({
+              title: t(`featuresSection.items.${key}.title`),
+              description: t(`featuresSection.items.${key}.description`),
+            }))}
           />
         </section>
       </PageFrame>
@@ -102,32 +94,7 @@ export default async function Home({
           label: t("teamSection.cta"),
           href: localizePath(params.locale, "/about"),
         }}
-        members={[
-          {
-            name: t("teamSection.members.one.name"),
-            role: t("teamSection.members.one.role"),
-          },
-          {
-            name: t("teamSection.members.two.name"),
-            role: t("teamSection.members.two.role"),
-          },
-          {
-            name: t("teamSection.members.three.name"),
-            role: t("teamSection.members.three.role"),
-          },
-          {
-            name: t("teamSection.members.four.name"),
-            role: t("teamSection.members.four.role"),
-          },
-          {
-            name: t("teamSection.members.five.name"),
-            role: t("teamSection.members.five.role"),
-          },
-          {
-            name: t("teamSection.members.six.name"),
-            role: t("teamSection.members.six.role"),
-          },
-        ]}
+        members={t.raw("teamSection.members") as TeamMemberEntry[]}
         testimonial={{
           quote: t("teamSection.testimonial.quote"),
           name: t("teamSection.testimonial.name"),
@@ -143,12 +110,12 @@ export default async function Home({
         }}
         subtitle={t("closingCta.description")}
         primaryCta={{
-          label: tNav("contact"),
-          href: localizePath(params.locale, "/contact"),
+          label: tNav("register"),
+          href: localizePath(params.locale, "/register"),
         }}
         secondaryCta={{
-          label: tNav("about"),
-          href: localizePath(params.locale, "/about"),
+          label: tNav("contact"),
+          href: localizePath(params.locale, "/contact"),
         }}
       />
     </div>

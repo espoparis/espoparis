@@ -3,7 +3,7 @@
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { SiteBrand } from "@/components/shared/site-brand";
-import { publicNavLinks } from "@/lib/constants/app";
+import { isActivePath, publicNavLinks } from "@/lib/constants/app";
 import { cn } from "@/lib/utils";
 import { Link, usePathname } from "@/lib/navigation";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -20,18 +20,6 @@ import {
 type Props = {
   locale: string;
 };
-
-function isActivePath(pathname: string, href: string) {
-  if (pathname === href) {
-    return true;
-  }
-
-  if (href === "/") {
-    return pathname === href;
-  }
-
-  return pathname.startsWith(`${href}/`);
-}
 
 export function SiteMobileNav({ locale }: Props) {
   const tCommon = useTranslations("common");

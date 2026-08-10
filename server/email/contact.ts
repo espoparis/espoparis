@@ -13,5 +13,7 @@ export async function sendContactInquiryNotification(input: ContactInquiryInput)
     subject: template.subject,
     html: template.html,
     text: template.text,
+    // Replying to the notification should reach the person who wrote in.
+    replyTo: input.email,
   });
 }

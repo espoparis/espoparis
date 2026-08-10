@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { JsonLd } from "@/components/shared/json-ld";
 import { PageFrame } from "@/components/layout/page-frame";
 import { ContactFormSection } from "@/features/marketing/components/contact-form-section";
@@ -29,6 +29,8 @@ export default async function ContactPage({
 }: {
   params: { locale: string };
 }) {
+  setRequestLocale(params.locale);
+
   const t = await getTranslations({ locale: params.locale, namespace: "contact" });
 
   return (
@@ -111,6 +113,7 @@ export default async function ContactPage({
               messagePlaceholder: t("form.fields.messagePlaceholder"),
               submit: t("form.fields.submit"),
               pending: t("form.fields.pending"),
+              honeypot: t("form.fields.honeypot"),
             }}
           />
         </section>

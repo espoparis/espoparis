@@ -7,7 +7,6 @@ import { AppErrorState } from "@/components/ui/app-error-state";
 import { useRouter } from "@/lib/navigation";
 
 export default function LocaleError({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };
@@ -21,9 +20,11 @@ export default function LocaleError({
   return (
     <PageFrame className="flex min-h-[70vh] items-center py-12 sm:py-14">
       <div className="mx-auto w-full max-w-xl">
+        {/* `error.message` is deliberately not surfaced: in production it can
+            carry internal detail that visitors should not see. */}
         <AppErrorState
           title={tError("pageTitle")}
-          description={error.message || tError("pageDescription")}
+          description={tError("pageDescription")}
           primaryAction={{
             label: tCommon("tryAgain"),
             onClick: reset,

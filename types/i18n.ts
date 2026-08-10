@@ -1,5 +1,3 @@
-import type {AbstractIntlMessages} from 'next-intl';
-
 // Import the English messages as the source of truth for types
 import enMessages from '@/messages/en.json';
 

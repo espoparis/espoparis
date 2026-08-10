@@ -2,25 +2,13 @@
 
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { publicNavLinks } from "@/lib/constants/app";
+import { isActivePath, publicNavLinks } from "@/lib/constants/app";
 import { Link, usePathname } from "@/lib/navigation";
 import { buttonVariants } from "@/components/ui/button";
 
 type Props = {
   locale: string;
 };
-
-function isActivePath(pathname: string, href: string) {
-  if (pathname === href) {
-    return true;
-  }
-
-  if (href === "/") {
-    return pathname === href;
-  }
-
-  return pathname.startsWith(`${href}/`);
-}
 
 export function SitePrimaryNav({ locale }: Props) {
   const t = useTranslations("common.nav");

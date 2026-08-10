@@ -1,17 +1,17 @@
 {
   "common": {
-    "siteName": "Espo Paris Academy",
     "nav": {
       "home": "Accueil",
       "about": "À propos",
+      "register": "Inscription",
       "contact": "Contact"
     },
     "labels": {
-      "connect": "Contact",
+      "connect": "Nous joindre",
       "navigate": "Navigation"
     },
     "actions": {
-      "working": "Traitement...",
+      "working": "En cours...",
       "tryAgain": "Réessayer",
       "returnHome": "Retour à l’accueil",
       "toggleTheme": "Changer le thème"
@@ -26,210 +26,597 @@
   },
   "shell": {
     "footer": {
-      "title": "Un lieu clair pour apprendre, enseigner et grandir avec confiance.",
-      "description": "Concu pour aider chaque visiteur a avancer dans l’academie avec assurance."
+      "title": "Une hawza enracinée à Paris, au service de la France et du monde francophone.",
+      "description": "Le Centre Imam (AJ) – Paris forme des étudiants, des enseignants et des prédicateurs par l’étude hawzawie traditionnelle, pensée pour la vie dans les sociétés occidentales."
     },
     "mobile": {
-      "title": "Naviguer dans l’académie",
-      "description": "Passez entre les principales pages publiques de l’académie."
+      "title": "Naviguer dans la hawza",
+      "description": "Accédez aux principales pages publiques de la hawza."
     }
   },
   "status": {
     "loading": {
       "badge": "Chargement",
-      "title": "Préparation de votre expérience",
-      "description": "Synchronisation des dernières données et routes."
+      "title": "Préparation de la page",
+      "description": "Récupération du contenu le plus récent."
     },
     "error": {
       "badge": "Une erreur est survenue",
       "defaultTitle": "Une erreur est survenue",
-      "defaultDescription": "La page n’a pas pu terminer son chargement. Réessayez ou revenez à une zone stable de l’application.",
+      "defaultDescription": "La page n’a pas pu se charger complètement. Réessayez ou revenez à une section stable du site.",
       "pageTitle": "Cette page a rencontré un problème",
-      "pageDescription": "La route actuelle n’a pas pu terminer son chargement. Réessayez ou revenez à une zone stable de l’application.",
-      "pageFooter": "Si cela continue, actualisez la page et reprenez depuis le site public."
+      "pageDescription": "La page actuelle n’a pas pu se charger complètement. Réessayez ou revenez à une section stable du site.",
+      "pageFooter": "Si le problème persiste, actualisez la page et repartez de l’accueil."
     }
   },
   "home": {
     "seo": {
-      "title": "Espoparis | Espo Paris Academy",
-      "description": "Espoparis, aussi nommé Espo Paris Academy, propose une expérience publique plus calme et plus claire pour découvrir l’apprentissage, l’enseignement et le contact."
+      "title": "Espo Paris Academy | Hawza à Paris pour le monde francophone",
+      "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris, première hawza chiite complète en France, qui forme des étudiants, des enseignants et des prédicateurs pour la France, l’Europe, l’Afrique et l’ensemble du monde francophone."
     },
-    "badge": "Espo Paris Academy",
-    "title": "Une plateforme plus calme et plus claire pour apprendre, enseigner et progresser.",
-    "description": "Espo Paris Academy propose une présence académique chaleureuse et moderne, avec une histoire plus claire, une meilleure orientation et une arrivée plus sereine.",
+    "badge": "Centre Imam (AJ) – Paris",
+    "title": "Une hawza enracinée à Paris et ouverte sur le monde francophone.",
+    "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris : la première hawza chiite complète en France, qui forme des étudiants, des enseignants et des prédicateurs par une étude traditionnelle adaptée à la vie en France, en Europe et dans les communautés qui leur sont liées.",
     "featuresSection": {
-      "title": "La base d’une gestion plus calme de l’académie",
-      "description": "Une experience publique plus claire, faconnee autour de la confiance, de l’orientation et d’une presence academique plus posee.",
+      "title": "Une hawza conçue pour l’étude, l’enseignement et le service.",
+      "description": "Les sciences hawzawies traditionnelles, enseignées avec une conscience des langues, des questions et des responsabilités qui façonnent la vie musulmane en Occident.",
       "items": {
-        "speed": {
-          "title": "Flux plus rapides",
-          "description": "Une navigation plus propre et des chemins plus courts vers les cours, les validations et le travail quotidien."
+        "seminaryStudy": {
+          "title": "Étude hawzawie",
+          "description": "Un cursus traditionnel adapté à la réalité des étudiants qui vivent dans les sociétés occidentales."
         },
-        "power": {
-          "title": "Base plus solide",
-          "description": "Les pages principales paraissent maintenant plus coherentes, plus sures et plus faciles a comprendre."
+        "multilingualTeaching": {
+          "title": "Enseignement multilingue",
+          "description": "La seule hawza dispensant son enseignement en français, anglais, persan, arabe et azéri."
         },
-        "security": {
-          "title": "Confiance plus claire",
-          "description": "L’experience publique est concue pour sembler fiable, chaleureuse et facile a parcourir."
+        "teacherFormation": {
+          "title": "Formation des enseignants",
+          "description": "Un programme dédié qui prépare les enseignants des écoles islamiques du week-end en Occident."
         },
-        "customization": {
-          "title": "Modeles reutilisables",
-          "description": "Des sections, formulaires et etats partages rendent l’interface plus coherente a mesure que les fonctionnalites evoluent."
+        "onlineAccess": {
+          "title": "Accès en ligne",
+          "description": "L’enseignement à distance porte les mêmes cours à des étudiants bien au-delà de Paris."
         },
-        "control": {
-          "title": "Supervision claire",
-          "description": "L’accueil, la page a propos et le contact forment maintenant un systeme public plus calme et plus coherent."
+        "najafPathway": {
+          "title": "Voie vers Najaf",
+          "description": "L’étude fondamentale à Paris prépare à la spécialisation avancée à Najaf al-Achraf."
         },
-        "aiReady": {
-          "title": "Pret a evoluer",
-          "description": "La nouvelle interface laisse de la place pour l’automatisation future, les outils de contenu et des flux plus intelligents."
+        "francophoneReach": {
+          "title": "Rayonnement francophone",
+          "description": "La France est une porte vers le Maghreb, vers l’Afrique et vers l’ensemble du monde francophone."
         }
       }
     },
     "teamSection": {
-      "eyebrow": "Les personnes derrière l’académie",
-      "title": "Une communauté portée par des mentors, des éducateurs et des guides créatifs.",
-      "description": "Derrière chaque page plus calme, il y a une équipe réelle qui aide l’académie à paraître plus accueillante, plus humaine et plus vivante.",
-      "cta": "Lire l’histoire de l’académie",
-      "members": {
-        "one": {
-          "name": "Mariam Rahal",
-          "role": "Direction académique"
-        },
-        "two": {
-          "name": "Omar Benyoussef",
-          "role": "Expérience étudiante"
-        },
-        "three": {
-          "name": "Camille Laurent",
-          "role": "Programmes créatifs"
-        },
-        "four": {
-          "name": "Youssef Haddad",
-          "role": "Partenariats et rayonnement"
-        },
-        "five": {
-          "name": "Ines Moreau",
-          "role": "Accompagnement pédagogique"
-        },
-        "six": {
-          "name": "Samir El Amrani",
-          "role": "Ateliers et événements"
-        }
-      },
+      "eyebrow": "Savants et corps enseignant",
+      "title": "Une hawza portée par des savants, des enseignants et des éducateurs de terrain.",
+      "description": "De l’étude hawzawie de longue haleine à la formation pour les écoles du week-end, le travail est soutenu par des enseignants qui servent à travers les langues, les pays et les générations.",
+      "cta": "Découvrir l’histoire de la hawza",
+      "members": [
+        { "name": "Cheikh Dr Mustafa al-Khaliq", "role": "Directeur, Centre Imam (AJ) – Paris" },
+        { "name": "Cheikh Dr Fares al-Khatib", "role": "Corps enseignant et orateur husseinite" },
+        { "name": "Cheikh Abdullah Shami-Zadeh", "role": "Corps enseignant" },
+        { "name": "Cheikh Ismail al-Kanawi", "role": "Directeur, séminaire Imam al-Sadiq, Nigéria" },
+        { "name": "Cheikh Abou Fatima", "role": "Directeur, Centre Dame al-Zahra, Cameroun" },
+        { "name": "Cheikh Mujtaba al-Khaliq", "role": "Corps enseignant, États-Unis" },
+        { "name": "Cheikh Hassan al-Nasiri", "role": "Administration et enseignement de l’arabe" }
+      ],
       "testimonial": {
-        "quote": "Ce qui rend l’académie différente, ce n’est pas seulement son travail, mais aussi la générosité, l’attention et le soin constant derrière chaque échange.",
-        "name": "Nadia El Idrissi",
-        "role": "Responsable de communauté"
+        "quote": "L’objectif est de former des enseignants et des prédicateurs issus des sociétés occidentales elles-mêmes, avec la langue et les fondements nécessaires pour bien servir leurs communautés.",
+        "name": "Ayatollah Cheikh Ismail al-Khaliq",
+        "role": "Fondateur"
       }
     },
     "closingCta": {
-      "badge": "Pret pour la suite",
-      "line1": "Faites entrer votre apprentissage",
-      "line2": "dans un flux plus clair.",
-      "description": "Decouvrez l’academie, prenez contact avec l’equipe et avancez dans une experience publique plus calme."
+      "badge": "Commencez vos études",
+      "line1": "Inscrivez-vous à",
+      "line2": "la prochaine rentrée.",
+      "description": "Choisissez un parcours, remplissez le formulaire d’inscription et rejoignez des étudiants qui apprennent en français, anglais, persan, arabe et azéri."
     }
   },
   "about": {
     "seo": {
-      "title": "À propos de Espo Paris Academy",
-      "description": "Découvrez les personnes, les valeurs et l’atmosphère qui façonnent Espo Paris Academy et l’expérience qu’elle souhaite offrir à chaque visiteur."
+      "title": "À propos de la hawza",
+      "description": "L’histoire du Centre Imam (AJ) – Paris : pourquoi la première hawza chiite complète de France a été fondée, comment elle enseigne, qui la dirige, et les instituts qu’elle soutient en Afrique et en Europe."
     },
-    "eyebrow": "À propos de l’académie",
-    "title": "Une académie plus calme, pensée pour accompagner une croissance sereine.",
-    "description": "Espo Paris Academy evolue autour d’une decouverte plus claire, d’approbations plus simples et d’un parcours d’apprentissage plus attentif pour les etudiants, les enseignants et les familles.",
     "sections": {
-      "heroPrimaryCta": "Contacter l’academie",
-      "heroSecondaryCta": "Retour a l’accueil",
-      "galleryEyebrow": "Un regard sur l’academie",
-      "galleryTitle": "Une image plus humaine de l’apprentissage, de l’accompagnement et du progres partage.",
-      "galleryDescription": "L’academie doit sembler aussi chaleureuse et assuree que les personnes qui l’animent. Cette section donne a la page un rythme plus vivant que le texte seul.",
-      "galleryCta": "Contacter l’academie",
-      "closingEyebrow": "La suite",
-      "closingTitle": "Un rythme plus solide pour le prochain chapitre de l’academie.",
-      "closingDescription": "La priorite est maintenant de garder l’academie simple a parcourir, agreable a utiliser et prete pour les prochaines promotions, les enseignants et les programmes."
+      "heroPrimaryCta": "S’inscrire",
+      "heroSecondaryCta": "Retour à l’accueil",
+      "galleryCta": "S’inscrire"
     },
     "gallery": {
-      "imageOneAlt": "Des etudiants collaborent autour d’une table.",
-      "imageTwoAlt": "Un enseignant anime une discussion en classe.",
-      "imageThreeAlt": "Des apprenants concentres pendant un atelier.",
-      "imageFourAlt": "Un moment creatif dans l’academie.",
-      "imageFiveAlt": "Des etudiants travaillent ensemble dans un espace moderne."
+      "imageOneAlt": "Des étudiants étudient ensemble autour d’une table commune.",
+      "imageTwoAlt": "Un enseignant dirige un cours avec des étudiants.",
+      "imageThreeAlt": "Des apprenants concentrés pendant une séance d’étude.",
+      "imageFourAlt": "Un coin calme de la salle d’étude.",
+      "imageFiveAlt": "Des étudiants travaillent ensemble dans un espace d’apprentissage."
     },
-    "closing": {
-      "phaseOneTitle": "Ce qui compte aujourd’hui",
-      "phaseOneDescription": "La priorite est une presence publique plus claire, une meilleure orientation et une academie plus accueillante.",
-      "removedTitle": "Ce qui semble plus leger",
-      "removedDescription": "Les etapes inutiles et les moments de confusion diminuent pour rendre l’academie plus simple a parcourir.",
-      "nextTitle": "La suite",
-      "nextDescription": "Le prochain chapitre consiste a enrichir la communication, renforcer l’accompagnement et rendre chaque partie de l’academie encore plus complete."
+    "content": {
+      "hero": {
+        "eyebrow": "À propos de la hawza",
+        "title": "Une hawza enracinée à Paris et ouverte sur le monde francophone.",
+        "description": "Le Centre Imam (AJ) – Paris existe pour former des étudiants, des prédicateurs et des enseignants capables de servir la France, l’Europe, l’Afrique et l’ensemble du monde francophone, avec une maîtrise des langues, un socle religieux solide et un sens contemporain de la responsabilité."
+      },
+      "intro": {
+        "eyebrow": "Pourquoi une hawza en Occident",
+        "title": "Un devoir qui ne peut être porté à distance.",
+        "pullQuote": "L’enseignement hawzawi est une obligation collective pour les savants des centres historiques du savoir. Pour les savants religieux de certains pays occidentaux et européens, il devient une obligation individuelle.",
+        "paragraphs": [
+          "Si l’enseignement hawzawi est considéré comme une obligation collective (farḍ kifāya) pour les savants vivant dans les pays islamiques et dans les centres historiques du savoir tels que Najaf al-Achraf et Karbala al-Muqaddassa, il devient une obligation individuelle (farḍ ʿayn) pour les savants religieux de certains pays occidentaux et européens.",
+          "Cela est particulièrement vrai dans un pays aussi divers sur le plan culturel et intellectuel que la France, où la liberté de pensée a atteint un niveau exceptionnel. L’administration du Centre Imam (AJ) – Paris considère donc qu’il est de son devoir religieux personnel d’assumer cette mission.",
+          "L’arène française revêt une importance considérable à tous les niveaux. Il est essentiel que les musulmans chiites apportent une contribution positive à la société française et enrichissent son tissu social.",
+          "La France constitue également une porte d’entrée — non seulement vers le Maghreb et l’Afrique, où de nombreuses personnes ont adopté l’enseignement des Ahl al-Bayt (que la paix soit sur eux), mais vers tous les pays francophones, dont beaucoup entretiennent des liens culturels étroits avec la France."
+        ]
+      },
+      "overview": {
+        "eyebrow": "Mission et origines",
+        "title": "Pourquoi cette hawza a été fondée, et pourquoi sa présence compte.",
+        "description": "La hawza s’est construite autour d’une conviction claire : dans des pays comme la France, où la diversité intellectuelle et culturelle est particulièrement forte, le savoir religieux doit être présent, accessible et capable de s’adresser avec clarté aux sociétés qui l’entourent.",
+        "cards": [
+          {
+            "title": "Une responsabilité nécessaire",
+            "description": "Pour les communautés musulmanes vivant en France et en Europe, un savoir religieux sérieux ne peut rester lointain. La hawza a été fondée comme une réponse locale à cette responsabilité, afin que la science religieuse prenne racine là où les gens vivent, interrogent, enseignent et servent réellement."
+          },
+          {
+            "title": "Fondée à Paris",
+            "description": "En 2002, l’Ayatollah Cheikh Ismail al-Khaliq a commencé à enseigner les sciences hawzawies traditionnelles à Paris. En 2012, ces cercles d’étude ont été formellement organisés sous le nom de Centre Imam (AJ) – Paris."
+          },
+          {
+            "title": "La première du genre",
+            "description": "Cette hawza est considérée comme le premier séminaire chiite complet en France, fondé pour instruire les partisans des Ahl al-Bayt — et les musulmans en général. Aucune hawza antérieure en France n’avait été établie avec une telle ampleur et une telle ouverture."
+          },
+          {
+            "title": "Près d’un demi-siècle d’expérience",
+            "description": "Cheikh Ismail al-Khaliq apporte près de cinquante ans d’expérience dans l’enseignement hawzawi et a mené un travail missionnaire et éducatif en Irak, en Syrie, au Liban, au Canada, en Afrique, au Pakistan et dans de nombreux autres pays."
+          }
+        ]
+      },
+      "objectives": {
+        "eyebrow": "Objectifs",
+        "title": "Ce que cette hawza se donne pour tâche.",
+        "description": "Le Centre répond à un manque concret : beaucoup d’Européens ne peuvent se rendre dans les séminaires traditionnels du monde islamique, et les communautés musulmanes d’Occident ont besoin de savants capables d’enseigner dans les langues parlées autour d’elles.",
+        "items": [
+          "Former des prédicateurs intégrés à la société occidentale et maîtrisant les langues locales.",
+          "Offrir un enseignement hawzawi fondamental au cœur de l’Europe, à Paris, pour celles et ceux qui ne peuvent rejoindre les séminaires traditionnels.",
+          "Préparer des savants religieux capables de prêcher et d’enseigner dans les langues occidentales en plus de l’arabe.",
+          "Donner aux étudiants une formation hawzawie initiale qui les prépare à une spécialisation avancée, s’ils choisissent ensuite de poursuivre au séminaire de Najaf."
+        ],
+        "focusLabel": "Exclusivement consacré à",
+        "focusAreas": [
+          "L’éducation",
+          "La science religieuse",
+          "Le développement spirituel",
+          "L’élévation intellectuelle",
+          "La formation morale"
+        ],
+        "noteTitle": "Un centre délibérément non politique",
+        "noteDescription": "Le Centre évite délibérément tout engagement politique. Il interdit l’usage de ses tribunes pour promouvoir des organisations politiques ou pour entrer dans des différends entre groupes."
+      },
+      "distinctives": {
+        "eyebrow": "Ce qui rend cette hawza unique",
+        "title": "Deux engagements qui distinguent le Centre.",
+        "description": "Son corps enseignant compte des savants éminents, mais ce qui distingue le plus le Centre est l’éventail des langues dans lesquelles il enseigne et la forme concrète de ce qu’il enseigne.",
+        "items": [
+          {
+            "title": "Enseignement multilingue",
+            "description": "C’est la seule hawza au monde à dispenser son enseignement en plusieurs langues, afin que chacun puisse étudier dans la langue où il vit et prêche réellement.",
+            "points": ["Français", "Anglais", "Persan", "Arabe", "Azéri (turc)"]
+          },
+          {
+            "title": "Programme pratique",
+            "description": "Bien que son corps enseignant compte des savants éminents conduits par l’Ayatollah Cheikh Ismail al-Khaliq, le programme met l’accent sur les besoins réels des musulmans vivant en Europe, en Occident et en Afrique. Plutôt que de se concentrer sur des débats théoriques abstraits, il privilégie le savoir religieux pratique dont les musulmans ont besoin dans la société contemporaine.",
+            "points": ["Europe", "Occident", "Afrique", "Besoins contemporains"]
+          }
+        ]
+      },
+      "gallery": {
+        "eyebrow": "Un environnement hawzawi vivant",
+        "title": "L’étude, l’enseignement et la communauté sous un jour plus humain.",
+        "description": "Au-delà des dates et des institutions, la hawza tient à la texture même de l’apprentissage : la présence, la discipline, l’accompagnement, la discussion, et la formation patiente de ceux qui enseigneront et serviront à leur tour."
+      },
+      "methodology": {
+        "eyebrow": "Méthodologie éducative",
+        "title": "Une étude traditionnelle, dispensée de trois manières.",
+        "description": "Le Centre suit le programme hawzawi traditionnel tout en l’adaptant aux besoins des étudiants vivant dans les sociétés occidentales. L’étude en présentiel demeure la méthode principale, mais les technologies modernes et l’enseignement à distance portent le même enseignement bien au-delà de Paris.",
+        "languagesLabel": "Langues",
+        "channels": [
+          {
+            "title": "En présentiel à Paris",
+            "description": "La méthode principale d’enseignement, suivant le programme hawzawi traditionnel dans les salles du Centre.",
+            "languages": "Arabe, français, persan, anglais"
+          },
+          {
+            "title": "En ligne et à distance",
+            "description": "Des cours dispensés à distance afin que des étudiants d’Orient comme d’Occident puissent bénéficier de l’enseignement hawzawi.",
+            "languages": "Français, arabe, persan, anglais"
+          },
+          {
+            "title": "Séminaires affiliés en Afrique",
+            "description": "Des cours en présentiel dans les instituts affiliés du Centre, enseignés dans les langues africaines locales aux côtés de l’arabe.",
+            "languages": "Arabe et langues africaines locales"
+          }
+        ]
+      },
+      "programs": {
+        "eyebrow": "Programmes et cursus",
+        "title": "Une étude traditionnelle, adaptée aux besoins des étudiants en Occident.",
+        "description": "Conscient que beaucoup d’étudiants ont un métier, des études universitaires et des responsabilités familiales, le Centre a développé deux parcours éducatifs ainsi qu’un programme dédié de formation des enseignants.",
+        "weekendLabel": "Écoles du week-end",
+        "tracks": [
+          {
+            "title": "Cours d’éducation religieuse (temps partiel)",
+            "description": "Des cours éducatifs et culturels conçus pour renforcer l’identité religieuse des musulmans, destinés aux étudiants qui ne peuvent se consacrer à plein temps aux études hawzawies en raison de leur travail ou de leurs études universitaires.",
+            "points": [
+              "Couvre le Saint Coran, la jurisprudence (fiqh), les croyances (ʿaqīda) et l’éthique.",
+              "Comprend la biographie du Prophète et des Ahl al-Bayt, l’histoire islamique et les autres sciences islamiques fondamentales.",
+              "Les diplômés reçoivent un certificat les qualifiant pour enseigner dans les écoles, mosquées et centres islamiques locaux."
+            ]
+          },
+          {
+            "title": "Programme hawzawi à temps plein",
+            "description": "Pour les étudiants qui souhaitent se consacrer entièrement aux études religieuses, suivant le programme hawzawi traditionnel avec de légères adaptations propres aux musulmans vivant en Occident.",
+            "points": [
+              "Un programme intensif d’une durée de cinq ans.",
+              "Offre une voie structurée vers une spécialisation religieuse approfondie.",
+              "Les diplômés sont académiquement préparés à poursuivre des études avancées à la hawza de Najaf al-Achraf."
+            ]
+          }
+        ],
+        "weekendSchools": {
+          "title": "Former les enseignants des écoles islamiques du week-end",
+          "description": "À mesure que les populations musulmanes croissent en Europe et en Amérique du Nord, le besoin d’enseignants qualifiés pour instruire les enfants musulmans s’accroît. Ce programme se distingue du parcours de formation des savants : il prépare spécifiquement des éducateurs à enseigner aux enfants dans les sociétés occidentales.",
+          "points": [
+            "Matières islamiques : jurisprudence (fiqh), croyances (ʿaqīda), éthique et langue arabe.",
+            "Méthodologie de l’enseignement et psychologie de l’éducation.",
+            "Développement de l’enfant et éducation de l’adolescent.",
+            "Conduite de classe et compétences de communication efficaces.",
+            "Prépare les enseignants des écoles islamiques du samedi et du dimanche dans les communautés d’Occident."
+          ]
+        }
+      },
+      "founder": {
+        "eyebrow": "À propos du fondateur",
+        "title": "Un demi-siècle de science, de service et d’ouverture.",
+        "description": "L’Ayatollah Cheikh Ismail al-Khaliq compte parmi les plus éminents savants religieux chiites en Occident, avec une expérience missionnaire de plus de quatre décennies.",
+        "name": "Ayatollah Cheikh Ismail al-Khaliq",
+        "role": "Fondateur, Centre Imam (AJ) – Paris",
+        "photoAlt": "Portrait de l’Ayatollah Cheikh Ismail al-Khaliq",
+        "factsLabel": "En bref",
+        "paragraphs": [
+          "Il est né en 1957 et a grandi à Karbala, en Irak, aux abords du sanctuaire du Maître des Martyrs (que la paix soit sur lui).",
+          "Il a commencé ses études religieuses à la hawza de la sainte Karbala auprès d’un groupe choisi de ses savants, parmi lesquels l’Ayatollah Cheikh Mujtaba al-Lankarani, l’Ayatollah Cheikh Muhammad al-Gharawi, son grand-père l’Ayatollah Cheikh Muhammad Ibrahim al-Khaliq, et son père l’Ayatollah Cheikh Muhammad Ali al-Khaliq.",
+          "Il a circulé entre les hawzas de Karbala et de Najaf al-Achraf jusqu’à achever Kifayat al-Usul, et fut examiné aux niveaux avancés (al-suṭūh al-ʿulyā) par un jury composé de Cheikh al-Ha’iri, Cheikh al-Rashti, Cheikh al-Kalbasi et d’autres savants — il avait alors treize ans.",
+          "Il se rendit ensuite à la hawza de Najaf al-Achraf et passa un examen en al-Makasib, al-Rasa’il et al-Kifaya devant le Grand Ayatollah Sayyid Abou al-Qasim al-Khoei (qu’Allah sanctifie son secret). Il rejoignit à la suite de cela les études supérieures de jurisprudence (bahth al-kharij) de l’Ayatollah Sayyid al-Khoei, de l’Ayatollah Sayyid Muhammad al-Ruhani et de l’Ayatollah Sayyid al-Khomeini.",
+          "Alors que les pratiques oppressives et criminelles s’intensifiaient contre les hommes de pensée, de religion et de culture, il fut contraint, avec d’autres savants, de quitter l’Irak. Il voyagea entre l’Iran, le Pakistan, la Syrie et le Liban. Au Pakistan, il obtint le grade d’al-Fadil al-Arabi, classé premier au niveau national.",
+          "Outre sa formation religieuse supérieure à la hawza, il acheva ses études académiques et obtint un master à l’Université arabe de Beyrouth. Il demeure profondément engagé dans l’élévation culturelle et scientifique de la Umma, œuvrant sans relâche à fonder écoles, hawzas, mosquées, bibliothèques et une université dans les régions des communautés alaouite et druze.",
+          "Passé l’âge de quarante ans, il s’installa en Occident pour lancer un projet culturel, religieux et éducatif tenant compte des caractéristiques, des cultures et des langues propres à ces pays. Il fonda des projets pour les orphelins au Canada et en Europe, ainsi que des écoles enseignant aux enfants le Saint Coran, l’éthique et la biographie prophétique.",
+          "En raison de son engagement étendu dans des rôles scientifiques, culturels, intellectuels et sociaux à travers de nombreux pays d’Orient et d’Occident, il maîtrise les langues des nations où il a vécu. Cette richesse d’expérience lui a donné une compréhension profonde de cultures et de religions diverses, ce qui a facilité ses projets culturels, notamment le dialogue interreligieux et les efforts de rapprochement au Moyen-Orient, au Canada et en France.",
+          "Porté par un souci profond d’élever la place des musulmans en Occident — afin qu’ils avancent au rythme de leurs compatriotes français sur le plan intellectuel et civilisationnel — il entreprit, vers 2014, le projet de fonder une université : un projet culturel, éducatif et religieux mené en arabe et en français, auquel il consacre une grande attention.",
+          "Il est connu pour une approche distinctive qui allie la préservation du patrimoine et de l’authenticité, d’une part, à l’ouverture aux autres cultures, d’autre part, et il possède un esprit humain raffiné. Il croit fermement au travail institutionnel, poursuit son rôle de guide pour les musulmans à Paris ainsi que dans toute la France, en Grande-Bretagne et en Belgique, et dispense ses leçons supérieures de jurisprudence (bahth al-kharij) à ses étudiants de la hawza. Il a également des écrits qui demeurent à l’état de manuscrits."
+        ],
+        "facts": [
+          { "label": "Naissance", "value": "1957, Karbala, Irak — élevé auprès du sanctuaire de l’Imam al-Husayn (que la paix soit sur lui)." },
+          { "label": "Formation initiale", "value": "Hawza de Karbala ; examiné aux niveaux avancés (al-suṭūh al-ʿulyā) à l’âge de treize ans." },
+          { "label": "Najaf al-Achraf", "value": "Bahth al-kharij auprès de Sayyid Abou al-Qasim al-Khoei, Sayyid Muhammad al-Ruhani et Sayyid al-Khomeini." },
+          { "label": "Parcours académique", "value": "Master de l’Université arabe de Beyrouth ; grade d’al-Fadil al-Arabi au Pakistan, classé premier au niveau national." },
+          { "label": "Langues", "value": "Arabe, persan, anglais, ourdou et français." },
+          { "label": "Service", "value": "Plus de quatre décennies en Irak, Iran, Pakistan, Syrie, Liban, France, Canada et Royaume-Uni." },
+          { "label": "Institution enregistrée", "value": "Enregistrée en France sous le nom d’« Al-Imam », en référence au Restant d’Allah (qu’Allah hâte sa noble délivrance) — École supérieure de Paris en études orientales." },
+          { "label": "Aujourd’hui", "value": "Il enseigne le bahth al-kharij aux étudiants de la hawza et guide les communautés musulmanes en France, en Grande-Bretagne et en Belgique." }
+        ]
+      },
+      "advisoryBoard": {
+        "eyebrow": "Conseil scientifique consultatif",
+        "title": "Un conseil académique au service de la mission éducative du Centre.",
+        "description": "Le conseil réunit des savants expérimentés et des universitaires dont les travaux couvrent la jurisprudence, la linguistique, les études coraniques et l’administration de l’enseignement supérieur.",
+        "members": [
+          {
+            "name": "Juge Dr Cheikh Youssef Muhammad Amro",
+            "country": "Liban",
+            "credentials": [
+              "Fondateur de l’Institut Imam al-Kadhim au Liban.",
+              "Juge de la charia au Liban pendant près de trente ans.",
+              "Auteur de nombreux ouvrages."
+            ]
+          },
+          {
+            "name": "Dr Muhammad Ridha al-Turayhi",
+            "country": "Pays-Bas",
+            "credentials": [
+              "Chercheur universitaire spécialisé en linguistique et en études coraniques.",
+              "Plus de vingt-cinq ans d’expérience dans l’enseignement.",
+              "Directeur de nombreux mémoires de master et thèses de doctorat.",
+              "Auteur de onze ouvrages scientifiques."
+            ]
+          },
+          {
+            "name": "Dr Abd al-Amir Zahid",
+            "country": "Irak",
+            "credentials": [
+              "Ancien doyen de la Faculté des Lettres de l’Université de Koufa.",
+              "Professeur d’université et auteur de nombreuses publications académiques.",
+              "Conférencier actif et participant à des initiatives culturelles et sociales."
+            ]
+          }
+        ]
+      },
+      "faculty": {
+        "eyebrow": "Corps enseignant",
+        "title": "Des savants au service des communautés musulmanes du monde entier.",
+        "description": "L’enseignement au Centre est assuré par des savants qui enseignent, prêchent et guident des communautés en Europe, en Amérique du Nord, en Afrique et au Moyen-Orient.",
+        "languagesLabel": "Enseigne en",
+        "worksLabel": "Travaux choisis",
+        "photoAltTemplate": "Portrait de {name}",
+        "members": [
+          {
+            "id": "mustafa-al-khaliq",
+            "name": "Cheikh Dr Mustafa al-Khaliq",
+            "role": "Directeur, Centre Imam (AJ) – Paris",
+            "bio": "Originaire de France et aujourd’hui établi à Londres, il a commencé ses études hawzawies à Qom en 1999 et y a étudié neuf ans, se spécialisant en jurisprudence, principes de la jurisprudence, langue et grammaire arabes, théologie, histoire islamique, exégèse coranique et éthique islamique. Il a ensuite poursuivi ses études en ligne auprès d’enseignants de la hawza, tout en restant actif dans plusieurs pays européens. Il est titulaire d’une licence en langues et civilisations étrangères de l’Université Paris 8 (Saint-Denis), d’un master en linguistique de la Sorbonne Nouvelle et d’un doctorat en éthique islamique imamite de l’École Pratique des Hautes Études (EPHE) à Paris. Il est actuellement imam du Centre Al-Khoei à Londres, après avoir été imam du Centre islamique de Swansea, au pays de Galles, pendant cinq ans. Il est actif dans la prédication depuis plus de vingt-trois ans — en France et en Belgique, pendant quatorze ans au Canada, notamment à Montréal et à Vancouver, et depuis cinq ans au Royaume-Uni.",
+            "languages": "Arabe, français, anglais et persan",
+            "works": [
+              "La restriction dans le Coran (mémoire de master)",
+              "La dimension mystique de l’Imam al-Husayn (que la paix soit sur lui)",
+              "Jésus-Christ dans le Coran",
+              "L’éthique islamique imamite (thèse de doctorat)"
+            ]
+          },
+          {
+            "id": "fares-al-khatib",
+            "name": "Cheikh Dr Fares al-Khatib",
+            "role": "Corps enseignant et orateur husseinite",
+            "bio": "Étudiant en jurisprudence supérieure (bahth al-kharij) à la hawza de Najaf al-Achraf, il suit les leçons de l’Ayatollah Cheikh Baqir al-Irawani. Il est professeur et enseignant de niveau master en jurisprudence, principes de la jurisprudence et études coraniques, ainsi que professeur d’université en Irak où il assure les cours de langue arabe pour le Centre. Comme orateur husseinite, il prononce des sermons dans de nombreux pays européens et dans la plupart des villes d’Irak. Il a publié plus de cinquante articles de recherche dans des revues académiques, à comité de lecture et hors comité de lecture, dans divers domaines des études islamiques, en arabe et en anglais.",
+            "languages": "Arabe et anglais",
+            "works": [
+              "Ouvrages spécialisés en jurisprudence comparée (fiqh muqāran)",
+              "Travaux sur les principes de la jurisprudence (usūl al-fiqh)",
+              "Travaux sur le hadith"
+            ]
+          },
+          {
+            "id": "abdullah-shami-zadeh",
+            "name": "Cheikh Abdullah Shami-Zadeh",
+            "role": "Corps enseignant",
+            "bio": "Un savant respecté de la hawza de Qom, doté d’une longue expérience dans l’enseignement et la prédication religieuse.",
+            "languages": "Persan et turc/azéri"
+          },
+          {
+            "id": "ismail-al-kanawi",
+            "name": "Cheikh Ismail al-Kanawi",
+            "role": "Directeur, séminaire Imam al-Sadiq, Nigéria",
+            "bio": "Prédicateur établi au Nigéria et directeur du séminaire Imam al-Sadiq à Garko, Kano. Il supervise l’enseignement hawzawi au Nigéria et enseigne dans les langues africaines locales.",
+            "languages": "Arabe, haoussa et langues africaines locales"
+          },
+          {
+            "id": "abu-fatimah",
+            "name": "Cheikh Abou Fatima",
+            "role": "Directeur, Centre Dame al-Zahra, Cameroun",
+            "bio": "Missionnaire islamique au Cameroun, il coopère avec le Centre et dirige sur place le Centre Dame al-Zahra (que la paix soit sur elle).",
+            "languages": "Arabe et langues africaines locales"
+          },
+          {
+            "id": "mujtaba-al-khaliq",
+            "name": "Cheikh Mujtaba al-Khaliq",
+            "role": "Corps enseignant, États-Unis",
+            "bio": "Un savant au service des communautés musulmanes des États-Unis, menant un travail de prédication à travers l’Amérique.",
+            "languages": "Anglais, arabe et persan"
+          },
+          {
+            "id": "hassan-al-nasiri",
+            "name": "Cheikh Hassan al-Nasiri",
+            "role": "Administration, Centre Imam (AJ) – Paris",
+            "bio": "Membre de l’administration du Centre Imam (AJ) – Paris, établi au Liban, et l’un des enseignants de langue arabe du Centre.",
+            "languages": "Arabe"
+          }
+        ]
+      },
+      "network": {
+        "eyebrow": "Instituts scientifiques en Afrique",
+        "title": "Paris est un centre parmi un réseau éducatif plus large.",
+        "description": "Parallèlement à son attention portée aux sphères européenne et occidentale, le Centre accorde une place considérable à l’Afrique, où il parraine plusieurs séminaires et instituts religieux.",
+        "institutes": [
+          {
+            "country": "Nigéria",
+            "institute": "Hawza Imam al-Sadiq (que la paix soit sur lui) — Garko, Kano",
+            "details": [
+              "Dirigée par Cheikh Ismail al-Kanawi.",
+              "Officiellement enregistrée auprès de l’autorité gouvernementale chargée des écoles islamiques et coraniques.",
+              "L’enseignement est dispensé en arabe et en haoussa, deuxième langue la plus parlée d’Afrique.",
+              "Le corps enseignant comprend également Cheikh Ahmad Hamza al-Ja‘fari et Cheikh Mukhtar Zango.",
+              "D’importantes activités de prédication, sociales et culturelles, dont la reconstruction de la mosquée al-Mustafa."
+            ]
+          },
+          {
+            "country": "Tanzanie",
+            "institute": "Institut al-Sadiq al-Amin",
+            "details": [
+              "Administré par Cheikh Sulayman al-Tanzani (Cheikh Sulayman bin Abdul).",
+              "Enseignement et prédication assurés par Cheikh Ali bin Muhammad, Cheikh Abdullah bin Khamis et Cheikh Baqir bin Khamis.",
+              "Joue un rôle important dans la diffusion des sciences religieuses islamiques et hawzawies."
+            ]
+          },
+          {
+            "country": "Cameroun",
+            "institute": "Centre Dame al-Zahra (que la paix soit sur elle)",
+            "details": [
+              "Dirigé par Cheikh Abou Fatima.",
+              "Enseignement en arabe aux côtés des langues africaines locales.",
+              "Coopère directement avec le Centre Imam (AJ) – Paris."
+            ]
+          },
+          {
+            "country": "Mauritanie",
+            "institute": "Le premier séminaire chiite à Nouakchott",
+            "details": [
+              "Le premier séminaire de ce type dans le pays.",
+              "S’inscrit dans l’attention de longue date du Centre envers les étudiants des sciences religieuses en Afrique."
+            ]
+          },
+          {
+            "country": "Guinée",
+            "institute": "Projet éducatif à Conakry",
+            "details": [
+              "Parmi les initiatives éducatives affiliées soutenues par le Centre.",
+              "Prolonge le travail du Centre en Afrique de l’Ouest."
+            ]
+          }
+        ],
+        "note": "L’intérêt de l’Ayatollah al-Khaliq pour les étudiants des sciences religieuses islamiques dans les pays africains remonte à plusieurs décennies. Le Centre soutient également des activités en Belgique et au Mali, reflétant un rayonnement éducatif et missionnaire qui dépasse largement la France elle-même."
+      }
+    }
+  },
+  "register": {
+    "seo": {
+      "title": "Inscription",
+      "description": "Inscrivez-vous aux études hawzawies au Centre Imam (AJ) – Paris : cours d’éducation religieuse à temps partiel, programme hawzawi de cinq ans à temps plein, et formation des enseignants des écoles islamiques du week-end."
+    },
+    "eyebrow": "Admissions",
+    "title": "Inscrivez-vous aux études de la hawza.",
+    "description": "Choisissez le parcours adapté à votre situation, remplissez le formulaire d’inscription, et l’équipe des admissions vous contactera pour la suite.",
+    "sections": {
+      "heroPrimaryCta": "Aller au formulaire",
+      "heroSecondaryCta": "En savoir plus sur la hawza"
+    },
+    "programs": {
+      "eyebrow": "Parcours d’étude",
+      "title": "Trois façons d’étudier avec le Centre.",
+      "description": "Que vous conciliiez travail et famille ou que vous soyez prêt à vous engager à temps plein, un parcours correspond à votre situation.",
+      "audienceLabel": "Pour qui",
+      "items": [
+        {
+          "title": "Cours d’éducation religieuse",
+          "description": "Un parcours souple à temps partiel couvrant le Saint Coran, la jurisprudence, les croyances, l’éthique, la biographie prophétique et l’histoire islamique. Les diplômés reçoivent un certificat les qualifiant pour enseigner dans les écoles, mosquées et centres islamiques.",
+          "audience": "Les étudiants qui concilient travail, université ou responsabilités familiales avec une étude religieuse sérieuse."
+        },
+        {
+          "title": "Programme hawzawi à temps plein",
+          "description": "Un cursus intensif de cinq ans suivant le programme hawzawi traditionnel, adapté aux musulmans vivant en Occident, et préparant les étudiants aux études avancées à Najaf al-Achraf.",
+          "audience": "Les étudiants en mesure de se consacrer entièrement à l’étude religieuse pendant cinq ans."
+        },
+        {
+          "title": "Formation des enseignants des écoles du week-end",
+          "description": "Un programme dédié associant matières islamiques, méthodologie de l’enseignement, psychologie de l’éducation, développement de l’enfant, conduite de classe et compétences de communication.",
+          "audience": "Les enseignants actuels et futurs des écoles islamiques du samedi et du dimanche dans les communautés d’Occident."
+        }
+      ]
+    },
+    "steps": {
+      "eyebrow": "Comment se déroule l’inscription",
+      "title": "Quatre étapes, de la demande à l’inscription.",
+      "description": "L’inscription se fait au moyen d’un formulaire court. Dès sa réception, l’équipe des admissions confirme votre parcours et vous explique la suite.",
+      "items": [
+        {
+          "title": "Choisissez votre parcours",
+          "description": "Décidez entre les cours d’éducation religieuse à temps partiel, le programme hawzawi à temps plein, ou la formation des enseignants des écoles du week-end."
+        },
+        {
+          "title": "Remplissez le formulaire d’inscription",
+          "description": "Complétez le formulaire ci-dessous avec vos coordonnées, votre langue d’étude préférée et le parcours que vous avez choisi."
+        },
+        {
+          "title": "Échangez avec l’équipe des admissions",
+          "description": "L’équipe examine votre demande et vous contacte pour confirmer votre parcours, répondre à vos questions et présenter le calendrier."
+        },
+        {
+          "title": "Commencez vos études",
+          "description": "Rejoignez les cours à Paris, en ligne, ou dans l’un des instituts affiliés du Centre, dans la langue qui vous convient le mieux."
+        }
+      ]
+    },
+    "form": {
+      "eyebrow": "Formulaire d’inscription",
+      "title": "Finalisez votre inscription.",
+      "description": "Le formulaire ci-dessous est hébergé par Google Forms. Vos réponses parviennent directement à l’équipe des admissions du Centre Imam (AJ) – Paris.",
+      "frameTitle": "Formulaire d’inscription à la hawza",
+      "fallbackTitle": "Le formulaire ne s’affiche pas ?",
+      "fallbackDescription": "Certains navigateurs et extensions de confidentialité bloquent les formulaires intégrés. Vous pouvez ouvrir le formulaire d’inscription directement dans un nouvel onglet.",
+      "openLabel": "Ouvrir le formulaire dans un nouvel onglet"
     }
   },
   "contact": {
     "seo": {
-      "title": "Contacter Espo Paris Academy",
-      "description": "Contactez Espo Paris Academy pour les demandes générales, les partenariats, l’organisation de visites et des échanges plus attentifs avec l’équipe."
+      "title": "Contacter la hawza",
+      "description": "Contactez le Centre Imam (AJ) – Paris pour toute question générale, demande d’admission, partenariat ou organisation de visite."
     },
-    "eyebrow": "Contacter l’academie",
-    "title": "Rejoignez l’academie par une page de contact plus claire et plus calme.",
-    "description": "Que vous exploriez les cours, prepariez une candidature ou souhaitiez organiser une visite, la bonne prochaine etape doit etre simple a trouver.",
+    "eyebrow": "Contacter la hawza",
+    "title": "Joindre la hawza directement.",
+    "description": "Que vous vous interrogiez sur les parcours d’étude, prépariez une visite ou ouvriez une conversation plus large, la première étape doit être simple à trouver.",
     "sections": {
       "heroPrimaryCta": "Voir les options de contact",
-      "heroSecondaryCta": "Preparer une visite",
+      "heroSecondaryCta": "Préparer une visite",
       "methodsEyebrow": "Points de contact directs",
-      "methodsTitle": "Choisissez la bonne facon de joindre l’academie.",
-      "methodsDescription": "Chaque conversation a son propre chemin. Ces points de contact rendent le premier geste plus simple et plus rassurant.",
+      "methodsTitle": "Choisissez la bonne façon de joindre la hawza.",
+      "methodsDescription": "Chaque conversation appelle un chemin différent. Ces points de contact rendent la première étape simple et fiable.",
       "formEyebrow": "Envoyer un message",
-      "formTitle": "Ecrivez a l’academie et recevez une reponse plus claire.",
-      "formDescription": "Utilisez ce formulaire pour les questions plus detaillees, les demandes d’admission, les visites ou tout sujet qui merite une reponse plus attentive.",
-      "visitEyebrow": "Visites et horaires",
-      "visitTitle": "Preparer une visite calme ou envoyer une demande plus detaillee.",
-      "visitDescription": "Qu’il s’agisse d’admission, de partenariat ou d’une premiere prise de contact, l’academie doit sembler accueillante avant meme l’arrivee."
+      "formTitle": "Écrivez à la hawza et attendez une réponse claire.",
+      "formDescription": "Utilisez le formulaire pour les questions plus longues, les demandes d’étude, les visites ou les partenariats qui appellent une réponse plus réfléchie.",
+      "visitEyebrow": "Visite et horaires d’ouverture",
+      "visitTitle": "Préparez une visite ou envoyez une demande détaillée.",
+      "visitDescription": "Que vous veniez pour une visite, un partenariat ou une première rencontre, un court message en amont aide l’équipe à préparer un accueil convenable."
     },
     "methods": {
-      "generalTitle": "Questions generales",
-      "generalDescription": "Pour les premieres questions sur l’academie, le site public et le meilleur point de depart.",
+      "generalTitle": "Questions générales",
+      "generalDescription": "Pour vos premières questions sur la hawza, ses programmes et par où commencer.",
       "partnershipsTitle": "Partenariats",
-      "partnershipsDescription": "Pour les collaborations, les evenements, les visites ou les echanges institutionnels.",
-      "phoneTitle": "Appeler l’academie",
-      "phoneDescription": "Utilisez la ligne principale pour une question rapide, un besoin de planification ou un suivi court.",
+      "partnershipsDescription": "Pour les collaborations, les événements, les savants invités ou les échanges entre institutions.",
+      "phoneTitle": "Appeler la hawza",
+      "phoneDescription": "Utilisez la ligne principale pour les questions brèves, l’organisation ou un suivi rapide.",
       "visitTitle": "Venir sur place",
-      "visitDescription": "Retrouvez l’adresse, le rythme d’ouverture et les conseils de visite juste en dessous.",
+      "visitDescription": "Retrouvez ci-dessous l’adresse, les horaires et les conseils de visite avant de venir.",
       "visitValue": "Voir l’adresse et les horaires"
     },
     "visit": {
-      "addressLabel": "Adresse de l’academie",
+      "addressLabel": "Adresse de la hawza",
       "hoursLabel": "Horaires d’ouverture",
-      "noteTitle": "Avant de venir",
-      "noteDescription": "Si votre visite concerne une admission, un partenariat ou un parcours precis, envoyer un court message a l’avance aide l’academie a preparer le bon accueil."
+      "noteTitle": "Un mot avant votre venue",
+      "noteDescription": "Si vous préparez une visite, une collaboration ou un échange plus détaillé, un court message préalable aide la hawza à préparer le bon accueil."
     },
     "form": {
-      "noteTitle": "Ce format convient aux messages plus detaillees",
-      "noteDescription": "Si vous avez besoin d’orientation sur l’admission, une visite ou un echange de partenariat, ajoutez un peu de contexte et l’equipe pourra repondre plus justement.",
+      "noteTitle": "Un message détaillé a toute sa place ici",
+      "noteDescription": "Si vous cherchez des repères sur les parcours d’étude, une visite ou une collaboration, donnez un peu de contexte : l’équipe pourra répondre plus utilement. Pour vous inscrire, utilisez plutôt le formulaire d’inscription.",
       "fields": {
         "name": "Nom",
-        "email": "Email",
-        "subject": "Sujet",
+        "email": "E-mail",
+        "subject": "Objet",
         "message": "Message",
         "reason": "Motif",
         "namePlaceholder": "Votre nom",
         "emailPlaceholder": "vous@exemple.com",
-        "subjectPlaceholder": "Sur quoi avez-vous besoin d’aide ?",
-        "messagePlaceholder": "Partagez ici votre question, votre demande de visite ou votre contexte...",
+        "subjectPlaceholder": "Sur quoi souhaitez-vous de l’aide ?",
+        "messagePlaceholder": "Partagez ici votre question, votre demande d’étude ou de visite...",
         "submit": "Envoyer le message",
         "pending": "Envoi du message...",
+        "honeypot": "Laissez ce champ vide",
         "reasonOptions": {
-          "general": "Question generale",
+          "general": "Question générale",
           "partnerships": "Partenariats",
           "visit": "Organisation d’une visite"
         }
+      },
+      "status": {
+        "success": "Votre message a été envoyé. L’équipe de la hawza vous répondra bientôt.",
+        "rateLimited": "Vous avez envoyé plusieurs messages récemment. Merci de patienter quelques minutes avant de réessayer.",
+        "notConfigured": "L’envoi d’e-mails n’est pas encore configuré. En attendant, contactez la hawza par e-mail ou par téléphone.",
+        "failed": "Nous n’avons pas pu envoyer votre message pour le moment. Merci de réessayer dans un instant.",
+        "unknown": "Un problème est survenu avec votre message. Vérifiez le formulaire et réessayez."
+      },
+      "errors": {
+        "nameRequired": "Merci d’indiquer votre nom.",
+        "nameTooLong": "Ce nom est trop long.",
+        "emailInvalid": "Merci d’indiquer une adresse e-mail valide.",
+        "emailTooLong": "Cette adresse e-mail est trop longue.",
+        "reasonInvalid": "Merci de choisir un motif pour votre message.",
+        "subjectRequired": "Merci d’ajouter un objet court.",
+        "subjectTooLong": "Cet objet est trop long.",
+        "messageTooShort": "Merci de donner un peu plus de détails.",
+        "messageTooLong": "Ce message est trop long. Merci de le raccourcir.",
+        "localeInvalid": "Un problème est survenu avec votre message. Merci de réessayer."
       }
     }
   },
   "errors": {
     "pageNotFound": "Page introuvable",
     "goBack": "Retour à l’accueil",
-    "pageNotFoundDescription": "La page que vous recherchez n'existe pas ou a été déplacée."
+    "pageNotFoundDescription": "La page que vous cherchez n’existe pas ou a été déplacée."
   }
 }

@@ -8,6 +8,7 @@ type Props = {
   eyebrow: string;
   title: string;
   description: string;
+  weekendLabel: string;
   tracks: readonly ProgramTrack[];
   weekendSchool: ProgramTrack;
 };
@@ -16,6 +17,7 @@ export function AboutProgramsSection({
   eyebrow,
   title,
   description,
+  weekendLabel,
   tracks,
   weekendSchool,
 }: Props) {
@@ -59,7 +61,7 @@ export function AboutProgramsSection({
         <article className="rounded-[2rem] border border-border/65 bg-card/80 p-6 shadow-[0_34px_90px_-60px_hsl(var(--foreground)/0.34)] backdrop-blur-xl sm:p-7">
           <div className="grid gap-6 lg:grid-cols-[minmax(0,0.74fr)_minmax(0,1.26fr)] lg:gap-10">
             <div className="public-intro-stack max-w-md">
-              <p className="section-eyebrow">Weekend schools</p>
+              <p className="section-eyebrow">{weekendLabel}</p>
               <h3 className="public-card-heading text-balance">
                 {weekendSchool.title}
               </h3>

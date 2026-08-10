@@ -12,9 +12,12 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: "#10141a",
     icons: [
       {
-        src: siteConfig.brand.markSrc,
+        // The generated `/icon` route is a true 512x512 square. `logo.png` is a
+        // 327x109 wordmark and was being declared at the wrong size here.
+        src: "/icon",
         sizes: "512x512",
         type: "image/png",
+        purpose: "any",
       },
     ],
   };

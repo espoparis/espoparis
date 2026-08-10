@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "echo \"No tests configured\"",
+    "test": "node scripts/check-messages.mjs && node scripts/check-tailwind-content.mjs && node --experimental-strip-types --test \"server/**/*.test.ts\"",
+    "test:messages": "node scripts/check-messages.mjs",
+    "test:tailwind": "node scripts/check-tailwind-content.mjs",
     "typecheck": "node scripts/typecheck.mjs",
     "clean": "rm -rf .next tsconfig.tsbuildinfo"
   },

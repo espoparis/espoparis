@@ -14,16 +14,13 @@ export default function GlobalError({
   reset: () => void;
 }) {
   return (
-    <html className={bodyFont.variable}>
+    <html lang="en" dir="ltr" className={bodyFont.variable}>
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <AppShell>
           <div className="flex min-h-screen items-center justify-center px-4 py-12 sm:py-14">
             <AppErrorState
               title="The app hit a critical problem"
-              description={
-                error.message ||
-                "A root-level failure interrupted the experience. Try reloading the app."
-              }
+              description="A root-level failure interrupted the experience. Try reloading the app."
               primaryAction={{
                 label: "Reload app",
                 onClick: reset,

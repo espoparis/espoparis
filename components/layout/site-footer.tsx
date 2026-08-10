@@ -1,5 +1,4 @@
 import { getTranslations } from "next-intl/server";
-import { Github, Twitter } from "lucide-react";
 import { SiteBrand } from "@/components/shared/site-brand";
 import { Footer } from "@/components/ui/footer";
 import { publicNavLinks } from "@/lib/constants/app";
@@ -19,18 +18,8 @@ export async function SiteFooter({ locale }: Props) {
       <Footer
         brand={<SiteBrand variant="full" size="md" />}
         description={`${tFooter("title")} ${tFooter("description")}`}
-        socialLinks={[
-          {
-            icon: <Twitter className="h-4 w-4" />,
-            href: "https://twitter.com",
-            label: "Twitter",
-          },
-          {
-            icon: <Github className="h-4 w-4" />,
-            href: "https://github.com",
-            label: "GitHub",
-          },
-        ]}
+        // No social links until real seminary accounts are confirmed. The
+        // previous entries pointed at bare twitter.com / github.com.
         mainLinksTitle={tCommon("labels.navigate")}
         mainLinks={publicNavLinks.map((link) => ({
           href: localizePath(locale, link.href),
