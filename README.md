@@ -100,4 +100,4 @@ These are placeholders that need real values before launch:
   on a seminary page and should be replaced with real photographs of the hawza
   or the section removed. It lives in `app/[locale]/about/page.tsx`.
 - Four of the seven faculty have no portrait yet (Shami-Zadeh, al-Kanawi,
-  Abu Fatimah, Mujtaba al-Khaliq, al-Nasiri)
+  Abu Fatimah, Mujtaba al-Khaliq, al-Nasiri).
