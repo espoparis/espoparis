@@ -105,4 +105,4 @@ who are not actually connected to the hawza.
 > `espoparis.ecole@gmail.co` — note the `.co`, not `.com`. If that is a typo,
 > every enquiry, the JSON-LD contact points, and the contact form's delivery
 > target are all pointing at the wrong domain. It is a one-line fix in
-> `lib/site-config.ts`.
+> `lib/site-config.ts`
