@@ -62,6 +62,16 @@ export function buildPageMetadata({
 }
 
 export function createOrganizationJsonLd() {
+  const address =
+    siteConfig.contact.addressLineOne && siteConfig.contact.addressLineTwo
+      ? {
+          "@type": "PostalAddress",
+          streetAddress: siteConfig.contact.addressLineOne,
+          addressLocality: "Paris",
+          addressCountry: "FR",
+        }
+      : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
@@ -71,27 +81,33 @@ export function createOrganizationJsonLd() {
     logo: absoluteUrl(siteConfig.brand.wordmarkSrc),
     description: siteConfig.description,
     email: siteConfig.contact.primaryEmail,
-    telephone: siteConfig.contact.phone,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: siteConfig.contact.addressLineOne,
-      addressLocality: "Paris",
-      postalCode: "75002",
-      addressCountry: "FR",
-    },
+    ...(address ? { address } : {}),
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "customer support",
         email: siteConfig.contact.primaryEmail,
-        telephone: siteConfig.contact.phone,
-        availableLanguage: ["English", "French", "Arabic", "Persian"],
+        availableLanguage: [
+          "English",
+          "French",
+          "Arabic",
+          "Persian",
+          "Turkish",
+          "Azerbaijani",
+        ],
       },
       {
         "@type": "ContactPoint",
         contactType: "admissions",
         email: siteConfig.contact.admissionsEmail,
-        availableLanguage: ["English", "French", "Arabic", "Persian"],
+        availableLanguage: [
+          "English",
+          "French",
+          "Arabic",
+          "Persian",
+          "Turkish",
+          "Azerbaijani",
+        ],
       },
       {
         "@type": "ContactPoint",

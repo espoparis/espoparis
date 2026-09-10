@@ -3,6 +3,7 @@ import type { AdvisoryMember } from "@/features/marketing/components/about-advis
 import type { Distinctive } from "@/features/marketing/components/about-distinctives-section";
 import type { FacultyMember } from "@/features/marketing/components/about-faculty-section";
 import type { Institute } from "@/features/marketing/components/about-network-section";
+import type { LeadershipMember } from "@/features/marketing/components/leadership-section";
 
 export type OverviewCard = {
   title: string;
@@ -95,6 +96,12 @@ export async function getAboutContent(locale: string) {
       factsLabel: t("founder.factsLabel"),
       paragraphs: t.raw("founder.paragraphs") as string[],
       facts: t.raw("founder.facts") as FounderFact[],
+    },
+    leadership: {
+      eyebrow: t("leadership.eyebrow"),
+      title: t("leadership.title"),
+      description: t("leadership.description"),
+      members: t.raw("leadership.members") as LeadershipMember[],
     },
     advisoryBoard: {
       eyebrow: t("advisoryBoard.eyebrow"),

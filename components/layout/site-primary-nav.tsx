@@ -15,7 +15,7 @@ export function SitePrimaryNav({ locale }: Props) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden items-center gap-1 rounded-full border border-border/60 bg-secondary/45 p-1 shadow-[inset_0_1px_0_hsl(var(--background)/0.85)] md:flex">
+    <nav className="hidden items-center gap-1 rounded-full border border-border/60 bg-secondary/45 p-1 shadow-[inset_0_1px_0_hsl(var(--background)/0.85)] xl:flex">
       {publicNavLinks.map((link) => {
         const active = isActivePath(pathname, link.href);
 

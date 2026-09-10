@@ -11,11 +11,12 @@ import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 type ProgramEntry = { title: string; description: string; audience: string };
 type StepEntry = { title: string; description: string };
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: "register.seo" });
 
   return buildPageMetadata({
@@ -26,11 +27,12 @@ export async function generateMetadata({
   });
 }
 
-export default async function RegisterPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function RegisterPage(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   setRequestLocale(params.locale);
 
   const t = await getTranslations({ locale: params.locale, namespace: "register" });

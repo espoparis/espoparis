@@ -32,7 +32,7 @@ export function SiteMobileNav({ locale }: Props) {
         <Button
           variant="nav"
           size="icon"
-          className="size-10 rounded-full border border-border/60 bg-secondary/45 shadow-[inset_0_1px_0_hsl(var(--background)/0.85)] md:hidden"
+          className="size-10 rounded-full border border-border/60 bg-secondary/45 shadow-[inset_0_1px_0_hsl(var(--background)/0.85)] xl:hidden"
           aria-label={tMobile("title")}
         >
           <Menu className="h-4 w-4" />

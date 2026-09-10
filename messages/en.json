@@ -3,8 +3,13 @@
     "nav": {
       "home": "Home",
       "about": "About",
+      "faculty": "Faculty",
       "register": "Register",
-      "contact": "Contact"
+      "contact": "Contact",
+      "academicProgram": "Academic Program",
+      "library": "Digital Library",
+      "learning": "Recorded Learning",
+      "support": "Support the Center"
     },
     "labels": {
       "connect": "Connect",
@@ -93,13 +98,34 @@
       "description": "From long-form hawza study to weekend-school formation, the work is sustained by teachers serving across languages, countries, and generations.",
       "cta": "Read the hawza story",
       "members": [
-        { "name": "Shaykh Dr. Mustafa al-Khaliq", "role": "Director, Imam (AJ) Center – Paris" },
-        { "name": "Shaykh Dr. Fares al-Khatib", "role": "Teaching faculty and Husayni orator" },
-        { "name": "Shaykh Abdullah Shami-Zadeh", "role": "Teaching faculty" },
-        { "name": "Shaykh Ismail al-Kanawi", "role": "Director, Imam al-Sadiq Seminary, Nigeria" },
-        { "name": "Shaykh Abu Fatimah", "role": "Director, Lady al-Zahra Center, Cameroon" },
-        { "name": "Shaykh Mujtaba al-Khaliq", "role": "Teaching faculty, United States" },
-        { "name": "Shaykh Hassan al-Nasiri", "role": "Administration and Arabic instruction" }
+        {
+          "name": "Shaykh Dr. Mustafa al-Khaliq",
+          "role": "Director, Imam (AJ) Center – Paris"
+        },
+        {
+          "name": "Shaykh Dr. Fares al-Khatib",
+          "role": "Teaching faculty and Husayni orator"
+        },
+        {
+          "name": "Shaykh Abdullah Shami-Zadeh",
+          "role": "Teaching faculty"
+        },
+        {
+          "name": "Shaykh Ismail al-Kanawi",
+          "role": "Director, Imam al-Sadiq Seminary, Nigeria"
+        },
+        {
+          "name": "Shaykh Abu Fatimah",
+          "role": "Director, Lady al-Zahra Center, Cameroon"
+        },
+        {
+          "name": "Shaykh Mujtaba al-Khaliq",
+          "role": "Teaching faculty, United States"
+        },
+        {
+          "name": "Shaykh Hassan al-Nasiri",
+          "role": "Administration and Arabic instruction"
+        }
       ],
       "testimonial": {
         "quote": "The aim is to prepare teachers and preachers from within Western societies themselves, with the language and grounding needed to serve their communities well.",
@@ -112,6 +138,36 @@
       "line1": "Register for the",
       "line2": "next intake.",
       "description": "Choose a study track, complete the registration form, and join students learning across French, English, Persian, Arabic, and Azerbaijani."
+    },
+    "accessSection": {
+      "eyebrow": "Study & Resources",
+      "title": "One academic environment, from curriculum to independent study.",
+      "description": "Move between the official academic programme, the digital library, and recorded lessons through a structure designed to grow with the Center.",
+      "academic": {
+        "title": "Academic Programme",
+        "description": "Explore the four-year, eight-semester pathway and the subjects assigned to each stage of study.",
+        "action": "View programme"
+      },
+      "library": {
+        "title": "Digital Library",
+        "description": "A searchable home for books and PDFs with covers, descriptions, in-browser reading, and downloads when permitted.",
+        "action": "Open library"
+      },
+      "learning": {
+        "title": "Recorded Lessons",
+        "description": "Browse recorded study by year, semester, subject, course, and lesson, with access rules ready for free or paid content.",
+        "action": "Explore lessons"
+      }
+    },
+    "supportSection": {
+      "eyebrow": "Support the Mission",
+      "title": "Help sustain teaching, learning, and service.",
+      "description": "Those who wish to support Imam (AJ) Center – Paris may contact the administration directly for the currently available donation methods.",
+      "action": "Support the Center"
+    },
+    "dailyReflection": {
+      "eyebrow": "Daily verse / hadith",
+      "source": "Source"
     }
   },
   "about": {
@@ -192,12 +248,23 @@
           {
             "title": "Multilingual education",
             "description": "It is the only hawza in the world offering instruction in several languages, so students can study in the language they actually live and preach in.",
-            "points": ["French", "English", "Persian", "Arabic", "Azerbaijani (Turkish)"]
+            "points": [
+              "French",
+              "English",
+              "Persian",
+              "Arabic",
+              "Azerbaijani (Turkish)"
+            ]
           },
           {
             "title": "Practical curriculum",
             "description": "Although its faculty includes highly distinguished scholars led by Ayatollah Shaykh Ismail al-Khaliq, the curriculum emphasizes the real needs of Muslims living in Europe, the West, and Africa. Rather than focusing on abstract theoretical debates, it prioritizes the practical religious knowledge Muslims need in contemporary society.",
-            "points": ["Europe", "The West", "Africa", "Contemporary needs"]
+            "points": [
+              "Europe",
+              "The West",
+              "Africa",
+              "Contemporary needs"
+            ]
           }
         ]
       },
@@ -282,14 +349,38 @@
           "He is known for a distinctive approach that combines the preservation of heritage and authenticity on one hand with openness to other cultures on the other, and he possesses a refined humane spirit. He believes strongly in institutional work, continues to carry out his guiding role for Muslims in Paris and throughout France, Britain, and Belgium, and delivers his advanced jurisprudence lessons (bahth al-kharij) to his students in the hawza. He also has writings that remain in manuscript form."
         ],
         "facts": [
-          { "label": "Born", "value": "1957, Karbala, Iraq — raised beside the shrine of Imam al-Husayn (peace be upon him)." },
-          { "label": "Early formation", "value": "Hawza of Karbala; examined in the advanced levels (al-suṭuh al-ʿulya) at thirteen years of age." },
-          { "label": "Najaf al-Ashraf", "value": "Bahth al-kharij under Sayyid Abu al-Qasim al-Khoei, Sayyid Muhammad al-Ruhani, and Sayyid al-Khomeini." },
-          { "label": "Academic", "value": "Master's degree from the Arab University in Beirut; attained al-Fadil al-Arabi in Pakistan, ranking first nationally." },
-          { "label": "Languages", "value": "Arabic, Persian, English, Urdu, and French." },
-          { "label": "Service", "value": "More than four decades across Iraq, Iran, Pakistan, Syria, Lebanon, France, Canada, and the United Kingdom." },
-          { "label": "Registered institution", "value": "Registered in France as “Al-Imam”, in reference to the Remaining One of Allah (may Allah hasten his noble relief) — École supérieure de Paris en études orientales." },
-          { "label": "Today", "value": "Teaches bahth al-kharij to hawza students and guides Muslim communities in France, Britain, and Belgium." }
+          {
+            "label": "Born",
+            "value": "1957, Karbala, Iraq — raised beside the shrine of Imam al-Husayn (peace be upon him)."
+          },
+          {
+            "label": "Early formation",
+            "value": "Hawza of Karbala; examined in the advanced levels (al-suṭuh al-ʿulya) at thirteen years of age."
+          },
+          {
+            "label": "Najaf al-Ashraf",
+            "value": "Bahth al-kharij under Sayyid Abu al-Qasim al-Khoei, Sayyid Muhammad al-Ruhani, and Sayyid al-Khomeini."
+          },
+          {
+            "label": "Academic",
+            "value": "Master's degree from the Arab University in Beirut; attained al-Fadil al-Arabi in Pakistan, ranking first nationally."
+          },
+          {
+            "label": "Languages",
+            "value": "Arabic, Persian, English, Urdu, and French."
+          },
+          {
+            "label": "Service",
+            "value": "More than four decades across Iraq, Iran, Pakistan, Syria, Lebanon, France, Canada, and the United Kingdom."
+          },
+          {
+            "label": "Registered institution",
+            "value": "Registered in France as “Al-Imam”, in reference to the Remaining One of Allah (may Allah hasten his noble relief) — École supérieure de Paris en études orientales."
+          },
+          {
+            "label": "Today",
+            "value": "Teaches bahth al-kharij to hawza students and guides Muslim communities in France, Britain, and Belgium."
+          }
         ]
       },
       "advisoryBoard": {
@@ -449,6 +540,31 @@
           }
         ],
         "note": "Ayatollah al-Khaliq's interest in students of the Islamic religious sciences in African countries goes back several decades. The Center also supports activities in Belgium and Mali, reflecting an educational and missionary reach well beyond France itself."
+      },
+      "leadership": {
+        "eyebrow": "Leadership",
+        "title": "Academic leadership rooted in scholarship and service.",
+        "description": "The Center’s leadership combines founding vision, institutional management, and educational oversight.",
+        "members": [
+          {
+            "id": "founder-mohammad-ismail-al-khaliq",
+            "name": "Ayatollah Shaykh Mohammad Ismail al-Khaliq",
+            "role": "Founder",
+            "bio": "Founder of Imam (AJ) Center – Paris. He began teaching seminary sciences in Paris in 2002, and the study circles developed into the organized Center in 2012."
+          },
+          {
+            "id": "mustafa-al-khaliq",
+            "name": "Shaykh Dr. Mustafa al-Khaliq",
+            "role": "Director General",
+            "bio": "Director General of Imam (AJ) Center – Paris and a member of its teaching body, with teaching and missionary experience across Europe and North America."
+          },
+          {
+            "id": "mohammad-ali-al-hajj-al-amili",
+            "name": "Shaykh Mohammad Ali al-Hajj al-Amili",
+            "role": "Educational Officer",
+            "bio": "Responsible for educational affairs and the academic organization of the Center’s programs."
+          }
+        ]
       }
     }
   },
@@ -550,7 +666,11 @@
       "phoneDescription": "Use the main line for short questions, scheduling help, or quick follow-up.",
       "visitTitle": "Visit in person",
       "visitDescription": "Find the address, opening hours, and visit guidance below before you come in.",
-      "visitValue": "See address and hours"
+      "visitValue": "See address and hours",
+      "phoneArabicFrench": "Arabic & French",
+      "phonePersianTurkishAzeri": "Persian, Turkish & Azerbaijani",
+      "phoneEnglish": "English",
+      "phoneAfrica": "Africa / African languages"
     },
     "visit": {
       "addressLabel": "Hawza address",
@@ -605,5 +725,1098 @@
     "pageNotFound": "Page not found",
     "goBack": "Go back home",
     "pageNotFoundDescription": "The page you are looking for does not exist or has moved."
+  },
+  "library": {
+    "title": "Digital Library",
+    "description": "Searchable digital books published or approved by the Center.",
+    "copy": {
+      "eyebrow": "Digital Library",
+      "title": "Knowledge, organized for serious study.",
+      "description": "A dedicated digital library for books published or approved by the Center, with structured metadata, in-browser PDF reading and controlled downloads.",
+      "searchPlaceholder": "Search by title, author or subject…",
+      "allCategories": "All",
+      "emptyTitle": "No books have been published here yet.",
+      "emptyDescription": "The interface is ready for covers, descriptions, categories, in-browser PDF reading and controlled downloads once approved materials are uploaded.",
+      "readerLabel": "Read online",
+      "downloadLabel": "Download",
+      "categories": [
+        "Qur’an",
+        "Fiqh",
+        "Usul",
+        "Aqidah",
+        "Ethics",
+        "History"
+      ],
+      "capabilitiesTitle": "Built for a real academic collection",
+      "metadataLabel": "Planned metadata: title · author · description · cover · language · category · year · page count · access level",
+      "capabilities": [
+        {
+          "title": "In-browser reading",
+          "description": "Approved PDFs can open in a focused reader without forcing a download.",
+          "icon": "reader"
+        },
+        {
+          "title": "Academic metadata",
+          "description": "Each item can carry author, subject, language, description, cover and publication information.",
+          "icon": "metadata"
+        },
+        {
+          "title": "Controlled access",
+          "description": "Resources can be public, student-only, or downloadable only when permission allows.",
+          "icon": "access"
+        }
+      ]
+    }
+  },
+  "learning": {
+    "title": "Recorded Learning",
+    "description": "Structured recorded courses for enrolled and paid learners.",
+    "copy": {
+      "eyebrow": "Recorded Learning",
+      "title": "Study on your schedule, without losing academic structure.",
+      "description": "Structured recorded courses for enrolled and paid learners.",
+      "hierarchyTitle": "Academic structure",
+      "hierarchy": [
+        "Program",
+        "Level / Year",
+        "Subject",
+        "Course",
+        "Lesson"
+      ],
+      "featuresTitle": "Learning experience",
+      "features": [
+        {
+          "title": "Watch lessons",
+          "description": "Video or audio lessons with notes and references.",
+          "icon": "play"
+        },
+        {
+          "title": "Offline access",
+          "description": "Allow downloads only for materials explicitly licensed for offline study.",
+          "icon": "download"
+        },
+        {
+          "title": "Progress",
+          "description": "Track completed lessons and continue where the student stopped.",
+          "icon": "progress"
+        },
+        {
+          "title": "Controlled access",
+          "description": "Free, student-only and paid materials use account permissions.",
+          "icon": "access"
+        }
+      ],
+      "accessNote": "No recorded lessons are published yet. The academic structure is public, while student accounts, storage, permissions and payments will control access when recordings go live.",
+      "catalogTitle": "Recorded courses aligned with the academic program",
+      "catalogDescription": "The recorded-learning catalog follows the same four-year academic structure. Each approved course can later contain video, audio, notes, references and downloadable resources.",
+      "recordingsPending": "No recordings are published yet. When approved lessons are uploaded, they will appear under their exact year, semester and course instead of forming a separate unstructured archive.",
+      "portalLabel": "Student Portal"
+    }
+  },
+  "academicProgram": {
+    "title": "Academic Program 2026–2027",
+    "description": "The Imam (AJ) Center – Paris four-year, eight-semester academic program.",
+    "copy": {
+      "eyebrow": "Academic Guide 2026–2027",
+      "title": "A progressive academic path from foundations to advanced study and practice.",
+      "description": "A structured program in Islamic studies that builds core knowledge and skills, deepens understanding, develops specialization and communication, and culminates in advanced and applied study.",
+      "facts": [
+        "4 academic years",
+        "8 semesters",
+        "Years 1–2: Diploma stage"
+      ],
+      "pathwayTitle": "Academic pathway",
+      "curriculumTitle": "Curriculum by year and semester",
+      "fieldsTitle": "Fields of study",
+      "fieldsDescription": "The curriculum brings together complementary scholarly, educational, linguistic and practical fields.",
+      "years": [
+        {
+          "year": "Year One",
+          "stage": "Foundations",
+          "description": "A foundational stage establishing core study in Qur’an, jurisprudence, doctrine, ethics, sira and history.",
+          "semesters": [
+            {
+              "label": "Semester One",
+              "courses": [
+                "Tajwid and recitation",
+                "Jurisprudence (1)",
+                "Doctrine (1)",
+                "General ethics (1)",
+                "Sira and history (1)"
+              ]
+            },
+            {
+              "label": "Semester Two",
+              "courses": [
+                "Recitation and reflection on Qur’anic meanings",
+                "Jurisprudence (2)",
+                "Doctrine (2)",
+                "General ethics (2)",
+                "Sira and history (2)",
+                "Introduction to Qur’anic exegesis"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Year Two",
+          "stage": "Deepening Knowledge",
+          "description": "Deepens the academic foundations, introduces Arabic language studies and continues Qur’anic exegesis.",
+          "semesters": [
+            {
+              "label": "Semester Three",
+              "courses": [
+                "Jurisprudence (3)",
+                "Doctrine (3)",
+                "Family ethics: marriage and children",
+                "Sira and history (3)",
+                "Morphology – simplified introduction",
+                "Qur’anic exegesis (1)"
+              ]
+            },
+            {
+              "label": "Semester Four",
+              "courses": [
+                "Jurisprudence (4)",
+                "Doctrine (4)",
+                "Ethics for teachers",
+                "Sira and history (4)",
+                "Grammar – introduction",
+                "Qur’anic exegesis (2)"
+              ]
+            }
+          ],
+          "milestone": "Completion of the Diploma stage"
+        },
+        {
+          "year": "Year Three",
+          "stage": "Specialization & Communication",
+          "description": "The transition from foundational study to specialized, analytical and religious-communication studies.",
+          "semesters": [
+            {
+              "label": "Semester Five",
+              "courses": [
+                "Jurisprudence for religious communicators (1)",
+                "Doctrinal questions and objections (1)",
+                "Analytical history",
+                "Ethics in the Qur’an and Hadith (1)",
+                "Public speaking (1)"
+              ]
+            },
+            {
+              "label": "Semester Six",
+              "courses": [
+                "Jurisprudence for religious communicators (2)",
+                "Doctrinal questions and objections (2)",
+                "Analytical history (2)",
+                "Ethics in the Qur’an and Hadith (2)",
+                "Public speaking (2)"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Year Four",
+          "stage": "Advanced & Applied",
+          "description": "The advanced and applied stage, culminating in direct teaching practice.",
+          "semesters": [
+            {
+              "label": "Semester Seven",
+              "courses": [
+                "Advanced deductive jurisprudence",
+                "Principles of jurisprudence",
+                "Detailed study of Mahdism",
+                "Questions and responses in ethics",
+                "Public speaking (3)"
+              ]
+            },
+            {
+              "label": "Semester Eight – Practice",
+              "courses": [
+                "Dissertation writing",
+                "Practical teaching in jurisprudence",
+                "Practical teaching in doctrine",
+                "Practical teaching in ethics"
+              ]
+            }
+          ],
+          "milestone": "Program completion"
+        }
+      ],
+      "fields": [
+        {
+          "title": "Jurisprudence & its principles",
+          "items": "Jurisprudence, jurisprudence for communicators, deductive jurisprudence, principles of jurisprudence"
+        },
+        {
+          "title": "Doctrine & thought",
+          "items": "Doctrine, doctrinal questions, Mahdism"
+        },
+        {
+          "title": "The Qur’an",
+          "items": "Tajwid, recitation, reflection, Qur’anic exegesis"
+        },
+        {
+          "title": "Ethics & education",
+          "items": "General ethics, family ethics, teacher ethics, ethics in Qur’an and Hadith"
+        },
+        {
+          "title": "Sira & history",
+          "items": "Sira and history, analytical history"
+        },
+        {
+          "title": "Arabic language",
+          "items": "Morphology, grammar"
+        },
+        {
+          "title": "Communication & skills",
+          "items": "Public speaking, practical teaching, dissertation writing"
+        }
+      ],
+      "noteTitle": "Academic note",
+      "note": "The guide does not yet specify credit units or teaching hours because they remain subject to final approval. Some course names may also be updated in the final plan. Additional subjects such as Logic are therefore not presented as confirmed courses until formally approved."
+    }
+  },
+  "activities": {
+    "title": "Activities & News",
+    "description": "Official activities, announcements and institutional updates from Imam (AJ) Center – Paris.",
+    "copy": {
+      "eyebrow": "Center Updates",
+      "title": "Activities, announcements and academic life.",
+      "description": "A structured home for official news, events, academic announcements and documented activities from the Center and its associated initiatives.",
+      "emptyTitle": "No public activities have been published yet.",
+      "emptyDescription": "This section is prepared for verified institutional updates only. It remains outside the main navigation until approved content is added.",
+      "capabilitiesTitle": "Prepared publishing structure",
+      "capabilities": [
+        {
+          "title": "News & announcements",
+          "description": "Publish official notices with dates, categories, summaries and full detail pages.",
+          "icon": "news"
+        },
+        {
+          "title": "Events",
+          "description": "Document lectures, ceremonies, academic sessions and upcoming activities.",
+          "icon": "events"
+        },
+        {
+          "title": "Media galleries",
+          "description": "Attach approved photographs to activity pages without mixing them into the academic content system.",
+          "icon": "gallery"
+        },
+        {
+          "title": "Search & archive",
+          "description": "Future updates can be filtered by year, category and keyword as the archive grows.",
+          "icon": "search"
+        }
+      ]
+    }
+  },
+  "studentPortal": {
+    "title": "Student Portal",
+    "description": "Secure access area for enrolled learners and approved digital learning resources.",
+    "copy": {
+      "eyebrow": "Student Access",
+      "title": "Your learning space",
+      "description": "The student portal will bring enrolled courses, recorded lessons, progress and approved learning resources into one secure area.",
+      "signedOutTitle": "Sign in to your student account",
+      "signedOutDescription": "Use your verified account to access academic enrollments, recorded lessons and eligible resources.",
+      "signInLabel": "Sign in with Google",
+      "backToLearning": "Explore the academic structure",
+      "securityNote": "Sign-in will only be enabled after institutional OAuth credentials, server sessions and role mapping are configured. No password will be collected directly by this website.",
+      "sections": [
+        {
+          "title": "My Courses",
+          "description": "Courses and recorded lessons connected to the learner’s enrollment and entitlements.",
+          "icon": "courses"
+        },
+        {
+          "title": "Progress",
+          "description": "Lesson completion and viewing progress will live here once accounts and the database are connected.",
+          "icon": "progress"
+        },
+        {
+          "title": "My Resources",
+          "description": "Course attachments and approved learning files, separate from the public Digital Library.",
+          "icon": "library"
+        },
+        {
+          "title": "Grades",
+          "description": "Published course grades and approved term averages will appear here when the academic office releases them.",
+          "icon": "grades"
+        },
+        {
+          "title": "Attendance",
+          "description": "Attendance summaries from approved records will appear here, while detailed editing remains administrative.",
+          "icon": "attendance"
+        }
+      ],
+      "pendingLabel": "Next phase",
+      "accessMap": {
+        "title": "How access works",
+        "description": "The portal supports two distinct paths without mixing academic enrollment with commercial purchases.",
+        "officialTitle": "Official Hawza Student",
+        "officialDescription": "An admitted student receives access to the courses included in the active academic enrollment. Google Classroom remains the live class and communication space; approved recordings are organized in the portal for catch-up and review.",
+        "buyerTitle": "Standalone Course Learner",
+        "buyerDescription": "A visitor who purchases a standalone course receives access only to that purchased course. A purchase never unlocks the full academic program.",
+        "classroomLabel": "Live class & announcements in Classroom",
+        "recordingsLabel": "Approved recordings in Student Portal",
+        "includedLabel": "Access comes from academic enrollment",
+        "purchasedLabel": "Access comes from a confirmed purchase"
+      }
+    }
+  },
+  "signIn": {
+    "title": "Secure sign in",
+    "description": "Access your ESPO Paris account and connect it to your academic enrollment when eligible.",
+    "copy": {
+      "eyebrow": "Student access",
+      "title": "Your ESPO account",
+      "description": "Create or access one personal account. The system generates the internal ID automatically and links verified students to their approved academic enrollment.",
+      "googleLabel": "Continue with Google",
+      "magicTitle": "Sign in by email",
+      "magicDescription": "Use a secure email link when Google sign-in is not suitable. No password needs to be stored by ESPO.",
+      "emailPlaceholder": "you@example.com",
+      "emailButton": "Send secure link",
+      "unavailable": "This provider is prepared but not active until the production credentials are connected.",
+      "securityTitle": "How access is verified",
+      "securityDescription": "Creating an account does not automatically make someone an official hawza student. Academic access is granted only after an approved enrollment is matched or confirmed by administration.",
+      "flowTitle": "Account flow",
+      "flow": [
+        "Verify your identity with Google or email.",
+        "A secure internal User ID is created automatically.",
+        "The verified email is checked against accepted enrollments.",
+        "If matched, the enrollment is linked and academic access is activated."
+      ],
+      "studentNote": "Official students receive access from their academic enrollment, not by purchasing each subject.",
+      "memberNote": "Other users remain regular members and can later access free or individually purchased courses.",
+      "backLabel": "Back to Student Portal"
+    }
+  },
+  "support": {
+    "title": "Support the Center",
+    "description": "Contact the administration to learn about the currently available ways to support Imam (AJ) Center – Paris.",
+    "copy": {
+      "eyebrow": "Support the Mission",
+      "title": "Contribute to the Center’s educational mission",
+      "description": "Imam (AJ) Center – Paris continues its educational and community work with the support of benefactors and well-wishers. Contributions can help sustain the Center’s educational mission and its ability to serve learners across countries and languages.",
+      "contactTitle": "Contact the administration",
+      "contactDescription": "For donations or questions about currently available methods of support, contact the administration directly.",
+      "whatsappAction": "Contact on WhatsApp",
+      "emailAction": "Contact by email",
+      "stewardshipTitle": "Clear and responsible handling",
+      "stewardshipDescription": "Donation methods are confirmed by the administration. The website does not currently collect card details or process donations automatically.",
+      "note": "Online donation checkout can be enabled later after the Center approves a payment provider, currencies, receipts and financial procedures.",
+      "whatsappMessage": "Peace be upon you. I would like to support Imam (AJ) Center – Paris and would like to know the available donation methods."
+    }
+  },
+  "adminAcademic": {
+    "title": "Academic Control Center",
+    "description": "Protected administrative workspace for curriculum, students, results, progression and access.",
+    "copy": {
+      "eyebrow": "Administration",
+      "title": "Academic Control Center",
+      "description": "A protected control layer for student records, curriculum versions, grades, attendance, progression and learning access.",
+      "lockedTitle": "Administrative access required",
+      "lockedDescription": "This route is intentionally locked until real institutional authentication and admin role mapping are connected. No client-side value can unlock it.",
+      "modules": [
+        {
+          "title": "Students & Enrollment",
+          "description": "Review matched accounts, active enrollments, statuses and academic placement.",
+          "icon": "students"
+        },
+        {
+          "title": "Curriculum Management",
+          "description": "Create curriculum versions, add or deactivate subjects, and assign them to the correct year and semester.",
+          "icon": "curriculum"
+        },
+        {
+          "title": "Grades & Attendance",
+          "description": "Enter academic records, then publish only approved grades and attendance summaries to students.",
+          "icon": "grades"
+        },
+        {
+          "title": "Progression Decisions",
+          "description": "Review recommendations and approve promotion, repetition, holds or program completion.",
+          "icon": "progression"
+        },
+        {
+          "title": "Payments & Entitlements",
+          "description": "Track contact-price requests, verified offline payments and future online purchases separately from academic enrollment.",
+          "icon": "payments"
+        },
+        {
+          "title": "Enrollment Data Quality",
+          "description": "Audit Form → language sheet → Central Database imports before they can create or update student records.",
+          "icon": "data"
+        },
+        {
+          "title": "Audit & Accountability",
+          "description": "Record who changed grades, enrollment, curriculum, payments and access, with before/after history.",
+          "icon": "audit"
+        },
+        {
+          "title": "Roles & Permissions",
+          "description": "Keep teachers, academic officers, finance staff, editors and administrators within clearly separated responsibilities.",
+          "icon": "roles"
+        }
+      ],
+      "versioningTitle": "Curriculum history is preserved",
+      "versioningDescription": "Changes for a new academic year are made in a new curriculum version. Existing student records remain attached to the version under which they actually studied.",
+      "operationsTitle": "One source of truth, controlled changes",
+      "operationsDescription": "The Central Enrollment Database remains authoritative for student identity and academic placement. Forms, Classroom, Drive and the portal synchronize around it rather than becoming competing databases.",
+      "safetyTitle": "Approval before automation",
+      "safetyDescription": "The system may calculate recommendations and detect data issues, but sensitive actions such as publishing final grades, promoting a student, confirming an offline payment or granting paid access require an authorized server-side action."
+    }
+  },
+  "teacherPortal": {
+    "content": {
+      "eyebrow": "Faculty Workspace",
+      "title": "Teacher Gradebook",
+      "description": "A secure, low-friction workspace for entering grades and attendance without exposing the central student database.",
+      "lockedTitle": "Teacher access is protected",
+      "lockedDescription": "This workspace becomes available only after institutional authentication and an assigned teacher role.",
+      "workflowTitle": "Academic workflow",
+      "workflow": [
+        {
+          "title": "Enter grades",
+          "description": "Open only the courses and students assigned to you, then enter assessment scores as drafts.",
+          "icon": "gradebook"
+        },
+        {
+          "title": "Record attendance",
+          "description": "Mark present, absent, excused or late from a fast session roster.",
+          "icon": "attendance"
+        },
+        {
+          "title": "Submit for review",
+          "description": "Send completed grade entries to the academic office without publishing them to students.",
+          "icon": "submit"
+        },
+        {
+          "title": "Publish after approval",
+          "description": "Only an academic officer or administrator can release approved results to the Student Portal.",
+          "icon": "publish"
+        }
+      ],
+      "storageTitle": "Google Workspace first, database later",
+      "storageDescription": "In the first phase, protected Google Sheets store academic records behind Apps Script. Teachers use this portal, not raw spreadsheets. The storage can later migrate without changing the interface.",
+      "safetyTitle": "No accidental grade leaks",
+      "safetyDescription": "Draft and submitted grades remain invisible to students. Every sensitive change is designed to be attributable to an authorized staff member."
+    }
+  },
+  "gradeReview": {
+    "copy": {
+      "eyebrow": "Academic quality control",
+      "title": "Grade Review & Publication",
+      "description": "A controlled review stage between teacher entry and student visibility. Submitted grades are checked for completeness before academic approval and publication.",
+      "lockedTitle": "Authorized academic staff only",
+      "lockedDescription": "This workspace remains locked until production authentication and authorized staff roles are connected.",
+      "steps": [
+        {
+          "title": "Receive submissions",
+          "description": "Teachers submit completed gradebooks for review."
+        },
+        {
+          "title": "Validate records",
+          "description": "The system checks missing assessments, invalid values, and draft entries."
+        },
+        {
+          "title": "Academic approval",
+          "description": "An authorized academic officer reviews and approves or returns the batch."
+        },
+        {
+          "title": "Publish to students",
+          "description": "Only approved records become visible in the Student Portal."
+        }
+      ],
+      "ruleTitle": "No blind publishing",
+      "ruleDescription": "A batch cannot be published while required assessments are missing or entries remain in draft status.",
+      "visibilityTitle": "Student-safe visibility",
+      "visibilityDescription": "Students only see published results; drafts, returned records, and internal notes remain private."
+    }
+  },
+  "academicRecord": {
+    "copy": {
+      "eyebrow": "Official academic record",
+      "title": "Your academic record",
+      "description": "A private view of published results, approved term averages, attendance summaries and progression history tied to your official student identity.",
+      "lockedTitle": "Student access required",
+      "lockedDescription": "Academic records are private and only become available after a verified account is linked to an accepted enrollment.",
+      "signInLabel": "Sign in securely",
+      "cards": [
+        {
+          "title": "Term history",
+          "description": "Published course results remain attached to the academic year and curriculum version in which they were earned.",
+          "icon": "history"
+        },
+        {
+          "title": "Approved averages",
+          "description": "Only academically approved term averages are shown. Draft teacher entries never appear here.",
+          "icon": "average"
+        },
+        {
+          "title": "Attendance summary",
+          "description": "Approved attendance summaries are visible without exposing internal administrative notes.",
+          "icon": "attendance"
+        }
+      ],
+      "privacyTitle": "Historical integrity",
+      "privacyDescription": "Future curriculum edits never rewrite a student’s previous academic record. Each term remains tied to its original curriculum version and AIC student identity."
+    }
+  },
+  "progressionCenter": {
+    "copy": {
+      "eyebrow": "Academic progression",
+      "title": "Term Closing & Progression",
+      "description": "A controlled end-of-term workflow that turns published results into an academic recommendation, then requires an authorized human decision before the next term is activated.",
+      "lockedTitle": "Authorized academic staff only",
+      "lockedDescription": "Progression decisions remain locked until production authentication and authorized academic roles are connected.",
+      "steps": [
+        {
+          "title": "Close academic records",
+          "description": "Confirm that all required grades are published and attendance records are complete."
+        },
+        {
+          "title": "Generate recommendation",
+          "description": "The system evaluates the current standing and proposes promotion, hold or program completion."
+        },
+        {
+          "title": "Human approval",
+          "description": "An authorized academic officer approves the recommendation or records an explicit exception."
+        },
+        {
+          "title": "Activate next term",
+          "description": "After approval, the new semester and course access can be activated while prior history remains immutable."
+        }
+      ],
+      "guardTitle": "No automatic silent promotion",
+      "guardDescription": "The system may recommend a next step, but it never advances a student solely because a date changed or a grade was entered. Academic approval is mandatory.",
+      "auditTitle": "Every decision is traceable",
+      "auditDescription": "The progression record stores the source term, decision, approver, timestamp and reason so later administrators can reconstruct what happened."
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Secure academic and operational notifications for students, teachers and administrators.",
+    "content": {
+      "eyebrow": "Academic operations",
+      "title": "Notifications & action center",
+      "description": "A single place for published results, enrollment updates, review requests, progression decisions, payment confirmations and learning notices. Live delivery activates only after production authentication and persistence are connected.",
+      "lockedTitle": "Secure sign-in required",
+      "lockedDescription": "Notifications are private and role-aware. The production inbox will open only after the account is securely authenticated.",
+      "inAppTitle": "In-app notifications",
+      "inAppDescription": "Students, teachers and administrators receive only the updates relevant to their role and records. Unread state is tracked without exposing other users' information.",
+      "emailTitle": "Email delivery",
+      "emailDescription": "Important events can also be delivered by email through the institution's approved mail provider. Users can keep in-app delivery while disabling non-essential email notices.",
+      "safetyTitle": "No academic result is published by notification alone",
+      "safetyDescription": "A notification reports an already-authorized event. Grade publishing, progression, payment confirmation and access decisions still follow their own protected approval workflows."
+    }
+  },
+  "enrollmentIntegrity": {
+    "copy": {
+      "eyebrow": "Enrollment integrity",
+      "title": "Enrollment Integrity Center",
+      "description": "A controlled workspace for auditing the six enrollment sources, repairing the central database, resolving identity mismatches and protecting the AIC student record before portal access is activated.",
+      "lockedTitle": "Administrator access required",
+      "lockedDescription": "Live audit and repair actions remain unavailable until production authentication is connected and the signed-in account is authorized as an enrollment administrator.",
+      "cards": [
+        {
+          "title": "Source audit",
+          "description": "Compare Arabic, English, French, Persian, Turkish and Azerbaijani response sheets against the central Applications database.",
+          "icon": "database"
+        },
+        {
+          "title": "Safe repair",
+          "description": "Preview missing fields first, then backfill only empty central values while preserving administrator edits and existing AIC IDs.",
+          "icon": "repair"
+        },
+        {
+          "title": "Identity linking",
+          "description": "Match a verified website account to the existing AIC record by normalized email. Account creation never creates a second student identity.",
+          "icon": "identity"
+        },
+        {
+          "title": "Change control",
+          "description": "Repairs require an authorized administrator, a signed server request and an explicit apply confirmation. Dry-run is the default.",
+          "icon": "safety"
+        }
+      ],
+      "workflowTitle": "Controlled repair workflow",
+      "workflow": [
+        "Create a backup and run a read-only audit.",
+        "Resolve mapping errors in the six source sheets.",
+        "Review proposed field repairs and duplicate warnings.",
+        "Apply repairs only after explicit administrator confirmation.",
+        "Re-run the audit and verify student folder names.",
+        "Enable account-to-AIC linking only after data integrity passes."
+      ],
+      "liveTitle": "No silent live changes",
+      "liveDescription": "This control center is designed to inspect first and write second. The production database is never repaired merely because a page was opened."
+    }
+  },
+  "productionReadiness": {
+    "eyebrow": "Production control",
+    "title": "Production readiness",
+    "body": "A gated operational view for enrollment, identity and academic-write activation. No feature is marked ready until the live environment proves it.",
+    "lockedTitle": "Production controls are locked",
+    "lockedBody": "Production authentication is not active yet. This page intentionally reveals no administrative state to anonymous visitors."
+  },
+  "academicOperations": {
+    "title": "Academic Operations Console",
+    "description": "Operational readiness for the academic workspace, staff access, gradebook and controlled publishing.",
+    "copy": {
+      "eyebrow": "Academic operations",
+      "title": "Academic Operations Console",
+      "description": "A protected operations view for provisioning, authorization, assessment configuration and academic data integrity before live teaching workflows are enabled.",
+      "lockedTitle": "Authorized academic access required",
+      "lockedDescription": "The console stays locked until production authentication maps this account to an authorized academic role.",
+      "cards": [
+        {
+          "title": "Workspace provisioning",
+          "description": "Prepare the six canonical Google Sheets with stable headers, validation rules and operational safeguards."
+        },
+        {
+          "title": "Staff access",
+          "description": "Assign teachers only to their course offerings and keep review, publishing and administrative permissions separated."
+        },
+        {
+          "title": "Assessment integrity",
+          "description": "Validate active assessment weights and prevent incomplete or malformed grading structures from going live."
+        },
+        {
+          "title": "Controlled publishing",
+          "description": "Keep draft, review, approval and publication as separate stages with a permanent audit trail."
+        }
+      ],
+      "footerTitle": "Low-cost by design",
+      "footerDescription": "The first production architecture uses Vercel, Google Workspace and Apps Script. No dedicated server is required at the current stage."
+    }
+  },
+  "curriculumControl": {
+    "title": "Curriculum Control Center",
+    "description": "Versioned academic-program management for subjects, semesters and future academic years.",
+    "copy": {
+      "eyebrow": "Academic governance",
+      "title": "Curriculum Control Center",
+      "description": "Manage the academic structure without rewriting history. Draft future curricula, edit subjects before activation, and preserve the exact curriculum each student studied.",
+      "lockedTitle": "Academic access required",
+      "lockedDescription": "This workspace remains locked until production authentication and academic-officer permissions are active.",
+      "principlesTitle": "Built for controlled academic change",
+      "principles": [
+        {
+          "title": "Edit drafts safely",
+          "description": "Add, rename, reorder or deactivate subjects only inside a draft curriculum version."
+        },
+        {
+          "title": "Create the next year",
+          "description": "Clone the current curriculum into a new academic year, then adjust it without altering prior records."
+        },
+        {
+          "title": "Preserve history",
+          "description": "Activated curricula are immutable. Existing transcripts continue to reflect the curriculum actually studied."
+        },
+        {
+          "title": "Govern changes",
+          "description": "Activation is a deliberate academic action, protected by validation and role-based permissions."
+        }
+      ],
+      "lifecycleTitle": "Curriculum lifecycle",
+      "lifecycle": [
+        "Create or clone a draft curriculum version.",
+        "Review year, semester and subject structure.",
+        "Validate codes, ordering and year/semester alignment.",
+        "Approve and activate the version for the academic year.",
+        "Archive only when it is no longer operational; never rewrite historical records."
+      ],
+      "controlsTitle": "What administration can control",
+      "controlsDescription": "Subject name, code, description, year, semester, display order and active status are administrative data. Future teacher assignment and course delivery remain separate from the immutable curriculum record."
+    }
+  },
+  "staffAccess": {
+    "title": "Staff Access & Teaching Assignments",
+    "description": "Controlled staff roles, account lifecycle and teacher-to-course assignments.",
+    "copy": {
+      "eyebrow": "Identity & permissions",
+      "title": "Staff Access & Teaching Assignments",
+      "description": "Keep staff identity, academic authority and teaching assignments separate. Administration controls who may enter the system, while the academic officer can assign active teachers only to the course offerings they actually teach.",
+      "lockedTitle": "Administrator access required",
+      "lockedDescription": "Staff identity and role management remains locked until production authentication is active.",
+      "rolesTitle": "Five operational roles",
+      "roles": [
+        {
+          "title": "Teacher",
+          "description": "Sees assigned course offerings, records attendance, saves draft grades and submits them for review."
+        },
+        {
+          "title": "Academic Officer",
+          "description": "Assigns teachers to course offerings, reviews academic submissions, publishes results and approves progression."
+        },
+        {
+          "title": "Finance",
+          "description": "Confirms authorized payments and financial access without receiving academic editing permissions."
+        },
+        {
+          "title": "Editor",
+          "description": "Maintains approved public content without gaining student-grade or staff-management authority."
+        },
+        {
+          "title": "Administrator",
+          "description": "Controls staff accounts, role changes, suspensions and the highest-risk system settings."
+        }
+      ],
+      "workflowTitle": "Safe staff lifecycle",
+      "workflow": [
+        "Invite or verify the staff member using an institutional or approved email address.",
+        "Assign one operational role; do not combine unrelated privileges by convenience.",
+        "For teachers, assign only the active course offerings they teach.",
+        "Suspend access immediately when duties change or a staff member leaves.",
+        "Preserve the audit history of role and assignment changes."
+      ],
+      "securityTitle": "Least privilege by default",
+      "securityDescription": "Finance is not treated as a higher teacher role, editors cannot publish grades, and academic officers cannot silently become system administrators. Access is capability-based rather than a simplistic role ranking."
+    }
+  },
+  "cohortManagement": {
+    "title": "Cohort Management",
+    "description": "Manage academic-year cohorts and controlled student rollover without rewriting historical records.",
+    "copy": {
+      "eyebrow": "Academic year control",
+      "title": "Cohorts, progression, and year rollover",
+      "description": "Prepare each academic year as a controlled cohort linked to one approved curriculum version, while preserving every student’s existing AIC identity and academic history.",
+      "lockedTitle": "Administrative access required",
+      "lockedDescription": "This control surface stays locked until production authentication and academic administrator permissions are active.",
+      "principlesTitle": "Rollover principles",
+      "principles": [
+        {
+          "title": "One cohort per academic cycle",
+          "description": "Students are grouped by academic year without changing their permanent AIC identity."
+        },
+        {
+          "title": "Advance only after approval",
+          "description": "A new semester membership is created only after the academic progression decision is approved."
+        },
+        {
+          "title": "History remains immutable",
+          "description": "Closed cohort memberships stay preserved for transcripts, audits, and later verification."
+        },
+        {
+          "title": "Curriculum stays versioned",
+          "description": "Each cohort points to an approved curriculum version instead of silently inheriting future changes."
+        }
+      ],
+      "workflowTitle": "Annual rollover workflow",
+      "workflow": [
+        "Close and publish the current term results.",
+        "Approve each student progression decision.",
+        "Activate the next curriculum version and academic cohort.",
+        "Create next-semester memberships only for eligible students.",
+        "Archive prior memberships without deleting grades, attendance, or AIC IDs.",
+        "Reconcile Classroom and portal access after the cohort is activated."
+      ],
+      "safeguardTitle": "No bulk automatic promotion",
+      "safeguardDescription": "The system can prepare rollover recommendations in bulk, but it never promotes every student simply because the calendar year changed. Academic approval remains the final gate."
+    }
+  },
+  "adminContent": {
+    "title": "Content Management",
+    "description": "Manage institutional news, activities, announcements and scheduled reflections.",
+    "copy": {
+      "eyebrow": "Website administration",
+      "title": "Content & Publishing Center",
+      "description": "A controlled CMS workspace for publishing, scheduling and maintaining public website content without editing code.",
+      "lockedTitle": "Restricted workspace",
+      "lockedDescription": "Sign in with an authorized editor or administrator account to manage website content.",
+      "masterTitle": "Master administrator",
+      "masterDescription": "Full authority over publishing, deletion, permissions and global content settings.",
+      "editorTitle": "Content editor",
+      "editorDescription": "Can prepare, edit and schedule content, while final publishing and deletion remain protected.",
+      "modules": [
+        {
+          "title": "News",
+          "description": "Create, edit, schedule, publish or archive institutional news.",
+          "icon": "news"
+        },
+        {
+          "title": "Activities",
+          "description": "Manage events, reports, galleries and public activity entries.",
+          "icon": "activity"
+        },
+        {
+          "title": "Daily verse / hadith",
+          "description": "Maintain an approved library of Qurʾanic verses and hadith for daily rotation.",
+          "icon": "reflection"
+        },
+        {
+          "title": "Scheduling",
+          "description": "Plan future publication, expiry and occasion-specific content.",
+          "icon": "schedule"
+        }
+      ],
+      "workflowTitle": "Editorial workflow",
+      "workflowDescription": "Draft → Review → Schedule → Publish → Archive. Editors prepare content; the master administrator retains final destructive and publishing authority.",
+      "reflectionTitle": "Daily & occasion content",
+      "reflectionDescription": "Normal approved entries rotate automatically by day. Higher-priority entries can be scheduled for specific occasions and date ranges, with source attribution required.",
+      "destructiveTitle": "Protected actions",
+      "destructiveDescription": "Permanent deletion, final publishing and site-wide settings remain restricted to the master administrator and should be audit logged."
+    },
+    "live": {
+      "liveTitle": "Live CMS storage",
+      "liveDescription": "This workspace reads and writes institutional website content through the signed Google Apps Script bridge. No public content is fabricated when the bridge is unavailable.",
+      "connected": "Connected",
+      "notConfigured": "Not configured",
+      "error": "Connection error",
+      "newContentTitle": "Create content",
+      "titleLabel": "Title",
+      "slugLabel": "Slug (optional)",
+      "kindLabel": "Content type",
+      "excerptLabel": "Excerpt",
+      "bodyLabel": "Body",
+      "publishAtLabel": "Publish at",
+      "unpublishAtLabel": "Unpublish at",
+      "saveDraft": "Save draft",
+      "currentContentTitle": "Current content",
+      "noContent": "No CMS entries are stored yet.",
+      "statusLabel": "Status",
+      "publish": "Publish",
+      "review": "Send to review",
+      "archive": "Archive",
+      "delete": "Delete",
+      "reflectionFormTitle": "Add verse / hadith",
+      "arabicTextLabel": "Arabic text",
+      "sourceLabel": "Source / attribution",
+      "reflectionKindLabel": "Type",
+      "occasionLabel": "Occasion (optional)",
+      "priorityLabel": "Priority",
+      "activeFromLabel": "Active from",
+      "activeUntilLabel": "Active until",
+      "saveReflection": "Save for review",
+      "currentReflectionsTitle": "Reflection library",
+      "noReflections": "No approved-source reflections are stored yet.",
+      "approvedLabel": "Approved",
+      "pendingLabel": "Pending approval"
+    }
+  },
+  "adminDashboard": {
+    "title": "Administration Dashboard",
+    "description": "Protected administration workspace for ESPO Paris operations.",
+    "copy": {
+      "eyebrow": "Internal administration",
+      "title": "Administration Dashboard",
+      "description": "A protected command center for website content, academic operations and institutional systems. Only modules permitted for the signed-in role are exposed.",
+      "signedInAs": "Signed in as",
+      "role": {
+        "master": "Master Admin",
+        "editor": "Content Editor",
+        "academic": "Academic Officer",
+        "staff": "Authorized Staff"
+      },
+      "statusTitle": "Security boundary active",
+      "statusDescription": "This area is excluded from public navigation and search indexing, and every protected route is checked server-side before rendering.",
+      "liveDataTitle": "Live metrics intentionally withheld",
+      "liveDataDescription": "No student, content, library or learning counts are fabricated. Operational metrics appear only after the corresponding production repository is connected and verified.",
+      "modulesTitle": "Administration modules",
+      "modulesDescription": "Available modules open immediately. Foundation modules are already architected but remain inactive until their production data source is connected.",
+      "open": "Open",
+      "foundation": "Foundation ready",
+      "locked": "Restricted",
+      "modules": {
+        "content": {
+          "title": "Content & Publishing",
+          "description": "Prepare, review, schedule, publish and archive news, activities, announcements and approved daily reflections."
+        },
+        "academic": {
+          "title": "Academic Administration",
+          "description": "Manage curriculum, cohorts, staff assignments, grade review, attendance, progression and academic readiness."
+        },
+        "library": {
+          "title": "Digital Library",
+          "description": "Manage institutional books, metadata, covers and controlled PDF access once the digital Drive repository is connected."
+        },
+        "learning": {
+          "title": "Learning Platform",
+          "description": "Manage recorded courses, lessons, attachments and access rules after the learning repository is activated."
+        },
+        "people": {
+          "title": "People & Permissions",
+          "description": "Master-admin control for staff identities, roles and administrative access boundaries."
+        },
+        "settings": {
+          "title": "Site Settings",
+          "description": "Master-admin area for verified institutional settings, public contact data and controlled configuration."
+        }
+      }
+    }
+  },
+  "adminPeople": {
+    "title": "People & Permissions",
+    "description": "Master-admin workspace for staff identities, roles and access control.",
+    "copy": {
+      "eyebrow": "Master administration",
+      "title": "People & Permissions",
+      "description": "Control staff roles and administrative boundaries from one protected workspace. No live staff directory is fabricated before the production identity source is connected.",
+      "masterTitle": "Master Admin remains the final authority",
+      "masterDescription": "Only the Master Admin can assign administrative roles, manage permission boundaries and control high-risk access. Operational staff receive only the capabilities required for their work.",
+      "liveTitle": "Live identity directory not connected yet",
+      "liveDescription": "The permission model is active in code, but real invitations and role changes remain disabled until Google authentication and persistent identity storage are activated.",
+      "rolesTitle": "Role boundaries",
+      "roles": [
+        {
+          "title": "Teacher",
+          "description": "Teaching access for assigned course offerings only.",
+          "permissions": "Teaching workspace only"
+        },
+        {
+          "title": "Academic Officer",
+          "description": "Reviews academic records, progression and academic operations.",
+          "permissions": "Academic administration"
+        },
+        {
+          "title": "Finance",
+          "description": "Finance-specific review without inheriting academic or publishing authority.",
+          "permissions": "Finance scope only"
+        },
+        {
+          "title": "Content Editor",
+          "description": "Creates and prepares public content without final administrative control.",
+          "permissions": "Draft and editorial workflow"
+        },
+        {
+          "title": "Master Admin",
+          "description": "Full institutional administration and permission control.",
+          "permissions": "Full administrative control"
+        }
+      ],
+      "lifecycleTitle": "Controlled staff lifecycle",
+      "lifecycle": [
+        {
+          "title": "Invite",
+          "description": "Create a pending identity only after the official email is verified."
+        },
+        {
+          "title": "Activate",
+          "description": "Assign the minimum role needed and activate access."
+        },
+        {
+          "title": "Suspend",
+          "description": "Temporarily revoke access without deleting audit history."
+        },
+        {
+          "title": "Depart",
+          "description": "Close access permanently while preserving historical records."
+        }
+      ],
+      "safetyTitle": "No silent privilege inheritance",
+      "safetyDescription": "Changing a staff role never grants unrelated capabilities. Departed accounts cannot be silently reactivated, and role changes must remain auditable."
+    }
+  },
+  "adminSettings": {
+    "title": "Site Settings",
+    "description": "Master-admin workspace for verified public institutional configuration.",
+    "copy": {
+      "eyebrow": "Controlled configuration",
+      "title": "Site Settings",
+      "description": "Manage verified public contact information and institutional settings without placing unconfirmed data into the website or search engines.",
+      "verified": "Verified",
+      "pending": "Pending verification",
+      "contactTitle": "Verified public contact data",
+      "contactDescription": "These values are the confirmed institutional contact channels currently permitted for public use.",
+      "fields": {
+        "contactEmail": "Public email",
+        "phoneArabicFrench": "Arabic + French",
+        "phonePersianTurkishAzerbaijani": "Persian + Turkish + Azerbaijani",
+        "phoneEnglish": "English",
+        "phoneAfrica": "Africa / African languages",
+        "supportPhone": "Support / donations",
+        "publicAddress": "Official public address",
+        "visitingHours": "Visiting hours",
+        "legalPublicName": "Final legal / public name"
+      },
+      "pendingTitle": "Unconfirmed fields stay unpublished",
+      "pendingDescription": "Address, visiting hours and final legal naming remain empty until the institution confirms them.",
+      "publishRuleTitle": "Verified before public",
+      "publishRuleDescription": "A setting may be stored as a draft, but unverified institutional information must never be emitted into public pages, metadata or structured data.",
+      "persistenceTitle": "Production storage gate",
+      "persistenceDescription": "The settings UI and validation model are ready. Saving live changes is enabled only after authenticated production persistence is connected."
+    }
+  },
+  "digitalAuthoring": {
+    "copy": {
+      "libraryFormTitle": "Library catalog authoring",
+      "learningFormTitle": "Learning catalog authoring",
+      "newRecord": "Create a new record",
+      "selectRecord": "Record",
+      "noRecords": "No records are stored yet.",
+      "currentStatus": "Current status",
+      "readOnly": "Published and archived metadata is read-only. Use the controlled lifecycle actions.",
+      "identifier": "Record ID (optional)",
+      "slug": "Slug",
+      "title": "Title",
+      "author": "Author",
+      "description": "Description",
+      "language": "Language / locale",
+      "category": "Category",
+      "accessLevel": "Access level",
+      "pdfFileId": "PDF Drive file reference",
+      "coverFileId": "Cover Drive file reference",
+      "publicationYear": "Publication year",
+      "pageCount": "Page count",
+      "academicYear": "Academic year",
+      "year": "Year level",
+      "semester": "Semester",
+      "courseId": "Course ID",
+      "courseTitle": "Course title",
+      "lessonOrder": "Lesson order",
+      "videoFileId": "Video Drive file reference",
+      "audioFileId": "Audio Drive file reference",
+      "attachments": "Attachment Drive references (one per line)",
+      "saveDraft": "Save draft",
+      "saveChanges": "Save changes",
+      "submitReview": "Submit for review",
+      "returnDraft": "Return to draft",
+      "publish": "Publish",
+      "archive": "Archive",
+      "restoreDraft": "Restore as draft",
+      "saved": "Metadata saved.",
+      "transitionComplete": "Status updated.",
+      "failed": "Operation failed",
+      "accessPublic": "Public",
+      "accessRegistered": "Registered free",
+      "accessStudent": "Student only",
+      "accessPaid": "Paid entitlement"
+    }
+  },
+  "adminLibrary": {
+    "title": "Digital Library Administration",
+    "description": "Manage approved library metadata and Drive-backed publication records.",
+    "copy": {
+      "eyebrow": "Digital Platform",
+      "title": "Digital Library Administration",
+      "description": "Review the institution's book catalog and its approved Google Drive references without exposing private storage directly to visitors.",
+      "connected": "Digital bridge connected",
+      "notConfigured": "Digital bridge not configured",
+      "error": "Digital bridge unavailable",
+      "libraryCount": "catalog records",
+      "lessonCount": "lesson records",
+      "safetyTitle": "Controlled Drive boundary",
+      "safetyDescription": "The website reads metadata through a signed server-to-server bridge. Files remain under the institution-owned digital Google Workspace account.",
+      "empty": "No live catalog is shown until the digital@espoparis.com bridge is deployed and configured."
+    }
+  },
+  "adminLearning": {
+    "title": "Learning Platform Administration",
+    "description": "Manage recorded-learning metadata and academic Drive references.",
+    "copy": {
+      "eyebrow": "Digital Platform",
+      "title": "Learning Platform Administration",
+      "description": "Review recorded lessons and approved course assets while keeping academic access rules separate from public content.",
+      "connected": "Digital bridge connected",
+      "notConfigured": "Digital bridge not configured",
+      "error": "Digital bridge unavailable",
+      "libraryCount": "catalog records",
+      "lessonCount": "lesson records",
+      "safetyTitle": "Academic access boundary",
+      "safetyDescription": "Published lesson metadata can be exposed safely while student-only and paid assets remain subject to entitlement checks before delivery.",
+      "empty": "No live lessons are shown until the digital@espoparis.com bridge is deployed and configured."
+    }
   }
 }

@@ -3,8 +3,13 @@
     "nav": {
       "home": "Accueil",
       "about": "À propos",
+      "faculty": "Corps enseignant",
       "register": "Inscription",
-      "contact": "Contact"
+      "contact": "Contact",
+      "academicProgram": "Programme académique",
+      "library": "Bibliothèque numérique",
+      "learning": "Cours enregistrés",
+      "support": "Soutenir le Centre"
     },
     "labels": {
       "connect": "Nous joindre",
@@ -93,13 +98,34 @@
       "description": "De l’étude hawzawie de longue haleine à la formation pour les écoles du week-end, le travail est soutenu par des enseignants qui servent à travers les langues, les pays et les générations.",
       "cta": "Découvrir l’histoire de la hawza",
       "members": [
-        { "name": "Cheikh Dr Mustafa al-Khaliq", "role": "Directeur, Centre Imam (AJ) – Paris" },
-        { "name": "Cheikh Dr Fares al-Khatib", "role": "Corps enseignant et orateur husseinite" },
-        { "name": "Cheikh Abdullah Shami-Zadeh", "role": "Corps enseignant" },
-        { "name": "Cheikh Ismail al-Kanawi", "role": "Directeur, séminaire Imam al-Sadiq, Nigéria" },
-        { "name": "Cheikh Abou Fatima", "role": "Directeur, Centre Dame al-Zahra, Cameroun" },
-        { "name": "Cheikh Mujtaba al-Khaliq", "role": "Corps enseignant, États-Unis" },
-        { "name": "Cheikh Hassan al-Nasiri", "role": "Administration et enseignement de l’arabe" }
+        {
+          "name": "Cheikh Dr Mustafa al-Khaliq",
+          "role": "Directeur, Centre Imam (AJ) – Paris"
+        },
+        {
+          "name": "Cheikh Dr Fares al-Khatib",
+          "role": "Corps enseignant et orateur husseinite"
+        },
+        {
+          "name": "Cheikh Abdullah Shami-Zadeh",
+          "role": "Corps enseignant"
+        },
+        {
+          "name": "Cheikh Ismail al-Kanawi",
+          "role": "Directeur, séminaire Imam al-Sadiq, Nigéria"
+        },
+        {
+          "name": "Cheikh Abou Fatima",
+          "role": "Directeur, Centre Dame al-Zahra, Cameroun"
+        },
+        {
+          "name": "Cheikh Mujtaba al-Khaliq",
+          "role": "Corps enseignant, États-Unis"
+        },
+        {
+          "name": "Cheikh Hassan al-Nasiri",
+          "role": "Administration et enseignement de l’arabe"
+        }
       ],
       "testimonial": {
         "quote": "L’objectif est de former des enseignants et des prédicateurs issus des sociétés occidentales elles-mêmes, avec la langue et les fondements nécessaires pour bien servir leurs communautés.",
@@ -112,6 +138,36 @@
       "line1": "Inscrivez-vous à",
       "line2": "la prochaine rentrée.",
       "description": "Choisissez un parcours, remplissez le formulaire d’inscription et rejoignez des étudiants qui apprennent en français, anglais, persan, arabe et azéri."
+    },
+    "accessSection": {
+      "eyebrow": "Études & ressources",
+      "title": "Un même environnement académique, du cursus à l’étude autonome.",
+      "description": "Passez du programme académique officiel à la bibliothèque numérique et aux cours enregistrés dans une structure conçue pour évoluer avec le Centre.",
+      "academic": {
+        "title": "Programme académique",
+        "description": "Découvrez le parcours de quatre années et huit semestres ainsi que les matières de chaque étape.",
+        "action": "Voir le programme"
+      },
+      "library": {
+        "title": "Bibliothèque numérique",
+        "description": "Un espace de recherche pour les livres et PDF avec couverture, description, lecture en ligne et téléchargement lorsqu’il est autorisé.",
+        "action": "Ouvrir la bibliothèque"
+      },
+      "learning": {
+        "title": "Cours enregistrés",
+        "description": "Parcourez les cours par année, semestre, matière, cours et leçon, avec des droits d’accès prévus pour les contenus gratuits ou payants.",
+        "action": "Explorer les cours"
+      }
+    },
+    "supportSection": {
+      "eyebrow": "Soutenir la mission",
+      "title": "Contribuez à la continuité de l’enseignement et du service.",
+      "description": "Les personnes souhaitant soutenir le Centre Imam (AJ) – Paris peuvent contacter directement l’administration pour connaître les moyens de don actuellement disponibles.",
+      "action": "Soutenir le Centre"
+    },
+    "dailyReflection": {
+      "eyebrow": "Verset / hadith du jour",
+      "source": "Source"
     }
   },
   "about": {
@@ -192,12 +248,23 @@
           {
             "title": "Enseignement multilingue",
             "description": "C’est la seule hawza au monde à dispenser son enseignement en plusieurs langues, afin que chacun puisse étudier dans la langue où il vit et prêche réellement.",
-            "points": ["Français", "Anglais", "Persan", "Arabe", "Azéri (turc)"]
+            "points": [
+              "Français",
+              "Anglais",
+              "Persan",
+              "Arabe",
+              "Azéri (turc)"
+            ]
           },
           {
             "title": "Programme pratique",
             "description": "Bien que son corps enseignant compte des savants éminents conduits par l’Ayatollah Cheikh Ismail al-Khaliq, le programme met l’accent sur les besoins réels des musulmans vivant en Europe, en Occident et en Afrique. Plutôt que de se concentrer sur des débats théoriques abstraits, il privilégie le savoir religieux pratique dont les musulmans ont besoin dans la société contemporaine.",
-            "points": ["Europe", "Occident", "Afrique", "Besoins contemporains"]
+            "points": [
+              "Europe",
+              "Occident",
+              "Afrique",
+              "Besoins contemporains"
+            ]
           }
         ]
       },
@@ -282,14 +349,38 @@
           "Il est connu pour une approche distinctive qui allie la préservation du patrimoine et de l’authenticité, d’une part, à l’ouverture aux autres cultures, d’autre part, et il possède un esprit humain raffiné. Il croit fermement au travail institutionnel, poursuit son rôle de guide pour les musulmans à Paris ainsi que dans toute la France, en Grande-Bretagne et en Belgique, et dispense ses leçons supérieures de jurisprudence (bahth al-kharij) à ses étudiants de la hawza. Il a également des écrits qui demeurent à l’état de manuscrits."
         ],
         "facts": [
-          { "label": "Naissance", "value": "1957, Karbala, Irak — élevé auprès du sanctuaire de l’Imam al-Husayn (que la paix soit sur lui)." },
-          { "label": "Formation initiale", "value": "Hawza de Karbala ; examiné aux niveaux avancés (al-suṭūh al-ʿulyā) à l’âge de treize ans." },
-          { "label": "Najaf al-Achraf", "value": "Bahth al-kharij auprès de Sayyid Abou al-Qasim al-Khoei, Sayyid Muhammad al-Ruhani et Sayyid al-Khomeini." },
-          { "label": "Parcours académique", "value": "Master de l’Université arabe de Beyrouth ; grade d’al-Fadil al-Arabi au Pakistan, classé premier au niveau national." },
-          { "label": "Langues", "value": "Arabe, persan, anglais, ourdou et français." },
-          { "label": "Service", "value": "Plus de quatre décennies en Irak, Iran, Pakistan, Syrie, Liban, France, Canada et Royaume-Uni." },
-          { "label": "Institution enregistrée", "value": "Enregistrée en France sous le nom d’« Al-Imam », en référence au Restant d’Allah (qu’Allah hâte sa noble délivrance) — École supérieure de Paris en études orientales." },
-          { "label": "Aujourd’hui", "value": "Il enseigne le bahth al-kharij aux étudiants de la hawza et guide les communautés musulmanes en France, en Grande-Bretagne et en Belgique." }
+          {
+            "label": "Naissance",
+            "value": "1957, Karbala, Irak — élevé auprès du sanctuaire de l’Imam al-Husayn (que la paix soit sur lui)."
+          },
+          {
+            "label": "Formation initiale",
+            "value": "Hawza de Karbala ; examiné aux niveaux avancés (al-suṭūh al-ʿulyā) à l’âge de treize ans."
+          },
+          {
+            "label": "Najaf al-Achraf",
+            "value": "Bahth al-kharij auprès de Sayyid Abou al-Qasim al-Khoei, Sayyid Muhammad al-Ruhani et Sayyid al-Khomeini."
+          },
+          {
+            "label": "Parcours académique",
+            "value": "Master de l’Université arabe de Beyrouth ; grade d’al-Fadil al-Arabi au Pakistan, classé premier au niveau national."
+          },
+          {
+            "label": "Langues",
+            "value": "Arabe, persan, anglais, ourdou et français."
+          },
+          {
+            "label": "Service",
+            "value": "Plus de quatre décennies en Irak, Iran, Pakistan, Syrie, Liban, France, Canada et Royaume-Uni."
+          },
+          {
+            "label": "Institution enregistrée",
+            "value": "Enregistrée en France sous le nom d’« Al-Imam », en référence au Restant d’Allah (qu’Allah hâte sa noble délivrance) — École supérieure de Paris en études orientales."
+          },
+          {
+            "label": "Aujourd’hui",
+            "value": "Il enseigne le bahth al-kharij aux étudiants de la hawza et guide les communautés musulmanes en France, en Grande-Bretagne et en Belgique."
+          }
         ]
       },
       "advisoryBoard": {
@@ -449,6 +540,31 @@
           }
         ],
         "note": "L’intérêt de l’Ayatollah al-Khaliq pour les étudiants des sciences religieuses islamiques dans les pays africains remonte à plusieurs décennies. Le Centre soutient également des activités en Belgique et au Mali, reflétant un rayonnement éducatif et missionnaire qui dépasse largement la France elle-même."
+      },
+      "leadership": {
+        "eyebrow": "Direction",
+        "title": "Une direction académique fondée sur le savoir et le service.",
+        "description": "La direction du Centre réunit vision fondatrice, gestion institutionnelle et supervision pédagogique.",
+        "members": [
+          {
+            "id": "founder-mohammad-ismail-al-khaliq",
+            "name": "Ayatollah Cheikh Mohammad Ismail al-Khaliq",
+            "role": "Fondateur",
+            "bio": "Fondateur du Centre Imam (AJ) – Paris. Il a commencé à enseigner les sciences de la hawza à Paris en 2002, avant l’organisation du Centre en 2012."
+          },
+          {
+            "id": "mustafa-al-khaliq",
+            "name": "Cheikh Dr Mustafa al-Khaliq",
+            "role": "Directeur général",
+            "bio": "Directeur général du Centre Imam (AJ) – Paris et membre de son corps enseignant, avec une expérience d’enseignement et de prédication en Europe et en Amérique du Nord."
+          },
+          {
+            "id": "mohammad-ali-al-hajj-al-amili",
+            "name": "Cheikh Mohammad Ali al-Hajj al-Amili",
+            "role": "Responsable pédagogique",
+            "bio": "Responsable des affaires pédagogiques et de l’organisation académique des programmes du Centre."
+          }
+        ]
       }
     }
   },
@@ -550,7 +666,11 @@
       "phoneDescription": "Utilisez la ligne principale pour les questions brèves, l’organisation ou un suivi rapide.",
       "visitTitle": "Venir sur place",
       "visitDescription": "Retrouvez ci-dessous l’adresse, les horaires et les conseils de visite avant de venir.",
-      "visitValue": "Voir l’adresse et les horaires"
+      "visitValue": "Voir l’adresse et les horaires",
+      "phoneArabicFrench": "Arabe et français",
+      "phonePersianTurkishAzeri": "Persan, turc et azéri",
+      "phoneEnglish": "Anglais",
+      "phoneAfrica": "Afrique / langues africaines"
     },
     "visit": {
       "addressLabel": "Adresse de la hawza",
@@ -605,5 +725,1098 @@
     "pageNotFound": "Page introuvable",
     "goBack": "Retour à l’accueil",
     "pageNotFoundDescription": "La page que vous cherchez n’existe pas ou a été déplacée."
+  },
+  "library": {
+    "title": "Bibliothèque numérique",
+    "description": "Bibliothèque numérique de livres publiés ou approuvés par le Centre.",
+    "copy": {
+      "eyebrow": "Bibliothèque numérique",
+      "title": "Le savoir, organisé pour une étude sérieuse.",
+      "description": "Une bibliothèque numérique consacrée aux livres publiés ou approuvés par le Centre, avec métadonnées structurées, lecture PDF en ligne et téléchargements contrôlés.",
+      "searchPlaceholder": "Rechercher par titre, auteur ou sujet…",
+      "allCategories": "Tous",
+      "emptyTitle": "Aucun livre n’est encore publié ici.",
+      "emptyDescription": "L’interface est prête pour les couvertures, descriptions, catégories, lecture PDF dans le navigateur et téléchargements contrôlés après validation des contenus.",
+      "readerLabel": "Lire en ligne",
+      "downloadLabel": "Télécharger",
+      "categories": [
+        "Coran",
+        "Fiqh",
+        "Usul",
+        "Doctrine",
+        "Éthique",
+        "Histoire"
+      ],
+      "capabilitiesTitle": "Conçue pour une véritable collection académique",
+      "metadataLabel": "Métadonnées prévues : titre · auteur · description · couverture · langue · catégorie · année · pages · niveau d’accès",
+      "capabilities": [
+        {
+          "title": "Lecture dans le navigateur",
+          "description": "Les PDF approuvés peuvent être lus dans une interface dédiée sans téléchargement obligatoire.",
+          "icon": "reader"
+        },
+        {
+          "title": "Métadonnées académiques",
+          "description": "Chaque ressource peut inclure auteur, sujet, langue, description, couverture et informations de publication.",
+          "icon": "metadata"
+        },
+        {
+          "title": "Accès contrôlé",
+          "description": "Les ressources peuvent être publiques, réservées aux étudiants ou téléchargeables uniquement avec autorisation.",
+          "icon": "access"
+        }
+      ]
+    }
+  },
+  "learning": {
+    "title": "Cours enregistrés",
+    "description": "Cours enregistrés structurés pour les étudiants inscrits et les contenus payants.",
+    "copy": {
+      "eyebrow": "Cours enregistrés",
+      "title": "Étudier à son rythme sans perdre la structure académique.",
+      "description": "Cours enregistrés structurés pour les étudiants inscrits et les contenus payants.",
+      "hierarchyTitle": "Structure académique",
+      "hierarchy": [
+        "Programme",
+        "Niveau / Année",
+        "Matière",
+        "Cours",
+        "Leçon"
+      ],
+      "featuresTitle": "Expérience d’apprentissage",
+      "features": [
+        {
+          "title": "Regarder les leçons",
+          "description": "Leçons vidéo ou audio avec notes et références.",
+          "icon": "play"
+        },
+        {
+          "title": "Accès hors ligne",
+          "description": "Téléchargement uniquement pour les contenus autorisés à l’étude hors ligne.",
+          "icon": "download"
+        },
+        {
+          "title": "Progression",
+          "description": "Suivi des leçons terminées et reprise au dernier point étudié.",
+          "icon": "progress"
+        },
+        {
+          "title": "Accès contrôlé",
+          "description": "Les contenus gratuits, réservés aux étudiants ou payants utilisent des permissions de compte.",
+          "icon": "access"
+        }
+      ],
+      "accessNote": "Aucun cours enregistré n’est encore publié. La structure académique est publique, tandis que les comptes, le stockage, les permissions et les paiements contrôleront l’accès lors de la mise en ligne des enregistrements.",
+      "catalogTitle": "Cours enregistrés alignés sur le programme académique",
+      "catalogDescription": "Le catalogue des cours enregistrés suit la même structure académique sur quatre ans. Chaque matière approuvée pourra contenir vidéo, audio, notes, références et ressources téléchargeables.",
+      "recordingsPending": "Aucun enregistrement n’est encore publié. Les leçons approuvées apparaîtront sous l’année, le semestre et la matière correspondants, plutôt que dans une archive séparée.",
+      "portalLabel": "Portail étudiant"
+    }
+  },
+  "academicProgram": {
+    "title": "Programme académique 2026–2027",
+    "description": "Le programme académique en quatre années et huit semestres du Centre Imam (AJ) – Paris.",
+    "copy": {
+      "eyebrow": "Guide académique 2026–2027",
+      "title": "Un parcours progressif, des fondements à l’étude avancée et à la pratique.",
+      "description": "Un programme structuré d’études islamiques qui construit les bases, approfondit les connaissances, développe la spécialisation et la transmission, puis mène à l’étude avancée et appliquée.",
+      "facts": [
+        "4 années académiques",
+        "8 semestres",
+        "Années 1–2 : étape du diplôme"
+      ],
+      "pathwayTitle": "Parcours académique",
+      "curriculumTitle": "Programme par année et semestre",
+      "fieldsTitle": "Domaines d’étude",
+      "fieldsDescription": "Le cursus réunit des domaines scientifiques, éducatifs, linguistiques et pratiques complémentaires.",
+      "years": [
+        {
+          "year": "Première année",
+          "stage": "Fondements",
+          "description": "Étape fondatrice en Coran, jurisprudence, doctrine, éthique, sîra et histoire.",
+          "semesters": [
+            {
+              "label": "Semestre 1",
+              "courses": [
+                "Tajwid et récitation",
+                "Jurisprudence (1)",
+                "Doctrine (1)",
+                "Éthique générale (1)",
+                "Sîra et histoire (1)"
+              ]
+            },
+            {
+              "label": "Semestre 2",
+              "courses": [
+                "Récitation et réflexion sur le sens des versets",
+                "Jurisprudence (2)",
+                "Doctrine (2)",
+                "Éthique générale (2)",
+                "Sîra et histoire (2)",
+                "Introduction à l’exégèse coranique"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Deuxième année",
+          "stage": "Approfondissement",
+          "description": "Approfondissement des bases, introduction à la langue arabe et poursuite de l’exégèse.",
+          "semesters": [
+            {
+              "label": "Semestre 3",
+              "courses": [
+                "Jurisprudence (3)",
+                "Doctrine (3)",
+                "Éthique familiale : couple et enfants",
+                "Sîra et histoire (3)",
+                "Morphologie – introduction simplifiée",
+                "Exégèse coranique (1)"
+              ]
+            },
+            {
+              "label": "Semestre 4",
+              "courses": [
+                "Jurisprudence (4)",
+                "Doctrine (4)",
+                "Éthique des enseignants",
+                "Sîra et histoire (4)",
+                "Grammaire – introduction",
+                "Exégèse coranique (2)"
+              ]
+            }
+          ],
+          "milestone": "Achèvement de l’étape du diplôme"
+        },
+        {
+          "year": "Troisième année",
+          "stage": "Spécialisation et transmission",
+          "description": "Passage des fondements aux études spécialisées, analytiques et de transmission religieuse.",
+          "semesters": [
+            {
+              "label": "Semestre 5",
+              "courses": [
+                "Jurisprudence pour les prédicateurs (1)",
+                "Objections doctrinales (1)",
+                "Histoire analytique",
+                "Éthique dans le Coran et le Hadith (1)",
+                "Art oratoire (1)"
+              ]
+            },
+            {
+              "label": "Semestre 6",
+              "courses": [
+                "Jurisprudence pour les prédicateurs (2)",
+                "Objections doctrinales (2)",
+                "Histoire analytique (2)",
+                "Éthique dans le Coran et le Hadith (2)",
+                "Art oratoire (2)"
+              ]
+            }
+          ]
+        },
+        {
+          "year": "Quatrième année",
+          "stage": "Avancé et appliqué",
+          "description": "Étape avancée et appliquée, conclue par la pratique directe de l’enseignement.",
+          "semesters": [
+            {
+              "label": "Semestre 7",
+              "courses": [
+                "Jurisprudence déductive",
+                "Principes de jurisprudence",
+                "Mahdisme en détail",
+                "Questions et réponses en éthique",
+                "Art oratoire (3)"
+              ]
+            },
+            {
+              "label": "Semestre 8 – pratique",
+              "courses": [
+                "Rédaction du mémoire",
+                "Enseignement pratique en jurisprudence",
+                "Enseignement pratique en doctrine",
+                "Enseignement pratique en éthique"
+              ]
+            }
+          ],
+          "milestone": "Achèvement du programme"
+        }
+      ],
+      "fields": [
+        {
+          "title": "Jurisprudence et principes",
+          "items": "Jurisprudence, jurisprudence du prédicateur, jurisprudence déductive, principes de jurisprudence"
+        },
+        {
+          "title": "Doctrine et pensée",
+          "items": "Doctrine, objections doctrinales, mahdisme"
+        },
+        {
+          "title": "Coran",
+          "items": "Tajwid, récitation, réflexion, exégèse"
+        },
+        {
+          "title": "Éthique et éducation",
+          "items": "Éthique générale, familiale, des enseignants, Coran et Hadith"
+        },
+        {
+          "title": "Sîra et histoire",
+          "items": "Sîra et histoire, histoire analytique"
+        },
+        {
+          "title": "Langue arabe",
+          "items": "Morphologie, grammaire"
+        },
+        {
+          "title": "Transmission et compétences",
+          "items": "Art oratoire, enseignement pratique, rédaction du mémoire"
+        }
+      ],
+      "noteTitle": "Note académique",
+      "note": "Le guide ne fixe pas encore le nombre de crédits ni les heures d’enseignement, qui restent soumis à validation finale. Certains intitulés peuvent aussi évoluer. Des matières supplémentaires comme la logique ne sont donc pas affichées comme confirmées avant leur approbation officielle."
+    }
+  },
+  "activities": {
+    "title": "Activités et actualités",
+    "description": "Activités, annonces et mises à jour officielles du Centre Imam (AJ) – Paris.",
+    "copy": {
+      "eyebrow": "Actualités du Centre",
+      "title": "Activités, annonces et vie académique.",
+      "description": "Un espace structuré pour les actualités officielles, événements, annonces académiques et activités documentées du Centre.",
+      "emptyTitle": "Aucune activité publique n’a encore été publiée.",
+      "emptyDescription": "Cette section est réservée aux mises à jour institutionnelles vérifiées et restera hors de la navigation principale jusqu’à l’ajout de contenu approuvé.",
+      "capabilitiesTitle": "Structure éditoriale prête",
+      "capabilities": [
+        {
+          "title": "Actualités et annonces",
+          "description": "Publier des avis officiels avec date, catégorie, résumé et page détaillée.",
+          "icon": "news"
+        },
+        {
+          "title": "Événements",
+          "description": "Documenter conférences, cérémonies, sessions académiques et activités à venir.",
+          "icon": "events"
+        },
+        {
+          "title": "Galeries médias",
+          "description": "Associer des photographies approuvées aux pages d’activité.",
+          "icon": "gallery"
+        },
+        {
+          "title": "Recherche et archives",
+          "description": "Filtrer ultérieurement les contenus par année, catégorie et mot-clé.",
+          "icon": "search"
+        }
+      ]
+    }
+  },
+  "studentPortal": {
+    "title": "Portail étudiant",
+    "description": "Espace sécurisé pour les étudiants inscrits et les ressources pédagogiques autorisées.",
+    "copy": {
+      "eyebrow": "Accès étudiant",
+      "title": "Votre espace d’apprentissage",
+      "description": "Le portail étudiant réunira les cours inscrits, les leçons enregistrées, la progression et les ressources pédagogiques autorisées dans un espace sécurisé.",
+      "signedOutTitle": "Connectez-vous à votre compte étudiant",
+      "signedOutDescription": "Utilisez votre compte vérifié pour accéder à vos inscriptions académiques, aux cours enregistrés et aux ressources autorisées.",
+      "signInLabel": "Se connecter avec Google",
+      "backToLearning": "Découvrir la structure académique",
+      "securityNote": "La connexion sera activée uniquement après la configuration OAuth institutionnelle, des sessions serveur et des rôles. Le site ne demandera jamais directement votre mot de passe Google.",
+      "sections": [
+        {
+          "title": "Mes cours",
+          "description": "Cours et leçons enregistrées liés à l’inscription et aux droits d’accès de l’étudiant.",
+          "icon": "courses"
+        },
+        {
+          "title": "Progression",
+          "description": "L’avancement et la complétion des leçons apparaîtront ici après connexion de la base de données.",
+          "icon": "progress"
+        },
+        {
+          "title": "Mes ressources",
+          "description": "Pièces jointes et fichiers pédagogiques approuvés, distincts de la Bibliothèque numérique publique.",
+          "icon": "library"
+        },
+        {
+          "title": "Notes",
+          "description": "Les notes publiées et les moyennes semestrielles approuvées apparaîtront ici après validation académique.",
+          "icon": "grades"
+        },
+        {
+          "title": "Présence",
+          "description": "Les synthèses de présence validées apparaîtront ici, tandis que la modification détaillée reste administrative.",
+          "icon": "attendance"
+        }
+      ],
+      "pendingLabel": "Prochaine phase",
+      "accessMap": {
+        "title": "Fonctionnement des accès",
+        "description": "Le portail sépare clairement l’inscription académique des achats de cours indépendants.",
+        "officialTitle": "Étudiant officiel de la Hawza",
+        "officialDescription": "Un étudiant admis reçoit l’accès aux cours inclus dans son inscription académique active. Google Classroom reste l’espace des cours en direct et des annonces; les enregistrements approuvés sont organisés dans le portail pour le rattrapage et la révision.",
+        "buyerTitle": "Apprenant d’un cours indépendant",
+        "buyerDescription": "Une personne qui achète un cours autonome accède uniquement à ce cours. Un achat ne déverrouille jamais l’ensemble du programme académique.",
+        "classroomLabel": "Cours en direct et annonces dans Classroom",
+        "recordingsLabel": "Enregistrements approuvés dans le portail",
+        "includedLabel": "Accès accordé par l’inscription académique",
+        "purchasedLabel": "Accès accordé après confirmation du paiement"
+      }
+    }
+  },
+  "signIn": {
+    "title": "Connexion sécurisée",
+    "description": "Accédez à votre compte ESPO Paris et reliez-le à votre inscription académique lorsque vous êtes éligible.",
+    "copy": {
+      "eyebrow": "Accès étudiant",
+      "title": "Votre compte ESPO",
+      "description": "Créez ou utilisez un seul compte personnel. Le système génère automatiquement l’identifiant interne et relie les étudiants vérifiés à leur inscription académique approuvée.",
+      "googleLabel": "Continuer avec Google",
+      "magicTitle": "Connexion par e-mail",
+      "magicDescription": "Utilisez un lien sécurisé envoyé par e-mail lorsque Google ne convient pas. ESPO n’a pas besoin de stocker votre mot de passe.",
+      "emailPlaceholder": "vous@exemple.com",
+      "emailButton": "Envoyer le lien sécurisé",
+      "unavailable": "Ce fournisseur est préparé mais reste inactif jusqu’à la connexion des identifiants de production.",
+      "securityTitle": "Comment l’accès est vérifié",
+      "securityDescription": "Créer un compte ne rend pas automatiquement son titulaire étudiant officiel de la hawza. L’accès académique n’est accordé qu’après correspondance avec une inscription approuvée ou validation administrative.",
+      "flowTitle": "Parcours du compte",
+      "flow": [
+        "Vérifiez votre identité avec Google ou par e-mail.",
+        "Un identifiant utilisateur interne sécurisé est créé automatiquement.",
+        "L’e-mail vérifié est comparé aux inscriptions acceptées.",
+        "En cas de correspondance, l’inscription est reliée au compte et l’accès académique est activé."
+      ],
+      "studentNote": "Les étudiants officiels reçoivent leurs accès via leur inscription académique, sans acheter chaque matière.",
+      "memberNote": "Les autres utilisateurs restent des membres ordinaires et pourront accéder aux cours gratuits ou achetés individuellement.",
+      "backLabel": "Retour au portail étudiant"
+    }
+  },
+  "support": {
+    "title": "Soutenir le Centre",
+    "description": "Contactez l’administration pour connaître les moyens actuellement disponibles pour soutenir le Centre Imam (AJ) – Paris.",
+    "copy": {
+      "eyebrow": "Soutenir la mission",
+      "title": "Contribuez à la mission éducative du Centre",
+      "description": "Le Centre Imam (AJ) – Paris poursuit sa mission éducative et son service aux communautés avec le soutien de bienfaiteurs et de donateurs. Les contributions peuvent soutenir la continuité de l’enseignement et l’accompagnement des apprenants dans plusieurs pays et langues.",
+      "contactTitle": "Contacter l’administration",
+      "contactDescription": "Pour un don ou pour connaître les moyens de soutien actuellement disponibles, contactez directement l’administration.",
+      "whatsappAction": "Contacter sur WhatsApp",
+      "emailAction": "Contacter par e-mail",
+      "stewardshipTitle": "Une gestion claire et responsable",
+      "stewardshipDescription": "Les moyens de don sont confirmés par l’administration. Le site ne collecte actuellement aucune donnée bancaire et ne traite pas automatiquement les dons.",
+      "note": "Le paiement en ligne pourra être activé ultérieurement après validation du prestataire, des devises, des reçus et des procédures financières par le Centre.",
+      "whatsappMessage": "Salam alaykoum. Je souhaite soutenir le Centre Imam (AJ) – Paris et connaître les moyens de don disponibles."
+    }
+  },
+  "adminAcademic": {
+    "title": "Centre de contrôle académique",
+    "description": "Espace administratif protégé pour le cursus, les étudiants, les résultats, la progression et les accès.",
+    "copy": {
+      "eyebrow": "Administration",
+      "title": "Centre de contrôle académique",
+      "description": "Un espace protégé pour gérer les dossiers étudiants, les versions du cursus, les notes, l’assiduité, la progression et les accès pédagogiques.",
+      "lockedTitle": "Accès administratif requis",
+      "lockedDescription": "Cette page reste volontairement verrouillée jusqu’à la connexion de l’authentification institutionnelle réelle et de l’attribution du rôle administrateur.",
+      "modules": [
+        {
+          "title": "Étudiants et inscriptions",
+          "description": "Examiner les comptes rapprochés, inscriptions actives, statuts et niveaux académiques.",
+          "icon": "students"
+        },
+        {
+          "title": "Gestion du programme",
+          "description": "Créer des versions du programme, ajouter ou désactiver des matières et les affecter à l'année et au semestre appropriés.",
+          "icon": "curriculum"
+        },
+        {
+          "title": "Notes et présence",
+          "description": "Saisir les données académiques puis publier uniquement les notes et synthèses de présence validées.",
+          "icon": "grades"
+        },
+        {
+          "title": "Décisions de progression",
+          "description": "Examiner les recommandations et valider passage, redoublement, suspension ou fin de programme.",
+          "icon": "progression"
+        },
+        {
+          "title": "Paiements et droits d'accès",
+          "description": "Suivre demandes de prix, paiements hors ligne vérifiés et futurs achats en ligne séparément de l'inscription académique.",
+          "icon": "payments"
+        },
+        {
+          "title": "Qualité des données d'inscription",
+          "description": "Auditer le flux Formulaire → feuille de langue → base centrale avant toute création ou mise à jour d'étudiant.",
+          "icon": "data"
+        },
+        {
+          "title": "Audit et traçabilité",
+          "description": "Conserver qui a modifié notes, inscription, programme, paiements et accès, avec historique avant/après.",
+          "icon": "audit"
+        },
+        {
+          "title": "Rôles et permissions",
+          "description": "Séparer clairement les responsabilités des enseignants, responsables académiques, finances, éditeurs et administrateurs.",
+          "icon": "roles"
+        }
+      ],
+      "versioningTitle": "L’historique du cursus est préservé",
+      "versioningDescription": "Les modifications d’une nouvelle année académique sont effectuées dans une nouvelle version du cursus. Les anciens dossiers restent liés à la version réellement suivie.",
+      "operationsTitle": "Une source de vérité, des changements contrôlés",
+      "operationsDescription": "La base centrale des inscriptions reste la référence pour l’identité de l’étudiant et son placement académique. Forms, Classroom, Drive et le portail se synchronisent autour d’elle.",
+      "safetyTitle": "Validation avant automatisation",
+      "safetyDescription": "Le système peut calculer des recommandations et détecter les anomalies, mais publier les notes finales, promouvoir un étudiant, confirmer un paiement hors ligne ou accorder un accès payant exige une action autorisée côté serveur."
+    }
+  },
+  "teacherPortal": {
+    "content": {
+      "eyebrow": "Espace enseignant",
+      "title": "Carnet de notes enseignant",
+      "description": "Un espace sécurisé et simple pour saisir les notes et les présences sans exposer la base centrale des étudiants.",
+      "lockedTitle": "L’accès enseignant est protégé",
+      "lockedDescription": "Cet espace s’ouvre uniquement après authentification institutionnelle et attribution du rôle enseignant.",
+      "workflowTitle": "Flux académique",
+      "workflow": [
+        {
+          "title": "Saisir les notes",
+          "description": "L’enseignant voit uniquement ses cours et ses étudiants, puis saisit les évaluations en brouillon.",
+          "icon": "gradebook"
+        },
+        {
+          "title": "Saisir les présences",
+          "description": "Marquer présent, absent, excusé ou en retard depuis une liste rapide de séance.",
+          "icon": "attendance"
+        },
+        {
+          "title": "Soumettre à validation",
+          "description": "Envoyer les notes terminées au service académique sans les publier aux étudiants.",
+          "icon": "submit"
+        },
+        {
+          "title": "Publier après validation",
+          "description": "Seul un responsable académique ou administrateur peut publier les résultats dans le portail étudiant.",
+          "icon": "publish"
+        }
+      ],
+      "storageTitle": "Google Workspace d’abord, base de données ensuite",
+      "storageDescription": "Au départ, des Google Sheets protégés stockent les données derrière Apps Script. Les enseignants utilisent le portail, jamais les feuilles brutes. Le stockage pourra migrer plus tard sans changer l’interface.",
+      "safetyTitle": "Aucune fuite de notes provisoires",
+      "safetyDescription": "Les brouillons et notes soumises restent invisibles aux étudiants. Toute modification sensible doit être attribuable à un membre autorisé."
+    }
+  },
+  "gradeReview": {
+    "copy": {
+      "eyebrow": "Contrôle qualité académique",
+      "title": "Révision et publication des notes",
+      "description": "Une étape contrôlée entre la saisie par l’enseignant et la visibilité pour l’étudiant. Les résultats sont vérifiés avant approbation et publication.",
+      "lockedTitle": "Personnel académique autorisé uniquement",
+      "lockedDescription": "Cet espace reste verrouillé jusqu’à la connexion de l’authentification de production et des rôles autorisés.",
+      "steps": [
+        {
+          "title": "Recevoir les soumissions",
+          "description": "Les enseignants soumettent les relevés complétés pour révision."
+        },
+        {
+          "title": "Valider les données",
+          "description": "Le système détecte les évaluations manquantes, valeurs invalides et brouillons."
+        },
+        {
+          "title": "Approbation académique",
+          "description": "Un responsable académique approuve ou renvoie le lot."
+        },
+        {
+          "title": "Publier aux étudiants",
+          "description": "Seuls les résultats approuvés deviennent visibles dans le portail étudiant."
+        }
+      ],
+      "ruleTitle": "Aucune publication aveugle",
+      "ruleDescription": "Un lot ne peut pas être publié tant que des évaluations requises manquent ou restent en brouillon.",
+      "visibilityTitle": "Visibilité sécurisée",
+      "visibilityDescription": "Les étudiants ne voient que les résultats publiés; brouillons, retours et notes internes restent privés."
+    }
+  },
+  "academicRecord": {
+    "copy": {
+      "eyebrow": "Dossier académique officiel",
+      "title": "Votre dossier académique",
+      "description": "Un espace privé pour les résultats publiés, les moyennes validées, les synthèses de présence et l’historique de progression liés à votre identité étudiante officielle.",
+      "lockedTitle": "Accès étudiant requis",
+      "lockedDescription": "Le dossier académique est privé et devient accessible uniquement après liaison d’un compte vérifié à une inscription acceptée.",
+      "signInLabel": "Se connecter en toute sécurité",
+      "cards": [
+        {
+          "title": "Historique des semestres",
+          "description": "Les résultats publiés restent liés à l’année académique et à la version du programme suivie.",
+          "icon": "history"
+        },
+        {
+          "title": "Moyennes validées",
+          "description": "Seules les moyennes approuvées académiquement sont affichées. Les brouillons des enseignants restent privés.",
+          "icon": "average"
+        },
+        {
+          "title": "Synthèse de présence",
+          "description": "Les synthèses validées sont visibles sans exposer les notes administratives internes.",
+          "icon": "attendance"
+        }
+      ],
+      "privacyTitle": "Intégrité historique",
+      "privacyDescription": "Les modifications futures du programme ne réécrivent jamais les anciens résultats. Chaque semestre reste lié à sa version d’origine et à l’identité AIC de l’étudiant."
+    }
+  },
+  "progressionCenter": {
+    "copy": {
+      "eyebrow": "Progression académique",
+      "title": "Clôture du semestre et progression",
+      "description": "Un flux contrôlé qui transforme les résultats publiés en recommandation académique, puis exige une décision humaine autorisée avant l’activation du semestre suivant.",
+      "lockedTitle": "Réservé au personnel académique autorisé",
+      "lockedDescription": "Les décisions de progression restent verrouillées jusqu’à la connexion de l’authentification de production et des rôles autorisés.",
+      "steps": [
+        {
+          "title": "Clôturer les dossiers",
+          "description": "Confirmer que toutes les notes requises sont publiées et que les présences sont complètes."
+        },
+        {
+          "title": "Générer la recommandation",
+          "description": "Le système évalue la situation et propose promotion, attente ou fin de programme."
+        },
+        {
+          "title": "Validation humaine",
+          "description": "Un responsable académique autorisé valide la recommandation ou consigne une exception motivée."
+        },
+        {
+          "title": "Activer le semestre suivant",
+          "description": "Après validation, le nouveau semestre et ses accès peuvent être activés tout en conservant l’historique."
+        }
+      ],
+      "guardTitle": "Aucune promotion automatique silencieuse",
+      "guardDescription": "Le système peut recommander une étape, mais il ne fait jamais progresser un étudiant uniquement parce qu’une date change ou qu’une note est saisie.",
+      "auditTitle": "Chaque décision est traçable",
+      "auditDescription": "Le dossier conserve le semestre source, la décision, le responsable, l’horodatage et la raison."
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Notifications académiques et opérationnelles sécurisées pour étudiants, enseignants et administration.",
+    "content": {
+      "eyebrow": "Opérations académiques",
+      "title": "Centre de notifications et d’actions",
+      "description": "Un espace unique pour les résultats publiés, les mises à jour d’inscription, les demandes de révision, les décisions de progression, les confirmations de paiement et les avis pédagogiques. La diffusion réelle ne sera activée qu’après connexion de l’authentification et de la persistance de production.",
+      "lockedTitle": "Connexion sécurisée requise",
+      "lockedDescription": "Les notifications sont privées et dépendent des rôles. La boîte réelle ne sera accessible qu’après authentification sécurisée du compte.",
+      "inAppTitle": "Notifications dans la plateforme",
+      "inAppDescription": "Étudiants, enseignants et administrateurs ne reçoivent que les informations liées à leur rôle et à leurs dossiers, sans exposer les données des autres utilisateurs.",
+      "emailTitle": "Envoi par e-mail",
+      "emailDescription": "Les événements importants peuvent aussi être envoyés par e-mail via le fournisseur approuvé par l’institution, avec des préférences séparées pour les messages non essentiels.",
+      "safetyTitle": "Une notification ne publie jamais seule un résultat",
+      "safetyDescription": "Elle signale un événement déjà autorisé. La publication des notes, la progression, la confirmation des paiements et les droits d’accès conservent leurs propres circuits d’approbation protégés."
+    }
+  },
+  "enrollmentIntegrity": {
+    "copy": {
+      "eyebrow": "Intégrité des admissions",
+      "title": "Centre d’intégrité des admissions",
+      "description": "Un espace contrôlé pour auditer les six sources d’inscription, réparer la base centrale, résoudre les écarts d’identité et protéger le dossier AIC avant l’activation du portail étudiant.",
+      "lockedTitle": "Accès administrateur requis",
+      "lockedDescription": "Les audits et réparations en production restent verrouillés tant que l’authentification réelle n’est pas connectée et que le compte n’est pas autorisé comme administrateur des admissions.",
+      "cards": [
+        {
+          "title": "Audit des sources",
+          "description": "Comparer les feuilles arabe, anglaise, française, persane, turque et azerbaïdjanaise avec la base centrale Applications.",
+          "icon": "database"
+        },
+        {
+          "title": "Réparation sûre",
+          "description": "Prévisualiser les champs manquants puis compléter uniquement les valeurs centrales vides, sans écraser les modifications administratives ni les identifiants AIC existants.",
+          "icon": "repair"
+        },
+        {
+          "title": "Liaison d’identité",
+          "description": "Associer un compte web vérifié au dossier AIC existant par e-mail normalisé. La création d’un compte ne crée jamais une seconde identité étudiante.",
+          "icon": "identity"
+        },
+        {
+          "title": "Contrôle des changements",
+          "description": "Toute réparation exige un administrateur autorisé, une requête serveur signée et une confirmation explicite. Le mode par défaut reste la simulation.",
+          "icon": "safety"
+        }
+      ],
+      "workflowTitle": "Flux de réparation contrôlé",
+      "workflow": [
+        "Créer une sauvegarde et lancer un audit en lecture seule.",
+        "Corriger les erreurs de correspondance dans les six sources.",
+        "Examiner les réparations proposées et les avertissements de doublons.",
+        "Appliquer uniquement après confirmation explicite d’un administrateur.",
+        "Relancer l’audit et vérifier les noms des dossiers étudiants.",
+        "Activer la liaison compte-AIC seulement après validation de l’intégrité."
+      ],
+      "liveTitle": "Aucune modification silencieuse",
+      "liveDescription": "Ce centre inspecte d’abord et écrit ensuite. L’ouverture d’une page ne déclenche jamais une réparation de la base de production."
+    }
+  },
+  "productionReadiness": {
+    "eyebrow": "Contrôle de production",
+    "title": "Préparation à la mise en production",
+    "body": "Vue opérationnelle à étapes pour activer l’inscription, l’identité et les écritures académiques. Aucune fonction n’est déclarée prête avant validation dans l’environnement réel.",
+    "lockedTitle": "Les contrôles de production sont verrouillés",
+    "lockedBody": "L’authentification de production n’est pas encore active. Cette page n’expose volontairement aucun état administratif aux visiteurs anonymes."
+  },
+  "academicOperations": {
+    "title": "Console des opérations académiques",
+    "description": "Préparation opérationnelle de l’espace académique, des accès du personnel, du relevé de notes et de la publication contrôlée.",
+    "copy": {
+      "eyebrow": "Opérations académiques",
+      "title": "Console des opérations académiques",
+      "description": "Une vue opérationnelle protégée pour le provisionnement, les autorisations, la configuration des évaluations et l’intégrité des données avant l’activation des flux pédagogiques réels.",
+      "lockedTitle": "Accès académique autorisé requis",
+      "lockedDescription": "La console reste verrouillée jusqu’à ce que l’authentification de production associe ce compte à un rôle académique autorisé.",
+      "cards": [
+        {
+          "title": "Provisionnement de l’espace",
+          "description": "Préparer les six feuilles Google canoniques avec en-têtes stables, validations et garde-fous opérationnels."
+        },
+        {
+          "title": "Accès du personnel",
+          "description": "Affecter chaque enseignant uniquement à ses cours et séparer clairement révision, publication et administration."
+        },
+        {
+          "title": "Intégrité des évaluations",
+          "description": "Valider les pondérations actives et empêcher une structure de notation incomplète ou incorrecte d’être mise en service."
+        },
+        {
+          "title": "Publication contrôlée",
+          "description": "Séparer brouillon, révision, validation et publication avec une piste d’audit permanente."
+        }
+      ],
+      "footerTitle": "Conçu pour limiter les coûts",
+      "footerDescription": "La première architecture de production repose sur Vercel, Google Workspace et Apps Script, sans serveur dédié à ce stade."
+    }
+  },
+  "curriculumControl": {
+    "title": "Centre de gestion du cursus",
+    "description": "Gestion versionnée du programme académique, des matières, semestres et années futures.",
+    "copy": {
+      "eyebrow": "Gouvernance académique",
+      "title": "Centre de gestion du cursus",
+      "description": "Gérer la structure académique sans réécrire l’historique. Préparer les futurs cursus, modifier les matières avant activation et conserver exactement le programme suivi par chaque étudiant.",
+      "lockedTitle": "Accès académique requis",
+      "lockedDescription": "Cet espace reste verrouillé jusqu’à l’activation de l’authentification de production et des droits du responsable académique.",
+      "principlesTitle": "Conçu pour des changements académiques contrôlés",
+      "principles": [
+        {
+          "title": "Modifier les brouillons",
+          "description": "Ajouter, renommer, réordonner ou désactiver des matières uniquement dans une version de cursus en brouillon."
+        },
+        {
+          "title": "Créer l’année suivante",
+          "description": "Cloner le cursus courant vers une nouvelle année académique, puis l’ajuster sans modifier les anciens dossiers."
+        },
+        {
+          "title": "Préserver l’historique",
+          "description": "Les cursus activés sont immuables. Les relevés restent fidèles au programme réellement suivi."
+        },
+        {
+          "title": "Gouverner les changements",
+          "description": "L’activation est une décision académique explicite, protégée par validation et permissions."
+        }
+      ],
+      "lifecycleTitle": "Cycle de vie du cursus",
+      "lifecycle": [
+        "Créer ou cloner une version de cursus en brouillon.",
+        "Réviser les années, semestres et matières.",
+        "Valider les codes, l’ordre et la cohérence année/semestre.",
+        "Approuver et activer la version pour l’année académique.",
+        "Archiver lorsqu’elle n’est plus opérationnelle sans réécrire l’historique."
+      ],
+      "controlsTitle": "Ce que l’administration peut gérer",
+      "controlsDescription": "Nom, code, description, année, semestre, ordre d’affichage et statut d’une matière sont administrables. L’affectation des enseignants et la diffusion des cours restent séparées du dossier historique du cursus."
+    }
+  },
+  "staffAccess": {
+    "title": "Accès du personnel et affectations pédagogiques",
+    "description": "Gestion contrôlée des rôles du personnel, du cycle de vie des comptes et des affectations enseignants-cours.",
+    "copy": {
+      "eyebrow": "Identité et autorisations",
+      "title": "Accès du personnel et affectations pédagogiques",
+      "description": "Séparer clairement identité, autorité académique et affectations d’enseignement. L’administration contrôle les comptes; le responsable académique affecte uniquement les enseignants actifs aux cours qu’ils dispensent réellement.",
+      "lockedTitle": "Accès administrateur requis",
+      "lockedDescription": "La gestion des identités et rôles reste verrouillée jusqu’à l’activation de l’authentification de production.",
+      "rolesTitle": "Cinq rôles opérationnels",
+      "roles": [
+        {
+          "title": "Enseignant",
+          "description": "Accède uniquement à ses cours, saisit la présence et les notes brouillon puis les soumet à validation."
+        },
+        {
+          "title": "Responsable académique",
+          "description": "Affecte les enseignants, révise les résultats, les publie et approuve la progression."
+        },
+        {
+          "title": "Finance",
+          "description": "Confirme les paiements autorisés sans obtenir de droits de modification académique."
+        },
+        {
+          "title": "Éditeur",
+          "description": "Maintient le contenu public approuvé sans accès aux notes ni à la gestion du personnel."
+        },
+        {
+          "title": "Administrateur",
+          "description": "Gère les comptes, changements de rôle, suspensions et paramètres sensibles."
+        }
+      ],
+      "workflowTitle": "Cycle de vie sécurisé du personnel",
+      "workflow": [
+        "Inviter ou vérifier le membre du personnel avec une adresse approuvée.",
+        "Attribuer un seul rôle opérationnel cohérent.",
+        "Pour les enseignants, affecter uniquement les cours actifs réellement enseignés.",
+        "Suspendre immédiatement l’accès lors d’un changement de fonction ou départ.",
+        "Conserver un historique d’audit des rôles et affectations."
+      ],
+      "securityTitle": "Principe du moindre privilège",
+      "securityDescription": "La finance n’est pas considérée comme supérieure à un enseignant, les éditeurs ne publient pas les notes et les responsables académiques ne deviennent pas administrateurs implicitement."
+    }
+  },
+  "cohortManagement": {
+    "title": "Gestion des cohortes",
+    "description": "Gérer les cohortes annuelles et le passage des étudiants sans réécrire les dossiers historiques.",
+    "copy": {
+      "eyebrow": "Pilotage de l’année académique",
+      "title": "Cohortes, progression et passage annuel",
+      "description": "Chaque année académique est préparée comme une cohorte contrôlée, liée à une version de programme approuvée, tout en conservant l’identité AIC et l’historique académique de chaque étudiant.",
+      "lockedTitle": "Accès administratif requis",
+      "lockedDescription": "Cette interface reste verrouillée jusqu’à l’activation de l’authentification de production et des autorisations académiques.",
+      "principlesTitle": "Principes du passage annuel",
+      "principles": [
+        {
+          "title": "Une cohorte par cycle",
+          "description": "Les étudiants sont regroupés par année sans modifier leur identité AIC permanente."
+        },
+        {
+          "title": "Passage après validation",
+          "description": "Une nouvelle inscription semestrielle n’est créée qu’après validation académique."
+        },
+        {
+          "title": "Historique préservé",
+          "description": "Les appartenances clôturées restent disponibles pour relevés, audits et vérifications."
+        },
+        {
+          "title": "Programme versionné",
+          "description": "Chaque cohorte référence une version approuvée du programme et n’hérite pas silencieusement des changements futurs."
+        }
+      ],
+      "workflowTitle": "Processus annuel",
+      "workflow": [
+        "Clôturer et publier les résultats du semestre courant.",
+        "Valider la progression de chaque étudiant.",
+        "Activer la version du programme et la cohorte suivantes.",
+        "Créer les nouvelles appartenances seulement pour les étudiants éligibles.",
+        "Archiver l’ancienne appartenance sans supprimer notes, présence ni identifiant AIC.",
+        "Synchroniser Classroom et les accès au portail."
+      ],
+      "safeguardTitle": "Aucune promotion automatique globale",
+      "safeguardDescription": "Le système peut préparer des recommandations en masse, mais ne promeut jamais tous les étudiants simplement parce que l’année change. La validation académique reste obligatoire."
+    }
+  },
+  "adminContent": {
+    "title": "Gestion du contenu",
+    "description": "Gérer les actualités, activités, annonces et contenus quotidiens programmés.",
+    "copy": {
+      "eyebrow": "Administration du site",
+      "title": "Centre de contenu et de publication",
+      "description": "Un espace CMS contrôlé pour publier, programmer et maintenir le contenu public sans modifier le code.",
+      "lockedTitle": "Espace restreint",
+      "lockedDescription": "Connectez-vous avec un compte éditeur ou administrateur autorisé.",
+      "masterTitle": "Administrateur principal",
+      "masterDescription": "Autorité complète sur la publication, la suppression, les permissions et les réglages globaux.",
+      "editorTitle": "Éditeur de contenu",
+      "editorDescription": "Peut préparer, modifier et programmer le contenu; la publication finale et la suppression restent protégées.",
+      "modules": [
+        {
+          "title": "Actualités",
+          "description": "Créer, modifier, programmer, publier ou archiver les actualités.",
+          "icon": "news"
+        },
+        {
+          "title": "Activités",
+          "description": "Gérer événements, comptes rendus, galeries et activités publiques.",
+          "icon": "activity"
+        },
+        {
+          "title": "Verset / hadith du jour",
+          "description": "Gérer une bibliothèque approuvée pour la rotation quotidienne.",
+          "icon": "reflection"
+        },
+        {
+          "title": "Programmation",
+          "description": "Planifier publication, expiration et contenus liés aux occasions.",
+          "icon": "schedule"
+        }
+      ],
+      "workflowTitle": "Flux éditorial",
+      "workflowDescription": "Brouillon → Révision → Programmation → Publication → Archive. L’administrateur principal garde les actions sensibles.",
+      "reflectionTitle": "Contenu quotidien et occasions",
+      "reflectionDescription": "Les entrées approuvées tournent automatiquement chaque jour; les contenus d’occasion peuvent recevoir une priorité supérieure sur une période définie, avec source obligatoire.",
+      "destructiveTitle": "Actions protégées",
+      "destructiveDescription": "La suppression définitive, la publication finale et les réglages globaux restent réservés à l’administrateur principal et doivent être journalisés."
+    },
+    "live": {
+      "liveTitle": "Stockage CMS en direct",
+      "liveDescription": "Cet espace lit et écrit le contenu institutionnel via le pont Google Apps Script signé. Aucun contenu public fictif n’est créé si le pont est indisponible.",
+      "connected": "Connecté",
+      "notConfigured": "Non configuré",
+      "error": "Erreur de connexion",
+      "newContentTitle": "Créer un contenu",
+      "titleLabel": "Titre",
+      "slugLabel": "Slug (facultatif)",
+      "kindLabel": "Type de contenu",
+      "excerptLabel": "Résumé",
+      "bodyLabel": "Contenu",
+      "publishAtLabel": "Publier le",
+      "unpublishAtLabel": "Retirer le",
+      "saveDraft": "Enregistrer le brouillon",
+      "currentContentTitle": "Contenu actuel",
+      "noContent": "Aucune entrée CMS n’est encore enregistrée.",
+      "statusLabel": "Statut",
+      "publish": "Publier",
+      "review": "Envoyer en révision",
+      "archive": "Archiver",
+      "delete": "Supprimer",
+      "reflectionFormTitle": "Ajouter un verset / hadith",
+      "arabicTextLabel": "Texte arabe",
+      "sourceLabel": "Source / attribution",
+      "reflectionKindLabel": "Type",
+      "occasionLabel": "Occasion (facultatif)",
+      "priorityLabel": "Priorité",
+      "activeFromLabel": "Actif à partir de",
+      "activeUntilLabel": "Actif jusqu’au",
+      "saveReflection": "Enregistrer pour révision",
+      "currentReflectionsTitle": "Bibliothèque des réflexions",
+      "noReflections": "Aucun texte sourcé n’est encore enregistré.",
+      "approvedLabel": "Approuvé",
+      "pendingLabel": "En attente"
+    }
+  },
+  "adminDashboard": {
+    "title": "Tableau de bord administratif",
+    "description": "Espace administratif protégé pour les opérations ESPO Paris.",
+    "copy": {
+      "eyebrow": "Administration interne",
+      "title": "Tableau de bord administratif",
+      "description": "Un centre de commande protégé pour le contenu du site, les opérations académiques et les systèmes institutionnels. Seuls les modules autorisés pour le rôle connecté sont affichés.",
+      "signedInAs": "Connecté en tant que",
+      "role": {
+        "master": "Administrateur principal",
+        "editor": "Éditeur de contenu",
+        "academic": "Responsable académique",
+        "staff": "Personnel autorisé"
+      },
+      "statusTitle": "Périmètre de sécurité actif",
+      "statusDescription": "Cette zone est absente de la navigation publique et de l’indexation, et chaque route protégée est vérifiée côté serveur avant affichage.",
+      "liveDataTitle": "Indicateurs réels volontairement masqués",
+      "liveDataDescription": "Aucun nombre d’étudiants, de contenus, de livres ou de cours n’est inventé. Les indicateurs apparaîtront uniquement après connexion et vérification du dépôt de production concerné.",
+      "modulesTitle": "Modules d’administration",
+      "modulesDescription": "Les modules disponibles s’ouvrent immédiatement. Les modules de fondation sont déjà structurés mais restent inactifs jusqu’à la connexion de leur source de données de production.",
+      "open": "Ouvrir",
+      "foundation": "Fondation prête",
+      "locked": "Restreint",
+      "modules": {
+        "content": {
+          "title": "Contenu et publication",
+          "description": "Préparer, réviser, planifier, publier et archiver les actualités, activités, annonces et réflexions quotidiennes approuvées."
+        },
+        "academic": {
+          "title": "Administration académique",
+          "description": "Gérer le curriculum, les cohortes, les affectations du personnel, les notes, la présence, la progression et la préparation académique."
+        },
+        "library": {
+          "title": "Bibliothèque numérique",
+          "description": "Gérer les livres, métadonnées, couvertures et accès PDF contrôlé une fois le dépôt Drive numérique connecté."
+        },
+        "learning": {
+          "title": "Plateforme d’apprentissage",
+          "description": "Gérer les cours enregistrés, leçons, pièces jointes et règles d’accès après activation du dépôt pédagogique."
+        },
+        "people": {
+          "title": "Personnes et permissions",
+          "description": "Contrôle réservé à l’administrateur principal pour les identités, rôles et limites d’accès administratif."
+        },
+        "settings": {
+          "title": "Paramètres du site",
+          "description": "Zone réservée à l’administrateur principal pour les paramètres institutionnels vérifiés, les contacts publics et la configuration contrôlée."
+        }
+      }
+    }
+  },
+  "adminPeople": {
+    "title": "Personnes et autorisations",
+    "description": "Espace du Master Admin pour les identités, rôles et contrôles d’accès du personnel.",
+    "copy": {
+      "eyebrow": "Administration principale",
+      "title": "Personnes et autorisations",
+      "description": "Contrôlez les rôles du personnel et les limites d’accès depuis un espace protégé. Aucun annuaire fictif n’est affiché avant la connexion de la source d’identité de production.",
+      "masterTitle": "Le Master Admin reste l’autorité finale",
+      "masterDescription": "Seul le Master Admin peut attribuer les rôles administratifs, gérer les limites d’autorisation et les accès sensibles. Chaque membre reçoit uniquement les capacités nécessaires.",
+      "liveTitle": "Annuaire d’identités en direct non connecté",
+      "liveDescription": "Le modèle d’autorisation est actif dans le code, mais les invitations et changements de rôles réels restent désactivés jusqu’à l’activation de Google Auth et du stockage persistant.",
+      "rolesTitle": "Limites des rôles",
+      "roles": [
+        {
+          "title": "Enseignant",
+          "description": "Accès pédagogique uniquement aux cours qui lui sont attribués.",
+          "permissions": "Espace enseignant uniquement"
+        },
+        {
+          "title": "Responsable académique",
+          "description": "Révise les dossiers, la progression et les opérations académiques.",
+          "permissions": "Administration académique"
+        },
+        {
+          "title": "Finance",
+          "description": "Révision financière sans autorité académique ou éditoriale héritée.",
+          "permissions": "Périmètre financier uniquement"
+        },
+        {
+          "title": "Éditeur de contenu",
+          "description": "Crée et prépare le contenu public sans contrôle administratif final.",
+          "permissions": "Brouillons et workflow éditorial"
+        },
+        {
+          "title": "Master Admin",
+          "description": "Administration institutionnelle complète et contrôle des autorisations.",
+          "permissions": "Contrôle administratif complet"
+        }
+      ],
+      "lifecycleTitle": "Cycle de vie contrôlé du personnel",
+      "lifecycle": [
+        {
+          "title": "Inviter",
+          "description": "Créer une identité en attente après vérification de l’adresse officielle."
+        },
+        {
+          "title": "Activer",
+          "description": "Attribuer le rôle minimal nécessaire puis activer l’accès."
+        },
+        {
+          "title": "Suspendre",
+          "description": "Retirer temporairement l’accès sans supprimer l’historique d’audit."
+        },
+        {
+          "title": "Départ",
+          "description": "Fermer définitivement l’accès en conservant l’historique."
+        }
+      ],
+      "safetyTitle": "Aucun héritage implicite de privilèges",
+      "safetyDescription": "Un changement de rôle n’accorde jamais de capacités sans rapport. Un compte clôturé ne peut pas être réactivé silencieusement et chaque changement doit être auditable."
+    }
+  },
+  "adminSettings": {
+    "title": "Paramètres du site",
+    "description": "Espace Master Admin pour la configuration institutionnelle publique vérifiée.",
+    "copy": {
+      "eyebrow": "Configuration contrôlée",
+      "title": "Paramètres du site",
+      "description": "Gérez les coordonnées publiques vérifiées et les paramètres institutionnels sans publier de données non confirmées sur le site ou dans les moteurs de recherche.",
+      "verified": "Vérifié",
+      "pending": "En attente",
+      "contactTitle": "Coordonnées publiques vérifiées",
+      "contactDescription": "Ces valeurs sont les canaux institutionnels confirmés actuellement autorisés pour un usage public.",
+      "fields": {
+        "contactEmail": "E-mail public",
+        "phoneArabicFrench": "Arabe + français",
+        "phonePersianTurkishAzerbaijani": "Persan + turc + azerbaïdjanais",
+        "phoneEnglish": "Anglais",
+        "phoneAfrica": "Afrique / langues africaines",
+        "supportPhone": "Soutien / dons",
+        "publicAddress": "Adresse publique officielle",
+        "visitingHours": "Horaires de visite",
+        "legalPublicName": "Nom légal / public final"
+      },
+      "pendingTitle": "Les champs non confirmés restent non publiés",
+      "pendingDescription": "L’adresse, les horaires de visite et le nom légal final restent vides jusqu’à confirmation institutionnelle.",
+      "publishRuleTitle": "Vérifier avant publication",
+      "publishRuleDescription": "Un paramètre peut exister en brouillon, mais une information institutionnelle non vérifiée ne doit jamais apparaître dans les pages publiques, métadonnées ou données structurées.",
+      "persistenceTitle": "Verrou de stockage production",
+      "persistenceDescription": "L’interface et la validation sont prêtes. L’enregistrement réel sera activé uniquement après connexion d’un stockage de production authentifié."
+    }
+  },
+  "digitalAuthoring": {
+    "copy": {
+      "libraryFormTitle": "Gestion du catalogue de la bibliothèque",
+      "learningFormTitle": "Gestion du catalogue pédagogique",
+      "newRecord": "Créer une nouvelle entrée",
+      "selectRecord": "Entrée",
+      "noRecords": "Aucune entrée n’est encore enregistrée.",
+      "currentStatus": "Statut actuel",
+      "readOnly": "Les métadonnées publiées et archivées sont en lecture seule. Utilisez les actions de cycle de vie.",
+      "identifier": "Identifiant (facultatif)",
+      "slug": "Identifiant URL",
+      "title": "Titre",
+      "author": "Auteur",
+      "description": "Description",
+      "language": "Langue / locale",
+      "category": "Catégorie",
+      "accessLevel": "Niveau d’accès",
+      "pdfFileId": "Référence du fichier PDF Drive",
+      "coverFileId": "Référence de la couverture Drive",
+      "publicationYear": "Année de publication",
+      "pageCount": "Nombre de pages",
+      "academicYear": "Année académique",
+      "year": "Niveau d’année",
+      "semester": "Semestre",
+      "courseId": "Identifiant du cours",
+      "courseTitle": "Titre du cours",
+      "lessonOrder": "Ordre de la leçon",
+      "videoFileId": "Référence vidéo Drive",
+      "audioFileId": "Référence audio Drive",
+      "attachments": "Références des pièces jointes Drive (une par ligne)",
+      "saveDraft": "Enregistrer le brouillon",
+      "saveChanges": "Enregistrer les modifications",
+      "submitReview": "Soumettre à révision",
+      "returnDraft": "Retourner au brouillon",
+      "publish": "Publier",
+      "archive": "Archiver",
+      "restoreDraft": "Restaurer en brouillon",
+      "saved": "Métadonnées enregistrées.",
+      "transitionComplete": "Statut mis à jour.",
+      "failed": "Échec de l’opération",
+      "accessPublic": "Public",
+      "accessRegistered": "Inscription gratuite",
+      "accessStudent": "Étudiants uniquement",
+      "accessPaid": "Droit d’accès payant"
+    }
+  },
+  "adminLibrary": {
+    "title": "Administration de la bibliothèque numérique",
+    "description": "Gérer le catalogue approuvé et les références Google Drive.",
+    "copy": {
+      "eyebrow": "Plateforme numérique",
+      "title": "Administration de la bibliothèque numérique",
+      "description": "Gérer le catalogue des livres et les références Google Drive approuvées sans exposer directement le stockage privé.",
+      "connected": "Passerelle numérique connectée",
+      "notConfigured": "Passerelle numérique non configurée",
+      "error": "Passerelle numérique indisponible",
+      "libraryCount": "entrées du catalogue",
+      "lessonCount": "leçons",
+      "safetyTitle": "Frontière Drive contrôlée",
+      "safetyDescription": "Le site lit les métadonnées via une passerelle serveur signée. Les fichiers restent dans le compte Google Workspace institutionnel.",
+      "empty": "Aucun catalogue en direct ne sera affiché avant la configuration de digital@espoparis.com."
+    }
+  },
+  "adminLearning": {
+    "title": "Administration de la plateforme d’apprentissage",
+    "description": "Gérer les cours enregistrés et leurs références académiques.",
+    "copy": {
+      "eyebrow": "Plateforme numérique",
+      "title": "Administration de la plateforme d’apprentissage",
+      "description": "Gérer les leçons enregistrées et les ressources approuvées avec des règles d’accès académiques séparées du contenu public.",
+      "connected": "Passerelle numérique connectée",
+      "notConfigured": "Passerelle numérique non configurée",
+      "error": "Passerelle numérique indisponible",
+      "libraryCount": "entrées du catalogue",
+      "lessonCount": "leçons",
+      "safetyTitle": "Frontière d’accès académique",
+      "safetyDescription": "Les métadonnées publiées peuvent être exposées tandis que les ressources réservées restent soumises aux droits d’accès.",
+      "empty": "Aucune leçon en direct ne sera affichée avant la configuration de digital@espoparis.com."
+    }
   }
 }

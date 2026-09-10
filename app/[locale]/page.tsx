@@ -1,32 +1,26 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { JsonLd } from "@/components/shared/json-ld";
-import { Features } from "@/components/blocks/features-4";
-import { PageFrame } from "@/components/layout/page-frame";
-import { HomeClosingCta } from "@/features/marketing/components/home-closing-cta";
 import { HomeHero } from "@/features/marketing/components/home-hero";
-import {
-  HomeTeamSection,
-  type TeamMemberEntry,
-} from "@/features/marketing/components/home-team-section";
+import { HomeInstitutionalSections } from "@/features/marketing/components/home-institutional-sections";
+import { HomeAccessSection } from "@/features/marketing/components/home-access-section";
+import { HomeSupportSection } from "@/features/marketing/components/home-support-section";
+import { HomeDailyReflection } from "@/features/marketing/components/home-daily-reflection";
+import { getAboutContent } from "@/features/marketing/about-content";
 import { localizePath } from "@/lib/constants/app";
 import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
+import { getPublicCmsSnapshot } from "@/server/content/cms-repository";
+import { selectDailyReflection } from "@/server/content/cms";
 
-const FEATURE_KEYS = [
-  "seminaryStudy",
-  "multilingualTeaching",
-  "teacherFormation",
-  "onlineAccess",
-  "najafPathway",
-  "francophoneReach",
-] as const;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: "home.seo" });
 
   return buildPageMetadata({
@@ -38,18 +32,22 @@ export async function generateMetadata({
   });
 }
 
-export default async function Home({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function Home(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   setRequestLocale(params.locale);
 
   const t = await getTranslations({ locale: params.locale, namespace: "home" });
   const tNav = await getTranslations({ locale: params.locale, namespace: "common.nav" });
+  const aboutContent = await getAboutContent(params.locale);
+  const cms = await getPublicCmsSnapshot();
+  const dailyReflection = selectDailyReflection(cms.reflections);
 
   return (
-    <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
+    <div className="flex flex-1 flex-col">
       <JsonLd
         data={createWebPageJsonLd({
           locale: params.locale,
@@ -71,52 +69,26 @@ export default async function Home({
           label: tNav("contact"),
           href: localizePath(params.locale, "/contact"),
         }}
+        highlights={[
+          { label: t("featuresSection.items.seminaryStudy.title") },
+          { label: t("featuresSection.items.multilingualTeaching.title") },
+          { label: t("featuresSection.items.teacherFormation.title") },
+        ]}
+        featureTitle={t("featuresSection.title")}
+        featureDescription={t("featuresSection.description")}
       />
 
-      <PageFrame className="py-3 sm:py-4 lg:py-5">
-        <section className="mt-4 sm:mt-5 lg:mt-6">
-          <Features
-            title={t("featuresSection.title")}
-            description={t("featuresSection.description")}
-            items={FEATURE_KEYS.map((key) => ({
-              title: t(`featuresSection.items.${key}.title`),
-              description: t(`featuresSection.items.${key}.description`),
-            }))}
-          />
-        </section>
-      </PageFrame>
+      <HomeDailyReflection reflection={dailyReflection} locale={params.locale} copy={t.raw("dailyReflection")} />
 
-      <HomeTeamSection
-        eyebrow={t("teamSection.eyebrow")}
-        title={t("teamSection.title")}
-        description={t("teamSection.description")}
-        cta={{
-          label: t("teamSection.cta"),
-          href: localizePath(params.locale, "/about"),
-        }}
-        members={t.raw("teamSection.members") as TeamMemberEntry[]}
-        testimonial={{
-          quote: t("teamSection.testimonial.quote"),
-          name: t("teamSection.testimonial.name"),
-          role: t("teamSection.testimonial.role"),
-        }}
-      />
+      <HomeAccessSection locale={params.locale} copy={t.raw("accessSection")} />
 
-      <HomeClosingCta
-        badge={t("closingCta.badge")}
-        headline={{
-          line1: t("closingCta.line1"),
-          line2: t("closingCta.line2"),
-        }}
-        subtitle={t("closingCta.description")}
-        primaryCta={{
-          label: tNav("register"),
-          href: localizePath(params.locale, "/register"),
-        }}
-        secondaryCta={{
-          label: tNav("contact"),
-          href: localizePath(params.locale, "/contact"),
-        }}
+      <HomeSupportSection locale={params.locale} copy={t.raw("supportSection")} />
+
+      <HomeInstitutionalSections
+        locale={params.locale}
+        aboutHref={localizePath(params.locale, "/about")}
+        registerHref={localizePath(params.locale, "/register")}
+        content={aboutContent}
       />
     </div>
   );

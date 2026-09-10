@@ -42,11 +42,11 @@ export const siteConfig = {
     "weekend school teacher training",
   ],
   brand: {
-    wordmarkSrc: "/logo.png",
-    wordmarkDarkSrc: "/logo-dark.png",
-    markSrc: "/logo.png",
-    markDarkSrc: "/logo-dark.png",
-    alt: "Espo Paris Academy",
+    wordmarkSrc: "/brand-mark.webp",
+    wordmarkDarkSrc: "/brand-mark.webp",
+    markSrc: "/brand-mark.webp",
+    markDarkSrc: "/brand-mark.webp",
+    alt: "École Supérieure de Paris — Imam (AJ) Center, Paris",
     // Intrinsic pixel sizes of the files in `public/`.
     wordmarkSize: { width: 327, height: 109 },
     wordmarkDarkSize: { width: 866, height: 288 },
@@ -55,14 +55,43 @@ export const siteConfig = {
     // One mailbox serves all three routes for now. They stay as separate
     // fields so a dedicated admissions or partnerships address can be split
     // out later without touching every call site.
-    primaryEmail: "espoparis.ecole@gmail.co",
-    admissionsEmail: "espoparis.ecole@gmail.co",
-    partnershipsEmail: "espoparis.ecole@gmail.co",
-    phone: "+33 1 84 80 24 10",
-    addressLineOne: "24 Rue de la Paix",
-    addressLineTwo: "75002 Paris, France",
-    visitHoursWeekdays: "Monday to Friday, 9:00 to 18:00",
-    visitHoursSaturday: "Saturday visits by appointment",
+    primaryEmail: "contact@espoparis.com",
+    admissionsEmail: "contact@espoparis.com",
+    partnershipsEmail: "contact@espoparis.com",
+    donationsEmail: "contact@espoparis.com",
+    phones: {
+      arFr: {
+        display: "+33 7 81 10 39 15",
+        tel: "+33781103915",
+        languages: ["Arabic", "French"],
+      },
+      faTrAz: {
+        display: "+98 902 976 3802",
+        tel: "+989029763802",
+        languages: ["Persian", "Turkish", "Azerbaijani"],
+      },
+      en: {
+        display: "+44 7828 604011",
+        tel: "+447828604011",
+        languages: ["English"],
+      },
+      africa: {
+        display: "+234 802 469 2242",
+        tel: "+2348024692242",
+        languages: ["African languages"],
+      },
+    },
+    donationsPhone: {
+      display: "+44 7828 604011",
+      tel: "+447828604011",
+      whatsapp: "447828604011",
+    },
+    // Public address and visiting hours are intentionally unpublished until
+    // the administration confirms the official details. Never guess these.
+    addressLineOne: null,
+    addressLineTwo: null,
+    visitHoursWeekdays: null,
+    visitHoursSaturday: null,
   },
   /**
    * Enrolment is handled by a Google Form. `embedUrl` is what the /register

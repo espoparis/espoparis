@@ -10,7 +10,10 @@ export const localeDirection: Record<string, "ltr" | "rtl"> = {
 export const publicNavLinks = [
   { href: "/", key: "home" },
   { href: "/about", key: "about" },
-  { href: "/register", key: "register" },
+  { href: "/academic-program", key: "academicProgram" },
+  { href: "/faculty", key: "faculty" },
+  { href: "/library", key: "library" },
+  { href: "/learning", key: "learning" },
   { href: "/contact", key: "contact" },
 ] as const;
 

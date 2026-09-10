@@ -7,11 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node scripts/check-messages.mjs && node scripts/check-tailwind-content.mjs && node --experimental-strip-types --test \"server/**/*.test.ts\"",
+    "test": "node scripts/check-messages.mjs && node scripts/check-tailwind-content.mjs && node --disable-warning=ExperimentalWarning --experimental-strip-types --test \"server/**/*.test.ts\"",
     "test:messages": "node scripts/check-messages.mjs",
     "test:tailwind": "node scripts/check-tailwind-content.mjs",
     "typecheck": "node scripts/typecheck.mjs",
-    "clean": "rm -rf .next tsconfig.tsbuildinfo"
+    "clean": "rm -rf .next tsconfig.tsbuildinfo",
+    "verify": "npm run test && npm run typecheck",
+    "build:verify": "npm run test && next build --no-lint"
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.72",
@@ -24,7 +26,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.454.0",
-    "next": "14.2.16",
+    "next": "^15.5.25",
     "next-intl": "^4.3.9",
     "next-themes": "^0.4.4",
     "react": "^18",
@@ -38,9 +40,10 @@
     "@types/react": "^18.3.17",
     "@types/react-dom": "^18.3.5",
     "eslint": "^8.57.1",
-    "eslint-config-next": "14.2.16",
+    "eslint-config-next": "^15.5.25",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
-  }
+  },
+  "type": "module"
 }

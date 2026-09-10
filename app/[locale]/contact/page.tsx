@@ -9,11 +9,12 @@ import { ContactVisitSection } from "@/features/marketing/components/contact-vis
 import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+): Promise<Metadata> {
+  const params = await props.params;
   const t = await getTranslations({ locale: params.locale, namespace: "contact.seo" });
 
   return buildPageMetadata({
@@ -24,14 +25,33 @@ export async function generateMetadata({
   });
 }
 
-export default async function ContactPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
+export default async function ContactPage(
+  props: {
+    params: Promise<{ locale: string }>;
+  }
+) {
+  const params = await props.params;
   setRequestLocale(params.locale);
 
   const t = await getTranslations({ locale: params.locale, namespace: "contact" });
+  const phoneOrder =
+    params.locale === "en"
+      ? ["en", "arFr", "faTrAz"] as const
+      : params.locale === "fa"
+        ? ["faTrAz", "arFr", "en", "africa"] as const
+        : ["arFr", "en", "faTrAz", "africa"] as const;
+  const hasConfirmedVisitDetails = Boolean(
+    siteConfig.contact.addressLineOne &&
+      siteConfig.contact.addressLineTwo &&
+      siteConfig.contact.visitHoursWeekdays &&
+      siteConfig.contact.visitHoursSaturday,
+  );
+  const phoneLabels = {
+    arFr: t("methods.phoneArabicFrench"),
+    faTrAz: t("methods.phonePersianTurkishAzeri"),
+    en: t("methods.phoneEnglish"),
+    africa: t("methods.phoneAfrica"),
+  };
 
   return (
     <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
@@ -72,18 +92,20 @@ export default async function ContactPage({
                 value: siteConfig.contact.partnershipsEmail,
                 href: `mailto:${siteConfig.contact.partnershipsEmail}`,
               },
-              {
-                title: t("methods.phoneTitle"),
+              ...phoneOrder.map((key) => ({
+                title: phoneLabels[key],
                 description: t("methods.phoneDescription"),
-                value: siteConfig.contact.phone,
-                href: `tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`,
-              },
-              {
-                title: t("methods.visitTitle"),
-                description: t("methods.visitDescription"),
-                value: t("methods.visitValue"),
-                href: "#visit-academy",
-              },
+                value: siteConfig.contact.phones[key].display,
+                href: `tel:${siteConfig.contact.phones[key].tel}`,
+              })),
+              ...(hasConfirmedVisitDetails
+                ? [{
+                    title: t("methods.visitTitle"),
+                    description: t("methods.visitDescription"),
+                    value: t("methods.visitValue"),
+                    href: "#visit-academy",
+                  }]
+                : []),
             ]}
           />
         </section>
@@ -118,25 +140,27 @@ export default async function ContactPage({
           />
         </section>
 
-        <section className="section-space">
-          <ContactVisitSection
-            eyebrow={t("sections.visitEyebrow")}
-            title={t("sections.visitTitle")}
-            description={t("sections.visitDescription")}
-            addressLabel={t("visit.addressLabel")}
-            addressLines={[
-              siteConfig.contact.addressLineOne,
-              siteConfig.contact.addressLineTwo,
-            ]}
-            hoursLabel={t("visit.hoursLabel")}
-            hoursLines={[
-              siteConfig.contact.visitHoursWeekdays,
-              siteConfig.contact.visitHoursSaturday,
-            ]}
-            noteLabel={t("visit.noteTitle")}
-            noteDescription={t("visit.noteDescription")}
-          />
-        </section>
+        {hasConfirmedVisitDetails ? (
+          <section className="section-space">
+            <ContactVisitSection
+              eyebrow={t("sections.visitEyebrow")}
+              title={t("sections.visitTitle")}
+              description={t("sections.visitDescription")}
+              addressLabel={t("visit.addressLabel")}
+              addressLines={[
+                siteConfig.contact.addressLineOne!,
+                siteConfig.contact.addressLineTwo!,
+              ]}
+              hoursLabel={t("visit.hoursLabel")}
+              hoursLines={[
+                siteConfig.contact.visitHoursWeekdays!,
+                siteConfig.contact.visitHoursSaturday!,
+              ]}
+              noteLabel={t("visit.noteTitle")}
+              noteDescription={t("visit.noteDescription")}
+            />
+          </section>
+        ) : null}
       </PageFrame>
     </div>
   );

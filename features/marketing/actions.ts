@@ -1,6 +1,6 @@
 "use server";
 
-import { headers } from "next/headers";
+import { headers, type UnsafeUnwrappedHeaders } from "next/headers";
 import {
   CONTACT_HONEYPOT_FIELD,
   contactInquirySchema,
@@ -24,7 +24,7 @@ export const initialContactState: ActionState = { status: "idle" };
 const RATE_LIMIT = { limit: 3, windowMs: 10 * 60 * 1000 };
 
 function getClientKey() {
-  const headerList = headers();
+  const headerList = (headers() as unknown as UnsafeUnwrappedHeaders);
   const forwarded =
     headerList.get("x-vercel-forwarded-for") ??
     headerList.get("x-forwarded-for") ??

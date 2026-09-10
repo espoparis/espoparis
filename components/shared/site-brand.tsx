@@ -1,6 +1,5 @@
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
 import { Link } from "@/lib/navigation";
 import { cn } from "@/lib/utils";
@@ -15,21 +14,9 @@ type SiteBrandProps = {
 };
 
 const sizeStyles = {
-  sm: {
-    wordmark: "h-9",
-    mark: "h-10 w-10",
-    text: "text-base",
-  },
-  md: {
-    wordmark: "h-11",
-    mark: "h-11 w-11",
-    text: "text-lg",
-  },
-  lg: {
-    wordmark: "h-12",
-    mark: "h-12 w-12",
-    text: "text-xl",
-  },
+  sm: { mark: "size-9", latin: "text-[0.66rem]", arabic: "text-[0.7rem]" },
+  md: { mark: "size-11", latin: "text-[0.72rem]", arabic: "text-[0.78rem]" },
+  lg: { mark: "size-14", latin: "text-[0.8rem]", arabic: "text-[0.86rem]" },
 } as const;
 
 export function SiteBrand({
@@ -40,98 +27,48 @@ export function SiteBrand({
   className,
 }: SiteBrandProps) {
   const styles = sizeStyles[size];
-  const [wordmarkAvailable, setWordmarkAvailable] = React.useState(true);
-  const [wordmarkDarkAvailable, setWordmarkDarkAvailable] = React.useState(true);
-  const [markAvailable, setMarkAvailable] = React.useState(true);
-  const [markDarkAvailable, setMarkDarkAvailable] = React.useState(true);
+
+  const mark = (
+    <span className={cn("relative shrink-0 overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5", styles.mark)}>
+      <Image
+        src="/brand-mark.webp"
+        alt=""
+        fill
+        sizes="64px"
+        className="object-contain p-1"
+        priority={size !== "sm"}
+      />
+    </span>
+  );
 
   const content =
-    variant === "full" ? (
-      wordmarkAvailable || wordmarkDarkAvailable ? (
-        <>
-          {wordmarkAvailable ? (
-            <Image
-              src={siteConfig.brand.wordmarkSrc}
-              alt={siteConfig.brand.alt}
-              width={360}
-              height={96}
-              priority={size !== "sm"}
-              className={cn("w-auto object-contain dark:hidden", styles.wordmark)}
-              onError={() => setWordmarkAvailable(false)}
-            />
-          ) : null}
-          {wordmarkDarkAvailable ? (
-            <Image
-              src={siteConfig.brand.wordmarkDarkSrc}
-              alt={siteConfig.brand.alt}
-              width={360}
-              height={96}
-              priority={size !== "sm"}
-              className={cn("hidden w-auto object-contain dark:block", styles.wordmark)}
-              onError={() => setWordmarkDarkAvailable(false)}
-            />
-          ) : null}
-        </>
-      ) : (
-        <span
-          className={cn(
-            "block truncate font-display font-semibold tracking-tight text-foreground/95",
-            styles.text,
-          )}
-        >
-          {siteConfig.name}
+    variant === "mark" ? (
+      mark
+    ) : variant === "text" ? (
+      <span className="min-w-0 leading-tight">
+        <span className="block truncate font-display font-semibold tracking-[-0.02em] text-current">
+          {siteConfig.seminaryName}
         </span>
-      )
-    ) : variant === "mark" ? (
-      markAvailable || markDarkAvailable ? (
-        <>
-          {markAvailable ? (
-            <Image
-              src={siteConfig.brand.markSrc}
-              alt={siteConfig.brand.alt}
-              width={96}
-              height={96}
-              className={cn("rounded-full object-contain dark:hidden", styles.mark)}
-              onError={() => setMarkAvailable(false)}
-            />
-          ) : null}
-          {markDarkAvailable ? (
-            <Image
-              src={siteConfig.brand.markDarkSrc}
-              alt={siteConfig.brand.alt}
-              width={96}
-              height={96}
-              className={cn("hidden rounded-full object-contain dark:block", styles.mark)}
-              onError={() => setMarkDarkAvailable(false)}
-            />
-          ) : null}
-        </>
-      ) : (
-        <span
-          className={cn(
-            "block truncate font-display font-semibold tracking-tight text-foreground/95",
-            styles.text,
-          )}
-        >
-          {siteConfig.shortName}
-        </span>
-      )
-    ) : (
-      <span
-        className={cn(
-          "block truncate font-display font-semibold tracking-tight text-foreground/95",
-          styles.text,
-        )}
-      >
-        {siteConfig.name}
       </span>
+    ) : (
+      <>
+        {mark}
+        <span className="hidden min-w-0 leading-none sm:block">
+          <span className={cn("block whitespace-nowrap font-semibold uppercase tracking-[0.12em] text-current/75", styles.latin)}>
+            École Supérieure de Paris
+          </span>
+          <span className={cn("mt-1.5 block whitespace-nowrap font-semibold tracking-tight text-current", styles.arabic)} dir="rtl">
+            مركز الإمام (عج) – باريس
+          </span>
+        </span>
+      </>
     );
 
-  const sharedClassName = cn("flex min-w-0 items-center text-foreground", className);
+  const sharedClassName = cn("flex min-w-0 items-center gap-2.5 text-current", className);
 
   if (href) {
     return (
-      <Link href={href} locale={locale} className={sharedClassName}>
+      <Link href={href} locale={locale} className={sharedClassName} aria-label={siteConfig.seminaryName}>
         {content}
       </Link>
     );

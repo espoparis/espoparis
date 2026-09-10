@@ -2,7 +2,7 @@
 
 /**
  * Verifies every source directory that writes Tailwind classes is covered by a
- * `content` glob in tailwind.config.js.
+ * `content` glob in tailwind.config.cjs.
  *
  * This exists because `features/` was missing from the globs for a long time.
  * Tailwind does not warn about that — it just silently omits the classes those
@@ -18,11 +18,11 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const IGNORED = new Set(["node_modules", ".next", ".git", "public", "messages", "scripts"]);
 
-const config = fs.readFileSync(path.join(projectRoot, "tailwind.config.js"), "utf8");
+const config = fs.readFileSync(path.join(projectRoot, "tailwind.config.cjs"), "utf8");
 const contentBlock = config.match(/content:\s*\[([\s\S]*?)\]/);
 
 if (!contentBlock) {
-  console.error("✖ could not find a `content` array in tailwind.config.js");
+  console.error("✖ could not find a `content` array in tailwind.config.cjs");
   process.exit(1);
 }
 
@@ -64,7 +64,7 @@ const roots = findClassNameRoots(projectRoot, null, new Set());
 const uncovered = [...roots].filter((root) => !coveredRoots.has(root)).sort();
 
 if (uncovered.length) {
-  console.error("✖ these directories use Tailwind classes but are not in tailwind.config.js `content`:\n");
+  console.error("✖ these directories use Tailwind classes but are not in tailwind.config.cjs `content`:\n");
   for (const root of uncovered) {
     console.error(`  ${root}/  → add "${root}/**/*.{ts,tsx}"`);
   }

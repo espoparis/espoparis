@@ -6,9 +6,10 @@ import { siteConfig } from "@/lib/site-config";
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
+  const publicPaths = [...publicNavLinks.map((link) => link.href), "/support"] as const;
+
   return routing.locales.flatMap((locale) =>
-    publicNavLinks.map((link) => {
-      const path = link.href;
+    publicPaths.map((path) => {
 
       return {
         url: new URL(localizePath(locale, path), siteConfig.url).toString(),
