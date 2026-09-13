@@ -93,16 +93,16 @@ export const siteConfig = {
     visitHoursWeekdays: null,
     visitHoursSaturday: null,
   },
-  /**
-   * Enrolment is handled by a Google Form. `embedUrl` is what the /register
-   * page iframes; `viewUrl` is the escape hatch offered alongside it for
-   * visitors whose browser or extensions block third-party frames.
-   */
+  /** Admissions form links supplied by the institution, grouped by language. */
   registration: {
-    viewUrl:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfBABcSblUchrtpQzrPE70eolB3H0i3VG8G9_1Mb1MflOcfAA/viewform",
-    embedUrl:
-      "https://docs.google.com/forms/d/e/1FAIpQLSfBABcSblUchrtpQzrPE70eolB3H0i3VG8G9_1Mb1MflOcfAA/viewform?embedded=true",
+    forms: [
+      { locale: "ar", label: "العربية", dir: "rtl", url: "https://forms.gle/GT5y7x96U69goLua9" },
+      { locale: "en", label: "English", dir: "ltr", url: "https://forms.gle/HknrC7XQX9frGytX8" },
+      { locale: "fr", label: "Français", dir: "ltr", url: "https://forms.gle/VTdZ6cHwRvQTib3F7" },
+      { locale: "fa", label: "فارسی", dir: "rtl", url: "https://forms.gle/34Qg7vWZpnSVh8RZA" },
+      { locale: "az", label: "Azərbaycanca", dir: "ltr", url: "https://forms.gle/PuFtQdrxunG1oQ6U6" },
+      { locale: "tr", label: "Türkçe", dir: "ltr", url: "https://forms.gle/EjibGFgNADxg8c9d6" },
+    ],
   },
   seo: {
     ogImageAlt: "Espo Paris Academy preview image",
