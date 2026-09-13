@@ -12,7 +12,7 @@ export function DigitalPlatformWorkspace({ copy, authoring, snapshot, mode, loca
   const connected = snapshot.state === "connected";
   const count = mode === "library" ? snapshot.books.length : snapshot.lessons.length;
   const Icon = mode === "library" ? BookOpen : GraduationCap;
-  return <div className="page-shell pb-24 pt-36 sm:pt-40 lg:pb-32 lg:pt-44">
+  return <div className="page-shell pb-24 pt-10 sm:pt-12 lg:pb-32 lg:pt-16">
     <header className="mx-auto max-w-4xl"><p className="section-eyebrow">{copy.eyebrow}</p><h1 className="mt-4 font-display text-4xl font-semibold sm:text-6xl">{copy.title}</h1><p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">{copy.description}</p></header>
     <section className="mx-auto mt-10 grid max-w-6xl gap-5 lg:grid-cols-3">
       <article className="rounded-[2rem] border border-border bg-card p-6"><Database className="size-5 text-primary"/><p className="mt-4 text-sm text-muted-foreground">{connected ? copy.connected : snapshot.state === "error" ? copy.error : copy.notConfigured}</p><p className="mt-3 font-display text-4xl font-semibold">{count}</p><p className="mt-2 text-sm text-muted-foreground">{mode === "library" ? copy.libraryCount : copy.lessonCount}</p></article>
