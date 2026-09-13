@@ -32,14 +32,14 @@ export function SiteMobileNav({ locale }: Props) {
         <Button
           variant="nav"
           size="icon"
-          className="size-10 rounded-full border border-border/60 bg-secondary/45 shadow-[inset_0_1px_0_hsl(var(--background)/0.85)] xl:hidden"
+          className="size-10 rounded-sm border border-border/60 bg-secondary/45  2xl:hidden"
           aria-label={tMobile("title")}
         >
           <Menu className="h-4 w-4" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="surface-panel-strong max-w-sm overflow-hidden border-0 p-0">
-        <DialogHeader className="border-b border-border/60 px-6 py-5 text-left">
+      <DialogContent className="surface-panel-strong max-h-[85dvh] max-w-sm overflow-y-auto border-0 p-0">
+        <DialogHeader className="border-b border-border/60 px-6 py-5 text-start">
           <SiteBrand variant="full" size="sm" />
           <DialogTitle className="pt-1 text-xl">{tMobile("title")}</DialogTitle>
           <DialogDescription className="max-w-xs text-sm leading-6">
@@ -48,7 +48,7 @@ export function SiteMobileNav({ locale }: Props) {
         </DialogHeader>
 
         <div className="flex flex-col gap-6 px-6 py-6">
-          <nav className="flex flex-col gap-1 rounded-[1.5rem] border border-border/60 bg-secondary/35 p-2">
+          <nav className="flex flex-col gap-1 rounded-sm border border-border/60 bg-secondary/35 p-2">
             {publicNavLinks.map((link) => {
               const active = isActivePath(pathname, link.href);
 
@@ -57,11 +57,12 @@ export function SiteMobileNav({ locale }: Props) {
                   <Link
                     href={link.href}
                     locale={locale}
+                    aria-current={active ? "page" : undefined}
                     className={cn(
                       buttonVariants({ variant: active ? "soft" : "nav", size: "default" }),
-                      "h-11 justify-start rounded-[1rem] px-4",
+                      "h-11 justify-start rounded-sm px-4",
                       active
-                        ? "bg-background text-foreground shadow-[0_10px_24px_-18px_hsl(var(--foreground)/0.35)] ring-1 ring-border/70"
+                        ? "bg-background text-foreground  ring-1 ring-border/70"
                         : ""
                     )}
                   >
@@ -72,7 +73,7 @@ export function SiteMobileNav({ locale }: Props) {
             })}
           </nav>
 
-          <div className="flex flex-col gap-2 rounded-[1.5rem] border border-border/60 bg-secondary/35 p-4">
+          <div className="flex flex-col gap-2 rounded-sm border border-border/60 bg-secondary/35 p-4">
             <p className="section-eyebrow">{tCommon("labels.navigate")}</p>
             <p className="text-sm text-muted-foreground">{tMobile("description")}</p>
           </div>

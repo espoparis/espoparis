@@ -1,7 +1,7 @@
 import { ArrowUpRight, Mail, MapPin, Phone } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { SiteBrand } from "@/components/shared/site-brand";
-import { publicNavLinks, localizePath } from "@/lib/constants/app";
+import { publicNavLinks } from "@/lib/constants/app";
 import { Link } from "@/lib/navigation";
 import { siteConfig } from "@/lib/site-config";
 
@@ -31,7 +31,7 @@ export async function SiteFooter({ locale }: Props) {
               {tFooter("description")}
             </p>
             <Link
-              href={localizePath(locale, "/register")}
+              href={"/register"}
               locale={locale}
               className="mt-7 inline-flex items-center text-sm font-semibold text-[#e2c47d] transition-colors hover:text-white"
             >
@@ -39,7 +39,7 @@ export async function SiteFooter({ locale }: Props) {
               <ArrowUpRight className="ms-2 size-4 rtl:-rotate-90" />
             </Link>
             <Link
-              href={localizePath(locale, "/support")}
+              href={"/support"}
               locale={locale}
               className="ms-5 mt-7 inline-flex items-center text-sm font-semibold text-white/75 transition-colors hover:text-white"
             >
@@ -56,7 +56,7 @@ export async function SiteFooter({ locale }: Props) {
               {publicNavLinks.map((link) => (
                 <Link
                   key={link.href}
-                  href={localizePath(locale, link.href)}
+                  href={link.href}
                   locale={locale}
                   className="w-fit text-white/68 transition-colors hover:text-white"
                 >
@@ -83,7 +83,7 @@ export async function SiteFooter({ locale }: Props) {
                 className="flex items-start gap-3 transition-colors hover:text-white"
               >
                 <Phone className="mt-0.5 size-4 shrink-0 text-[#d7b56d]" />
-                <span>{primaryPhone.display}</span>
+                <span dir="ltr">{primaryPhone.display}</span>
               </a>
               {siteConfig.contact.addressLineOne && siteConfig.contact.addressLineTwo ? (
                 <div className="flex items-start gap-3">
