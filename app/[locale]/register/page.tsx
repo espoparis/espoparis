@@ -38,7 +38,7 @@ export default async function RegisterPage(
   const t = await getTranslations({ locale: params.locale, namespace: "register" });
 
   return (
-    <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
+    <div className="flex flex-1 flex-col">
       <JsonLd
         data={createWebPageJsonLd({
           locale: params.locale,
@@ -58,6 +58,15 @@ export default async function RegisterPage(
       />
 
       <PageFrame className="py-10 lg:py-14">
+        <section className="pt-4">
+          <RegisterFormSection
+            locale={params.locale}
+            eyebrow={t("form.eyebrow")}
+            title={t("form.title")}
+            description={t("form.description")}
+            openLabel={t("form.openLabel")}
+          />
+        </section>
         <section className="section-space">
           <RegisterProgramsSection
             eyebrow={t("programs.eyebrow")}
@@ -74,18 +83,6 @@ export default async function RegisterPage(
             title={t("steps.title")}
             description={t("steps.description")}
             steps={t.raw("steps.items") as StepEntry[]}
-          />
-        </section>
-
-        <section className="section-space">
-          <RegisterFormSection
-            eyebrow={t("form.eyebrow")}
-            title={t("form.title")}
-            description={t("form.description")}
-            frameTitle={t("form.frameTitle")}
-            fallbackTitle={t("form.fallbackTitle")}
-            fallbackDescription={t("form.fallbackDescription")}
-            openLabel={t("form.openLabel")}
           />
         </section>
       </PageFrame>
