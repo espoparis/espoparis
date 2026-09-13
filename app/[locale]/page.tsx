@@ -1,13 +1,14 @@
+export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { JsonLd } from "@/components/shared/json-ld";
+import { HomeNewsSection } from "@/features/marketing/components/home-news-section";
 import { HomeHero } from "@/features/marketing/components/home-hero";
-import { HomeInstitutionalSections } from "@/features/marketing/components/home-institutional-sections";
+import { HomeAdmissionsSection, HomeInstitutionalSections } from "@/features/marketing/components/home-institutional-sections";
 import { HomeAccessSection } from "@/features/marketing/components/home-access-section";
 import { HomeSupportSection } from "@/features/marketing/components/home-support-section";
 import { HomeDailyReflection } from "@/features/marketing/components/home-daily-reflection";
 import { getAboutContent } from "@/features/marketing/about-content";
-import { localizePath } from "@/lib/constants/app";
 import { buildPageMetadata, createWebPageJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 import { getPublicCmsSnapshot } from "@/server/content/cms-repository";
@@ -42,6 +43,7 @@ export default async function Home(
 
   const t = await getTranslations({ locale: params.locale, namespace: "home" });
   const tNav = await getTranslations({ locale: params.locale, namespace: "common.nav" });
+  const tActivities = await getTranslations({ locale: params.locale, namespace: "activities" });
   const aboutContent = await getAboutContent(params.locale);
   const cms = await getPublicCmsSnapshot();
   const dailyReflection = selectDailyReflection(cms.reflections);
@@ -63,11 +65,11 @@ export default async function Home(
         description={t("description")}
         primaryCta={{
           label: tNav("about"),
-          href: localizePath(params.locale, "/about"),
+          href: "/about",
         }}
         secondaryCta={{
           label: tNav("contact"),
-          href: localizePath(params.locale, "/contact"),
+          href: "/contact",
         }}
         highlights={[
           { label: t("featuresSection.items.seminaryStudy.title") },
@@ -78,18 +80,17 @@ export default async function Home(
         featureDescription={t("featuresSection.description")}
       />
 
-      <HomeDailyReflection reflection={dailyReflection} locale={params.locale} copy={t.raw("dailyReflection")} />
-
-      <HomeAccessSection locale={params.locale} copy={t.raw("accessSection")} />
-
-      <HomeSupportSection locale={params.locale} copy={t.raw("supportSection")} />
-
       <HomeInstitutionalSections
         locale={params.locale}
-        aboutHref={localizePath(params.locale, "/about")}
-        registerHref={localizePath(params.locale, "/register")}
+        aboutHref={"/about"}
+        registerHref={"/register"}
         content={aboutContent}
       />
+      <HomeDailyReflection reflection={dailyReflection} locale={params.locale} copy={t.raw("dailyReflection")} />
+      <HomeAccessSection locale={params.locale} copy={t.raw("accessSection")} />
+      <HomeNewsSection locale={params.locale} copy={tActivities.raw("copy")} items={cms.items.filter((item) => ["news", "activity", "announcement"].includes(item.kind))} />
+      <HomeAdmissionsSection locale={params.locale} registerHref={"/register"} content={aboutContent} />
+      <HomeSupportSection locale={params.locale} copy={t.raw("supportSection")} />
     </div>
   );
 }

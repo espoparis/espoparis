@@ -10,7 +10,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { localeDirection } from "@/lib/constants/app";
-import { bodyFont } from "@/lib/fonts";
+import { arabicBodyFont, arabicDisplayFont, bodyFont, displayFont } from "@/lib/fonts";
 import { createOrganizationJsonLd, createWebsiteJsonLd } from "@/lib/seo";
 
 type Props = {
@@ -45,7 +45,12 @@ export default async function LocaleLayout(props: Props) {
       lang={locale}
       dir={direction}
       suppressHydrationWarning
-      className={bodyFont.variable}
+      className={[
+        bodyFont.variable,
+        displayFont.variable,
+        arabicBodyFont.variable,
+        arabicDisplayFont.variable,
+      ].join(" ")}
     >
       <body className="min-h-screen bg-background font-sans text-foreground antialiased">
         <JsonLd data={[createOrganizationJsonLd(), createWebsiteJsonLd()]} />
