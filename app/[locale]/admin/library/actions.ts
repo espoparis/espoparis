@@ -1,6 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
+import { driveFileId } from "@/server/media/files";
 import { routing } from "@/i18n/routing";
 import { canOpenAdminSection } from "@/server/auth/admin-policy";
 import { getAuthSession } from "@/server/auth/session";
@@ -22,11 +23,13 @@ function safeLocale(locale: string) {
 export async function saveLibraryRecordAction(locale: string, record: LibraryCatalogRecord) {
   const validatedLocale = safeLocale(locale);
   const identity = await requireLibraryIdentity();
+  if (record.coverFileId && !driveFileId(record.coverFileId)) throw new Error("Invalid cover Drive link.");
+  record = { ...record, pdfFileId: driveFileId(record.pdfFileId), coverFileId: driveFileId(record.coverFileId ?? "") || undefined };
   const errors = validateLibraryRecord(record);
   if (errors.length) throw new Error(`Invalid library record: ${errors.join(" ")}`);
   await saveLibraryRecord(identity, record);
   revalidatePath(`/${validatedLocale}/admin/library`);
-  revalidatePath(`/${validatedLocale}/library`);
+  revalidatePath("/", "layout");
 }
 
 export async function transitionLibraryRecordAction(locale: string, id: string, status: LibraryCatalogRecord["status"]) {
@@ -34,5 +37,5 @@ export async function transitionLibraryRecordAction(locale: string, id: string, 
   const identity = await requireLibraryIdentity();
   await transitionLibraryRecord(identity, id.trim(), status);
   revalidatePath(`/${validatedLocale}/admin/library`);
-  revalidatePath(`/${validatedLocale}/library`);
+  revalidatePath("/", "layout");
 }
