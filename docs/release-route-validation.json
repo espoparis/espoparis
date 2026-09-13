@@ -1,0 +1,518 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/about/founder",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/about/advisory-board",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/global-presence",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/faculty",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/academic-program",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/library",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/learning",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/activities",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/support",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/register",
+    "status": 200,
+    "lang": "en",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/about",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/about/founder",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/about/advisory-board",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/global-presence",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/faculty",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/academic-program",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/library",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/learning",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/activities",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/contact",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/support",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/fr/register",
+    "status": 200,
+    "lang": "fr",
+    "dir": "ltr"
+  },
+  {
+    "path": "/ar/",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/about",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/about/founder",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/about/advisory-board",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/global-presence",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/faculty",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/academic-program",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/library",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/learning",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/activities",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/contact",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/support",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/register",
+    "status": 200,
+    "lang": "ar",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/about",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/about/founder",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/about/advisory-board",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/global-presence",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/faculty",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/academic-program",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/library",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/learning",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/activities",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/contact",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/support",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/fa/register",
+    "status": 200,
+    "lang": "fa",
+    "dir": "rtl"
+  },
+  {
+    "path": "/ar/faculty/abdullah-shami-zadeh",
+    "status": 200
+  },
+  {
+    "path": "/ar/faculty/abu-fatimah",
+    "status": 200
+  },
+  {
+    "path": "/ar/faculty/fares-al-khatib",
+    "status": 200
+  },
+  {
+    "path": "/ar/faculty/hassan-al-nasiri",
+    "status": 200
+  },
+  {
+    "path": "/ar/faculty/ismail-al-kanawi",
+    "status": 200
+  },
+  {
+    "path": "/ar/faculty/mujtaba-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/ar/faculty/mustafa-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/abdullah-shami-zadeh",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/abu-fatimah",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/fares-al-khatib",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/hassan-al-nasiri",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/ismail-al-kanawi",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/mujtaba-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/fa/faculty/mustafa-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/faculty/abdullah-shami-zadeh",
+    "status": 200
+  },
+  {
+    "path": "/faculty/abu-fatimah",
+    "status": 200
+  },
+  {
+    "path": "/faculty/fares-al-khatib",
+    "status": 200
+  },
+  {
+    "path": "/faculty/hassan-al-nasiri",
+    "status": 200
+  },
+  {
+    "path": "/faculty/ismail-al-kanawi",
+    "status": 200
+  },
+  {
+    "path": "/faculty/mujtaba-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/faculty/mustafa-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/abdullah-shami-zadeh",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/abu-fatimah",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/fares-al-khatib",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/hassan-al-nasiri",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/ismail-al-kanawi",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/mujtaba-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/fr/faculty/mustafa-al-khaliq",
+    "status": 200
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200
+  },
+  {
+    "path": "/admin/content",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/admin/content/profiles",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/admin/help",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/admin/library",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fr/admin/content",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fr/admin/content/profiles",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fr/admin/help",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fr/admin/library",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/ar/admin/content",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/ar/admin/content/profiles",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/ar/admin/help",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/ar/admin/library",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fa/admin/content",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fa/admin/content/profiles",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fa/admin/help",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/fa/admin/library",
+    "status": 200,
+    "redirect": "sign-in"
+  },
+  {
+    "path": "/api/content-media/abcdefghijk123",
+    "status": 404
+  }
+]
