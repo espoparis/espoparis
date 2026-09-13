@@ -37,9 +37,9 @@ export function AboutDistinctivesSection({
             return (
               <article
                 key={item.title}
-                className="rounded-[2rem] border border-border/65 bg-card/80 p-6 shadow-[0_30px_80px_-56px_hsl(var(--foreground)/0.3)] backdrop-blur-xl sm:p-7"
+                className="border-t border-border p-6 sm:p-7"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="public-card-heading mt-5">{item.title}</h3>
@@ -48,7 +48,7 @@ export function AboutDistinctivesSection({
                   {item.points.map((point) => (
                     <li
                       key={point}
-                      className="rounded-full border border-border/60 bg-background/72 px-4 py-2 text-sm text-muted-foreground"
+                      className="border-t border-border px-4 py-2 text-sm text-muted-foreground"
                     >
                       {point}
                     </li>

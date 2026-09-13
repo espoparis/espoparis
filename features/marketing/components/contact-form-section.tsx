@@ -170,13 +170,13 @@ export function ContactFormSection({
 
             <div aria-live="polite" role="status">
               {message && state.status === "error" ? (
-                <div className="rounded-2xl border border-destructive/20 bg-destructive/5 px-4 py-3 text-sm leading-6 text-destructive">
+                <div className="rounded-sm border border-destructive/20 bg-destructive/5 px-4 py-3 text-sm leading-6 text-destructive">
                   {message}
                 </div>
               ) : null}
 
               {message && state.status === "success" ? (
-                <div className="rounded-2xl border border-primary/20 bg-primary/5 px-4 py-3 text-sm leading-6 text-foreground">
+                <div className="rounded-sm border border-primary/20 bg-primary/5 px-4 py-3 text-sm leading-6 text-foreground">
                   {message}
                 </div>
               ) : null}

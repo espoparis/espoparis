@@ -25,9 +25,9 @@ export function RegisterStepsSection({
           <p className="public-copy-lead max-w-[30rem]">{description}</p>
         </div>
 
-        <ol className="grid gap-px self-start overflow-hidden rounded-[2rem] border border-border/65 bg-border/60">
+        <ol className="grid gap-px self-start overflow-hidden rounded-sm border border-border/65 bg-border/60">
           {steps.map((step, index) => (
-            <li key={step.title} className="bg-background/78 p-6 backdrop-blur-xl sm:p-7">
+            <li key={step.title} className="bg-background/78 p-6 sm:p-7">
               <p className="section-eyebrow">{String(index + 1).padStart(2, "0")}</p>
               <h3 className="public-card-heading mt-3">{step.title}</h3>
               <p className="public-card-copy">{step.description}</p>

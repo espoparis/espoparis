@@ -30,11 +30,11 @@ export function AboutOverviewSection({
             </p>
           </div>
 
-          <div className="grid gap-px overflow-hidden rounded-[2rem] border border-border/65 bg-border/60 self-start sm:grid-cols-2">
+          <div className="grid gap-px overflow-hidden rounded-sm border border-border/65 bg-border/60 self-start sm:grid-cols-2">
             {cards.map((card) => (
               <article
                 key={card.title}
-                className="bg-background/78 p-6 backdrop-blur-xl sm:p-7"
+                className="bg-background/78 p-6 sm:p-7"
               >
                 <h3 className="public-card-heading">
                   {card.title}

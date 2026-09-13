@@ -29,11 +29,11 @@ export function AboutMethodologySection({
             <p className="public-copy-lead max-w-[30rem]">{description}</p>
           </div>
 
-          <div className="grid gap-px self-start overflow-hidden rounded-[2rem] border border-border/65 bg-border/60 sm:grid-cols-3">
+          <div className="grid gap-px self-start overflow-hidden rounded-sm border border-border/65 bg-border/60 sm:grid-cols-3">
             {channels.map((channel) => (
               <article
                 key={channel.title}
-                className="flex flex-col bg-background/80 p-6 backdrop-blur-xl sm:p-7"
+                className="flex flex-col bg-background/80 p-6 sm:p-7"
               >
                 <h3 className="public-item-title">{channel.title}</h3>
                 <p className="public-card-copy">{channel.description}</p>

@@ -1,12 +1,8 @@
 import Image from "next/image";
+import { InstitutionalGeometry } from "./institutional-geometry";
 import {
   ArrowUpRight,
-  BookOpenCheck,
-  GraduationCap,
-  Languages,
   MapPin,
-  School,
-  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
@@ -21,15 +17,12 @@ type Props = {
   content: AboutContent;
 };
 
-const programIcons = [GraduationCap, BookOpenCheck, School];
 
 export function HomeInstitutionalSections({
   locale,
   aboutHref,
-  registerHref,
   content,
 }: Props) {
-  const distinctiveIcons = [Languages, Sparkles];
   const programs = [...content.programs.tracks, content.programs.weekendSchools];
   const featuredFaculty = content.faculty.members.slice(0, 3);
 
@@ -45,7 +38,7 @@ export function HomeInstitutionalSections({
             <p className="mt-6 max-w-xl text-base leading-8 text-muted-foreground sm:text-lg">
               {content.overview.description}
             </p>
-            <Button asChild variant="outline" className="mt-8 rounded-full px-6">
+            <Button asChild variant="outline" className="mt-8 rounded-sm px-6">
               <Link href={aboutHref} locale={locale}>
                 {content.hero.eyebrow}
                 <ArrowUpRight className="ms-2 size-4 rtl:-rotate-90" />
@@ -53,20 +46,20 @@ export function HomeInstitutionalSections({
             </Button>
           </Reveal>
 
-          <Stagger className="grid gap-4 sm:grid-cols-2">
+          <Stagger className="divide-y divide-border">
             {content.overview.cards.slice(0, 4).map((card, index) => (
               <StaggerItem key={card.title}>
               <article
                 key={card.title}
-                className="group min-h-[18rem] rounded-[2rem] border border-border/70 bg-card/80 p-6 shadow-[0_26px_80px_-58px_hsl(var(--foreground)/0.35)] transition-transform duration-300 hover:-translate-y-1 sm:p-7"
+                className="py-8 first:pt-0"
               >
                 <div className="flex items-center justify-between gap-4">
                   <span className="font-display text-4xl font-medium text-primary/22">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="size-2 rounded-full bg-accent" />
+                  <span className="size-2 rounded-sm bg-accent" />
                 </div>
-                <h3 className="mt-10 max-w-[14ch] font-display text-2xl font-semibold tracking-tight text-foreground">
+                <h3 className="mt-5 max-w-xl font-display text-2xl font-semibold tracking-tight text-foreground">
                   {card.title}
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
@@ -94,16 +87,15 @@ export function HomeInstitutionalSections({
           </Reveal>
 
           <Stagger className="mt-12 grid gap-5 lg:grid-cols-2">
-            {content.distinctives.items.map((item, index) => {
-              const Icon = distinctiveIcons[index] ?? Sparkles;
+            {content.distinctives.items.map((item) => {
               return (
                 <StaggerItem key={item.title}>
                 <article
                   key={item.title}
-                  className="rounded-[2.25rem] border border-white/10 bg-white/[0.055] p-7 backdrop-blur-xl transition-transform duration-500 hover:-translate-y-1 sm:p-9"
+                  className="border-t border-white/25 py-8 sm:pe-8"
                 >
-                  <div className="flex size-12 items-center justify-center rounded-2xl border border-[#d7b56d]/25 bg-[#d7b56d]/10">
-                    <Icon className="size-5 text-[#e4c579]" />
+                  <div className="flex size-12 items-center justify-center">
+                    <InstitutionalGeometry className="size-12 text-[#d7b56d]" />
                   </div>
                   <h3 className="mt-7 font-display text-3xl font-medium tracking-tight text-white">
                     {item.title}
@@ -115,7 +107,7 @@ export function HomeInstitutionalSections({
                     {item.points.map((point) => (
                       <span
                         key={point}
-                        className="rounded-full border border-white/10 bg-white/[0.045] px-3 py-1.5 text-xs font-medium text-white/72"
+                        className="border-s border-white/30 ps-3 py-1.5 text-xs font-medium text-white/72"
                       >
                         {point}
                       </span>
@@ -136,32 +128,22 @@ export function HomeInstitutionalSections({
           <p className="mt-5 public-copy-lead">{content.programs.description}</p>
         </Reveal>
 
-        <Stagger className="mt-10 grid gap-5 lg:grid-cols-3">
+        <Stagger className="mt-12 divide-y divide-border">
           {programs.map((program, index) => {
-            const Icon = programIcons[index] ?? GraduationCap;
             return (
               <StaggerItem key={program.title}>
               <article
                 key={program.title}
-                className="flex min-h-[31rem] flex-col rounded-[2.25rem] border border-border/70 bg-card p-7 shadow-[0_32px_90px_-62px_hsl(var(--foreground)/0.34)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_38px_100px_-58px_hsl(var(--foreground)/0.38)] sm:p-8"
+                className="editorial-layout border-t border-border py-9"
               >
-                <div className="flex items-center justify-between gap-4">
-                  <div className="flex size-12 items-center justify-center rounded-2xl bg-primary/8 text-primary">
-                    <Icon className="size-5" />
-                  </div>
-                  <span className="section-eyebrow">0{index + 1}</span>
+                <div>
+                  <p className="section-eyebrow">0{index + 1}</p>
+                  <h3 className="mt-4 font-display text-3xl font-medium leading-tight text-foreground">{program.title}</h3>
                 </div>
-                <h3 className="mt-9 font-display text-3xl font-semibold leading-tight tracking-tight text-foreground">
-                  {program.title}
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">
-                  {program.description}
-                </p>
-                <div className="mt-auto pt-7">
-                  <div className="h-px bg-border/70" />
-                  <p className="mt-5 text-sm leading-7 text-muted-foreground">
-                    {program.points[0]}
-                  </p>
+                <div>
+                  <p className="text-base leading-8 text-muted-foreground">{program.description}</p>
+                  <p className="mt-5 border-t border-border pt-5 text-sm leading-7 text-muted-foreground">{program.points[0]}</p>
+                  <Link href="/academic-program" locale={locale} className="mt-6 inline-flex items-center gap-2 border-b border-primary/40 pb-2 text-sm font-medium text-primary hover:border-primary">{content.programs.eyebrow}<ArrowUpRight className="size-4 rtl:-rotate-90" /></Link>
                 </div>
               </article>
               </StaggerItem>
@@ -172,18 +154,18 @@ export function HomeInstitutionalSections({
 
       <section className="page-shell pb-16 sm:pb-20 lg:pb-28">
         <Reveal>
-        <div className="overflow-hidden rounded-[2.6rem] border border-border/60 bg-[#f0eadb] dark:bg-card">
+        <div className="overflow-hidden rounded-sm border border-border/60 bg-[#f0eadb] dark:bg-card">
           <div className="grid lg:grid-cols-[0.82fr_1.18fr]">
             <div className="relative min-h-[28rem] overflow-hidden lg:min-h-[42rem]">
               <Image
                 src={FOUNDER_IMAGE}
                 alt={content.founder.photoAlt}
                 fill
-                className="object-cover object-top grayscale-[0.12]"
+                className="editorial-portrait object-cover object-top"
                 sizes="(min-width: 1024px) 42vw, 100vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0b3429]/55 via-transparent to-transparent" />
-              <div className="absolute inset-x-6 bottom-6 rounded-[1.5rem] border border-white/15 bg-[#0b3429]/78 p-5 text-white backdrop-blur-xl sm:inset-x-8 sm:bottom-8">
+              <div className="absolute inset-x-6 bottom-6 rounded-sm border border-white/15 bg-[#0b3429]/78 p-5 text-white sm:inset-x-8 sm:bottom-8">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e4c579]">
                   {content.founder.eyebrow}
                 </p>
@@ -203,7 +185,7 @@ export function HomeInstitutionalSections({
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {content.founder.facts.slice(0, 4).map((fact) => (
-                  <div key={`${fact.label}-${fact.value}`} className="rounded-[1.4rem] border border-border/60 bg-background/55 p-4">
+                  <div key={`${fact.label}-${fact.value}`} className="border-t border-border py-4">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                       {fact.label}
                     </p>
@@ -214,8 +196,8 @@ export function HomeInstitutionalSections({
                 ))}
               </div>
 
-              <Button asChild className="mt-8 w-fit rounded-full px-6">
-                <Link href={aboutHref} locale={locale}>
+              <Button asChild className="mt-8 w-fit rounded-sm px-6">
+                <Link href="/about/founder" locale={locale}>
                   {content.founder.name}
                   <ArrowUpRight className="ms-2 size-4 rtl:-rotate-90" />
                 </Link>
@@ -234,20 +216,20 @@ export function HomeInstitutionalSections({
             <p className="mt-5 public-copy-lead">{content.faculty.description}</p>
           </Reveal>
 
-          <Stagger className="grid gap-4 sm:grid-cols-3">
+          <Stagger className="space-y-8">
             {featuredFaculty.map((member) => {
-              const image = getFacultyImage(member.id);
+              const image = member.image || getFacultyImage(member.id);
               return (
                 <StaggerItem key={member.id}>
-                <article key={member.id} className="group overflow-hidden rounded-[2rem] border border-border/65 bg-card transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_-55px_hsl(var(--foreground)/0.35)]">
-                  <div className="relative aspect-[4/5] bg-secondary/70">
+                <article key={member.id} className="grid min-w-0 gap-6 border-b border-border pb-8 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
+                  <div className="relative aspect-[4/5] overflow-hidden bg-secondary/70">
                     {image ? (
                       <Image
-                        src={image}
+                        src={image} unoptimized={image.startsWith("/api/content-media/")}
                         alt={member.name}
                         fill
-                        className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.025]"
-                        sizes="(min-width: 640px) 33vw, 100vw"
+                        className="editorial-portrait object-cover object-top"
+                        sizes="(min-width: 1024px) 20vw, (min-width: 640px) 30vw, 90vw"
                       />
                     ) : (
                       <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(circle_at_top,hsl(var(--primary)/.14),transparent_58%)]">
@@ -255,9 +237,10 @@ export function HomeInstitutionalSections({
                       </div>
                     )}
                   </div>
-                  <div className="p-5">
-                    <h3 className="font-display text-xl font-semibold tracking-tight text-foreground">{member.name}</h3>
-                    <p className="mt-2 text-sm leading-6 text-muted-foreground">{member.role}</p>
+                  <div className="min-w-0 self-center">
+                    <h3 className="font-display text-xl font-semibold tracking-tight text-foreground"><Link href={`/faculty/${member.id}`} locale={locale} className="hover:underline underline-offset-4">{member.name}</Link></h3>
+                    <p className="mt-2 text-sm leading-6 text-primary">{member.role}</p>
+                    <p className="mt-4 text-sm leading-7 text-muted-foreground">{member.bio}</p>
                   </div>
                 </article>
                 </StaggerItem>
@@ -280,7 +263,7 @@ export function HomeInstitutionalSections({
               <StaggerItem key={member.name}>
               <article
                 key={member.name}
-                className="group rounded-[2rem] border border-border/65 bg-card p-6 shadow-[0_28px_80px_-58px_hsl(var(--foreground)/0.3)] transition-transform duration-300 hover:-translate-y-1 sm:p-7"
+                className="border-t border-border py-7"
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
@@ -291,7 +274,7 @@ export function HomeInstitutionalSections({
                       {member.name}
                     </h3>
                   </div>
-                  <span className="rounded-full border border-border/70 bg-secondary/55 px-3 py-1.5 text-xs font-semibold text-muted-foreground">
+                  <span className="rounded-sm border border-border/70 bg-secondary/55 px-3 py-1.5 text-xs font-semibold text-muted-foreground">
                     {member.country}
                   </span>
                 </div>
@@ -318,7 +301,7 @@ export function HomeInstitutionalSections({
                 <StaggerItem key={`${institute.country}-${institute.institute}`}>
                 <article
                   key={`${institute.country}-${institute.institute}`}
-                  className="rounded-[1.8rem] border border-border/65 bg-background/75 p-5 backdrop-blur"
+                  className="border-t border-border py-6"
                 >
                   <div className="flex items-start justify-between gap-4">
                     <MapPin className="mt-1 size-5 shrink-0 text-primary" />
@@ -336,11 +319,17 @@ export function HomeInstitutionalSections({
         </div>
       </section>
 
+    </>
+  );
+}
+
+export function HomeAdmissionsSection({ locale, registerHref, content }: Pick<Props, "locale" | "registerHref" | "content">) {
+  return (
       <section className="page-shell py-16 sm:py-20 lg:py-28">
         <Reveal>
-        <div className="relative overflow-hidden rounded-[2.75rem] bg-[#0b3429] px-7 py-12 text-white sm:px-10 sm:py-14 lg:px-16 lg:py-16">
-          <div className="absolute -end-16 -top-28 size-80 rounded-full border border-[#d7b56d]/20" />
-          <div className="absolute -end-3 -top-10 size-52 rounded-full border border-white/10" />
+        <div className="relative overflow-hidden rounded-sm bg-[#0b3429] px-7 py-12 text-white sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+          <div className="pointer-events-none absolute -end-16 -top-28 size-80 rotate-45 border border-[#d7b56d]/20" />
+          <div className="pointer-events-none absolute -end-3 -top-10 size-52 border border-white/10" />
           <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-[#d7b56d]">
@@ -353,7 +342,7 @@ export function HomeInstitutionalSections({
                 {content.hero.description}
               </p>
             </div>
-            <Button asChild size="lg" className="h-12 rounded-full bg-[#d1b16e] px-7 text-[#0b3429] hover:bg-[#e0c483]">
+            <Button asChild size="lg" className="h-auto min-h-12 whitespace-normal rounded-sm bg-[#faf7ef] px-7 py-3 text-[#0b3429] hover:bg-white">
               <Link href={registerHref} locale={locale}>
                 {content.programs.eyebrow}
                 <ArrowUpRight className="ms-2 size-4 rtl:-rotate-90" />
@@ -363,6 +352,5 @@ export function HomeInstitutionalSections({
         </div>
         </Reveal>
       </section>
-    </>
   );
 }

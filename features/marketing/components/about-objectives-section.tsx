@@ -35,21 +35,21 @@ export function AboutObjectivesSection({
             {objectives.map((objective) => (
               <li
                 key={objective}
-                className="flex gap-4 rounded-2xl border border-border/60 bg-background/74 px-5 py-5 text-sm leading-7 text-muted-foreground backdrop-blur-xl md:text-[0.98rem]"
+                className="flex gap-4 border-t border-border px-5 py-5 text-sm leading-7 text-muted-foreground md:text-[0.98rem]"
               >
-                <span className="mt-2.5 h-2 w-2 shrink-0 rounded-full bg-primary/85" />
+                <span className="mt-2.5 h-2 w-2 shrink-0 rounded-sm bg-primary/85" />
                 <span>{objective}</span>
               </li>
             ))}
           </ul>
 
-          <div className="rounded-[2rem] border border-border/65 bg-card/80 p-6 backdrop-blur-xl sm:p-7">
+          <div className="border-t border-border p-6 sm:p-7">
             <p className="section-eyebrow">{focusLabel}</p>
             <ul className="mt-5 space-y-3">
               {focusAreas.map((area) => (
                 <li
                   key={area}
-                  className="rounded-2xl border border-border/55 bg-background/70 px-4 py-3 text-sm leading-6 text-foreground"
+                  className="border-t border-border px-4 py-3 text-sm leading-6 text-foreground"
                 >
                   {area}
                 </li>
@@ -58,10 +58,10 @@ export function AboutObjectivesSection({
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-[2rem] border border-border/65 bg-background/74 p-6 backdrop-blur-xl sm:flex-row sm:items-start sm:gap-6 sm:p-7">
+        <div className="flex flex-col gap-4 border-t border-border p-6 sm:flex-row sm:items-start sm:gap-6 sm:p-7">
           <div
             aria-hidden="true"
-            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary"
+            className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary"
           >
             <ShieldCheck className="h-5 w-5" />
           </div>

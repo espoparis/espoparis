@@ -34,9 +34,9 @@ export function RegisterProgramsSection({
           {programs.map((program) => (
             <article
               key={program.title}
-              className="flex flex-col rounded-[2rem] border border-border/65 bg-background/72 p-6 shadow-[0_30px_80px_-56px_hsl(var(--foreground)/0.28)] backdrop-blur-xl sm:p-7"
+              className="flex flex-col border-t border-border p-6 sm:p-7"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+              <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
                 <GraduationCap className="h-5 w-5" />
               </div>
               <h3 className="public-card-heading mt-5">{program.title}</h3>

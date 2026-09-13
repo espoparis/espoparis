@@ -1,5 +1,4 @@
 import { CTASection } from "@/components/ui/hero-dithering-card";
-import { localizePath } from "@/lib/constants/app";
 
 type Props = {
   locale: string;
@@ -26,17 +25,17 @@ export function AboutHero({
       announcementBanner={{
         text: eyebrow,
         linkText: primaryCta,
-        linkHref: localizePath(locale, "/contact"),
+        linkHref: "/contact",
       }}
       callToActions={[
         {
           text: primaryCta,
-          href: localizePath(locale, "/contact"),
+          href: "/contact",
           variant: "primary",
         },
         {
           text: secondaryCta,
-          href: localizePath(locale, "/"),
+          href: "/",
           variant: "secondary",
         },
       ]}

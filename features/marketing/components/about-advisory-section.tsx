@@ -31,7 +31,7 @@ export function AboutAdvisorySection({
             {members.map((member) => (
               <article
                 key={member.name}
-                className="rounded-[2rem] border border-border/65 bg-background/74 p-6 shadow-[0_30px_80px_-56px_hsl(var(--foreground)/0.28)] backdrop-blur-xl sm:p-7"
+                className="border-t border-border p-6 sm:p-7"
               >
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                   <h3 className="text-lg font-semibold leading-7 text-foreground">
@@ -42,7 +42,7 @@ export function AboutAdvisorySection({
                 <ul className="mt-4 space-y-2.5 text-sm leading-7 text-muted-foreground md:text-[0.98rem]">
                   {member.credentials.map((credential) => (
                     <li key={credential} className="flex gap-3">
-                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/85" />
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-sm bg-primary/85" />
                       <span>{credential}</span>
                     </li>
                   ))}

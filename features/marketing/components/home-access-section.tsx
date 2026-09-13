@@ -1,7 +1,6 @@
 import { ArrowUpRight, BookOpenText, GraduationCap, LibraryBig } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/reveal";
 import { Link } from "@/lib/navigation";
-import { localizePath } from "@/lib/constants/app";
 
 type AccessItem = {
   title: string;
@@ -37,23 +36,23 @@ export function HomeAccessSection({ locale, copy }: Props) {
           <p className="mt-5 public-copy-lead max-w-xl">{copy.description}</p>
         </Reveal>
 
-        <Stagger className="grid gap-4 md:grid-cols-3">
+        <Stagger className="divide-y divide-border">
           {items.map(({ key, href, Icon }, index) => {
             const item = copy[key];
             return (
               <StaggerItem key={key}>
                 <Link
-                  href={localizePath(locale, href)}
+                  href={href}
                   locale={locale}
-                  className="group flex h-full min-h-[19rem] flex-col rounded-[2rem] border border-border/70 bg-card p-6 shadow-[0_26px_80px_-58px_hsl(var(--foreground)/0.35)] transition duration-300 hover:-translate-y-1 hover:border-primary/25 sm:p-7"
+                  className="group block border-t border-border py-8 transition-colors hover:border-primary"
                 >
                   <div className="flex items-center justify-between gap-4">
-                    <span className="flex size-11 items-center justify-center rounded-2xl bg-primary/[0.07] text-primary">
+                    <span className="text-primary">
                       <Icon className="size-5" />
                     </span>
                     <span className="font-display text-3xl font-medium text-primary/20">0{index + 1}</span>
                   </div>
-                  <h3 className="mt-8 font-display text-2xl font-semibold tracking-tight text-foreground">{item.title}</h3>
+                  <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-foreground">{item.title}</h3>
                   <p className="mt-4 flex-1 text-sm leading-7 text-muted-foreground sm:text-base">{item.description}</p>
                   <span className="mt-7 inline-flex items-center text-sm font-semibold text-primary">
                     {item.action}

@@ -9,6 +9,7 @@ export type FacultyMember = {
   bio: string;
   languages: string;
   works?: string[];
+  image?: string;
 };
 
 type Props = {
@@ -41,28 +42,28 @@ export function AboutFacultySection({
 
         <div className="grid gap-5 md:grid-cols-2">
           {members.map((member) => {
-            const image = getFacultyImage(member.id);
+            const image = member.image || getFacultyImage(member.id);
 
             return (
               <article
                 key={member.id}
-                className="flex flex-col rounded-[2rem] border border-border/65 bg-background/74 p-6 shadow-[0_30px_80px_-56px_hsl(var(--foreground)/0.28)] backdrop-blur-xl sm:p-7"
+                className="flex flex-col border-t border-border p-6 sm:p-7"
               >
                 <div className="flex items-start gap-4">
                   {image ? (
-                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-2xl border border-border/60 bg-card">
+                    <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-sm border border-border/60 bg-card">
                       <Image
-                        src={image}
+                        src={image} unoptimized={image.startsWith("/api/content-media/")}
                         alt={photoAltTemplate.replace("{name}", member.name)}
                         fill
                         sizes="80px"
-                        className="object-cover object-top"
+                        className="editorial-portrait object-cover object-top"
                       />
                     </div>
                   ) : (
                     <div
                       aria-hidden="true"
-                      className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary"
+                      className="flex h-20 w-20 shrink-0 items-center justify-center rounded-sm bg-primary/10 text-primary"
                     >
                       <BookOpen className="h-6 w-6" />
                     </div>
@@ -84,7 +85,7 @@ export function AboutFacultySection({
                     <ul className="mt-3 space-y-2 text-sm leading-6 text-muted-foreground">
                       {member.works.map((work) => (
                         <li key={work} className="flex gap-3">
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary/85" />
+                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-sm bg-primary/85" />
                           <span>{work}</span>
                         </li>
                       ))}

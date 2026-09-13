@@ -18,7 +18,7 @@ export function LeadershipSection({ eyebrow, title, description, members }: Prop
         {members.map((member) => {
           const image = getFacultyImage(member.id);
           return <StaggerItem key={member.id}>
-            <article className="group overflow-hidden rounded-[2rem] border border-border/65 bg-card shadow-[0_30px_80px_-58px_hsl(var(--foreground)/0.38)]">
+            <article className="group overflow-hidden rounded-sm border border-border/65 bg-card">
               <div className="relative aspect-[4/5] overflow-hidden bg-secondary/60">
                 {image ? <Image src={image} alt={member.name} fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.025]" sizes="(min-width:1024px) 33vw,100vw" /> : null}
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#062b22]/90 via-[#062b22]/35 to-transparent" />

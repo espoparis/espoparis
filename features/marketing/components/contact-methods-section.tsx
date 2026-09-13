@@ -31,7 +31,7 @@ export function ContactMethodsSection({
           <p className="public-copy-lead mx-auto max-w-2xl">{description}</p>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-[2rem] border border-border/65 bg-border/60 md:grid-cols-2">
+        <div className="grid gap-px overflow-hidden rounded-sm border border-border/65 bg-border/60 md:grid-cols-2">
           {methods.map((method, index) => {
             const Icon = icons[index] ?? Mail;
 
@@ -41,7 +41,7 @@ export function ContactMethodsSection({
                 href={method.href}
                 className="group bg-background/82 p-7 transition-colors hover:bg-background/94 sm:p-8"
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-105">
+                <div className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary transition-transform duration-300 group-hover:scale-105">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="public-card-heading mt-5">

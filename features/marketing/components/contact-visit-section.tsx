@@ -34,7 +34,7 @@ export function ContactVisitSection({
           </p>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-[2rem] border border-border/65 bg-border/60">
+        <div className="grid gap-px overflow-hidden rounded-sm border border-border/65 bg-border/60">
           <div className="bg-background/82 p-6 sm:p-7">
             <p className="text-sm font-medium uppercase tracking-[0.22em] text-primary/90">
               {addressLabel}

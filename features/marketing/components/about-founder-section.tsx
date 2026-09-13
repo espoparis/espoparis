@@ -42,14 +42,14 @@ export function AboutFounderSection({
           <div className="lg:sticky lg:top-28">
             {/* Capped below `lg`: at tablet width the 3:4 portrait otherwise
                 fills a whole viewport height before any text is reached. */}
-            <figure className="mx-auto max-w-sm overflow-hidden rounded-[2rem] border border-border/65 bg-card/80 shadow-[0_36px_90px_-58px_hsl(var(--foreground)/0.42)] lg:max-w-none">
+            <figure className="mx-auto max-w-sm overflow-hidden border-t border-border lg:max-w-none">
               <div className="relative aspect-[3/4] w-full">
                 <Image
                   src={FOUNDER_IMAGE}
                   alt={photoAlt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 34vw"
-                  className="object-cover object-top"
+                  className="editorial-portrait object-cover object-top"
                   priority
                 />
               </div>
@@ -61,7 +61,7 @@ export function AboutFounderSection({
           </div>
 
           <div className="space-y-8">
-            <div className="rounded-[2rem] border border-border/65 bg-background/74 p-6 backdrop-blur-xl sm:p-8">
+            <div className="border-t border-border p-6 sm:p-8">
               <div className="space-y-5">
                 {paragraphs.map((paragraph) => (
                   <p key={paragraph} className="public-card-copy mt-0">
@@ -71,9 +71,9 @@ export function AboutFounderSection({
               </div>
             </div>
 
-            <div className="rounded-[2rem] border border-border/65 bg-card/78 p-6 backdrop-blur-xl sm:p-8">
+            <div className="border-t border-border p-6 sm:p-8">
               <p className="section-eyebrow">{factsLabel}</p>
-              <dl className="mt-5 grid gap-px overflow-hidden rounded-[1.35rem] border border-border/60 bg-border/60 sm:grid-cols-2">
+              <dl className="mt-5 grid gap-px overflow-hidden rounded-sm border border-border/60 bg-border/60 sm:grid-cols-2">
                 {facts.map((fact) => (
                   <div key={fact.label} className="bg-background/85 p-5">
                     <dt className="text-sm font-medium uppercase tracking-[0.18em] text-primary/90">

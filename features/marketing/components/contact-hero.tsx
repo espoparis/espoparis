@@ -27,7 +27,7 @@ export function ContactHero({
       }}
       callToActions={[
         { text: primaryCta, href: "#contact-methods", variant: "primary" },
-        { text: secondaryCta, href: "#visit-academy", variant: "secondary" },
+        { text: secondaryCta, href: "#contact-methods", variant: "secondary" },
       ]}
       className="full-bleed border-b border-border/60 bg-background"
     />

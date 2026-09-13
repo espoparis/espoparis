@@ -1,5 +1,4 @@
 import { CTASection } from "@/components/ui/hero-dithering-card";
-import { localizePath } from "@/lib/constants/app";
 
 type Props = {
   locale: string;
@@ -32,7 +31,7 @@ export function RegisterHero({
         { text: primaryCta, href: "#registration-form", variant: "primary" },
         {
           text: secondaryCta,
-          href: localizePath(locale, "/about"),
+          href: "/about",
           variant: "secondary",
         },
       ]}
