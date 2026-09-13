@@ -2,11 +2,17 @@ import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { publicNavLinks, localizePath } from "@/lib/constants/app";
 import { siteConfig } from "@/lib/site-config";
+import messages from "@/messages/en.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
-  const publicPaths = [...publicNavLinks.map((link) => link.href), "/support"] as const;
+  const publicPaths = [...new Set([
+    ...publicNavLinks.map((link) => link.href),
+    "/support", "/register", "/activities", "/about/founder",
+    "/about/advisory-board", "/global-presence",
+    ...messages.about.content.faculty.members.map((member) => `/faculty/${member.id}`),
+  ])];
 
   return routing.locales.flatMap((locale) =>
     publicPaths.map((path) => {

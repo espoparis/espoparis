@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --font-sans: var(--font-body), "Avenir Next", "Segoe UI", sans-serif;
-    --font-display: var(--font-sans);
+    --font-sans: var(--font-body), Arial, sans-serif;
+    --font-display: var(--font-editorial), Georgia, serif;
     --background: 42 35% 97%;
     --foreground: 157 33% 12%;
     --card: 42 38% 99%;
@@ -19,21 +19,21 @@
     --muted: 42 20% 94%;
     --muted-foreground: 157 10% 39%;
     --accent: 39 48% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 157 33% 12%;
     --destructive: 0 68% 50%;
     --destructive-foreground: 0 0% 100%;
     --border: 40 18% 84%;
     --input: 40 18% 84%;
     --ring: 157 58% 20%;
-    --radius: 1.25rem;
+    --radius: 0.375rem;
     --surface-soft: 42 30% 98%;
     --surface-strong: 42 35% 99%;
     --surface-ink: 157 30% 15%;
-    --shadow-soft: 0 24px 70px -36px hsl(220 30% 12% / 0.12);
-    --shadow-panel:
-      0 0 0 1px hsl(var(--border) / 0.52),
-      0 22px 60px -30px hsl(220 30% 12% / 0.12);
-    --section-space: clamp(4rem, 7vw, 7rem);
+    --shadow-soft: 0 4px 16px -8px hsl(157 30% 12% / 0.1);
+    --shadow-panel: none;
+    --section-space: clamp(4.5rem, 8vw, 8rem);
+    --editorial-rule: hsl(var(--border) / 0.8);
+    --motion-editorial: cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .dark {
@@ -59,10 +59,8 @@
     --surface-soft: 157 27% 10%;
     --surface-strong: 157 25% 12%;
     --surface-ink: 42 28% 94%;
-    --shadow-soft: 0 24px 70px -36px hsl(220 40% 3% / 0.48);
-    --shadow-panel:
-      0 0 0 1px hsl(var(--border) / 0.68),
-      0 18px 54px -26px hsl(220 40% 3% / 0.5);
+    --shadow-soft: 0 4px 16px -8px hsl(157 30% 3% / 0.3);
+    --shadow-panel: none;
   }
 
   * {
@@ -71,6 +69,13 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+  }
+
+  html:lang(ar),
+  html:lang(fa) {
+    --font-sans: var(--font-arabic-body), var(--font-body), sans-serif;
+    --font-display: var(--font-arabic-editorial), Georgia, serif;
   }
 
   body {
@@ -84,8 +89,14 @@
   h2,
   h3,
   h4 {
-    font-family: var(--font-display), sans-serif;
-    letter-spacing: -0.03em;
+    font-family: var(--font-display), serif;
+    letter-spacing: -0.025em;
+    overflow-wrap: break-word;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 4px;
   }
 
   @keyframes marquee {
@@ -135,22 +146,22 @@
   .surface-panel {
     background: hsl(var(--surface-soft) / 0.86);
     box-shadow: var(--shadow-panel);
-    @apply rounded-[1.75rem] border border-border/70 backdrop-blur-xl;
+    @apply rounded-md border border-border/70;
   }
 
   .surface-panel-strong {
     background: hsl(var(--surface-strong) / 0.96);
     box-shadow: var(--shadow-panel);
-    @apply rounded-[2rem] border border-border/70 backdrop-blur-xl;
+    @apply rounded-md border border-border/70;
   }
 
   .surface-subtle {
-    @apply rounded-[1.35rem] border border-border/60 bg-background/70;
+    @apply rounded-sm border border-border/60 bg-background/70;
   }
 
   .surface-accent {
     background: hsl(var(--primary) / 0.06);
-    @apply rounded-[1.75rem] border border-border/60;
+    @apply rounded-sm border border-border/60;
   }
 
   .panel-grid {
@@ -170,7 +181,7 @@
   }
 
   .inset-panel {
-    @apply rounded-[1.35rem] border border-border/60 bg-background/70 p-4 sm:p-5;
+    @apply rounded-sm border border-border/60 bg-background/70 p-4 sm:p-5;
   }
 
   .form-stack {
@@ -186,18 +197,18 @@
   }
 
   .section-eyebrow {
-    @apply text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-primary;
+    @apply text-xs font-semibold uppercase tracking-[0.16em] text-primary;
   }
 
   .public-heading-hero {
-    font-size: clamp(2.9rem, 7vw, 5.5rem);
-    line-height: 0.96;
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    line-height: 1.06;
     @apply text-balance font-display font-medium text-foreground;
   }
 
   .public-heading-display {
-    font-size: clamp(2.05rem, 4.4vw, 3.45rem);
-    line-height: 1.02;
+    font-size: clamp(2rem, 4.6vw, 4.5rem);
+    line-height: 1.12;
     @apply text-balance font-display font-medium text-foreground;
   }
 
@@ -245,9 +256,7 @@
   }
 
   .hero-glow {
-    box-shadow:
-      0 0 0 1px hsl(var(--border) / 0.45),
-      0 30px 80px hsl(var(--primary) / 0.18);
+    box-shadow: 0 0 0 1px hsl(var(--border) / 0.45);
   }
 
   .glass-surface {
@@ -264,5 +273,90 @@
 
   .animate-marquee-vertical {
     animation: marquee-vertical var(--duration, 36s) linear infinite;
+  }
+
+  /* Opt-in compositions: functional dashboards retain their own density. */
+  .editorial-section {
+    padding-block: var(--section-space);
+  }
+
+  .editorial-layout {
+    display: grid;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .editorial-layout > * {
+    min-width: 0;
+  }
+
+  .editorial-row {
+    border-block-start: 1px solid var(--editorial-rule);
+    padding-block: clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .editorial-copy {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .editorial-portrait {
+    filter: grayscale(1);
+  }
+
+  .editorial-rule {
+    border: 0;
+    border-block-start: 1px solid var(--editorial-rule);
+  }
+
+  @media (min-width: 1024px) {
+    .editorial-layout {
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    }
+  }
+}
+
+/* Keep connected Arabic/Persian scripts intact, including legacy utility
+   classes. Higher specificity also corrects tight Latin heading line heights. */
+html:is(:lang(ar), :lang(fa)) :is(h1, h2, h3, h4, .font-display) {
+  letter-spacing: normal;
+  line-height: 1.45;
+}
+
+html:is(:lang(ar), :lang(fa)) :is(.section-eyebrow, [class*="tracking-"]) {
+  letter-spacing: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.font-arabic-display {
+  font-family: var(--font-arabic-editorial), serif;
+  letter-spacing: normal;
+}
+[lang="ar"]:not(html):not(.font-arabic-display) {
+  font-family: var(--font-arabic-body), sans-serif;
+  letter-spacing: normal;
+}
+/* Prevent long translated names and labels from enlarging grid tracks. */
+.page-shell .grid > *,
+.editorial-layout > * {
+  min-width: 0;
+}
+@media (max-width: 639px) {
+  .page-shell {
+    padding-inline: 1.25rem;
   }
 }
