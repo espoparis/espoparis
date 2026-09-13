@@ -54,7 +54,7 @@ export default async function ContactPage(
   };
 
   return (
-    <div className="-mt-24 flex flex-1 flex-col md:-mt-28">
+    <div className="flex flex-1 flex-col">
       <JsonLd
         data={createWebPageJsonLd({
           locale: params.locale,
