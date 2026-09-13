@@ -2,7 +2,7 @@
   "common": {
     "nav": {
       "home": "Accueil",
-      "about": "À propos",
+      "about": "Le Centre",
       "faculty": "Corps enseignant",
       "register": "Inscription",
       "contact": "Contact",
@@ -31,7 +31,7 @@
   },
   "shell": {
     "footer": {
-      "title": "Une hawza enracinée à Paris, au service de la France et du monde francophone.",
+      "title": "Centre Imam (AJ) – Paris",
       "description": "Le Centre Imam (AJ) – Paris forme des étudiants, des enseignants et des prédicateurs par l’étude hawzawie traditionnelle, pensée pour la vie dans les sociétés occidentales."
     },
     "mobile": {
@@ -60,10 +60,10 @@
       "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris, première hawza chiite complète en France, qui forme des étudiants, des enseignants et des prédicateurs pour la France, l’Europe, l’Afrique et l’ensemble du monde francophone."
     },
     "badge": "Centre Imam (AJ) – Paris",
-    "title": "Une hawza enracinée à Paris et ouverte sur le monde francophone.",
+    "title": "Centre Imam (AJ) – Paris. Savoir, enseignement et service.",
     "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris : la première hawza chiite complète en France, qui forme des étudiants, des enseignants et des prédicateurs par une étude traditionnelle adaptée à la vie en France, en Europe et dans les communautés qui leur sont liées.",
     "featuresSection": {
-      "title": "Une hawza conçue pour l’étude, l’enseignement et le service.",
+      "title": "Un centre d’étude, d’enseignement et de service.",
       "description": "Les sciences hawzawies traditionnelles, enseignées avec une conscience des langues, des questions et des responsabilités qui façonnent la vie musulmane en Occident.",
       "items": {
         "seminaryStudy": {
@@ -181,8 +181,8 @@
     },
     "content": {
       "hero": {
-        "eyebrow": "À propos de la hawza",
-        "title": "Une hawza enracinée à Paris et ouverte sur le monde francophone.",
+        "eyebrow": "Le Centre",
+        "title": "Centre Imam (AJ) – Paris. Savoir, enseignement et service.",
         "description": "Le Centre Imam (AJ) – Paris existe pour former des étudiants, des prédicateurs et des enseignants capables de servir la France, l’Europe, l’Afrique et l’ensemble du monde francophone, avec une maîtrise des langues, un socle religieux solide et un sens contemporain de la responsabilité."
       },
       "intro": {
@@ -629,7 +629,7 @@
     "form": {
       "eyebrow": "Formulaire d’inscription",
       "title": "Finalisez votre inscription.",
-      "description": "Le formulaire ci-dessous est hébergé par Google Forms. Vos réponses parviennent directement à l’équipe des admissions du Centre Imam (AJ) – Paris.",
+      "description": "Choisissez votre langue. Chaque formulaire d’inscription s’ouvre dans un nouvel onglet sur Google Forms.",
       "frameTitle": "Formulaire d’inscription à la hawza",
       "fallbackTitle": "Le formulaire ne s’affiche pas ?",
       "fallbackDescription": "Certains navigateurs et extensions de confidentialité bloquent les formulaires intégrés. Vous pouvez ouvrir le formulaire d’inscription directement dans un nouvel onglet.",
@@ -1818,5 +1818,59 @@
       "safetyDescription": "Les métadonnées publiées peuvent être exposées tandis que les ressources réservées restent soumises aux droits d’accès.",
       "empty": "Aucune leçon en direct ne sera affichée avant la configuration de digital@espoparis.com."
     }
+  },
+  "adminOperations": {
+    "edit": "Modifier",
+    "newItem": "Nouvelle activité ou annonce",
+    "save": "Enregistrer",
+    "saved": "Enregistrement réussi.",
+    "failed": "Échec. Vérifiez la connexion et vos droits.",
+    "remove": "Supprimer définitivement",
+    "confirmDelete": "Supprimer définitivement cette fiche ? Le fichier original reste dans Drive.",
+    "hide": "Masquer sur le site",
+    "restore": "Restaurer le brouillon",
+    "preview": "Aperçu",
+    "image": "Image / affiche",
+    "upload": "Importer un fichier",
+    "uploading": "Importation…",
+    "uploadHint": "JPG, PNG ou WebP. Les images sont redimensionnées pour le web ; moins de 1 Mo après préparation.",
+    "pdfHint": "PDF direct : 3 Mo maximum. Pour un livre plus volumineux, déposez-le dans le dossier des livres et collez son lien Drive.",
+    "uploadFailed": "Importation impossible. Vérifiez la taille, le format, la connexion et vos droits.",
+    "clear": "Retirer l’image",
+    "fileReference": "Lien Drive ou identifiant du fichier",
+    "driveFolder": "Ouvrir le dossier Drive",
+    "chooseReflection": "Choisir un verset ou une parole",
+    "newReflection": "Nouveau verset ou parole",
+    "approved": "Approuvé pour publication",
+    "quran": "Coran",
+    "hadith": "Hadith",
+    "wisdom": "Sagesse / Nahj al-Balagha",
+    "translation": "Traduction",
+    "scheduleHint": "Les dates suivent le fuseau de votre appareil ; laissez la fin vide pour maintenir l’affichage.",
+    "autoSlug": "Laisser vide pour générer automatiquement.",
+    "draft": "Brouillon",
+    "review": "En révision",
+    "scheduled": "Programmé",
+    "published": "Publié",
+    "archived": "Masqué",
+    "news": "Actualité",
+    "activity": "Activité",
+    "announcement": "Cours / annonce",
+    "profiles": "Profils des enseignants",
+    "profileName": "Nom",
+    "profileRole": "Fonction",
+    "profileBio": "Biographie",
+    "profileLanguages": "Langues d’enseignement",
+    "profileWorks": "Œuvres — une par ligne",
+    "chooseProfile": "Choisir un enseignant",
+    "profileHint": "Modifiez la langue choisie ; les autres traductions sont conservées. Les changements paraissent après approbation.",
+    "help": "Guide d’administration",
+    "helpIntro": "Gérez les contenus quotidiens du Centre depuis ces espaces.",
+    "contentGuide": "Activités : créer → importer une affiche → décrire → enregistrer → réviser → publier. Masquez une annonce terminée ou fixez sa date de fin.",
+    "libraryGuide": "Livres : importez le PDF et la couverture ou collez leurs liens Drive. Enregistrez, soumettez puis publiez. L’archivage retire le livre du site sans effacer le fichier source.",
+    "reflectionGuide": "Texte du jour : saisissez le texte et sa source, les traductions et les dates, puis approuvez. Décochez l’approbation pour masquer.",
+    "profileGuide": "Enseignants : choisissez le profil et la langue, modifiez le texte ou la photo, approuvez et enregistrez.",
+    "statusGuide": "Un état déconnecté signifie que le stockage doit être activé ; la connexion au compte ne suffit pas.",
+    "libraryTitle": "Gérer les livres"
   }
 }

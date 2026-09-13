@@ -2,7 +2,7 @@
   "common": {
     "nav": {
       "home": "Home",
-      "about": "About",
+      "about": "About the Center",
       "faculty": "Faculty",
       "register": "Register",
       "contact": "Contact",
@@ -31,7 +31,7 @@
   },
   "shell": {
     "footer": {
-      "title": "A hawza rooted in Paris, serving France and the wider Francophone world.",
+      "title": "Imam (AJ) Center – Paris",
       "description": "Imam (AJ) Center – Paris prepares students, teachers, and preachers through traditional hawza study shaped for life in Western societies."
     },
     "mobile": {
@@ -60,10 +60,10 @@
       "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris, the first comprehensive Shi'a hawza in France, preparing students, teachers, and preachers for France, Europe, Africa, and the wider Francophone world."
     },
     "badge": "Imam (AJ) Center – Paris",
-    "title": "A hawza rooted in Paris and open to the wider Francophone world.",
+    "title": "Imam (AJ) Center – Paris. Knowledge, teaching and service.",
     "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris: the first comprehensive Shi'a hawza in France, preparing students, teachers, and preachers through traditional study shaped for life in France, Europe, and connected communities beyond.",
     "featuresSection": {
-      "title": "A hawza built for study, teaching, and service.",
+      "title": "A center for study, teaching and community service.",
       "description": "Traditional hawza sciences, taught with an awareness of the languages, questions, and responsibilities that shape Muslim life in the West.",
       "items": {
         "seminaryStudy": {
@@ -181,8 +181,8 @@
     },
     "content": {
       "hero": {
-        "eyebrow": "About the hawza",
-        "title": "A hawza rooted in Paris and open to the wider Francophone world.",
+        "eyebrow": "About the Center",
+        "title": "Imam (AJ) Center – Paris. Knowledge, teaching and service.",
         "description": "Imam (AJ) Center – Paris exists to prepare students, preachers, and teachers who can serve France, Europe, Africa, and the wider French-speaking world with language fluency, sound religious grounding, and a contemporary sense of responsibility."
       },
       "intro": {
@@ -629,7 +629,7 @@
     "form": {
       "eyebrow": "Registration form",
       "title": "Complete your registration.",
-      "description": "The form below is hosted by Google Forms. Your answers go directly to the admissions team of Imam (AJ) Center – Paris.",
+      "description": "Choose your preferred language. Each registration form opens in a new tab on Google Forms.",
       "frameTitle": "Hawza registration form",
       "fallbackTitle": "Cannot see the form?",
       "fallbackDescription": "Some browsers and privacy extensions block embedded forms. You can open the registration form directly in a new tab instead.",
@@ -1818,5 +1818,59 @@
       "safetyDescription": "Published lesson metadata can be exposed safely while student-only and paid assets remain subject to entitlement checks before delivery.",
       "empty": "No live lessons are shown until the digital@espoparis.com bridge is deployed and configured."
     }
+  },
+  "adminOperations": {
+    "edit": "Edit",
+    "newItem": "New activity or announcement",
+    "save": "Save changes",
+    "saved": "Saved successfully.",
+    "failed": "Could not save. Check the connection and your permissions.",
+    "remove": "Delete permanently",
+    "confirmDelete": "Delete this record permanently? The original file remains in Drive.",
+    "hide": "Hide from website",
+    "restore": "Restore draft",
+    "preview": "Preview",
+    "image": "Image / poster",
+    "upload": "Upload file",
+    "uploading": "Uploading…",
+    "uploadHint": "JPG, PNG or WebP. Images are resized for the web; uploaded images must be under 1 MB.",
+    "pdfHint": "Direct PDF upload: up to 3 MB. For larger books, upload to the books folder and paste the Drive link.",
+    "uploadFailed": "Upload failed. Check the file size and format, connection and permissions.",
+    "clear": "Remove image",
+    "fileReference": "Drive link or file ID",
+    "driveFolder": "Open Drive folder",
+    "chooseReflection": "Choose a verse or saying",
+    "newReflection": "New verse or saying",
+    "approved": "Approved for public display",
+    "quran": "Quran",
+    "hadith": "Hadith",
+    "wisdom": "Wisdom / Nahj al-Balagha",
+    "translation": "Translation",
+    "scheduleHint": "Times use your device time zone; leave the end empty to keep the item visible.",
+    "autoSlug": "Leave blank to generate automatically.",
+    "draft": "Draft",
+    "review": "In review",
+    "scheduled": "Scheduled",
+    "published": "Published",
+    "archived": "Hidden",
+    "news": "News",
+    "activity": "Activity",
+    "announcement": "Lesson / announcement",
+    "profiles": "Faculty profiles",
+    "profileName": "Name",
+    "profileRole": "Role",
+    "profileBio": "Biography",
+    "profileLanguages": "Teaching languages",
+    "profileWorks": "Works — one per line",
+    "chooseProfile": "Select faculty member",
+    "profileHint": "Edit the selected language; existing translations remain unchanged. Changes go live when approved.",
+    "help": "Administration guide",
+    "helpIntro": "Manage the Center’s daily content from these workspaces.",
+    "contentGuide": "Activities: create → upload a poster → add description → save → review → publish. Hide an ended announcement or set its end date.",
+    "libraryGuide": "Books: upload PDF and cover, or paste their Drive links. Save a draft, submit for review, then publish. Archive to remove a book from the website without deleting its source file.",
+    "reflectionGuide": "Daily text: enter the original text and source, add translations, choose dates, then approve. Uncheck approval to hide it.",
+    "profileGuide": "Faculty: choose a member and language, update the biography/photo, approve and save.",
+    "statusGuide": "A disconnected notice means storage must be activated; signing in alone does not connect it.",
+    "libraryTitle": "Manage books"
   }
 }
