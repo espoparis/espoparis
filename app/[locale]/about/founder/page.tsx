@@ -14,5 +14,5 @@ export default async function FounderPage(props: { params: Promise<{ locale: str
   const params = await props.params;
   setRequestLocale(params.locale);
   const content = await getAboutContent(params.locale);
-  return <main className="page-shell pb-24 pt-28 sm:pt-32 lg:pb-32 lg:pt-36"><AboutFounderSection {...content.founder} /></main>;
+  return <div className="page-shell pb-24 pt-12 sm:pt-16 lg:pb-32 lg:pt-20"><AboutFounderSection {...content.founder} /></div>;
 }
