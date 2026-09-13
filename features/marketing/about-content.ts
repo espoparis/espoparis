@@ -1,3 +1,4 @@
+import { getPublicCmsSnapshot } from "@/server/content/cms-repository";
 import { getTranslations } from "next-intl/server";
 import type { AdvisoryMember } from "@/features/marketing/components/about-advisory-section";
 import type { Distinctive } from "@/features/marketing/components/about-distinctives-section";
@@ -37,6 +38,11 @@ export type FounderFact = {
 export async function getAboutContent(locale: string) {
   const t = await getTranslations({ locale, namespace: "about.content" });
 
+  const profiles = (await getPublicCmsSnapshot()).profiles ?? [];
+  const members = (t.raw("faculty.members") as FacultyMember[]).map((member) => {
+    const profile = profiles.find((x) => x.id === member.id && x.locale === locale && x.approved);
+    return profile ? { ...member, name: profile.name, role: profile.role, bio: profile.bio, languages: profile.languages, works: profile.works, image: profile.image } : member;
+  });
   return {
     hero: {
       eyebrow: t("hero.eyebrow"),
@@ -119,7 +125,7 @@ export async function getAboutContent(locale: string) {
       // component substitutes per member. Reading it with `t()` would make
       // next-intl treat it as an ICU argument and fail to resolve the key.
       photoAltTemplate: t.raw("faculty.photoAltTemplate") as string,
-      members: t.raw("faculty.members") as FacultyMember[],
+      members,
     },
     network: {
       eyebrow: t("network.eyebrow"),
