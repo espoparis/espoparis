@@ -1,3 +1,5 @@
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/lib/navigation";
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { localizePath } from "@/lib/constants/app";
@@ -42,5 +44,13 @@ export default async function AdminLayout(
     notFound();
   }
 
-  return children;
+  const t = await getTranslations({locale:params.locale,namespace:"adminOperations"});
+  return <>
+    <nav className="page-shell flex flex-wrap gap-x-6 gap-y-3 border-b border-border py-5 text-sm">
+      <Link href="/admin">{(await getTranslations({locale:params.locale,namespace:"adminDashboard"}))("title")}</Link>
+      {canOpenAdminSection(session,"content").allowed ? <><Link href="/admin/content">{t("newItem")}</Link><Link href="/admin/content/profiles">{t("profiles")}</Link></> : null}
+      <Link href="/admin/help">{t("help")}</Link>
+    </nav>
+    {children}
+  </>;
 }
