@@ -14,12 +14,12 @@ export default async function FacultyPage(props: { params: Promise<{ locale: str
   const params = await props.params;
   setRequestLocale(params.locale);
   const content = await getAboutContent(params.locale);
-  return <main className="page-shell pb-24 pt-36 sm:pt-40 lg:pb-32 lg:pt-44">
+  return <div className="page-shell pb-24 pt-12 sm:pt-16 lg:pb-32 lg:pt-20">
     <header className="mx-auto max-w-4xl text-center">
       <p className="section-eyebrow">{content.faculty.eyebrow}</p>
-      <h1 className="mt-5 font-display text-[clamp(3rem,7vw,6.4rem)] font-medium leading-[.94] tracking-[-.055em]">{content.faculty.title}</h1>
+      <h1 className="mt-5 font-display text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[1.1] tracking-[-.025em]">{content.faculty.title}</h1>
       <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">{content.faculty.description}</p>
     </header>
     <section className="mt-14 lg:mt-20"><FacultyDirectory members={content.faculty.members} languagesLabel={content.faculty.languagesLabel} worksLabel={content.faculty.worksLabel} photoAltTemplate={content.faculty.photoAltTemplate} /></section>
-  </main>;
+  </div>;
 }
