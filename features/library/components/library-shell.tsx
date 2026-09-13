@@ -37,14 +37,14 @@ export function LibraryShell({ copy, books }: { copy: LibraryCopy; books: Publis
   }, [books, category, copy.allCategories, query]);
 
   return (
-    <div className="page-shell pb-24 pt-36 sm:pt-40 lg:pb-32 lg:pt-44">
+    <div className="page-shell pb-24 pt-12 sm:pt-16 lg:pb-32 lg:pt-20">
       <header className="mx-auto max-w-4xl text-center">
         <p className="section-eyebrow">{copy.eyebrow}</p>
-        <h1 className="mt-5 font-display text-[clamp(3rem,7vw,6.4rem)] font-medium leading-[.94] tracking-[-.055em]">{copy.title}</h1>
+        <h1 className="mt-5 font-display text-[clamp(2.5rem,7vw,6rem)] font-medium leading-[1.1] tracking-[-.025em]">{copy.title}</h1>
         <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">{copy.description}</p>
       </header>
 
-      <div className="mx-auto mt-12 max-w-6xl rounded-[2rem] border border-border/70 bg-card/80 p-4 shadow-[0_30px_80px_-58px_hsl(var(--foreground)/0.3)] sm:p-5">
+      <div className="mx-auto mt-12 max-w-6xl rounded-sm border border-border/70 bg-card/80 p-4 sm:p-5">
         <div className="flex flex-col gap-3 lg:flex-row">
           <label className="relative flex-1">
             <Search className="absolute start-4 top-1/2 size-5 -translate-y-1/2 text-muted-foreground" />
@@ -52,7 +52,8 @@ export function LibraryShell({ copy, books }: { copy: LibraryCopy; books: Publis
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={copy.searchPlaceholder}
-              className="h-12 w-full rounded-2xl border border-border bg-background ps-12 pe-4 text-sm outline-none ring-primary/20 transition focus:ring-4"
+              aria-label={copy.searchPlaceholder}
+              className="h-12 w-full rounded-sm border border-border bg-background ps-12 pe-4 text-sm outline-none ring-primary/20 transition focus:ring-4"
             />
           </label>
           <div className="flex items-center gap-2 overflow-x-auto pb-1 lg:max-w-[52%]">
@@ -61,7 +62,8 @@ export function LibraryShell({ copy, books }: { copy: LibraryCopy; books: Publis
               <button
                 key={item}
                 onClick={() => setCategory(item)}
-                className={`shrink-0 rounded-full border px-4 py-2 text-sm transition ${category === item ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background hover:border-primary/50"}`}
+                aria-pressed={category === item}
+                className={`shrink-0 rounded-sm border px-4 py-2 text-sm transition ${category === item ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background hover:border-primary/50"}`}
               >
                 {item}
               </button>
@@ -71,10 +73,10 @@ export function LibraryShell({ copy, books }: { copy: LibraryCopy; books: Publis
       </div>
 
       <section className="mx-auto mt-10 grid max-w-6xl gap-6 lg:grid-cols-[1.1fr_.9fr]">
-        <div className="rounded-[2rem] border border-border/70 bg-card p-6 sm:p-8">
+        <div className="rounded-sm border border-border/70 bg-card p-6 sm:p-8">
           {filteredBooks.length === 0 ? (
             <div className="border-dashed border-border bg-secondary/20 p-6 text-center sm:p-8">
-              <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-primary/10 text-primary"><LibraryBig className="size-6" /></div>
+              <div className="mx-auto flex size-14 items-center justify-center rounded-sm bg-primary/10 text-primary"><LibraryBig className="size-6" /></div>
               <h2 className="mt-5 font-display text-2xl font-semibold">{copy.emptyTitle}</h2>
               <p className="mx-auto mt-3 max-w-xl text-sm leading-7 text-muted-foreground">{copy.emptyDescription}</p>
               <div className="mt-6 flex flex-wrap justify-center gap-4 text-xs font-semibold uppercase tracking-[.14em] text-muted-foreground">
@@ -87,7 +89,7 @@ export function LibraryShell({ copy, books }: { copy: LibraryCopy; books: Publis
           ) : (
             <div className="grid gap-4 sm:grid-cols-2">
               {filteredBooks.map((book) => (
-                <article key={book.id} className="rounded-2xl border border-border/70 bg-background p-5">
+                <article key={book.id} className="border-t border-border p-5">
                   <p className="text-xs font-semibold uppercase tracking-[.14em] text-primary">{book.category} · {book.language}</p>
                   <h2 className="mt-3 font-display text-2xl font-semibold">{book.title}</h2>
                   <p className="mt-2 text-sm text-muted-foreground">{book.author}</p>
@@ -98,14 +100,14 @@ export function LibraryShell({ copy, books }: { copy: LibraryCopy; books: Publis
           )}
         </div>
 
-        <div className="rounded-[2rem] bg-[#082e24] p-7 text-white sm:p-9">
+        <div className="rounded-sm bg-[#082e24] p-7 text-white sm:p-9">
           <p className="text-xs font-semibold uppercase tracking-[.2em] text-[#d7b56d]">{copy.eyebrow}</p>
           <h2 className="mt-4 font-display text-3xl font-semibold">{copy.capabilitiesTitle}</h2>
           <div className="mt-7 space-y-4">
             {copy.capabilities.map((item) => {
               const Icon = capabilityIcons[item.icon];
               return (
-                <article key={item.title} className="rounded-2xl border border-white/10 bg-white/[.055] p-5">
+                <article key={item.title} className="border-t border-white/25 p-5">
                   <Icon className="size-5 text-[#e2c27b]" />
                   <h3 className="mt-3 font-semibold">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-white/65">{item.description}</p>
