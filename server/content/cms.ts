@@ -1,8 +1,9 @@
+import { validImageReference } from "../media/files.ts";
 import type { UserRole } from "@/server/platform/types";
 
 export type ContentKind = "news" | "activity" | "announcement" | "daily-reflection";
 export type ContentStatus = "draft" | "review" | "scheduled" | "published" | "archived";
-export type ReflectionKind = "quran" | "hadith";
+export type ReflectionKind = "quran" | "hadith" | "wisdom";
 
 export type ContentSchedule = {
   publishAt?: string;
@@ -109,6 +110,9 @@ export function canTransitionContent(role: UserRole, from: ContentStatus, to: Co
 
 export function validateCmsItem(item: CmsItem): string[] {
   const errors: string[] = [];
+  if (!["news", "activity", "announcement"].includes(item.kind)) errors.push("invalid-kind");
+  if (!["draft", "review", "scheduled", "published", "archived"].includes(item.status)) errors.push("invalid-status");
+  if (!validImageReference(item.coverImage)) errors.push("invalid-image");
   if (!item.id.trim()) errors.push("missing-id");
   if (!item.title.trim()) errors.push("missing-title");
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.slug)) errors.push("invalid-slug");
@@ -120,6 +124,7 @@ export function validateCmsItem(item: CmsItem): string[] {
 
 export function validateDailyReflection(item: DailyReflection): string[] {
   const errors: string[] = [];
+  if (!["quran", "hadith", "wisdom"].includes(item.kind)) errors.push("invalid-kind");
   if (!item.id.trim()) errors.push("missing-id");
   if (!item.arabicText.trim()) errors.push("missing-arabic-text");
   if (!item.sourceLabel.trim()) errors.push("missing-source");

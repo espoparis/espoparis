@@ -62,3 +62,9 @@ test("CMS item validation rejects unsafe publishing metadata", () => {
 test("reflection validation requires Arabic source text and attribution", () => {
   assert.deepEqual(validateDailyReflection({ id: "r1", kind: "quran", arabicText: "", sourceLabel: "", priority: 10, approved: false }), ["missing-arabic-text", "missing-source"]);
 });
+
+test("Nahj al-Balagha wisdom uses the existing approved daily rotation", () => {
+  const item = { id: "wisdom", kind: "wisdom" as const, arabicText: "نص", sourceLabel: "نهج البلاغة، رقم الحكمة", priority: 10, approved: true };
+  assert.deepEqual(validateDailyReflection(item), []);
+  assert.equal(selectDailyReflection([item])?.id, "wisdom");
+});

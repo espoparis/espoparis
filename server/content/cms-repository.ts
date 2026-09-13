@@ -1,3 +1,4 @@
+import type { FacultyProfile } from "./faculty-profile.ts";
 import { randomUUID } from "node:crypto";
 import { callAppsScript } from "../integrations/apps-script-client.ts";
 import type { AuthIdentity } from "../auth/types.ts";
@@ -10,6 +11,7 @@ export type CmsPublicSnapshot = {
   state: CmsRepositoryState;
   items: CmsItem[];
   reflections: DailyReflection[];
+  profiles?: FacultyProfile[];
   error?: string;
 };
 
@@ -17,6 +19,7 @@ export type CmsAdminSnapshot = {
   state: CmsRepositoryState;
   items: CmsItem[];
   reflections: DailyReflection[];
+  profiles?: FacultyProfile[];
   error?: string;
 };
 
@@ -70,8 +73,8 @@ async function publicCmsCall<TInput, TOutput>(action: string, data: TInput): Pro
 export async function getPublicCmsSnapshot(at = new Date()): Promise<CmsPublicSnapshot> {
   if (!isCmsConfigured()) return { state: "not-configured", items: [], reflections: [] };
   try {
-    const result = await publicCmsCall<{ at: string }, { items: CmsItem[]; reflections: DailyReflection[] }>("cms.public.snapshot", { at: at.toISOString() });
-    return { state: "connected", items: result.items ?? [], reflections: result.reflections ?? [] };
+    const result = await publicCmsCall<{ at: string }, { items: CmsItem[]; reflections: DailyReflection[]; profiles?: FacultyProfile[] }>("cms.public.snapshot", { at: at.toISOString() });
+    return { state: "connected", items: result.items ?? [], reflections: result.reflections ?? [], profiles: result.profiles ?? [] };
   } catch (error) {
     return { state: "error", items: [], reflections: [], error: error instanceof Error ? error.message : "Unknown CMS error." };
   }
@@ -80,8 +83,8 @@ export async function getPublicCmsSnapshot(at = new Date()): Promise<CmsPublicSn
 export async function getCmsAdminSnapshot(identity: AuthIdentity): Promise<CmsAdminSnapshot> {
   if (!isCmsConfigured()) return { state: "not-configured", items: [], reflections: [] };
   try {
-    const result = await cmsCall<Record<string, never>, { items: CmsItem[]; reflections: DailyReflection[] }>("cms.admin.snapshot", {}, identity);
-    return { state: "connected", items: result.items ?? [], reflections: result.reflections ?? [] };
+    const result = await cmsCall<Record<string, never>, { items: CmsItem[]; reflections: DailyReflection[]; profiles?: FacultyProfile[] }>("cms.admin.snapshot", {}, identity);
+    return { state: "connected", items: result.items ?? [], reflections: result.reflections ?? [], profiles: result.profiles ?? [] };
   } catch (error) {
     return { state: "error", items: [], reflections: [], error: error instanceof Error ? error.message : "Unknown CMS error." };
   }
@@ -105,4 +108,18 @@ export async function saveDailyReflection(identity: AuthIdentity, reflection: Da
 
 export async function deleteDailyReflection(identity: AuthIdentity, id: string) {
   return cmsCall("cms.reflection.delete", { id }, identity);
+}
+
+export async function uploadCmsImage(identity: AuthIdentity, input: { name: string; mime: string; base64: string }) {
+  return cmsCall<typeof input, { id: string }>("cms.media.upload", input, identity);
+}
+export async function readCmsImage(id: string, identity?: AuthIdentity) {
+  const input = { id };
+  return identity
+    ? cmsCall<typeof input, { mime: string; base64: string }>("cms.media.read", input, identity)
+    : publicCmsCall<typeof input, { mime: string; base64: string }>("cms.media.read", input);
+}
+
+export async function saveFacultyProfile(identity: AuthIdentity, profile: FacultyProfile) {
+  return cmsCall("cms.profile.save", { profile }, identity);
 }
