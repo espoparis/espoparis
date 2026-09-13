@@ -19,7 +19,7 @@ function canonicalJson(value: unknown): string {
 
 export function signAppsScriptEnvelope<T>(envelope: AppsScriptEnvelope<T>, secret: string) {
   if (secret.length < 32) throw new Error("Apps Script shared secret must be at least 32 characters.");
-  return createHmac("sha256", secret).update(canonicalJson(envelope)).digest("hex");
+  return createHmac("sha256", secret).update(canonicalJson(JSON.parse(JSON.stringify(envelope)))).digest("hex");
 }
 
 export function verifyAppsScriptEnvelope<T>(envelope: AppsScriptEnvelope<T>, signature: string, secret: string) {

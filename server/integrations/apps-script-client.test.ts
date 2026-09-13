@@ -18,3 +18,9 @@ test("Apps Script signature covers actor identity", () => {
   assert.equal(verifyAppsScriptEnvelope(envelope, signature, secret), true);
   assert.equal(verifyAppsScriptEnvelope({ ...envelope, actor: { email: "other@espoparis.com", role: "admin" } }, signature, secret), false);
 });
+
+test("signature matches the actual JSON payload when optional fields are absent", () => {
+  const secret = "test-only-secret-at-least-32-characters";
+  const envelope = { action: "cms.item.save", issuedAt: "2026-09-13T00:00:00Z", nonce: "test", actor: null, data: { item: { title: "Title", coverImage: undefined, schedule: { publishAt: undefined }, values: [undefined, 1] } } };
+  assert.equal(signAppsScriptEnvelope(envelope, secret), signAppsScriptEnvelope(JSON.parse(JSON.stringify(envelope)), secret));
+});
