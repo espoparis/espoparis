@@ -29,7 +29,7 @@ export function SiteBrand({
   const styles = sizeStyles[size];
 
   const mark = (
-    <span className={cn("relative shrink-0 overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-black/5", styles.mark)}>
+    <span className={cn("relative shrink-0 overflow-hidden rounded-sm bg-white", styles.mark)}>
       <Image
         src="/brand-mark.webp"
         alt=""
@@ -57,7 +57,7 @@ export function SiteBrand({
           <span className={cn("block whitespace-nowrap font-semibold uppercase tracking-[0.12em] text-current/75", styles.latin)}>
             École Supérieure de Paris
           </span>
-          <span className={cn("mt-1.5 block whitespace-nowrap font-semibold tracking-tight text-current", styles.arabic)} dir="rtl">
+          <span className={cn("mt-1.5 block whitespace-nowrap font-semibold tracking-tight text-current", styles.arabic)} dir="rtl" lang="ar">
             مركز الإمام (عج) – باريس
           </span>
         </span>
