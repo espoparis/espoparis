@@ -12,7 +12,7 @@ type RevealProps = {
   once?: boolean;
 };
 
-export function Reveal({ children, className, delay = 0, y = 24, once = true }: RevealProps) {
+export function Reveal({ children, className, delay = 0, y = 12, once = true }: RevealProps) {
   const reduceMotion = useReducedMotion();
 
   if (reduceMotion) return <div className={className}>{children}</div>;
@@ -22,7 +22,7 @@ export function Reveal({ children, className, delay = 0, y = 24, once = true }: 
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once, amount: 0.16 }}
+      viewport={{ once, amount: "some" }}
       transition={{ duration: 0.62, delay, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
@@ -41,7 +41,7 @@ export function Stagger({
   children,
   className,
   delayChildren = 0.05,
-  staggerChildren = 0.08,
+  staggerChildren = 0.06,
 }: StaggerProps) {
   const reduceMotion = useReducedMotion();
 
@@ -52,7 +52,7 @@ export function Stagger({
       className={className}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.12 }}
+      viewport={{ once: true, amount: "some" }}
       variants={{
         hidden: {},
         show: { transition: { delayChildren, staggerChildren } },
@@ -77,7 +77,7 @@ export function StaggerItem({ children, className }: StaggerItemProps) {
     <motion.div
       className={cn(className)}
       variants={{
-        hidden: { opacity: 0, y: 22 },
+        hidden: { opacity: 0, y: 12 },
         show: {
           opacity: 1,
           y: 0,
