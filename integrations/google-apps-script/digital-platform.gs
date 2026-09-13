@@ -50,6 +50,7 @@ function dispatchDigital_(action, data, actor) {
   if (action === 'digital.entitlement.check') return checkDigitalEntitlement_(data);
   requireDigitalActor_(actor);
   if (action === 'digital.admin.snapshot') return adminDigitalSnapshot_(actor);
+  if (action === 'digital.media.upload') return uploadLibraryFile_(data, actor);
   if (action === 'digital.library.save') return saveLibraryRecord_(data.record, actor);
   if (action === 'digital.learning.save') return saveLearningRecord_(data.record, actor);
   if (action === 'digital.library.transition') return transitionDigitalRecord_('library', data.id, data.status, actor);
@@ -419,3 +420,21 @@ function auditDigital_(actor, action, type, id, status, detail) {
   requireDigitalAuditSheet_().appendRow([new Date().toISOString(), normalizeDigitalEmail_(actor.email), actor.role, action, type, id, status, detail]);
 }
 function jsonDigital_(obj) { return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON); }
+
+
+function uploadLibraryFile_(data, actor) {
+  requireLibraryEditor_(actor);
+  if (['book-pdf','book-cover'].indexOf(data.purpose) < 0) throw new Error('Invalid upload purpose.');
+  var isPdf = data.purpose === 'book-pdf';
+  if (!data.base64 || data.base64.length > (isPdf ? 4194304 : 1400000)) throw new Error('File too large.');
+  var bytes = Utilities.base64Decode(data.base64), b = bytes.slice(0,12).map(function(v){return (v+256)%256;});
+  if (!bytes.length || bytes.length > (isPdf ? 3145728 : 1048576)) throw new Error('File too large.');
+  var valid = isPdf ? data.mime === 'application/pdf' && String.fromCharCode.apply(null,b.slice(0,5)) === '%PDF-' :
+    ((data.mime === 'image/jpeg' && b[0] === 255 && b[1] === 216 && b[2] === 255) ||
+    (data.mime === 'image/png' && b.slice(0,8).join(',') === '137,80,78,71,13,10,26,10') ||
+    (data.mime === 'image/webp' && String.fromCharCode.apply(null,b.slice(0,4)) === 'RIFF' && String.fromCharCode.apply(null,b.slice(8,12)) === 'WEBP'));
+  if (!valid) throw new Error('Invalid file format.');
+  var folder = DriveApp.getFolderById(isPdf ? DIGITAL.libraryBooksFolderId : DIGITAL.libraryCoversFolderId);
+  var file = folder.createFile(Utilities.newBlob(bytes, data.mime, String(data.name || 'file').slice(0,120)));
+  return { id:file.getId() };
+}

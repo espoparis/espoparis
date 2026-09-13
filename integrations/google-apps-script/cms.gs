@@ -23,7 +23,8 @@ var CMS_REFLECTION_HEADERS = [
 var CMS_AUDIT_HEADERS = ['Timestamp','ActorEmail','ActorRole','Action','EntityType','EntityId','DetailsJson'];
 
 function provisionCmsWorkspace() {
-  var ss = SpreadsheetApp.create('ESPO Paris - Website CMS');
+  var existingId = PropertiesService.getScriptProperties().getProperty('CMS_SPREADSHEET_ID');
+  var ss = existingId ? SpreadsheetApp.openById(existingId) : SpreadsheetApp.create('ESPO Paris - Website CMS');
   ensureCmsSheet_(ss, CMS_CONTENT_SHEET, CMS_CONTENT_HEADERS);
   ensureCmsSheet_(ss, CMS_REFLECTIONS_SHEET, CMS_REFLECTION_HEADERS);
   ensureCmsSheet_(ss, CMS_AUDIT_SHEET, CMS_AUDIT_HEADERS);
@@ -58,6 +59,9 @@ function doPost(e) {
     else if (action === 'cms.item.delete') { assertCmsCapability_(actor, 'delete'); result = deleteCmsItem_(data.id, actor); }
     else if (action === 'cms.reflection.save') { assertCmsCapability_(actor, 'reflection'); result = saveCmsReflection_(data.reflection, actor); }
     else if (action === 'cms.reflection.delete') { assertCmsCapability_(actor, 'delete'); result = deleteCmsReflection_(data.id, actor); }
+    else if (action === 'cms.profile.save') { assertCmsCapability_(actor, 'edit'); result = saveCmsProfile_(data.profile, actor); }
+    else if (action === 'cms.media.upload') { assertCmsCapability_(actor, 'edit'); result = uploadCmsImage_(data, actor); }
+    else if (action === 'cms.media.read') { result = readCmsImage_(data.id, actor); }
     else if (action === 'cms.public.snapshot') result = cmsPublicSnapshot_(data);
     else throw new Error('Unsupported CMS action: ' + action);
 
@@ -108,7 +112,7 @@ function assertCmsCapability_(actor, capability) {
 }
 
 function cmsAdminSnapshot_() {
-  return { items: readCmsItems_(), reflections: readCmsReflections_() };
+  return { items: readCmsItems_(), reflections: readCmsReflections_(), profiles: readCmsProfiles_() };
 }
 
 function readCmsItems_() {
@@ -154,6 +158,9 @@ function saveCmsItem_(item, actor) {
   validateCmsItem_(item);
   if (String(item.status) === 'published') assertCmsCapability_(actor, 'publish');
   if (String(item.status) === 'scheduled') assertCmsCapability_(actor, 'schedule');
+  var existing = readCmsItems_().filter(function(x){ return x.id === item.id; })[0];
+  if (existing && existing.status === 'published') assertCmsCapability_(actor, 'publish');
+  if (item.coverImage && !/^\/api\/content-media\/[A-Za-z0-9_-]{10,}$/.test(item.coverImage) && !/^\/(faculty|images)\/[A-Za-z0-9_./-]+\.(jpg|jpeg|png|webp)$/i.test(item.coverImage)) throw new Error('Invalid image reference.');
   var now = new Date().toISOString();
   item.updatedAt = now;
   item.authorEmail = item.authorEmail || normalizeCmsEmail_(actor.email);
@@ -210,13 +217,15 @@ function reflectionRow_(r, actor) {
 
 function validateReflection_(r) {
   if (!r || !String(r.id || '').trim()) throw new Error('Reflection id is required.');
-  if (['quran','hadith'].indexOf(String(r.kind)) < 0) throw new Error('Invalid reflection kind.');
+  if (['quran','hadith','wisdom'].indexOf(String(r.kind)) < 0) throw new Error('Invalid reflection kind.');
   if (!String(r.arabicText || '').trim()) throw new Error('Arabic reflection text is required.');
   if (!String(r.sourceLabel || '').trim()) throw new Error('Source attribution is required.');
 }
 
 function saveCmsReflection_(r, actor) {
   validateReflection_(r);
+  var existing = readCmsReflections_().filter(function(x){ return x.id === r.id; })[0];
+  if (existing && existing.approved) assertCmsCapability_(actor, 'publish');
   // Approval is a publishing-equivalent action and remains master-admin only.
   if (r.approved) assertCmsCapability_(actor, 'publish');
   var sheet = cmsSheet_(CMS_REFLECTIONS_SHEET, CMS_REFLECTION_HEADERS);
@@ -252,7 +261,7 @@ function cmsPublicSnapshot_(data) {
     var end = r.activeUntil ? new Date(r.activeUntil).getTime() : Infinity;
     return ts >= start && ts <= end;
   });
-  return { items:items, reflections:reflections };
+  return { items:items, reflections:reflections, profiles:readCmsProfiles_().filter(function(p){return p.approved;}) };
 }
 
 function cmsAudit_(actor, action, entityType, entityId, details) {
@@ -273,3 +282,68 @@ function cmsHmacHex_(message, secret) {
   return bytes.map(function(byte){ var v=(byte<0?byte+256:byte).toString(16); return v.length===1?'0'+v:v; }).join('');
 }
 function cmsConstantTimeEquals_(a,b) { if (a.length !== b.length) return false; var diff=0; for(var i=0;i<a.length;i++) diff |= a.charCodeAt(i)^b.charCodeAt(i); return diff===0; }
+
+
+// Private image storage; only referenced, visible content is served publicly.
+function cmsMediaFolder_() {
+  var properties = PropertiesService.getScriptProperties();
+  var id = properties.getProperty('CMS_MEDIA_FOLDER_ID');
+  if (!id) throw new Error('Run provisionCmsMedia() once.');
+  return DriveApp.getFolderById(id);
+}
+function provisionCmsMedia() {
+  var properties = PropertiesService.getScriptProperties();
+  var id = properties.getProperty('CMS_MEDIA_FOLDER_ID');
+  if (id) return { folderId:id };
+  var folder = DriveApp.createFolder('ESPO Paris - Website Media');
+  properties.setProperty('CMS_MEDIA_FOLDER_ID', folder.getId());
+  return { folderId:folder.getId() };
+}
+function uploadCmsImage_(data, actor) {
+  if (!data.base64 || data.base64.length > 1400000) throw new Error('Image too large.');
+  var bytes = Utilities.base64Decode(data.base64);
+  if (!bytes.length || bytes.length > 1048576) throw new Error('Image too large.');
+  var b = bytes.map(function(v){return (v+256)%256;});
+  var valid = (data.mime === 'image/jpeg' && b[0] === 255 && b[1] === 216 && b[2] === 255) ||
+    (data.mime === 'image/png' && b.slice(0,8).join(',') === '137,80,78,71,13,10,26,10') ||
+    (data.mime === 'image/webp' && String.fromCharCode.apply(null,b.slice(0,4)) === 'RIFF' && String.fromCharCode.apply(null,b.slice(8,12)) === 'WEBP');
+  if (!valid) throw new Error('Invalid image.');
+  var file = cmsMediaFolder_().createFile(Utilities.newBlob(bytes, data.mime, String(data.name || 'image').slice(0,120)));
+  cmsAudit_(actor, 'media.upload', 'media', file.getId(), { mime:data.mime });
+  return { id:file.getId() };
+}
+function readCmsImage_(id, actor) {
+  if (!/^[A-Za-z0-9_-]{10,}$/.test(String(id))) throw new Error('Invalid image.');
+  if (actor && actor.email) assertCmsCapability_(actor, 'edit');
+  else {
+    var ref = '/api/content-media/' + id;
+    var snapshot = cmsPublicSnapshot_({});
+    var referenced = snapshot.items.some(function(item){return item.coverImage === ref;}) || snapshot.profiles.some(function(p){return p.image === ref;});
+    if (!referenced) throw new Error('Image not published.');
+  }
+  var file = DriveApp.getFileById(id), parents = file.getParents(), allowed = false;
+  var folderId = cmsMediaFolder_().getId();
+  while (parents.hasNext()) if (parents.next().getId() === folderId) allowed = true;
+  if (!allowed || file.isTrashed() || file.getSize() > 1048576) throw new Error('Image unavailable.');
+  return { mime:file.getMimeType(), base64:Utilities.base64Encode(file.getBlob().getBytes()) };
+}
+
+
+var CMS_PROFILE_HEADERS = ['Key','ProfileJson'];
+function readCmsProfiles_() {
+  var sheet = cmsSheet_('CMS Faculty', CMS_PROFILE_HEADERS);
+  if (sheet.getLastRow() <= 1) return [];
+  return sheet.getRange(2,1,sheet.getLastRow()-1,2).getDisplayValues().filter(function(r){return r[0];}).map(function(r){return JSON.parse(r[1]);});
+}
+function saveCmsProfile_(profile, actor) {
+  if (!profile || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(profile.id) || ['en','fr','ar','fa'].indexOf(profile.locale) < 0) throw new Error('Invalid profile.');
+  if (!String(profile.name || '').trim() || !String(profile.bio || '').trim() || !String(profile.role || '').trim()) throw new Error('Incomplete profile.');
+  if (profile.image && !/^\/api\/content-media\/[A-Za-z0-9_-]{10,}$/.test(profile.image)) throw new Error('Invalid profile image.');
+  var previous = readCmsProfiles_().filter(function(p){return p.id === profile.id && p.locale === profile.locale;})[0];
+  if (profile.approved || (previous && previous.approved)) assertCmsCapability_(actor, 'publish');
+  var sheet = cmsSheet_('CMS Faculty', CMS_PROFILE_HEADERS), key = profile.locale + ':' + profile.id;
+  var row = findCmsRowById_(sheet, key), values = [key, JSON.stringify(profile)];
+  if (row < 0) sheet.appendRow(values); else sheet.getRange(row,1,1,2).setValues([values]);
+  cmsAudit_(actor, 'profile.save', 'faculty', key, { approved:profile.approved });
+  return profile;
+}
