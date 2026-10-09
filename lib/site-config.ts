@@ -29,7 +29,7 @@ export const siteConfig = {
   seminaryName: "Imam (AJ) Center – Paris",
   url: resolveSiteUrl(),
   description:
-    "Espo Paris Academy presents Imam (AJ) Center – Paris: a hawza rooted in Paris, preparing students, teachers, and preachers for France, Europe, and the wider Francophone world.",
+    "Espo Paris Academy presents Imam (AJ) Center – Paris: an institute rooted in Paris, preparing students, teachers, and preachers for France, Europe, and the wider Francophone world.",
   category: "education",
   keywords: [
     "Espo Paris Academy",

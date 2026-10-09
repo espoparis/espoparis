@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SupportPage } from "@/features/support/components/support-page";
 import { buildPageMetadata } from "@/lib/seo";
+import { getPublicCmsSnapshot } from "@/server/content/cms-repository";
 
 export async function generateMetadata(props: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const params = await props.params;
@@ -13,5 +14,6 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
   const params = await props.params;
   setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale, namespace: "support" });
-  return <SupportPage copy={t.raw("copy")} />;
+  const cms = await getPublicCmsSnapshot();
+  return <SupportPage copy={t.raw("copy")} donation={cms.donation} locale={params.locale} />;
 }

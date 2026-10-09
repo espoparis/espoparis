@@ -38,11 +38,19 @@ export type FounderFact = {
 export async function getAboutContent(locale: string) {
   const t = await getTranslations({ locale, namespace: "about.content" });
 
-  const profiles = (await getPublicCmsSnapshot()).profiles ?? [];
-  const members = (t.raw("faculty.members") as FacultyMember[]).map((member) => {
+  const snapshot = await getPublicCmsSnapshot();
+  const profiles = snapshot.profiles ?? [];
+  const staticMembers = t.raw("faculty.members") as FacultyMember[];
+  const members = staticMembers.map((member) => {
     const profile = profiles.find((x) => x.id === member.id && x.locale === locale && x.approved);
     return profile ? { ...member, name: profile.name, role: profile.role, bio: profile.bio, languages: profile.languages, works: profile.works, image: profile.image } : member;
   });
+  for (const profile of profiles) {
+    if (profile.locale === locale && profile.approved && !staticMembers.some((member) => member.id === profile.id)) {
+      members.push({ id: profile.id, name: profile.name, role: profile.role, bio: profile.bio,
+        languages: profile.languages, works: profile.works, image: profile.image });
+    }
+  }
   return {
     hero: {
       eyebrow: t("hero.eyebrow"),
@@ -132,7 +140,7 @@ export async function getAboutContent(locale: string) {
       title: t("network.title"),
       description: t("network.description"),
       note: t("network.note"),
-      institutes: t.raw("network.institutes") as Institute[],
+      institutes: [...(t.raw("network.institutes") as Institute[]), ...(snapshot.institutes ?? []).filter(x => x.locale === locale && x.approved).sort((a, b) => a.order - b.order)],
     },
   };
 }

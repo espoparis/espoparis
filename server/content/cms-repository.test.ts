@@ -1,6 +1,14 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { isCmsConfigured } from "./cms-repository.ts";
+import { isCmsConfigured, validPayPalDonationUrl } from "./cms-repository.ts";
+
+test("donations accept only a PayPal hosted donation URL", () => {
+  assert.equal(validPayPalDonationUrl("https://www.paypal.com/donate/?hosted_button_id=AB1234"), true);
+  assert.equal(validPayPalDonationUrl("https://paypal.com/donate?hosted_button_id=AB1234"), true);
+  assert.equal(validPayPalDonationUrl("https://paypal.com.evil.example/donate?hosted_button_id=AB1234"), false);
+  assert.equal(validPayPalDonationUrl("http://paypal.com/donate?hosted_button_id=AB1234"), false);
+  assert.equal(validPayPalDonationUrl("https://www.paypal.com/donate?hosted_button_id=AB1234&redirect=https://evil.example"), false);
+});
 
 test("CMS is locked until production URL and secret are configured", () => {
   const oldUrl = process.env.CMS_API_URL;

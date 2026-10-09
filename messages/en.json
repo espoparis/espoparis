@@ -32,11 +32,11 @@
   "shell": {
     "footer": {
       "title": "Imam (AJ) Center – Paris",
-      "description": "Imam (AJ) Center – Paris prepares students, teachers, and preachers through traditional hawza study shaped for life in Western societies."
+      "description": "Imam (AJ) Center – Paris prepares students, teachers, and preachers through traditional institute study shaped for life in Western societies."
     },
     "mobile": {
-      "title": "Navigate the hawza",
-      "description": "Move between the main public pages of the hawza."
+      "title": "Navigate the institute",
+      "description": "Move between the main public pages of the institute."
     }
   },
   "status": {
@@ -56,23 +56,23 @@
   },
   "home": {
     "seo": {
-      "title": "Espo Paris Academy | Hawza in Paris for the Francophone World",
-      "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris, the first comprehensive Shi'a hawza in France, preparing students, teachers, and preachers for France, Europe, Africa, and the wider Francophone world."
+      "title": "Espo Paris Academy | institute in Paris for the Francophone World",
+      "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris, an Islamic educational institute in France, preparing students, teachers, and preachers for France, Europe, Africa, and the wider Francophone world."
     },
     "badge": "Imam (AJ) Center – Paris",
     "title": "Imam (AJ) Center – Paris. Knowledge, teaching and service.",
-    "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris: the first comprehensive Shi'a hawza in France, preparing students, teachers, and preachers through traditional study shaped for life in France, Europe, and connected communities beyond.",
+    "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris: an Islamic educational institute in France, preparing students, teachers, and preachers through traditional study shaped for life in France, Europe, and connected communities beyond.",
     "featuresSection": {
       "title": "A center for study, teaching and community service.",
-      "description": "Traditional hawza sciences, taught with an awareness of the languages, questions, and responsibilities that shape Muslim life in the West.",
+      "description": "Traditional institute sciences, taught with an awareness of the languages, questions, and responsibilities that shape Muslim life in the West.",
       "items": {
         "seminaryStudy": {
-          "title": "Hawza study",
+          "title": "institute study",
           "description": "A traditional course of study adapted to the realities of students living in Western societies."
         },
         "multilingualTeaching": {
           "title": "Multilingual teaching",
-          "description": "The only hawza offering instruction across French, English, Persian, Arabic, and Azerbaijani."
+          "description": "The only institute offering instruction across French, English, Persian, Arabic, and Azerbaijani."
         },
         "teacherFormation": {
           "title": "Teacher formation",
@@ -94,9 +94,9 @@
     },
     "teamSection": {
       "eyebrow": "Scholars and teaching staff",
-      "title": "A hawza carried by scholars, teachers, and community educators.",
-      "description": "From long-form hawza study to weekend-school formation, the work is sustained by teachers serving across languages, countries, and generations.",
-      "cta": "Read the hawza story",
+      "title": "A institute carried by scholars, teachers, and community educators.",
+      "description": "From long-form institute study to weekend-school formation, the work is sustained by teachers serving across languages, countries, and generations.",
+      "cta": "Read the institute story",
       "members": [
         {
           "name": "Shaykh Dr. Mustafa al-Khaliq",
@@ -112,7 +112,7 @@
         },
         {
           "name": "Shaykh Ismail al-Kanawi",
-          "role": "Director, Imam al-Sadiq Seminary, Nigeria"
+          "role": "Director, Imam al-Sadiq institute, Nigeria"
         },
         {
           "name": "Shaykh Abu Fatimah",
@@ -172,8 +172,8 @@
   },
   "about": {
     "seo": {
-      "title": "About the Hawza",
-      "description": "The story of Imam (AJ) Center – Paris: why the first comprehensive Shi'a hawza in France was established, how it teaches, who leads it, and the institutes it supports across Africa and Europe."
+      "title": "About the institute",
+      "description": "The story of Imam (AJ) Center – Paris: why an Islamic educational institute in France was established, how it teaches, who leads it, and the institutes it supports across Africa and Europe."
     },
     "sections": {
       "heroPrimaryCta": "Register now",
@@ -186,11 +186,11 @@
         "description": "Imam (AJ) Center – Paris exists to prepare students, preachers, and teachers who can serve France, Europe, Africa, and the wider French-speaking world with language fluency, sound religious grounding, and a contemporary sense of responsibility."
       },
       "intro": {
-        "eyebrow": "Why a hawza in the West",
+        "eyebrow": "Why a institute in the West",
         "title": "A duty that cannot be carried at a distance.",
-        "pullQuote": "Hawza education is a collective obligation for scholars in the historic centres of learning. For religious scholars in certain Western and European countries, it becomes an individual one.",
+        "pullQuote": "institute education is a collective obligation for scholars in the historic centres of learning. For religious scholars in certain Western and European countries, it becomes an individual one.",
         "paragraphs": [
-          "While hawza education is considered a collective obligation (farḍ kifāyah) for scholars living in Islamic countries and in historic centres of learning such as Najaf al-Ashraf and Karbala al-Muqaddasah, it becomes an individual obligation (farḍ ʿayn) for religious scholars in certain Western and European countries.",
+          "While institute education is considered a collective obligation (farḍ kifāyah) for scholars living in Islamic countries and in historic centres of learning such as Najaf al-Ashraf and Karbala al-Muqaddasah, it becomes an individual obligation (farḍ ʿayn) for religious scholars in certain Western and European countries.",
           "This is particularly true in a culturally and intellectually diverse country like France, where freedom of thought has reached an exceptional level. The administration of Imam (AJ) Center – Paris therefore considers it a personal religious duty to undertake this mission.",
           "The French arena is of tremendous importance at every level. It is essential that Shi'a Muslims make a positive contribution to French society and enrich its social fabric.",
           "France also serves as a gateway — not only to the Maghreb and to Africa, where many people have embraced the teachings of the Ahl al-Bayt (peace be upon them), but to all French-speaking countries, many of which maintain strong cultural ties with France."
@@ -198,36 +198,36 @@
       },
       "overview": {
         "eyebrow": "Mission and beginnings",
-        "title": "Why this hawza was established, and why its presence matters.",
-        "description": "The hawza was shaped around a clear conviction: in countries like France, where intellectual and cultural diversity is especially strong, religious learning must be present, accessible, and able to speak with clarity to the societies around it.",
+        "title": "Why this institute was established, and why its presence matters.",
+        "description": "The institute was shaped around a clear conviction: in countries like France, where intellectual and cultural diversity is especially strong, religious learning must be present, accessible, and able to speak with clarity to the societies around it.",
         "cards": [
           {
             "title": "A needed responsibility",
-            "description": "For Muslim communities living in France and across Europe, serious religious learning cannot remain distant. The hawza was established as a local response to that responsibility, helping scholarship take root where people actually live, ask, teach, and serve."
+            "description": "For Muslim communities living in France and across Europe, serious religious learning cannot remain distant. The institute was established as a local response to that responsibility, helping scholarship take root where people actually live, ask, teach, and serve."
           },
           {
             "title": "Established in Paris",
-            "description": "During 2002, Ayatollah Shaykh Ismail al-Khaliq began teaching traditional hawza sciences in Paris. In 2012 those study circles were formally organized under the name Imam (AJ) Center – Paris."
+            "description": "During 2002, Ayatollah Shaykh Ismail al-Khaliq began teaching traditional institute sciences in Paris. In 2012 those study circles were formally organized under the name Imam (AJ) Center – Paris."
           },
           {
             "title": "The first of its kind",
-            "description": "This hawza is regarded as the first comprehensive Shi'a seminary in France, established to educate followers of the Ahl al-Bayt — and indeed Muslims generally. No previous hawza in France had been established with such breadth and inclusiveness."
+            "description": "This institute is regarded as an Islamic educational institute in France, established to educate followers of the Ahl al-Bayt — and indeed Muslims generally. No previous institute in France had been established with such breadth and inclusiveness."
           },
           {
             "title": "Nearly half a century of experience",
-            "description": "Shaykh Ismail al-Khaliq brings close to fifty years of experience in hawza education, and has carried out missionary and educational work in Iraq, Syria, Lebanon, Canada, Africa, Pakistan, and many other countries."
+            "description": "Shaykh Ismail al-Khaliq brings close to fifty years of experience in institute education, and has carried out missionary and educational work in Iraq, Syria, Lebanon, Canada, Africa, Pakistan, and many other countries."
           }
         ]
       },
       "objectives": {
         "eyebrow": "Objectives",
-        "title": "What this hawza sets out to do.",
-        "description": "The Center responds to a practical gap: many Europeans are unable to travel to the traditional seminaries of the Islamic world, and Western Muslim communities need scholars who can teach in the languages spoken around them.",
+        "title": "What this institute sets out to do.",
+        "description": "The Center responds to a practical gap: many Europeans are unable to travel to the traditional institutes of the Islamic world, and Western Muslim communities need scholars who can teach in the languages spoken around them.",
         "items": [
           "Train preachers who are integrated into Western society and fluent in local languages.",
-          "Provide foundational hawza education in the heart of Europe, in Paris, for those who cannot travel to the traditional seminaries.",
+          "Provide foundational institute education in the heart of Europe, in Paris, for those who cannot travel to the traditional institutes.",
           "Prepare religious scholars capable of preaching and teaching in Western languages in addition to Arabic.",
-          "Give students introductory hawza studies that prepare them for advanced specialization, should they later choose to continue at the Najaf Seminary."
+          "Give students introductory institute studies that prepare them for advanced specialization, should they later choose to continue at the Najaf institute."
         ],
         "focusLabel": "Devoted exclusively to",
         "focusAreas": [
@@ -241,13 +241,13 @@
         "noteDescription": "The Center deliberately avoids political involvement. It prohibits the use of its platforms to promote political organizations or to engage in disputes between different groups."
       },
       "distinctives": {
-        "eyebrow": "What makes this hawza unique",
+        "eyebrow": "What makes this institute unique",
         "title": "Two commitments that set the Center apart.",
         "description": "Its faculty includes highly distinguished scholars, but what distinguishes the Center most is the range of languages it teaches in and the practical shape of what it teaches.",
         "items": [
           {
             "title": "Multilingual education",
-            "description": "It is the only hawza in the world offering instruction in several languages, so students can study in the language they actually live and preach in.",
+            "description": "It is the only institute in the world offering instruction in several languages, so students can study in the language they actually live and preach in.",
             "points": [
               "French",
               "English",
@@ -271,21 +271,21 @@
       "methodology": {
         "eyebrow": "Educational methodology",
         "title": "Traditional study, delivered three ways.",
-        "description": "The Center follows the traditional hawza curriculum while adapting it to the needs of students living in Western societies. In-person study remains the primary method, but modern technology and distance learning extend the same teaching far beyond Paris.",
+        "description": "Teaching is organized into study circles with a defined subject, level and sequence of lessons. A circle may cover a complete subject, a class or a longer sequence. Its title, duration and access conditions are stated separately; annual and semester labels remain useful for organizing existing academic records.",
         "languagesLabel": "Languages",
         "channels": [
           {
             "title": "In-person in Paris",
-            "description": "The primary method of instruction, following the traditional hawza curriculum in the Center's own classrooms.",
+            "description": "The primary method of instruction, following the traditional institute curriculum in the Center's own classrooms.",
             "languages": "Arabic, French, Persian, English"
           },
           {
             "title": "Online and distance learning",
-            "description": "Courses delivered remotely so students throughout both the East and the West can benefit from hawza education.",
+            "description": "Courses delivered remotely so students throughout both the East and the West can benefit from institute education.",
             "languages": "French, Arabic, Persian, English"
           },
           {
-            "title": "Affiliated seminaries in Africa",
+            "title": "Affiliated institutes in Africa",
             "description": "In-person classes at the Center's affiliated institutes, taught in local African languages alongside Arabic.",
             "languages": "Arabic and local African languages"
           }
@@ -294,12 +294,12 @@
       "programs": {
         "eyebrow": "Programs and curriculum",
         "title": "Traditional study, adapted to the needs of students in Western societies.",
-        "description": "Recognizing that many students have careers, university studies, and family responsibilities, the Center has developed two educational tracks alongside a dedicated teacher-training programme.",
+        "description": "Teaching is organized into study circles with a defined subject, level and sequence of lessons. A circle may cover a complete subject, a class or a longer sequence. Its title, duration and access conditions are stated separately; annual and semester labels remain useful for organizing existing academic records.",
         "weekendLabel": "Weekend schools",
         "tracks": [
           {
             "title": "Religious education programs (part-time)",
-            "description": "Educational and cultural courses designed to strengthen the religious identity of Muslims, intended for students who cannot dedicate themselves to full-time hawza studies because of work or university commitments.",
+            "description": "Educational and cultural courses designed to strengthen the religious identity of Muslims, intended for students who cannot dedicate themselves to full-time institute studies because of work or university commitments.",
             "points": [
               "Covers the Holy Qur'an, jurisprudence (fiqh), Islamic beliefs (ʿaqidah), and ethics.",
               "Includes the biography of the Prophet and the Ahl al-Bayt, Islamic history, and other foundational Islamic sciences.",
@@ -307,18 +307,18 @@
             ]
           },
           {
-            "title": "Full-time hawza program",
-            "description": "For students who wish to devote themselves entirely to religious studies, following the traditional hawza curriculum with minor adaptations suited to Muslims living in the West.",
+            "title": "Study circles and flexible learning pathways",
+            "description": "Teaching is organized into study circles with a defined subject, level and sequence of lessons. A circle may cover a complete subject, a class or a longer sequence. Its title, duration and access conditions are stated separately; annual and semester labels remain useful for organizing existing academic records.",
             "points": [
-              "An intensive program lasting five years.",
+              "Teaching is organized into study circles with a defined subject, level and sequence of lessons. A circle may cover a complete subject, a class or a longer sequence. Its title, duration and access conditions are stated separately; annual and semester labels remain useful for organizing existing academic records.",
               "Provides an organized route into deeper religious specialization.",
-              "Graduates are academically prepared to continue advanced studies at the Hawza in Najaf al-Ashraf."
+              "Graduates are academically prepared to continue advanced studies at the institute in Najaf al-Ashraf."
             ]
           }
         ],
         "weekendSchools": {
           "title": "Training teachers for weekend Islamic schools",
-          "description": "As Muslim populations continue to grow in Europe and North America, there is an increasing need for qualified teachers who can educate Muslim children. This programme is distinct from the hawza's scholar-training track: it specifically prepares educators to teach children in Western societies.",
+          "description": "As Muslim populations continue to grow in Europe and North America, there is an increasing need for qualified teachers who can educate Muslim children. This programme is distinct from the institute's scholar-training track: it specifically prepares educators to teach children in Western societies.",
           "points": [
             "Islamic subjects: jurisprudence (fiqh), beliefs (ʿaqidah), ethics, and Arabic language.",
             "Teaching methodology and educational psychology.",
@@ -338,15 +338,15 @@
         "factsLabel": "At a glance",
         "paragraphs": [
           "He was born in 1957 and grew up in Karbala, Iraq, in the vicinity of the shrine of the Master of Martyrs (peace be upon him).",
-          "He began his religious studies in the Hawza of holy Karbala under a select group of its scholars, including Ayatollah Shaykh Mujtaba al-Lankarani, Ayatollah Shaykh Muhammad al-Gharawi, his grandfather Ayatollah Shaykh Muhammad Ibrahim al-Khaliq, and his father Ayatollah Shaykh Muhammad Ali al-Khaliq.",
-          "He moved between the hawzas of Karbala and Najaf al-Ashraf until he completed Kifayat al-Usul, and was examined in the advanced levels (al-suṭuh al-ʿulya) by an examination committee composed of Shaykh al-Ha'iri, Shaykh al-Rashti, Shaykh al-Kalbasi, and other scholars — he was thirteen years old at the time.",
-          "He then journeyed to the Hawza of Najaf al-Ashraf and sat for an examination in al-Makasib, al-Rasa'il, and al-Kifaya before Grand Ayatollah Sayyid Abu al-Qasim al-Khoei (may Allah sanctify his secret). Following this, he joined the advanced jurisprudence studies (bahth al-kharij) of Ayatollah Sayyid al-Khoei, Ayatollah Sayyid Muhammad al-Ruhani, and Ayatollah Sayyid al-Khomeini.",
+          "He began his religious studies in the institute of holy Karbala under a select group of its scholars, including Ayatollah Shaykh Mujtaba al-Lankarani, Ayatollah Shaykh Muhammad al-Gharawi, his grandfather Ayatollah Shaykh Muhammad Ibrahim al-Khaliq, and his father Ayatollah Shaykh Muhammad Ali al-Khaliq.",
+          "He moved between the institutes of Karbala and Najaf al-Ashraf until he completed Kifayat al-Usul, and was examined in the advanced levels (al-suṭuh al-ʿulya) by an examination committee composed of Shaykh al-Ha'iri, Shaykh al-Rashti, Shaykh al-Kalbasi, and other scholars — he was thirteen years old at the time.",
+          "He then journeyed to the institute of Najaf al-Ashraf and sat for an examination in al-Makasib, al-Rasa'il, and al-Kifaya before Grand Ayatollah Sayyid Abu al-Qasim al-Khoei (may Allah sanctify his secret). Following this, he joined the advanced jurisprudence studies (bahth al-kharij) of Ayatollah Sayyid al-Khoei, Ayatollah Sayyid Muhammad al-Ruhani, and Ayatollah Sayyid al-Khomeini.",
           "As oppressive and criminal practices intensified against men of thought, religion, and culture, he was forced, along with some other scholars, to leave Iraq. He travelled between Iran, Pakistan, Syria, and Lebanon. In Pakistan he attained the degree of al-Fadil al-Arabi, ranking first at the national level.",
-          "In addition to his elevated religious education in the hawza, he completed his academic studies and obtained a Master's degree from the Arab University in Beirut. He remains deeply committed to the cultural and scientific advancement of the Ummah, working tirelessly to establish schools, hawzas, mosques, libraries, and a university in the regions of the Alawite and Druze communities.",
+          "In addition to his elevated religious education in the institute, he completed his academic studies and obtained a Master's degree from the Arab University in Beirut. He remains deeply committed to the cultural and scientific advancement of the Ummah, working tirelessly to establish schools, institutes, mosques, libraries, and a university in the regions of the Alawite and Druze communities.",
           "After passing the age of forty, he relocated to the West to begin a cultural, religious, and educational project, taking into account the unique characteristics, cultures, and languages of those countries. He established projects for orphans in Canada and Europe, as well as schools for children to teach the Holy Qur'an, ethics, and the Prophetic biography.",
           "As a result of his extensive engagement in scholarly, cultural, intellectual, and social roles across many countries of the East and West, he became fluent in the languages of the nations he lived in. This wealth of experience gave him a deep understanding of diverse cultures and religions, which facilitated his cultural projects, including interfaith dialogue and rapprochement efforts in the Middle East, Canada, and France.",
           "Carrying a deep concern for elevating the standing of Muslims in the West — so that Muslims might keep pace with their French compatriots in intellectual and civilizational advancement — he began, around 2014, the project of establishing a university: a cultural, educational, and religious project conducted in both Arabic and French, to which he devotes great attention.",
-          "He is known for a distinctive approach that combines the preservation of heritage and authenticity on one hand with openness to other cultures on the other, and he possesses a refined humane spirit. He believes strongly in institutional work, continues to carry out his guiding role for Muslims in Paris and throughout France, Britain, and Belgium, and delivers his advanced jurisprudence lessons (bahth al-kharij) to his students in the hawza. He also has writings that remain in manuscript form."
+          "He is known for a distinctive approach that combines the preservation of heritage and authenticity on one hand with openness to other cultures on the other, and he possesses a refined humane spirit. He believes strongly in institutional work, continues to carry out his guiding role for Muslims in Paris and throughout France, Britain, and Belgium, and delivers his advanced jurisprudence lessons (bahth al-kharij) to his students in the institute. He also has writings that remain in manuscript form."
         ],
         "facts": [
           {
@@ -355,7 +355,7 @@
           },
           {
             "label": "Early formation",
-            "value": "Hawza of Karbala; examined in the advanced levels (al-suṭuh al-ʿulya) at thirteen years of age."
+            "value": "institute of Karbala; examined in the advanced levels (al-suṭuh al-ʿulya) at thirteen years of age."
           },
           {
             "label": "Najaf al-Ashraf",
@@ -379,7 +379,7 @@
           },
           {
             "label": "Today",
-            "value": "Teaches bahth al-kharij to hawza students and guides Muslim communities in France, Britain, and Belgium."
+            "value": "Teaches bahth al-kharij to institute students and guides Muslim communities in France, Britain, and Belgium."
           }
         ]
       },
@@ -427,10 +427,18 @@
         "photoAltTemplate": "Portrait of {name}",
         "members": [
           {
+            "id": "founder-mohammad-ismail-al-khaliq",
+            "name": "Ayatollah Shaykh Ismail al-Khaliq",
+            "role": "Founder, Imam (AJ) Center – Paris",
+            "bio": "Ayatollah Shaykh Ismail al-Khaliq is among the most prominent Shi'a religious scholars in the West, with a missionary experience spanning more than four decades. He was born in 1957 and grew up in Karbala, Iraq, in the vicinity of the shrine of the Master of Martyrs (peace be upon him).",
+            "languages": "Arabic, Persian, English, Urdu, and French.",
+            "works": []
+          },
+          {
             "id": "mustafa-al-khaliq",
             "name": "Shaykh Dr. Mustafa al-Khaliq",
             "role": "Director, Imam (AJ) Center – Paris",
-            "bio": "Originally from France and now based in London, he began hawza studies in Qom in 1999 and studied there for nine years, specializing in jurisprudence, the principles of jurisprudence, Arabic language and grammar, theology, Islamic history, Qur'anic interpretation, and Islamic ethics. He later continued studying with hawza teachers online while remaining active in various European countries. He holds a Bachelor's degree in Foreign Languages and Civilizations from the University of Paris 8 (Saint-Denis), a Master's in Linguistics from Sorbonne Nouvelle, and a PhD in Imami Islamic Ethics from the École Pratique des Hautes Études (EPHE) in Paris. He is currently Imam of the Al-Khoei Centre in London, having previously served as Imam of the Islamic Centre of Swansea in Wales for five years. He has been active in religious outreach for more than twenty-three years — in France and Belgium, for fourteen years in Canada, notably Montreal and Vancouver, and for the past five years in the United Kingdom.",
+            "bio": "Originally from France and now based in London, he began institute studies in Qom in 1999 and studied there for nine years, specializing in jurisprudence, the principles of jurisprudence, Arabic language and grammar, theology, Islamic history, Qur'anic interpretation, and Islamic ethics. He later continued studying with institute teachers online while remaining active in various European countries. He holds a Bachelor's degree in Foreign Languages and Civilizations from the University of Paris 8 (Saint-Denis), a Master's in Linguistics from Sorbonne Nouvelle, and a PhD in Imami Islamic Ethics from the École Pratique des Hautes Études (EPHE) in Paris. He is currently Imam of the Al-Khoei Centre in London, having previously served as Imam of the Islamic Centre of Swansea in Wales for five years. He has been active in religious outreach for more than twenty-three years — in France and Belgium, for fourteen years in Canada, notably Montreal and Vancouver, and for the past five years in the United Kingdom.",
             "languages": "Arabic, French, English, and Persian",
             "works": [
               "Restriction in the Qur'an (Master's thesis)",
@@ -440,10 +448,17 @@
             ]
           },
           {
+            "id": "abdullah-shami-zadeh",
+            "name": "Shaykh Abdullah Shami-Zadeh",
+            "role": "Teaching faculty",
+            "bio": "A respected scholar from the institute of Qom with extensive experience in education and religious outreach. He teaches in Persian and Turkish/Azerbaijani.",
+            "languages": "Persian and Turkish/Azerbaijani"
+          },
+          {
             "id": "fares-al-khatib",
             "name": "Shaykh Dr. Fares al-Khatib",
             "role": "Teaching faculty and Husayni orator",
-            "bio": "An advanced jurisprudence (bahth al-kharij) student at the Hawza of Najaf al-Ashraf, attending the lessons of Ayatollah Shaykh Baqir al-Irawani. He is a professor and graduate-level instructor in jurisprudence, the principles of jurisprudence, and Qur'anic studies, and a university professor in Iraq who teaches Arabic-language courses for the Center. As a Husayni orator he delivers sermons in numerous European countries and most cities of Iraq. He has published more than fifty research papers in peer-reviewed and non-peer-reviewed academic journals across various fields of Islamic studies, in both Arabic and English.",
+            "bio": "An advanced jurisprudence (bahth al-kharij) student at the institute of Najaf al-Ashraf, attending the lessons of Ayatollah Shaykh Baqir al-Irawani. He is a professor and graduate-level instructor in jurisprudence, the principles of jurisprudence, and Qur'anic studies, and a university professor in Iraq who teaches Arabic-language courses for the Center. As a Husayni orator he delivers sermons in numerous European countries and most cities of Iraq. He has published more than fifty research papers in peer-reviewed and non-peer-reviewed academic journals across various fields of Islamic studies, in both Arabic and English.",
             "languages": "Arabic and English",
             "works": [
               "Specialized books in comparative jurisprudence (fiqh muqaran)",
@@ -452,65 +467,94 @@
             ]
           },
           {
-            "id": "abdullah-shami-zadeh",
-            "name": "Shaykh Abdullah Shami-Zadeh",
-            "role": "Teaching faculty",
-            "bio": "A respected scholar from the Hawza of Qom with extensive experience in education and religious outreach.",
-            "languages": "Persian and Turkish/Azerbaijani"
-          },
-          {
             "id": "ismail-al-kanawi",
             "name": "Shaykh Ismail al-Kanawi",
-            "role": "Director, Imam al-Sadiq Seminary, Nigeria",
-            "bio": "A preacher based in Nigeria and director of the Imam al-Sadiq Seminary in Garko, Kano. He oversees hawza education in Nigeria and teaches in local African languages.",
+            "role": "Director, Imam al-Sadiq institute, Nigeria",
+            "bio": "A preacher based in Nigeria and director of the Imam al-Sadiq institute in Garko, Kano. He oversees institute education in Nigeria and teaches in local African languages. He teaches in Arabic, Hausa, and local African languages.",
             "languages": "Arabic, Hausa, and local African languages"
           },
           {
             "id": "abu-fatimah",
             "name": "Shaykh Abu Fatimah",
             "role": "Director, Lady al-Zahra Center, Cameroon",
-            "bio": "An Islamic missionary in Cameroon who cooperates with the Center and directs the Lady al-Zahra (peace be upon her) Center there.",
+            "bio": "An Islamic missionary in Cameroon who cooperates with the Center and directs the Lady al-Zahra (peace be upon her) Center there. He teaches in Arabic and local African languages.",
             "languages": "Arabic and local African languages"
           },
           {
             "id": "mujtaba-al-khaliq",
             "name": "Shaykh Mujtaba al-Khaliq",
             "role": "Teaching faculty, United States",
-            "bio": "A scholar serving Muslim communities in the United States, carrying out religious outreach throughout America.",
+            "bio": "A scholar serving Muslim communities in the United States, carrying out religious outreach throughout America. He teaches in English, Arabic, and Persian.",
             "languages": "English, Arabic, and Persian"
           },
           {
             "id": "hassan-al-nasiri",
             "name": "Shaykh Hassan al-Nasiri",
             "role": "Administration, Imam (AJ) Center – Paris",
-            "bio": "A member of the administration of Imam (AJ) Center – Paris, based in Lebanon, and one of the Center's Arabic-language instructors.",
+            "bio": "A member of the administration of Imam (AJ) Center – Paris, based in Lebanon, and one of the Center's Arabic-language instructors. He teaches in Arabic.",
             "languages": "Arabic"
           }
         ]
       },
       "network": {
-        "eyebrow": "Scientific institutes in Africa",
+        "eyebrow": "Affiliated institutes and centers",
         "title": "Paris is one center within a broader educational network.",
-        "description": "Alongside its attention to the European and Western spheres, the Center places considerable emphasis on Africa, sponsoring a number of religious seminaries and institutes.",
+        "description": "Alongside its attention to the European and Western spheres, the Center places considerable emphasis on Africa, sponsoring a number of religious institutes and institutes.",
         "institutes": [
           {
-            "country": "Nigeria",
-            "institute": "Imam al-Sadiq (peace be upon him) Hawza — Garko, Kano",
+            "country": "Belgium",
+            "institute": "Imam al-Jawad Institute — Brussels",
             "details": [
-              "Directed by Shaykh Ismail al-Kanawi.",
-              "Officially registered with the government authority responsible for Islamic and Qur'anic schools.",
-              "Teaching is conducted in Arabic and Hausa, the second most widely spoken language in Africa.",
-              "Teaching staff also includes Shaykh Ahmad Hamza al-Ja'fari and Shaykh Mukhtar Zango.",
-              "Extensive religious outreach, social, and cultural activity, including the reconstruction of the al-Mustafa Mosque."
+              "An institute affiliated with Imam (AJ) Center – Paris."
+            ]
+          },
+          {
+            "country": "Nigeria",
+            "institute": "Imam al-Sadiq Institute — Garko, Kano",
+            "details": [
+              "Address: Garan Gamji No. 214, Garko town, Kano, Nigeria.",
+              "Director: Shaykh Ismail Ibrahim al-Kanawi.",
+              "Phone: +2348024692242",
+              "These four institutions are overseen by Shaykh Ismail Ibrahim al-Kanawi and supported by Imam (AJ) Center – Paris."
+            ]
+          },
+          {
+            "country": "Nigeria",
+            "institute": "Bab al-Hawaij Institute — Garko",
+            "details": [
+              "Address: Kafin Sheri, near the government hospital, Garko Local Government Area, Nigeria.",
+              "Director: Shaykh Badamasi Idris.",
+              "Phone: +234 904 031 4137",
+              "These four institutions are overseen by Shaykh Ismail Ibrahim al-Kanawi and supported by Imam (AJ) Center – Paris."
+            ]
+          },
+          {
+            "country": "Nigeria",
+            "institute": "Umm al-Banin Qur’an Memorization School — Kano",
+            "details": [
+              "Address: 304 Garangawa, Kumbotso Local Government Area, Kano, Nigeria.",
+              "Director: Shaykh al-Qasim Muhammad II.",
+              "Phone: +23407059326672",
+              "These four institutions are overseen by Shaykh Ismail Ibrahim al-Kanawi and supported by Imam (AJ) Center – Paris."
+            ]
+          },
+          {
+            "country": "Nigeria",
+            "institute": "Messenger of Allah Muhammad Institute — Garko",
+            "details": [
+              "Address: Gurjiya town, opposite the mosque, Garko Local Government Area, Nigeria.",
+              "Shaykh: Ghali Muhammad Adam.",
+              "Phone: +23409124911589",
+              "These four institutions are overseen by Shaykh Ismail Ibrahim al-Kanawi and supported by Imam (AJ) Center – Paris."
             ]
           },
           {
             "country": "Tanzania",
-            "institute": "al-Sadiq al-Amin Institute",
+            "institute": "Sadiq al-Amin Center — Tanzania",
             "details": [
-              "Administered by Shaykh Sulayman al-Tanzani (Shaykh Sulayman bin Abdul).",
-              "Teaching and religious outreach carried out by Shaykh Ali bin Muhammad, Shaykh Abdullah bin Khamis, and Shaykh Baqir bin Khamis.",
-              "Plays an important role in spreading the Islamic and hawza religious sciences."
+              "Location: Mwandege, Pwani Region, United Republic of Tanzania.",
+              "Director and person responsible: Shaykh Sulayman Abdullah.",
+              "Local contact number: 0717778766."
             ]
           },
           {
@@ -524,9 +568,9 @@
           },
           {
             "country": "Mauritania",
-            "institute": "The first Shi'a seminary in Nouakchott",
+            "institute": "The first Shi'a institute in Nouakchott",
             "details": [
-              "The first seminary of its kind in the country.",
+              "The first institute of its kind in the country.",
               "Part of the Center's long-standing attention to students of the religious sciences in Africa."
             ]
           },
@@ -539,7 +583,7 @@
             ]
           }
         ],
-        "note": "Ayatollah al-Khaliq's interest in students of the Islamic religious sciences in African countries goes back several decades. The Center also supports activities in Belgium and Mali, reflecting an educational and missionary reach well beyond France itself."
+        "note": "Ayatollah al-Khaliq's interest in students of the Islamic religious sciences in African countries goes back several decades. The Center also supports activities in Belgium and Mali, reflecting an educational and missionary reach well beyond France itself. The four Nigerian institutions are overseen by Shaykh Ismail Ibrahim al-Kanawi and supported by Imam (AJ) Center – Paris."
       },
       "leadership": {
         "eyebrow": "Leadership",
@@ -550,7 +594,7 @@
             "id": "founder-mohammad-ismail-al-khaliq",
             "name": "Ayatollah Shaykh Mohammad Ismail al-Khaliq",
             "role": "Founder",
-            "bio": "Founder of Imam (AJ) Center – Paris. He began teaching seminary sciences in Paris in 2002, and the study circles developed into the organized Center in 2012."
+            "bio": "Founder of Imam (AJ) Center – Paris. He began teaching institute sciences in Paris in 2002, and the study circles developed into the organized Center in 2012."
           },
           {
             "id": "mustafa-al-khaliq",
@@ -571,14 +615,14 @@
   "register": {
     "seo": {
       "title": "Register",
-      "description": "Register for hawza study at Imam (AJ) Center – Paris: part-time religious education courses, the full-time five-year hawza program, and weekend Islamic school teacher training."
+      "description": "Register for institute study at Imam (AJ) Center – Paris: part-time religious education courses, the full-time five-year institute program, and weekend Islamic school teacher training."
     },
     "eyebrow": "Admissions",
-    "title": "Register for study at the hawza.",
+    "title": "Register for study at the institute.",
     "description": "Choose the track that fits your circumstances, complete the registration form, and the admissions team will be in touch about next steps.",
     "sections": {
       "heroPrimaryCta": "Go to the form",
-      "heroSecondaryCta": "Read about the hawza"
+      "heroSecondaryCta": "Read about the institute"
     },
     "programs": {
       "eyebrow": "Study tracks",
@@ -592,8 +636,8 @@
           "audience": "Students balancing work, university, or family responsibilities alongside serious religious study."
         },
         {
-          "title": "Full-time hawza program",
-          "description": "A five-year intensive course of study following the traditional hawza curriculum, adapted for Muslims living in the West, and preparing students for advanced study at Najaf al-Ashraf.",
+          "title": "Study circles and flexible learning pathways",
+          "description": "Teaching is organized into study circles with a defined subject, level and sequence of lessons. A circle may cover a complete subject, a class or a longer sequence. Its title, duration and access conditions are stated separately; annual and semester labels remain useful for organizing existing academic records.",
           "audience": "Students able to devote themselves entirely to religious study over five years."
         },
         {
@@ -610,7 +654,7 @@
       "items": [
         {
           "title": "Choose your track",
-          "description": "Decide between the part-time religious education courses, the full-time hawza program, or the weekend school teacher training."
+          "description": "Decide between the part-time religious education courses, the full-time institute program, or the weekend school teacher training."
         },
         {
           "title": "Complete the registration form",
@@ -630,7 +674,7 @@
       "eyebrow": "Registration form",
       "title": "Complete your registration.",
       "description": "Choose your preferred language. Each registration form opens in a new tab on Google Forms.",
-      "frameTitle": "Hawza registration form",
+      "frameTitle": "institute registration form",
       "fallbackTitle": "Cannot see the form?",
       "fallbackDescription": "Some browsers and privacy extensions block embedded forms. You can open the registration form directly in a new tab instead.",
       "openLabel": "Open the form in a new tab"
@@ -638,20 +682,20 @@
   },
   "contact": {
     "seo": {
-      "title": "Contact the Hawza",
+      "title": "Contact the institute",
       "description": "Contact Imam (AJ) Center – Paris for general enquiries, admissions questions, partnerships, and visit planning."
     },
-    "eyebrow": "Contact the hawza",
-    "title": "Reach the hawza directly.",
+    "eyebrow": "Contact the institute",
+    "title": "Reach the institute directly.",
     "description": "Whether you are asking about study paths, planning a visit, or opening a wider conversation, the first step should be easy to find.",
     "sections": {
       "heroPrimaryCta": "See contact options",
       "heroSecondaryCta": "Plan a visit",
       "methodsEyebrow": "Direct contact points",
-      "methodsTitle": "Choose the right way to reach the hawza.",
+      "methodsTitle": "Choose the right way to reach the institute.",
       "methodsDescription": "Different conversations need different paths. These contact points keep the first step simple and easy to trust.",
       "formEyebrow": "Send a message",
-      "formTitle": "Write to the hawza and expect a clear reply.",
+      "formTitle": "Write to the institute and expect a clear reply.",
       "formDescription": "Use the form for longer questions, study enquiries, visit requests, or partnership conversations that need a more considered response.",
       "visitEyebrow": "Visit and opening hours",
       "visitTitle": "Plan a visit or send a more detailed enquiry.",
@@ -659,10 +703,10 @@
     },
     "methods": {
       "generalTitle": "General enquiries",
-      "generalDescription": "Use this for first questions about the hawza, its programs, and where to begin.",
+      "generalDescription": "Use this for first questions about the institute, its programs, and where to begin.",
       "partnershipsTitle": "Partnerships",
       "partnershipsDescription": "Use this for collaborations, events, visiting scholars, or institutional conversations.",
-      "phoneTitle": "Call the hawza",
+      "phoneTitle": "Call the institute",
       "phoneDescription": "Use the main line for short questions, scheduling help, or quick follow-up.",
       "visitTitle": "Visit in person",
       "visitDescription": "Find the address, opening hours, and visit guidance below before you come in.",
@@ -673,10 +717,10 @@
       "phoneAfrica": "Africa / African languages"
     },
     "visit": {
-      "addressLabel": "Hawza address",
+      "addressLabel": "institute address",
       "hoursLabel": "Opening hours",
       "noteTitle": "A note before you arrive",
-      "noteDescription": "If you are planning a visit, a collaboration, or a more detailed conversation, sending a short message first helps the hawza prepare the right welcome."
+      "noteDescription": "If you are planning a visit, a collaboration, or a more detailed conversation, sending a short message first helps the institute prepare the right welcome."
     },
     "form": {
       "noteTitle": "A more detailed message works well here",
@@ -701,9 +745,9 @@
         }
       },
       "status": {
-        "success": "Your message has been sent. The hawza team will reply soon.",
+        "success": "Your message has been sent. The institute team will reply soon.",
         "rateLimited": "You have sent several messages recently. Please wait a few minutes before trying again.",
-        "notConfigured": "Email delivery is not configured yet. Please reach the hawza by email or phone in the meantime.",
+        "notConfigured": "Email delivery is not configured yet. Please reach the institute by email or phone in the meantime.",
         "failed": "We could not send your message right now. Please try again in a moment.",
         "unknown": "Something went wrong with your message. Please check the form and try again."
       },
@@ -1054,7 +1098,7 @@
       "accessMap": {
         "title": "How access works",
         "description": "The portal supports two distinct paths without mixing academic enrollment with commercial purchases.",
-        "officialTitle": "Official Hawza Student",
+        "officialTitle": "Official institute Student",
         "officialDescription": "An admitted student receives access to the courses included in the active academic enrollment. Google Classroom remains the live class and communication space; approved recordings are organized in the portal for catch-up and review.",
         "buyerTitle": "Standalone Course Learner",
         "buyerDescription": "A visitor who purchases a standalone course receives access only to that purchased course. A purchase never unlocks the full academic program.",
@@ -1079,7 +1123,7 @@
       "emailButton": "Send secure link",
       "unavailable": "This provider is prepared but not active until the production credentials are connected.",
       "securityTitle": "How access is verified",
-      "securityDescription": "Creating an account does not automatically make someone an official hawza student. Academic access is granted only after an approved enrollment is matched or confirmed by administration.",
+      "securityDescription": "Creating an account does not automatically make someone an official institute student. Academic access is granted only after an approved enrollment is matched or confirmed by administration.",
       "flowTitle": "Account flow",
       "flow": [
         "Verify your identity with Google or email.",
@@ -1872,5 +1916,17 @@
     "profileGuide": "Faculty: choose a member and language, update the biography/photo, approve and save.",
     "statusGuide": "A disconnected notice means storage must be activated; signing in alone does not connect it.",
     "libraryTitle": "Manage books"
+  },
+  "adminInstitutes": {
+    "title": "Affiliated institutes and centers",
+    "hint": "Add a center in the current language. Save as a draft for review, or approve it for public display. Existing institutional descriptions remain part of the main site content.",
+    "select": "Choose a center",
+    "new": "New center",
+    "name": "Name",
+    "country": "Country / location",
+    "details": "Description — one paragraph per line",
+    "order": "Display order",
+    "delete": "Remove center",
+    "confirmDelete": "Remove this center from this language?"
   }
 }

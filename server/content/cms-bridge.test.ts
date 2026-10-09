@@ -16,10 +16,21 @@ test("CMS bridge hides expired, draft and archived activities and unapproved say
   ];
   c.readCmsReflections_=()=>[{id:"approved",approved:true},{id:"pending",approved:false}];
   c.readCmsProfiles_=()=>[{id:"approved",approved:true},{id:"draft",approved:false}];
+  c.readCmsInstitutes_=()=>[{id:"public",approved:true},{id:"pending",approved:false}];
+  c.readCmsDonation_=()=>({enabled:false,paypalUrl:""});
   const result=JSON.parse(JSON.stringify(c.cmsPublicSnapshot_({at:"2026-09-12T12:00:00Z"})));
   assert.deepEqual(result.items.map((x:{id:string})=>x.id),["live"]);
   assert.deepEqual(result.reflections.map((x:{id:string})=>x.id),["approved"]);
   assert.deepEqual(result.profiles.map((x:{id:string})=>x.id),["approved"]);
+  assert.deepEqual(result.institutes.map((x:{id:string})=>x.id),["public"]);
+  assert.equal(result.donation, undefined);
+});
+test("CMS bridge publishes donations only with the approved hosted link",()=>{
+  const c=bridge(); c.readCmsItems_=()=>[]; c.readCmsReflections_=()=>[]; c.readCmsProfiles_=()=>[]; c.readCmsInstitutes_=()=>[];
+  c.readCmsDonation_=()=>({enabled:true,paypalUrl:"https://www.paypal.com/donate/?hosted_button_id=AB1234"});
+  assert.equal(c.cmsPublicSnapshot_({}).donation.enabled,true);
+  c.readCmsDonation_=()=>({enabled:true,paypalUrl:"https://evil.example/donate?hosted_button_id=AB1234"});
+  assert.equal(c.cmsPublicSnapshot_({}).donation,undefined);
 });
 test("public image reads cannot reveal unreferenced or hidden Drive files",()=>{
   const c=bridge();c.cmsPublicSnapshot_=()=>({items:[],profiles:[]});
@@ -32,6 +43,12 @@ test("editor cannot overwrite an already approved profile or daily text",()=>{
   assert.throws(()=>c.saveCmsProfile_({id:"faculty-one",locale:"ar",name:"Name",bio:"Bio",role:"Teacher",approved:false},actor),/denied/);
   c.readCmsReflections_=()=>[{id:"quote",approved:true}];
   assert.throws(()=>c.saveCmsReflection_({id:"quote",kind:"wisdom",arabicText:"نص",sourceLabel:"مصدر",approved:false},actor),/denied/);
+});
+test("editor cannot silently unpublish an approved affiliated institute",()=>{
+  const c=bridge();
+  c.readCmsInstitutes_=()=>[{id:"imam-sadiq",locale:"en",approved:true}];
+  c.LockService={getScriptLock:()=>({waitLock:()=>{},releaseLock:()=>{}})};
+  assert.throws(()=>c.saveCmsInstitute_({id:"imam-sadiq",locale:"en",country:"Nigeria",institute:"Imam al-Sadiq",details:["Garko"],order:0,approved:false},{email:"editor@example.com",role:"editor"}),/denied/);
 });
 test("editor cannot overwrite already published content through save",()=>{
   const c=bridge();c.readCmsItems_=()=>[{id:"post",status:"published"}];

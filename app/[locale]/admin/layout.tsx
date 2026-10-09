@@ -48,7 +48,8 @@ export default async function AdminLayout(
   return <>
     <nav className="page-shell flex flex-wrap gap-x-6 gap-y-3 border-b border-border py-5 text-sm">
       <Link href="/admin">{(await getTranslations({locale:params.locale,namespace:"adminDashboard"}))("title")}</Link>
-      {canOpenAdminSection(session,"content").allowed ? <><Link href="/admin/content">{t("newItem")}</Link><Link href="/admin/content/profiles">{t("profiles")}</Link></> : null}
+      {canOpenAdminSection(session,"content").allowed ? <><Link href="/admin/content">{t("newItem")}</Link><Link href="/admin/content/profiles">{t("profiles")}</Link>{session.identity?.role === "admin" ? <Link href="/admin/content/inbox">{({ ar: "الرسائل", fa: "پیام‌ها", fr: "Messages", en: "Messages" } as Record<string,string>)[params.locale] ?? "Messages"}</Link> : null}</> : null}
+      {session.identity?.role === "admin" ? <Link href="/admin/settings/donations">{({ ar: "التبرعات", fa: "کمک‌های مالی", fr: "Dons", en: "Donations" } as Record<string,string>)[params.locale] ?? "Donations"}</Link> : null}
       <Link href="/admin/help">{t("help")}</Link>
     </nav>
     {children}

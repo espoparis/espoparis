@@ -3,7 +3,7 @@ export const FOUNDER_IMAGE = "/faculty/founder-mohammad-ismail-al-khaliq.webp";
 
 export const facultyImages: Record<string, string> = {
   "founder-mohammad-ismail-al-khaliq": "/faculty/founder-mohammad-ismail-al-khaliq.webp",
-  "mujtaba-al-khaliq": "/faculty/mujtaba-al-khaliq.webp",
+  "mujtaba-al-khaliq": "/faculty/mujtaba-al-khaliq-2026.jpeg",
   "mustafa-al-khaliq": "/faculty/mustafa-al-khaliq.webp",
   "mohammad-hussein-al-khaliq": "/faculty/mohammad-hussein-al-khaliq.webp",
   "abdullah-shami-zadeh": "/faculty/abdullah-shami-zadeh.webp",

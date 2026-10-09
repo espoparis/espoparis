@@ -1,5 +1,6 @@
 import { HeartHandshake, MessageCircle, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
+import type { DonationSettings } from "@/server/content/cms-repository";
 
 type Copy = {
   eyebrow: string;
@@ -15,7 +16,7 @@ type Copy = {
   whatsappMessage: string;
 };
 
-export function SupportPage({ copy }: { copy: Copy }) {
+export function SupportPage({ copy, donation, locale }: { copy: Copy; donation?: DonationSettings; locale: string }) {
   const phone = siteConfig.contact.donationsPhone;
   const whatsappHref = `https://wa.me/${phone.whatsapp}?text=${encodeURIComponent(copy.whatsappMessage)}`;
 
@@ -34,6 +35,7 @@ export function SupportPage({ copy }: { copy: Copy }) {
             <h2 className="mt-6 font-display text-2xl font-medium">{copy.contactTitle}</h2>
             <p className="mt-3 text-sm leading-7 text-[#5d6e68] dark:text-white/62">{copy.contactDescription}</p>
             <div className="mt-7 flex flex-wrap gap-3">
+              {donation?.enabled ? <a href={donation.paypalUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-sm bg-[#0f4738] px-5 py-3 text-sm font-semibold text-white">{({ ar:"التبرع عبر PayPal", fa:"کمک از طریق PayPal", fr:"Faire un don avec PayPal", en:"Donate with PayPal" } as Record<string,string>)[locale] ?? "Donate with PayPal"}</a> : null}
               <a href={whatsappHref} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center rounded-sm bg-[#0f4738] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#133f34]">
                 <MessageCircle className="me-2 size-4" />{copy.whatsappAction}
               </a>

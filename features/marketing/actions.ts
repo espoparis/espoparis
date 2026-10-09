@@ -8,6 +8,7 @@ import {
 import { isEmailConfigured } from "@/lib/env";
 import { checkRateLimit } from "@/server/rate-limit";
 import { sendContactInquiryNotification } from "@/server/email/contact";
+import { isCmsConfigured, saveContactInquiry } from "@/server/content/cms-repository";
 
 /**
  * `messageKey` is resolved client-side under `contact.form.status` (or
@@ -63,12 +64,20 @@ export async function submitContactInquiryAction(
     return { status: "error", messageKey: parsed.error.issues[0]?.message };
   }
 
-  if (!isEmailConfigured()) {
+  if (!isCmsConfigured() && !isEmailConfigured()) {
     return { status: "error", messageKey: "notConfigured" };
   }
 
   try {
-    await sendContactInquiryNotification(parsed.data);
+    if (isCmsConfigured()) {
+      await saveContactInquiry(parsed.data);
+      if (isEmailConfigured()) {
+        try { await sendContactInquiryNotification(parsed.data); }
+        catch (error) { console.error("Contact inquiry saved, email notification failed", error); }
+      }
+    } else {
+      await sendContactInquiryNotification(parsed.data);
+    }
     return { status: "success", messageKey: "success" };
   } catch (error) {
     console.error("Failed to send contact inquiry", error);

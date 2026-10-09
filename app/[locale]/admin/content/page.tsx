@@ -19,6 +19,7 @@ export default async function Page(props: { params: Promise<{ locale: string }> 
   const snapshot = session.identity ? await getCmsAdminSnapshot(session.identity) : { state: "not-configured" as const, items: [], reflections: [] };
   return <>
     <header className="page-shell py-10"><h1 className="font-display text-4xl">{t("title")}</h1><p className="mt-4 text-muted-foreground">{t("description")}</p><Link href="/admin/help" className="mt-5 inline-block underline">{(await getTranslations({locale:params.locale,namespace:"adminOperations"}))("help")}</Link></header>
+    <div className="page-shell pb-8"><Link href="/admin/content/institutes" className="underline">{(await getTranslations({locale:params.locale,namespace:"adminInstitutes"}))("title")}</Link></div>
     <CmsLiveWorkspace locale={params.locale} session={session} snapshot={snapshot} copy={t.raw("live")} />
   </>;
 }

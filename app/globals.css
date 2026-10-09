@@ -302,7 +302,7 @@
   }
 
   .editorial-portrait {
-    filter: grayscale(1);
+    filter: none;
   }
 
   .editorial-rule {

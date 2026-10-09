@@ -1,5 +1,7 @@
 "use server";
 
+import { validateInstitute, type InstituteRecord } from "@/server/content/institute";
+import { saveInstitute, deleteInstitute } from "@/server/content/cms-repository";
 import { validateFacultyProfile, type FacultyProfile } from "@/server/content/faculty-profile";
 import { randomUUID } from "node:crypto";
 import { revalidatePath } from "next/cache";
@@ -115,5 +117,21 @@ export async function saveFacultyProfileAction(profile: FacultyProfile) {
   const previous = (await getCmsAdminSnapshot(identity)).profiles?.find((x) => x.id === profile.id && x.locale === profile.locale);
   if ((profile.approved || previous?.approved) && !canCms(identity.role, "content.publish")) throw new Error("Publishing permission required.");
   await saveFacultyProfile(identity, profile);
+  refreshContent();
+}
+
+export async function saveInstituteAction(institute: InstituteRecord) {
+  const identity = await requireIdentity("content.edit");
+  if (!validateInstitute(institute)) throw new Error("Invalid institute.");
+  const snapshot = await getCmsAdminSnapshot(identity);
+  if (snapshot.state !== "connected") throw new Error("CMS unavailable.");
+  const previous = snapshot.institutes?.find(x => x.id === institute.id && x.locale === institute.locale);
+  if ((institute.approved || previous?.approved) && !canCms(identity.role, "content.publish")) throw new Error("Publishing permission required.");
+  await saveInstitute(identity, institute);
+  refreshContent();
+}
+export async function deleteInstituteAction(id: string, locale: string) {
+  const identity = await requireIdentity("content.delete");
+  await deleteInstitute(identity, id, locale);
   refreshContent();
 }

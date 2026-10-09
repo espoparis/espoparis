@@ -13,6 +13,10 @@
 var CMS_CONTENT_SHEET = 'CMS Content';
 var CMS_REFLECTIONS_SHEET = 'CMS Reflections';
 var CMS_AUDIT_SHEET = 'CMS Audit Log';
+var CMS_INQUIRIES_SHEET = 'CMS Contact Inbox';
+var CMS_INQUIRY_HEADERS = ['Id','ReceivedAt','Locale','Name','Email','Reason','Subject','Message'];
+var CMS_SETTINGS_SHEET = 'CMS Settings';
+var CMS_SETTINGS_HEADERS = ['Key','Value'];
 
 var CMS_CONTENT_HEADERS = [
   'Id','Kind','Title','Slug','Excerpt','Body','CoverImage','Status','PublishAt','UnpublishAt','Priority','AuthorEmail','UpdatedAt'
@@ -28,6 +32,8 @@ function provisionCmsWorkspace() {
   ensureCmsSheet_(ss, CMS_CONTENT_SHEET, CMS_CONTENT_HEADERS);
   ensureCmsSheet_(ss, CMS_REFLECTIONS_SHEET, CMS_REFLECTION_HEADERS);
   ensureCmsSheet_(ss, CMS_AUDIT_SHEET, CMS_AUDIT_HEADERS);
+  ensureCmsSheet_(ss, CMS_INQUIRIES_SHEET, CMS_INQUIRY_HEADERS);
+  ensureCmsSheet_(ss, CMS_SETTINGS_SHEET, CMS_SETTINGS_HEADERS);
   PropertiesService.getScriptProperties().setProperty('CMS_SPREADSHEET_ID', ss.getId());
   return { spreadsheetId: ss.getId(), url: ss.getUrl() };
 }
@@ -54,11 +60,16 @@ function doPost(e) {
 
     if (action === 'health') result = { ok: true, service: 'espo-cms' };
     else if (action === 'cms.admin.snapshot') { assertCmsCapability_(actor, 'view'); result = cmsAdminSnapshot_(); }
+    else if (action === 'cms.inquiry.create') result = createCmsInquiry_(data);
+    else if (action === 'cms.inquiries.list') { assertCmsCapability_(actor, 'inbox'); result = listCmsInquiries_(); }
+    else if (action === 'cms.donation.save') { assertCmsCapability_(actor, 'publish'); result = saveCmsDonation_(data.settings); }
     else if (action === 'cms.item.save') { assertCmsCapability_(actor, 'edit'); result = saveCmsItem_(data.item, actor); }
     else if (action === 'cms.item.transition') { result = transitionCmsItem_(data, actor); }
     else if (action === 'cms.item.delete') { assertCmsCapability_(actor, 'delete'); result = deleteCmsItem_(data.id, actor); }
     else if (action === 'cms.reflection.save') { assertCmsCapability_(actor, 'reflection'); result = saveCmsReflection_(data.reflection, actor); }
     else if (action === 'cms.reflection.delete') { assertCmsCapability_(actor, 'delete'); result = deleteCmsReflection_(data.id, actor); }
+    else if (action === 'cms.institute.save') { assertCmsCapability_(actor, 'edit'); result = saveCmsInstitute_(data.institute, actor); }
+    else if (action === 'cms.institute.delete') { assertCmsCapability_(actor, 'delete'); result = deleteCmsInstitute_(data, actor); }
     else if (action === 'cms.profile.save') { assertCmsCapability_(actor, 'edit'); result = saveCmsProfile_(data.profile, actor); }
     else if (action === 'cms.media.upload') { assertCmsCapability_(actor, 'edit'); result = uploadCmsImage_(data, actor); }
     else if (action === 'cms.media.read') { result = readCmsImage_(data.id, actor); }
@@ -106,13 +117,60 @@ function assertCmsCapability_(actor, capability) {
     schedule: ['editor','admin'],
     publish: ['admin'],
     delete: ['admin'],
-    reflection: ['editor','admin']
+    reflection: ['editor','admin'],
+    inbox: ['admin']
   };
   if (!allowed[capability] || allowed[capability].indexOf(role) < 0) throw new Error('CMS capability denied: ' + capability + '.');
 }
 
+function createCmsInquiry_(data) {
+  var name = String(data.name || '').trim(), email = String(data.email || '').trim();
+  var subject = String(data.subject || '').trim(), message = String(data.message || '').trim();
+  var locale = String(data.locale || ''), reason = String(data.reason || '');
+  if (name.length < 2 || name.length > 120 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200 ||
+      subject.length < 2 || subject.length > 200 || message.length < 20 || message.length > 5000 ||
+      ['en','fr','ar','fa'].indexOf(locale) < 0 || ['general','partnerships','visit'].indexOf(reason) < 0) {
+    throw new Error('Invalid contact inquiry.');
+  }
+  var id = Utilities.getUuid();
+  // Prevent user-supplied text from becoming a spreadsheet formula.
+  function cell(value) { return /^[=+\-@]/.test(value) ? "'" + value : value; }
+  cmsSheet_(CMS_INQUIRIES_SHEET, CMS_INQUIRY_HEADERS).appendRow([id,new Date().toISOString(),locale,cell(name),cell(email),reason,cell(subject),cell(message)]);
+  return { id:id };
+}
+
+function listCmsInquiries_() {
+  var sheet = cmsSheet_(CMS_INQUIRIES_SHEET, CMS_INQUIRY_HEADERS);
+  if (sheet.getLastRow() <= 1) return [];
+  return sheet.getRange(2,1,sheet.getLastRow()-1,CMS_INQUIRY_HEADERS.length).getDisplayValues().map(function(r){
+    return {id:r[0],receivedAt:r[1],locale:r[2],name:r[3],email:r[4],reason:r[5],subject:r[6],message:r[7]};
+  }).reverse().slice(0, 200);
+}
+
 function cmsAdminSnapshot_() {
-  return { items: readCmsItems_(), reflections: readCmsReflections_(), profiles: readCmsProfiles_() };
+  return { items: readCmsItems_(), reflections: readCmsReflections_(), institutes: readCmsInstitutes_(), profiles: readCmsProfiles_(), donation: readCmsDonation_() };
+}
+
+function readCmsDonation_() {
+  var sheet = cmsSheet_(CMS_SETTINGS_SHEET, CMS_SETTINGS_HEADERS);
+  var row = findCmsRowById_(sheet, 'donation');
+  if (row < 0) return { enabled:false, paypalUrl:'' };
+  try { return JSON.parse(sheet.getRange(row,2).getValue()); }
+  catch (error) { return { enabled:false, paypalUrl:'' }; }
+}
+
+function validCmsDonationUrl_(value) {
+  return /^https:\/\/(?:www\.)?paypal\.com\/donate\/?\?hosted_button_id=[A-Za-z0-9]+$/.test(String(value || ''));
+}
+
+function saveCmsDonation_(settings) {
+  if (!settings || typeof settings.enabled !== 'boolean' || typeof settings.paypalUrl !== 'string' ||
+      (settings.enabled && !validCmsDonationUrl_(settings.paypalUrl))) throw new Error('Invalid donation settings.');
+  var value = { enabled:settings.enabled, paypalUrl:settings.paypalUrl.trim() };
+  var sheet = cmsSheet_(CMS_SETTINGS_SHEET, CMS_SETTINGS_HEADERS), row = findCmsRowById_(sheet, 'donation');
+  if (row < 0) sheet.appendRow(['donation',JSON.stringify(value)]);
+  else sheet.getRange(row,2).setValue(JSON.stringify(value));
+  return value;
 }
 
 function readCmsItems_() {
@@ -261,7 +319,8 @@ function cmsPublicSnapshot_(data) {
     var end = r.activeUntil ? new Date(r.activeUntil).getTime() : Infinity;
     return ts >= start && ts <= end;
   });
-  return { items:items, reflections:reflections, profiles:readCmsProfiles_().filter(function(p){return p.approved;}) };
+  var donation = readCmsDonation_();
+  return { items:items, reflections:reflections, institutes:readCmsInstitutes_().filter(function(x){return x.approved;}), profiles:readCmsProfiles_().filter(function(p){return p.approved;}), donation: donation.enabled && validCmsDonationUrl_(donation.paypalUrl) ? donation : undefined };
 }
 
 function cmsAudit_(actor, action, entityType, entityId, details) {
@@ -346,4 +405,34 @@ function saveCmsProfile_(profile, actor) {
   if (row < 0) sheet.appendRow(values); else sheet.getRange(row,1,1,2).setValues([values]);
   cmsAudit_(actor, 'profile.save', 'faculty', key, { approved:profile.approved });
   return profile;
+}
+
+var CMS_INSTITUTE_HEADERS = ['Key','InstituteJson'];
+function readCmsInstitutes_() {
+  var sheet = cmsSheet_('CMS Institutes', CMS_INSTITUTE_HEADERS);
+  if (sheet.getLastRow() < 2) return [];
+  return sheet.getRange(2,1,sheet.getLastRow()-1,2).getDisplayValues().filter(function(r){return r[0];}).map(function(r){return JSON.parse(r[1]);});
+}
+function saveCmsInstitute_(item, actor) {
+  if (!item || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) || ['en','fr','ar','fa'].indexOf(item.locale) < 0 || !String(item.country || '').trim() || !String(item.institute || '').trim() || !Array.isArray(item.details) || !item.details.length || !item.details.every(function(x){return typeof x === 'string' && x.trim();}) || !Number.isSafeInteger(item.order) || item.order < 0 || typeof item.approved !== 'boolean') throw new Error('Invalid institute.');
+  var lock = LockService.getScriptLock(); lock.waitLock(10000);
+  try {
+    var previous = readCmsInstitutes_().filter(function(x){return x.id === item.id && x.locale === item.locale;})[0];
+    if (item.approved || (previous && previous.approved)) assertCmsCapability_(actor, 'publish');
+    var sheet = cmsSheet_('CMS Institutes', CMS_INSTITUTE_HEADERS), key = item.locale + ':' + item.id;
+    var row = findCmsRowById_(sheet, key), values = [key, JSON.stringify(item)];
+    if (row < 0) sheet.appendRow(values); else sheet.getRange(row,1,1,2).setValues([values]);
+    cmsAudit_(actor,'institute.save','institute',key,{approved:item.approved});
+    return item;
+  } finally { lock.releaseLock(); }
+}
+function deleteCmsInstitute_(data, actor) {
+  var lock = LockService.getScriptLock(); lock.waitLock(10000);
+  try {
+    var key = data.locale + ':' + data.id, sheet = cmsSheet_('CMS Institutes', CMS_INSTITUTE_HEADERS);
+    var row = findCmsRowById_(sheet, key);
+    if (row < 0) throw new Error('Institute not found.');
+    sheet.deleteRow(row); cmsAudit_(actor,'institute.delete','institute',key,{});
+    return {id:data.id};
+  } finally { lock.releaseLock(); }
 }
