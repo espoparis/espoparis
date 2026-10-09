@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { sanitizeReturnTo } from "@/server/auth/oauth-state";
 import { SignInShell } from "@/features/auth/components/sign-in-shell";
 import { buildPageMetadata } from "@/lib/seo";
 import { getAuthProviderReadiness } from "@/server/auth/providers";
@@ -10,9 +11,12 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
   return buildPageMetadata({ locale: params.locale, path: "/sign-in", title: t("title"), description: t("description") });
 }
 
-export default async function SignInPage(props: { params: Promise<{ locale: string }> }) {
+export default async function SignInPage(props: { params: Promise<{ locale: string }>; searchParams: Promise<{ returnTo?: string | string[] }> }) {
   const params = await props.params;
   setRequestLocale(params.locale);
   const t = await getTranslations({ locale: params.locale, namespace: "signIn" });
-  return <SignInShell copy={t.raw("copy")} readiness={getAuthProviderReadiness()} locale={params.locale} />;
+  const query = await props.searchParams;
+  const returnTo = sanitizeReturnTo(typeof query.returnTo === "string" ? query.returnTo : undefined, params.locale);
+  const adminMode = /^\/(?:en\/|fr\/|ar\/|fa\/)?admin(?:\/|\?|$)/.test(returnTo);
+  return <SignInShell copy={t.raw("copy")} readiness={getAuthProviderReadiness()} locale={params.locale} returnTo={returnTo} adminMode={adminMode} />;
 }

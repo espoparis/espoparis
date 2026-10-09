@@ -37,6 +37,10 @@ export async function SiteHeader({ locale }: Props) {
               <ThemeToggle />
             </div>
 
+            <Link href="/student" locale={locale} className="inline-flex min-h-10 items-center border-b border-white/40 px-1 text-xs font-semibold text-white hover:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:text-sm">
+              {({ ar: "بوابة الطلاب", en: "Student portal", fr: "Espace étudiant", fa: "پرتال دانشجویان" } as Record<string, string>)[locale] ?? "Student portal"}
+            </Link>
+
             <Button
               asChild
               size="sm"

@@ -35,7 +35,7 @@ export default async function AdminLayout(
   const decision = canOpenAdminSection(session, "root");
 
   if (!decision.allowed && decision.reason === "sign-in-required") {
-    redirect(localizePath(params.locale, "/sign-in"));
+    redirect(`${localizePath(params.locale, "/sign-in")}?returnTo=${encodeURIComponent(localizePath(params.locale, "/admin"))}`);
   }
 
   if (!decision.allowed) {
