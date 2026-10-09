@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerEnv } from "@/lib/env";
+import { getAuthEnv } from "@/lib/env";
 import { exchangeGoogleCode, verifyGoogleIdToken } from "@/server/auth/google-oauth";
 import { resolveEffectiveStaffRole } from "@/server/auth/staff-role-repository";
 import { sanitizeReturnTo } from "@/server/auth/oauth-state";
@@ -19,7 +19,7 @@ function readFlow(value: string | undefined): Flow | null {
 }
 
 export async function GET(request: NextRequest) {
-  const env = getServerEnv();
+  const env = getAuthEnv();
   if (!env?.AUTH_SESSION_SECRET || !env.AUTH_BASE_URL) return NextResponse.json({ error: "Authentication is not configured." }, { status: 503 });
 
   const flow = readFlow(request.cookies.get(FLOW_COOKIE)?.value);

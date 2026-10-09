@@ -77,3 +77,21 @@ export function getOptionalEmailEnv() {
 export function isEmailConfigured() {
   return Boolean(getOptionalEmailEnv());
 }
+
+// Authentication must not depend on unrelated email, CMS or digital settings.
+const authEnvSchema = serverEnvSchema.pick({
+  GOOGLE_OAUTH_CLIENT_ID: true,
+  GOOGLE_OAUTH_CLIENT_SECRET: true,
+  AUTH_SESSION_SECRET: true,
+  AUTH_BASE_URL: true,
+});
+
+export function getAuthEnv() {
+  const parsed = authEnvSchema.safeParse({
+    GOOGLE_OAUTH_CLIENT_ID: process.env.GOOGLE_OAUTH_CLIENT_ID,
+    GOOGLE_OAUTH_CLIENT_SECRET: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
+    AUTH_SESSION_SECRET: process.env.AUTH_SESSION_SECRET,
+    AUTH_BASE_URL: process.env.AUTH_BASE_URL,
+  });
+  return parsed.success ? parsed.data : null;
+}

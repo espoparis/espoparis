@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import { getServerEnv } from "@/lib/env";
+import { getAuthEnv } from "@/lib/env";
 import { resolveEffectiveStaffRole } from "./staff-role-repository";
 import { verifySessionToken } from "./session-token";
 import type { AuthConfig, AuthSession } from "./types";
@@ -11,7 +11,7 @@ export const anonymousSession: AuthSession = { authenticated: false, identity: n
 export const authConfig: AuthConfig = { provider: "google-workspace" };
 
 export async function getAuthSession(): Promise<AuthSession> {
-  const env = getServerEnv();
+  const env = getAuthEnv();
   if (!env?.AUTH_SESSION_SECRET) return anonymousSession;
   const token = (await cookies()).get(SESSION_COOKIE_NAME)?.value;
   if (!token) return anonymousSession;

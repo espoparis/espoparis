@@ -1,4 +1,4 @@
-import { getServerEnv } from "@/lib/env";
+import { getAuthEnv } from "@/lib/env";
 
 export type GoogleTokenIdentity = {
   sub: string;
@@ -30,7 +30,7 @@ export function buildGoogleAuthorizationUrl(input: {
 }
 
 export async function exchangeGoogleCode(input: { code: string; verifier: string }) {
-  const env = getServerEnv();
+  const env = getAuthEnv();
   if (!env?.GOOGLE_OAUTH_CLIENT_ID || !env.GOOGLE_OAUTH_CLIENT_SECRET || !env.AUTH_BASE_URL) {
     throw new Error("Google OAuth is not configured.");
   }
@@ -55,7 +55,7 @@ export async function exchangeGoogleCode(input: { code: string; verifier: string
 }
 
 export async function verifyGoogleIdToken(idToken: string): Promise<GoogleTokenIdentity> {
-  const env = getServerEnv();
+  const env = getAuthEnv();
   if (!env?.GOOGLE_OAUTH_CLIENT_ID) throw new Error("Google OAuth is not configured.");
 
   // Delegate signature, issuer, expiry and token validation to Google's official tokeninfo endpoint.
