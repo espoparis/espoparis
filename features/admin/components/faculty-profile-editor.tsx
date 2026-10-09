@@ -31,11 +31,11 @@ export function FacultyProfileEditor({ members, profiles, locale, connected, can
     }}>
       <fieldset disabled={disabled} className="grid gap-5 md:grid-cols-2">
         {isNew ? <label className="text-sm">ID / slug<input name="newId" required pattern="[a-z0-9]+(-[a-z0-9]+)*" placeholder="teacher-name" className={field}/></label> : null}
-        <label className="text-sm">{t("profileName")}<input name="name" required defaultValue={member.name} className={field}/></label>
-        <label className="text-sm">{t("profileRole")}<input name="role" required defaultValue={member.role} className={field}/></label>
-        <label className="text-sm md:col-span-2">{t("profileBio")}<textarea name="bio" required rows={8} defaultValue={member.bio} className={field}/></label>
-        <label className="text-sm">{t("profileLanguages")}<input name="languages" defaultValue={member.languages} className={field}/></label>
-        <label className="text-sm">{t("profileWorks")}<textarea name="works" rows={5} defaultValue={member.works?.join("\n")} className={field}/></label>
+        <label className="text-sm">{t("profileName")}<input name="name" required defaultValue={member?.name ?? ""} className={field}/></label>
+        <label className="text-sm">{t("profileRole")}<input name="role" required defaultValue={member?.role ?? ""} className={field}/></label>
+        <label className="text-sm md:col-span-2">{t("profileBio")}<textarea name="bio" required rows={8} defaultValue={member?.bio ?? ""} className={field}/></label>
+        <label className="text-sm">{t("profileLanguages")}<input name="languages" defaultValue={member?.languages ?? ""} className={field}/></label>
+        <label className="text-sm">{t("profileWorks")}<textarea name="works" rows={5} defaultValue={member?.works?.join("\n") ?? ""} className={field}/></label>
         {canPublish ? <label className="flex items-center gap-3 text-sm"><input type="checkbox" name="approved" value="true" defaultChecked={existing?.approved}/>{t("approved")}</label> : null}
       </fieldset>
       <MediaField name="image" purpose="cms-image" defaultValue={existing?.image} disabled={disabled} label={t("image")} onBusy={setUploading}/>
