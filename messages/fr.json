@@ -57,11 +57,11 @@
   "home": {
     "seo": {
       "title": "Espo Paris Academy | académie à Paris pour le monde francophone",
-      "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris, première académie chiite complète en France, qui forme des étudiants, des enseignants et des prédicateurs pour la France, l’Europe, l’Afrique et l’ensemble du monde francophone."
+      "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris, un établissement d’enseignement islamique en France qui forme des étudiants, des enseignants et des prédicateurs pour la France, l’Europe, l’Afrique et l’ensemble du monde francophone."
     },
     "badge": "Centre Imam (AJ) – Paris",
     "title": "Centre Imam (AJ) – Paris. Savoir, enseignement et service.",
-    "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris : la première académie chiite complète en France, qui forme des étudiants, des enseignants et des prédicateurs par une étude traditionnelle adaptée à la vie en France, en Europe et dans les communautés qui leur sont liées.",
+    "description": "Espo Paris Academy présente le travail du Centre Imam (AJ) – Paris : un établissement d’enseignement islamique en France qui forme des étudiants, des enseignants et des prédicateurs par une étude traditionnelle adaptée à la vie en France, en Europe et dans les communautés qui leur sont liées.",
     "featuresSection": {
       "title": "Un centre d’étude, d’enseignement et de service.",
       "description": "Les sciences religieuses traditionnelles, enseignées avec une conscience des langues, des questions et des responsabilités qui façonnent la vie musulmane en Occident.",
@@ -72,7 +72,7 @@
         },
         "multilingualTeaching": {
           "title": "Enseignement multilingue",
-          "description": "La seul’académie dispensant son enseignement en français, anglais, persan, arabe et azéri."
+          "description": "Des cours dispensés en français, en anglais, en persan, en arabe et en azéri."
         },
         "teacherFormation": {
           "title": "Formation des enseignants",
@@ -173,7 +173,7 @@
   "about": {
     "seo": {
       "title": "À propos de l’académie",
-      "description": "L’histoire du Centre Imam (AJ) – Paris : pourquoi la première académie chiite complète de France a été fondée, comment elle enseigne, qui la dirige, et les instituts qu’elle soutient en Afrique et en Europe."
+      "description": "L’histoire du Centre Imam (AJ) – Paris : pourquoi cet établissement d’enseignement islamique a été fondé en France, comment il enseigne, qui le dirige et les instituts qu’il soutient en Afrique et en Europe."
     },
     "sections": {
       "heroPrimaryCta": "S’inscrire",
@@ -199,19 +199,19 @@
       "overview": {
         "eyebrow": "Mission et origines",
         "title": "Pourquoi cette académie a été fondée, et pourquoi sa présence compte.",
-        "description": "La académie s’est construite autour d’une conviction claire : dans des pays comme la France, où la diversité intellectuelle et culturelle est particulièrement forte, le savoir religieux doit être présent, accessible et capable de s’adresser avec clarté aux sociétés qui l’entourent.",
+        "description": "L’académie s’est construite autour d’une conviction claire : dans des pays comme la France, où la diversité intellectuelle et culturelle est particulièrement forte, le savoir religieux doit être présent, accessible et capable de s’adresser avec clarté aux sociétés qui l’entourent.",
         "cards": [
           {
             "title": "Une responsabilité nécessaire",
-            "description": "Pour les communautés musulmanes vivant en France et en Europe, un savoir religieux sérieux ne peut rester lointain. La académie a été fondée comme une réponse locale à cette responsabilité, afin que la science religieuse prenne racine là où les gens vivent, interrogent, enseignent et servent réellement."
+            "description": "Pour les communautés musulmanes vivant en France et en Europe, un savoir religieux sérieux ne peut rester lointain. L’académie a été fondée comme une réponse locale à cette responsabilité, afin que la science religieuse prenne racine là où les gens vivent, s’interrogent, enseignent et servent réellement."
           },
           {
             "title": "Fondée à Paris",
             "description": "En 2002, l’Ayatollah Cheikh Ismail al-Khaliq a commencé à enseigner les sciences religieuses traditionnelles à Paris. En 2012, ces cercles d’étude ont été formellement organisés sous le nom de Centre Imam (AJ) – Paris."
           },
           {
-            "title": "La première du genre",
-            "description": "Cette académie est considérée comme le premier institut chiite complet en France, fondé pour instruire les partisans des Ahl al-Bayt — et les musulmans en général. Aucune académie antérieure en France n’avait été établie avec une telle ampleur et une telle ouverture."
+            "title": "Un enseignement ouvert",
+            "description": "Cet établissement d’enseignement en France propose une formation religieuse aux fidèles des Ahl al-Bayt et accueille plus largement les musulmans."
           },
           {
             "title": "Près d’un demi-siècle d’expérience",
@@ -247,7 +247,7 @@
         "items": [
           {
             "title": "Enseignement multilingue",
-            "description": "C’est la seul’académie au monde à dispenser son enseignement en plusieurs langues, afin que chacun puisse étudier dans la langue où il vit et prêche réellement.",
+            "description": "L’enseignement en plusieurs langues permet aux étudiants d’étudier dans les langues qu’ils utilisent au quotidien et au service de leurs communautés.",
             "points": [
               "Français",
               "Anglais",
@@ -312,7 +312,7 @@
             "points": [
               "L’enseignement s’organise en cercles d’étude, chacun défini par une matière, un niveau et une progression. Un cercle peut couvrir une matière complète, une classe ou une séquence plus longue. Son intitulé, sa durée et ses conditions d’accès sont précisés séparément ; les repères annuels et semestriels restent utiles au classement des dossiers pédagogiques existants.",
               "Offre une voie structurée vers une spécialisation religieuse approfondie.",
-              "Les diplômés sont académiquement préparés à poursuivre des études avancées à l’académie de Najaf al-Achraf."
+              "Les diplômés disposent des bases nécessaires pour poursuivre des études religieuses avancées à Najaf al-Achraf."
             ]
           }
         ],
@@ -338,15 +338,15 @@
         "factsLabel": "En bref",
         "paragraphs": [
           "Il est né en 1957 et a grandi à Karbala, en Irak, aux abords du sanctuaire du Maître des Martyrs (que la paix soit sur lui).",
-          "Il a commencé ses études religieuses à l’académie de la sainte Karbala auprès d’un groupe choisi de ses savants, parmi lesquels l’Ayatollah Cheikh Mujtaba al-Lankarani, l’Ayatollah Cheikh Muhammad al-Gharawi, son grand-père l’Ayatollah Cheikh Muhammad Ibrahim al-Khaliq, et son père l’Ayatollah Cheikh Muhammad Ali al-Khaliq.",
+          "Il a commencé ses études religieuses à Karbala auprès d’un groupe choisi de ses savants, parmi lesquels l’Ayatollah Cheikh Mujtaba al-Lankarani, l’Ayatollah Cheikh Muhammad al-Gharawi, son grand-père l’Ayatollah Cheikh Muhammad Ibrahim al-Khaliq, et son père l’Ayatollah Cheikh Muhammad Ali al-Khaliq.",
           "Il a circulé entre les académies de Karbala et de Najaf al-Achraf jusqu’à achever Kifayat al-Usul, et fut examiné aux niveaux avancés (al-suṭūh al-ʿulyā) par un jury composé de Cheikh al-Ha’iri, Cheikh al-Rashti, Cheikh al-Kalbasi et d’autres savants — il avait alors treize ans.",
-          "Il se rendit ensuite à l’académie de Najaf al-Achraf et passa un examen en al-Makasib, al-Rasa’il et al-Kifaya devant le Grand Ayatollah Sayyid Abou al-Qasim al-Khoei (qu’Allah sanctifie son secret). Il rejoignit à la suite de cela les études supérieures de jurisprudence (bahth al-kharij) de l’Ayatollah Sayyid al-Khoei, de l’Ayatollah Sayyid Muhammad al-Ruhani et de l’Ayatollah Sayyid al-Khomeini.",
+          "Il se rendit ensuite à Najaf al-Achraf et passa un examen en al-Makasib, al-Rasa’il et al-Kifaya devant le Grand Ayatollah Sayyid Abou al-Qasim al-Khoei (qu’Allah sanctifie son secret). Il rejoignit à la suite de cela les études supérieures de jurisprudence (bahth al-kharij) de l’Ayatollah Sayyid al-Khoei, de l’Ayatollah Sayyid Muhammad al-Ruhani et de l’Ayatollah Sayyid al-Khomeini.",
           "Alors que les pratiques oppressives et criminelles s’intensifiaient contre les hommes de pensée, de religion et de culture, il fut contraint, avec d’autres savants, de quitter l’Irak. Il voyagea entre l’Iran, le Pakistan, la Syrie et le Liban. Au Pakistan, il obtint le grade d’al-Fadil al-Arabi, classé premier au niveau national.",
-          "Outre sa formation religieuse supérieure à l’académie, il acheva ses études académiques et obtint un master à l’Université arabe de Beyrouth. Il demeure profondément engagé dans l’élévation culturelle et scientifique de la Umma, œuvrant sans relâche à fonder écoles, académies, mosquées, bibliothèques et une université dans les régions des communautés alaouite et druze.",
+          "Outre sa formation religieuse supérieure, il acheva ses études académiques et obtint un master à l’Université arabe de Beyrouth. Il demeure profondément engagé dans l’élévation culturelle et scientifique de la Umma, œuvrant sans relâche à fonder écoles, académies, mosquées, bibliothèques et une université dans les régions des communautés alaouite et druze.",
           "Passé l’âge de quarante ans, il s’installa en Occident pour lancer un projet culturel, religieux et éducatif tenant compte des caractéristiques, des cultures et des langues propres à ces pays. Il fonda des projets pour les orphelins au Canada et en Europe, ainsi que des écoles enseignant aux enfants le Saint Coran, l’éthique et la biographie prophétique.",
           "En raison de son engagement étendu dans des rôles scientifiques, culturels, intellectuels et sociaux à travers de nombreux pays d’Orient et d’Occident, il maîtrise les langues des nations où il a vécu. Cette richesse d’expérience lui a donné une compréhension profonde de cultures et de religions diverses, ce qui a facilité ses projets culturels, notamment le dialogue interreligieux et les efforts de rapprochement au Moyen-Orient, au Canada et en France.",
           "Porté par un souci profond d’élever la place des musulmans en Occident — afin qu’ils avancent au rythme de leurs compatriotes français sur le plan intellectuel et civilisationnel — il entreprit, vers 2014, le projet de fonder une université : un projet culturel, éducatif et religieux mené en arabe et en français, auquel il consacre une grande attention.",
-          "Il est connu pour une approche distinctive qui allie la préservation du patrimoine et de l’authenticité, d’une part, à l’ouverture aux autres cultures, d’autre part, et il possède un esprit humain raffiné. Il croit fermement au travail institutionnel, poursuit son rôle de guide pour les musulmans à Paris ainsi que dans toute la France, en Grande-Bretagne et en Belgique, et dispense ses leçons supérieures de jurisprudence (bahth al-kharij) à ses étudiants de l’académie. Il a également des écrits qui demeurent à l’état de manuscrits."
+          "Il est connu pour une approche distinctive qui allie la préservation du patrimoine et de l’authenticité, d’une part, à l’ouverture aux autres cultures, d’autre part, et il possède un esprit humain raffiné. Il croit fermement au travail institutionnel, poursuit son rôle de guide pour les musulmans à Paris ainsi que dans toute la France, en Grande-Bretagne et en Belgique, et dispense ses leçons supérieures de jurisprudence (bahth al-kharij) à ses étudiants du Centre. Il a également des écrits qui demeurent à l’état de manuscrits."
         ],
         "facts": [
           {
@@ -458,7 +458,7 @@
             "id": "fares-al-khatib",
             "name": "Cheikh Dr Fares al-Khatib",
             "role": "Corps enseignant et orateur husseinite",
-            "bio": "Étudiant en jurisprudence supérieure (bahth al-kharij) à l’académie de Najaf al-Achraf, il suit les leçons de l’Ayatollah Cheikh Baqir al-Irawani. Il est professeur et enseignant de niveau master en jurisprudence, principes de la jurisprudence et études coraniques, ainsi que professeur d’université en Irak où il assure les cours de langue arabe pour le Centre. Comme orateur husseinite, il prononce des sermons dans de nombreux pays européens et dans la plupart des villes d’Irak. Il a publié plus de cinquante articles de recherche dans des revues académiques, à comité de lecture et hors comité de lecture, dans divers domaines des études islamiques, en arabe et en anglais.",
+            "bio": "Étudiant en jurisprudence supérieure (bahth al-kharij) à Najaf al-Achraf, il suit les leçons de l’Ayatollah Cheikh Baqir al-Irawani. Il est professeur et enseignant de niveau master en jurisprudence, principes de la jurisprudence et études coraniques, ainsi que professeur d’université en Irak où il assure les cours de langue arabe pour le Centre. Comme orateur husseinite, il prononce des sermons dans de nombreux pays européens et dans la plupart des villes d’Irak. Il a publié plus de cinquante articles de recherche dans des revues académiques, à comité de lecture et hors comité de lecture, dans divers domaines des études islamiques, en arabe et en anglais.",
             "languages": "Arabe et anglais",
             "works": [
               "Ouvrages spécialisés en jurisprudence comparée (fiqh muqāran)",
@@ -594,7 +594,7 @@
             "id": "founder-mohammad-ismail-al-khaliq",
             "name": "Ayatollah Cheikh Mohammad Ismail al-Khaliq",
             "role": "Fondateur",
-            "bio": "Fondateur du Centre Imam (AJ) – Paris. Il a commencé à enseigner les sciences de l’académie à Paris en 2002, avant l’organisation du Centre en 2012."
+            "bio": "Fondateur du Centre Imam (AJ) – Paris. Il a commencé à enseigner les sciences islamiques à Paris en 2002, avant l’organisation du Centre en 2012."
           },
           {
             "id": "mustafa-al-khaliq",
@@ -638,7 +638,7 @@
         {
           "title": "Cercles d’étude et parcours progressifs",
           "description": "L’enseignement s’organise en cercles d’étude, chacun défini par une matière, un niveau et une progression. Un cercle peut couvrir une matière complète, une classe ou une séquence plus longue. Son intitulé, sa durée et ses conditions d’accès sont précisés séparément ; les repères annuels et semestriels restent utiles au classement des dossiers pédagogiques existants.",
-          "audience": "Les étudiants en mesure de se consacrer entièrement à l’étude religieuse pendant cinq ans."
+          "audience": "Les personnes souhaitant étudier une matière, une classe ou une suite de leçons plus longue."
         },
         {
           "title": "Formation des enseignants des écoles du week-end",

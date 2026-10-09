@@ -64,7 +64,7 @@
     "description": "Espo Paris Academy presents the work of Imam (AJ) Center – Paris: an Islamic educational institute in France, preparing students, teachers, and preachers through traditional study shaped for life in France, Europe, and connected communities beyond.",
     "featuresSection": {
       "title": "A center for study, teaching and community service.",
-      "description": "Traditional institute sciences, taught with an awareness of the languages, questions, and responsibilities that shape Muslim life in the West.",
+      "description": "Traditional Islamic studies, taught with an awareness of the languages, questions, and responsibilities that shape Muslim life in the West.",
       "items": {
         "seminaryStudy": {
           "title": "institute study",
@@ -72,7 +72,7 @@
         },
         "multilingualTeaching": {
           "title": "Multilingual teaching",
-          "description": "The only institute offering instruction across French, English, Persian, Arabic, and Azerbaijani."
+          "description": "Courses taught in French, English, Persian, Arabic, and Azerbaijani."
         },
         "teacherFormation": {
           "title": "Teacher formation",
@@ -186,11 +186,11 @@
         "description": "Imam (AJ) Center – Paris exists to prepare students, preachers, and teachers who can serve France, Europe, Africa, and the wider French-speaking world with language fluency, sound religious grounding, and a contemporary sense of responsibility."
       },
       "intro": {
-        "eyebrow": "Why a institute in the West",
+        "eyebrow": "Why an institute in the West",
         "title": "A duty that cannot be carried at a distance.",
-        "pullQuote": "institute education is a collective obligation for scholars in the historic centres of learning. For religious scholars in certain Western and European countries, it becomes an individual one.",
+        "pullQuote": "Religious education is a collective obligation for scholars in the historic centres of learning. For religious scholars in certain Western and European countries, it becomes an individual one.",
         "paragraphs": [
-          "While institute education is considered a collective obligation (farḍ kifāyah) for scholars living in Islamic countries and in historic centres of learning such as Najaf al-Ashraf and Karbala al-Muqaddasah, it becomes an individual obligation (farḍ ʿayn) for religious scholars in certain Western and European countries.",
+          "While religious education is considered a collective obligation (farḍ kifāyah) for scholars living in Islamic countries and in historic centres of learning such as Najaf al-Ashraf and Karbala al-Muqaddasah, it becomes an individual obligation (farḍ ʿayn) for religious scholars in certain Western and European countries.",
           "This is particularly true in a culturally and intellectually diverse country like France, where freedom of thought has reached an exceptional level. The administration of Imam (AJ) Center – Paris therefore considers it a personal religious duty to undertake this mission.",
           "The French arena is of tremendous importance at every level. It is essential that Shi'a Muslims make a positive contribution to French society and enrich its social fabric.",
           "France also serves as a gateway — not only to the Maghreb and to Africa, where many people have embraced the teachings of the Ahl al-Bayt (peace be upon them), but to all French-speaking countries, many of which maintain strong cultural ties with France."
@@ -207,11 +207,11 @@
           },
           {
             "title": "Established in Paris",
-            "description": "During 2002, Ayatollah Shaykh Ismail al-Khaliq began teaching traditional institute sciences in Paris. In 2012 those study circles were formally organized under the name Imam (AJ) Center – Paris."
+            "description": "In 2002, Ayatollah Shaykh Ismail al-Khaliq began teaching traditional Islamic sciences in Paris. In 2012, those study circles were formally organized under the name Imam (AJ) Center – Paris."
           },
           {
-            "title": "The first of its kind",
-            "description": "This institute is regarded as an Islamic educational institute in France, established to educate followers of the Ahl al-Bayt — and indeed Muslims generally. No previous institute in France had been established with such breadth and inclusiveness."
+            "title": "Open to learners",
+            "description": "This educational institute in France offers religious learning to followers of the Ahl al-Bayt and welcomes Muslims more broadly."
           },
           {
             "title": "Nearly half a century of experience",
@@ -247,7 +247,7 @@
         "items": [
           {
             "title": "Multilingual education",
-            "description": "It is the only institute in the world offering instruction in several languages, so students can study in the language they actually live and preach in.",
+            "description": "Instruction in several languages helps students study in the languages they use in daily life and community service.",
             "points": [
               "French",
               "English",
@@ -594,7 +594,7 @@
             "id": "founder-mohammad-ismail-al-khaliq",
             "name": "Ayatollah Shaykh Mohammad Ismail al-Khaliq",
             "role": "Founder",
-            "bio": "Founder of Imam (AJ) Center – Paris. He began teaching institute sciences in Paris in 2002, and the study circles developed into the organized Center in 2012."
+            "bio": "Founder of Imam (AJ) Center – Paris. He began teaching Islamic sciences in Paris in 2002, and the study circles developed into the organized Center in 2012."
           },
           {
             "id": "mustafa-al-khaliq",
@@ -638,7 +638,7 @@
         {
           "title": "Study circles and flexible learning pathways",
           "description": "Teaching is organized into study circles with a defined subject, level and sequence of lessons. A circle may cover a complete subject, a class or a longer sequence. Its title, duration and access conditions are stated separately; annual and semester labels remain useful for organizing existing academic records.",
-          "audience": "Students able to devote themselves entirely to religious study over five years."
+          "audience": "Learners seeking a defined subject, class, or longer sequence of lessons."
         },
         {
           "title": "Weekend school teacher training",
