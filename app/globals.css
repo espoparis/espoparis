@@ -360,3 +360,22 @@ html:is(:lang(ar), :lang(fa)) :is(.section-eyebrow, [class*="tracking-"]) {
     padding-inline: 1.25rem;
   }
 }
+
+/* The header stays deep green in both themes; controls follow its surface. */
+[data-site-header] .header-control { color: #faf7ef; }
+[data-site-header] .header-control:hover,
+[data-site-header] .header-control[data-state="open"] {
+  color: #fff;
+  background-color: rgb(255 255 255 / 0.12);
+  border-color: rgb(255 255 255 / 0.3);
+}
+[data-site-header] .header-control:focus-visible {
+  outline: 2px solid #d7b56d;
+  outline-offset: 3px;
+  box-shadow: none;
+}
+/* Transparent brand mark, reversed on dark surfaces without a white tile. */
+.dark .site-brand-mark,
+.site-brand-mark-inverse { filter: brightness(0) invert(1); }
+:root { color-scheme: light; }
+:root.dark { color-scheme: dark; }

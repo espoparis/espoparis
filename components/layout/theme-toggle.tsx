@@ -21,12 +21,16 @@ export function ThemeToggle() {
     <Button
       variant="nav"
       size="icon"
-      className="h-9 w-9 rounded-full border-0 bg-transparent text-foreground/85 hover:bg-background/72 hover:text-foreground"
+      type="button"
+      disabled={!mounted}
+      className="header-control relative h-10 w-10 rounded-sm border-0 bg-transparent text-foreground hover:bg-muted"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={t("toggleTheme")}
       aria-pressed={isDark}
     >
-      {isDark ? (
+      {!mounted ? (
+        <span aria-hidden="true" className="h-4 w-4" />
+      ) : isDark ? (
         <SunMedium className="h-4 w-4" />
       ) : (
         <Moon className="h-4 w-4" />

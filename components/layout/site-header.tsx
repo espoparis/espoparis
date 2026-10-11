@@ -24,6 +24,7 @@ export async function SiteHeader({ locale }: Props) {
               href="/"
               locale={locale}
               size="md"
+              inverse
               className="shrink-0 text-white"
             />
             <div className="min-w-0">

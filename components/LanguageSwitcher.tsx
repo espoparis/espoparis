@@ -32,14 +32,14 @@ export function LanguageSwitcher() {
         <Button
           variant="nav"
           size="sm"
-          className="h-9 gap-2 rounded-full border-0 bg-transparent px-3 text-foreground/85 hover:bg-background/72 hover:text-foreground"
+          className="header-control h-10 gap-2 rounded-sm border-0 bg-transparent px-2 text-foreground hover:bg-muted"
           aria-label={t("label")}
         >
           <Globe2 className="h-4 w-4" />
           <span>{current.flag}</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-48 rounded-[1.35rem] border-border/60 bg-background/96 p-1.5">
+      <DropdownMenuContent align="end" className="w-48 rounded-sm border-border bg-popover text-popover-foreground p-1.5">
         {routing.locales.map((item) => {
           const meta = languageMeta[item as keyof typeof languageMeta];
 

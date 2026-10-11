@@ -23,7 +23,7 @@ export async function SiteFooter({ locale }: Props) {
       <div className="page-shell py-14 sm:py-16 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_.75fr_1fr] lg:gap-16">
           <div>
-            <SiteBrand variant="full" size="lg" className="text-white" />
+            <SiteBrand variant="full" size="lg" inverse className="text-white" />
             <h2 className="mt-7 max-w-[18ch] font-display text-2xl font-medium leading-tight tracking-tight text-white sm:text-3xl">
               {tFooter("title")}
             </h2>

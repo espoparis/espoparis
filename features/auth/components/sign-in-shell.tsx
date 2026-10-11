@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CheckCircle2, KeyRound, Mail, ShieldCheck, UserRoundCheck } from "lucide-react";
+import { CheckCircle2, KeyRound, ShieldCheck, UserRoundCheck } from "lucide-react";
 import type { AuthProviderReadiness } from "@/server/auth/providers";
 
 export type SignInCopy = {
@@ -52,14 +52,8 @@ export function SignInShell({ copy, readiness, locale, returnTo, adminMode = fal
           )}
           {!readiness.google ? <p className="mt-2 text-center text-xs text-muted-foreground">{copy.unavailable}</p> : null}
 
-          <div className="my-7 flex items-center gap-3 text-xs uppercase tracking-[.18em] text-muted-foreground"><span className="h-px flex-1 bg-border" /><span>Email</span><span className="h-px flex-1 bg-border" /></div>
-          <h2 className="font-display text-2xl font-semibold">{copy.magicTitle}</h2>
-          <p className="mt-2 text-sm leading-7 text-muted-foreground">{copy.magicDescription}</p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <label className="flex flex-1 items-center gap-2 rounded-full border border-border bg-background px-4"><Mail className="size-4 text-muted-foreground" /><input disabled={!readiness.magicLink} type="email" placeholder={copy.emailPlaceholder} className="h-12 min-w-0 flex-1 bg-transparent text-sm outline-none disabled:cursor-not-allowed" /></label>
-            <button type="button" disabled={!readiness.magicLink} className="rounded-full border border-primary/30 px-5 py-3 text-sm font-semibold text-primary disabled:cursor-not-allowed disabled:opacity-45">{copy.emailButton}</button>
-          </div>
-          {!readiness.magicLink ? <p className="mt-2 text-xs text-muted-foreground">{copy.unavailable}</p> : null}
+          {/* Email sign-in is hidden until a verified token flow is implemented. */}
+
         </div>
 
         {!adminMode ? <aside className="rounded-[2rem] border border-border bg-secondary/35 p-7 sm:p-9">

@@ -11,6 +11,7 @@ type SiteBrandProps = {
   href?: string;
   locale?: string;
   className?: string;
+  inverse?: boolean;
 };
 
 const sizeStyles = {
@@ -25,17 +26,18 @@ export function SiteBrand({
   href,
   locale,
   className,
+  inverse = false,
 }: SiteBrandProps) {
   const styles = sizeStyles[size];
 
   const mark = (
-    <span className={cn("relative shrink-0 overflow-hidden rounded-sm bg-white", styles.mark)}>
+    <span className={cn("relative shrink-0", styles.mark)}>
       <Image
-        src="/brand-mark.webp"
+        src="/brand-mark-transparent.webp"
         alt=""
         fill
         sizes="64px"
-        className="object-contain p-1"
+        className={cn("site-brand-mark object-contain", inverse && "site-brand-mark-inverse")}
         priority={size !== "sm"}
       />
     </span>

@@ -24,10 +24,10 @@ export function FacultyDirectory({ members, languagesLabel, worksLabel, photoAlt
               <h2 className="font-display text-3xl font-medium leading-tight sm:text-4xl"><Link href={`/faculty/${member.id}`} className="decoration-primary/40 underline-offset-8 hover:underline">{member.name}</Link></h2>
               <p className="mt-3 text-sm leading-6 text-primary">{member.role}</p>
               <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground">{member.bio}</p>
-              <dl className="mt-6 border-t border-border pt-5">
+              {member.languages ? <dl className="mt-6 border-t border-border pt-5">
                 <dt className="text-sm font-semibold">{languagesLabel}</dt>
                 <dd className="mt-2 text-sm leading-7 text-muted-foreground">{member.languages}</dd>
-              </dl>
+              </dl> : null}
               {member.works?.length ? (
                 <div className="mt-6">
                   <h3 className="text-sm font-semibold">{worksLabel}</h3>

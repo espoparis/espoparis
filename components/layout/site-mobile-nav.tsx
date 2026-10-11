@@ -32,13 +32,13 @@ export function SiteMobileNav({ locale }: Props) {
         <Button
           variant="nav"
           size="icon"
-          className="size-10 rounded-sm border border-border/60 bg-secondary/45  2xl:hidden"
+          className="header-control size-10 rounded-sm border border-white/20 bg-white/5 2xl:hidden"
           aria-label={tMobile("title")}
         >
           <Menu className="h-4 w-4" />
         </Button>
       </DialogTrigger>
-      <DialogContent className="surface-panel-strong max-h-[85dvh] max-w-sm overflow-y-auto border-0 p-0">
+      <DialogContent className="surface-panel-strong max-h-[85dvh] max-w-sm overflow-y-auto border-0 p-0 text-foreground">
         <DialogHeader className="border-b border-border/60 px-6 py-5 text-start">
           <SiteBrand variant="full" size="sm" />
           <DialogTitle className="pt-1 text-xl">{tMobile("title")}</DialogTitle>

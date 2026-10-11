@@ -7,7 +7,7 @@ export type FacultyMember = {
   name: string;
   role: string;
   bio: string;
-  languages: string;
+  languages?: string;
   works?: string[];
   image?: string;
 };
@@ -93,12 +93,12 @@ export function AboutFacultySection({
                   </div>
                 ) : null}
 
-                <div className="mt-auto border-t border-border/60 pt-5">
+                {member.languages ? <div className="mt-auto border-t border-border/60 pt-5">
                   <p className="section-eyebrow">{languagesLabel}</p>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">
                     {member.languages}
                   </p>
-                </div>
+                </div> : null}
               </article>
             );
           })}

@@ -46,11 +46,11 @@ export default async function FacultyProfilePage(props: { params: Promise<{ loca
             <p className="text-base leading-8 text-muted-foreground sm:text-lg">{member.bio}</p>
           </div>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-sm border border-border/60 bg-card/80 p-5">
+            {member.languages ? <div className="rounded-sm border border-border/60 bg-card/80 p-5">
               <Languages className="size-5 text-primary" />
               <p className="mt-3 text-xs font-semibold uppercase tracking-[.16em] text-primary">{content.faculty.languagesLabel}</p>
               <p className="mt-2 text-sm leading-7 text-muted-foreground">{member.languages}</p>
-            </div>
+            </div> : null}
             {member.works?.length ? <div className="rounded-sm border border-border/60 bg-card/80 p-5 sm:col-span-1">
               <BookOpen className="size-5 text-primary" />
               <p className="mt-3 text-xs font-semibold uppercase tracking-[.16em] text-primary">{content.faculty.worksLabel}</p>
